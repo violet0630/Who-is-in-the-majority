@@ -1,0 +1,104 @@
+{
+  "branch_summaries": {
+    "TH": {
+      "mean": 0.46518518518518515,
+      "ci95": [
+        0.41999999999999993,
+        0.5148148148148147
+      ]
+    },
+    "TL": {
+      "mean": 0.3903703703703704,
+      "ci95": [
+        0.3400000000000001,
+        0.4377777777777778
+      ]
+    },
+    "U0": {
+      "mean": 0.4,
+      "ci95": [
+        0.3718518518518518,
+        0.43111111111111117
+      ]
+    }
+  },
+  "comparisons": [
+    {
+      "branches": [
+        "TH",
+        "TL"
+      ],
+      "difference": 0.0748148148148148,
+      "ci95": [
+        0.02370370370370367,
+        0.13185185185185183
+      ],
+      "p_value": 0.0390625,
+      "paired_groups": 9,
+      "p_holm": 0.1171875
+    },
+    {
+      "branches": [
+        "TH",
+        "U0"
+      ],
+      "difference": 0.06518518518518517,
+      "ci95": [
+        0.002962962962962834,
+        0.12814814814814812
+      ],
+      "p_value": 0.171875,
+      "paired_groups": 9,
+      "p_holm": 0.34375
+    },
+    {
+      "branches": [
+        "TL",
+        "U0"
+      ],
+      "difference": -0.009629629629629636,
+      "ci95": [
+        -0.05631481481481479,
+        0.04444444444444445
+      ],
+      "p_value": 0.8515625,
+      "paired_groups": 9,
+      "p_holm": 0.8515625
+    }
+  ],
+  "time_comparisons": [
+    {
+      "branch": "TH",
+      "difference": 0.04888888888888889,
+      "ci95": [
+        0.019999999999999993,
+        0.08148148148148152
+      ],
+      "p_value": 0.07421875,
+      "p_holm": 0.22265625
+    },
+    {
+      "branch": "TL",
+      "difference": 0.04518518518518519,
+      "ci95": [
+        2.4671622769447922e-17,
+        0.0911111111111111
+      ],
+      "p_value": 0.09765625,
+      "p_holm": 0.22265625
+    },
+    {
+      "branch": "U0",
+      "difference": 0.02814814814814817,
+      "ci95": [
+        0.00666666666666667,
+        0.04962962962962965
+      ],
+      "p_value": 0.09375,
+      "p_holm": 0.22265625
+    }
+  ],
+  "recommended_position": "TH",
+  "primary_outcome": "tail observer majority illusion",
+  "sign_flip_assumption": "paired differences are sign-exchangeable under the null, conditional on fixed networks"
+}

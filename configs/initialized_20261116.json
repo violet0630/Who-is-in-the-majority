@@ -1,0 +1,71 @@
+{
+  "size": 1000,
+  "observer_count": 50,
+  "settings": {
+    "mean_degree": 12,
+    "s_out": 0.35,
+    "s_in": 1.0,
+    "w": 0.2,
+    "fraction": 0.2,
+    "rho": 6,
+    "kappa": 0.5,
+    "gamma": 1,
+    "theta": [
+      1,
+      0,
+      -1,
+      0
+    ],
+    "rounds": 10,
+    "llm_workers": 4,
+    "tail_rounds": 3,
+    "window": 2,
+    "read_limit": 5,
+    "cross_fan_comments": true,
+    "community_fractions": [
+      0.15,
+      0.2,
+      0.25,
+      0.4
+    ]
+  },
+  "k": 200,
+  "expected_edges": 12000,
+  "alpha": 0.05,
+  "beta": 10,
+  "baseline_distribution": {
+    "family": "Beta",
+    "a": 0.24,
+    "b": 0.85
+  },
+  "strength_values": [
+    0.4,
+    0.8
+  ],
+  "strong_fraction": 0.5,
+  "selected_candidate": "fraction20",
+  "initialization_Q": 0.3466666666666667,
+  "selection_rule": "smallest minority among real-LLM candidates with tail Q >= .25",
+  "text_bank": "experiments/2026-11-16/01_texts_50/bank.json",
+  "text_bank_sha256": "9e32f8718d676b7a22a78abe2a5af6c5439c7bcc277a3ea120e02a1a6eab80dd",
+  "observer_rule": "50 degree/community-stratified nodes; exclude them from advocates",
+  "nonobserver_rule": "no perception estimation; gamma=theta_d=theta_hd=0; private stance and feedback drive actions",
+  "llm": {
+    "temperature": 0,
+    "thinking": "disabled",
+    "timeout_seconds": 180,
+    "transport_attempts": 3,
+    "schema_attempts": 3,
+    "workers_per_run": 4,
+    "concurrent_runs": 27,
+    "history": "complete personal reading history",
+    "canonical_model": "deepseek-flash",
+    "max_gateway_concurrency": 16,
+    "gateway_models": {
+      "https://api.1nvictus.me/v1": "deepseek-flash",
+      "http://127.0.0.1:3000/v1": "deepseek-v4-flash"
+    }
+  },
+  "position_strategy": "TH",
+  "position_file": "experiments/2026-11-16/recommended_positions.json"
+}

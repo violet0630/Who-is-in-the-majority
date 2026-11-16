@@ -1,0 +1,27 @@
+{
+  "python": "3.12.9",
+  "numpy": "2.1.2",
+  "openai": "2.21.0",
+  "runner_sha256": "c8d90b355cfc2cb0f410a7705c7bce564d7f8d0cc2075bd001466b3b93c2d6da",
+  "modules_sha256": {
+    "__init__.py": "c9bd5d6e9d2ecc399284f0ff57427b87b918e0ec40e673152193f7e752d21292",
+    "__main__.py": "b81ae5f1d9b74919629378d1a115e661178cda2d54b1f54bd4f635ef847bee57",
+    "analysis.py": "ef90a426bf454d2d30ef46d4468b09215dd4c60f78348280b93e93902f38c889",
+    "artifacts.py": "b2ee1c4a9397d8aec5f7d63b44a2ce4bbef6ce443714e0184ad0c1b73b69c87e",
+    "behavior.py": "dece4e716f74ea2fad5fd77475820656d3a41099f2d05da2b59e007799ec09f1",
+    "experiments.py": "f7837835d336a8b777a57a98f273439badaa4642b545442490113af717ae54a2",
+    "feed.py": "27da95784701bbcf6a8b5534996052e064d5498ad5a4cc0085db5b61209a6ca2",
+    "judgments.py": "7b7c30bc732da841331d2f45e64a2f1137ecd58598fba96f0cb529cd8257562e",
+    "llm.py": "fa5025120936ba5212a44a4d7064c41b37e25a8256f89e79a9795a1f542ecb96",
+    "llm_perception.py": "c6ee9852c5336618d31b45aeda88ba118ca8790ca9d316af476d2b83effc75de",
+    "models.py": "5f0bea9edb7f5d6915ab506b2541bd617fbcadab16e3cc4791db51a896b63b0c",
+    "network.py": "0f86cf7eed03ea76549fce871ce786cb169735b579ab2a2b9211a12f0de79361",
+    "perception.py": "536c60eaefebf88a805a84527ba696cb14377a4376e9fbde80f3a98d9e4b455a",
+    "preparation.py": "9b050bf794a61419d6a6256eae346ad0ae1e4ce6f0e05c0ee77af3b2ac46bee8",
+    "randomness.py": "eb1367aa4685fa0e68ad9e0ea366d236ac69edd9c7037ad51f953939e80e5c4e",
+    "simulation.py": "900bfd38efe139b6ac3edd33cde76f27f4add5be889188ffa0654d2d6413cd24",
+    "storage.py": "a7332a143d7db81be85ec03dc8f783fbba14a9733479bd45e49d5aaf27e13141",
+    "text_generation.py": "163359e5ba07d04760ab4ba06a9414c09d76e13296c9c475996e4d3dfb60ed73"
+  },
+  "study_sha256": "46f7923f6a5460219d21d920082021b6c4f9f1d0fac24b07f9e356db9b664715"
+}

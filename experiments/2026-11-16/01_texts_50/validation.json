@@ -1,0 +1,12 @@
+{
+  "originals": 50,
+  "comments": 200,
+  "originals_per_stance": {
+    "-1": 25,
+    "1": 25
+  },
+  "all_lengths_40_to_80": true,
+  "unique_text_count": 250,
+  "semantic_review": "assistant reviewed all 50 originals and 200 comments for stance, agree/disagree relation, and pre-election framing",
+  "bank_sha256": "9e32f8718d676b7a22a78abe2a5af6c5439c7bcc277a3ea120e02a1a6eab80dd"
+}

@@ -1,0 +1,8 @@
+{
+  "resume_reason": "gateway replacement configuration passed both tests",
+  "frozen_model": "deepseek-v4-flash",
+  "max_gateway_concurrency": 16,
+  "request_replay_includes_invalid_responses": true,
+  "original_prefix_metrics_preserved": true,
+  "runner_sha256": "c1fe32edddcc529cd3bac769a0469b9908d948dd9aab2ced8850c6c5410ab159"
+}

@@ -1,0 +1,18 @@
+{
+  "main_audit_rows": {
+    "ok": 26082,
+    "api_error": 428,
+    "invalid_response": 129
+  },
+  "actual_calls": {
+    "ok": 14864,
+    "api_error": 428,
+    "invalid_response": 69
+  },
+  "returned_models": {
+    "deepseek-flash": 9125,
+    "dfmodel": 5808
+  },
+  "known_input_tokens": 42302929,
+  "known_output_tokens": 37881506
+}

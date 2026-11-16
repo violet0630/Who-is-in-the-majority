@@ -1,0 +1,84 @@
+{
+  "networks": [
+    {
+      "network": "network-0.json",
+      "edges": 11998,
+      "observers": 50
+    },
+    {
+      "network": "network-1.json",
+      "edges": 12133,
+      "observers": 50
+    },
+    {
+      "network": "network-2.json",
+      "edges": 12018,
+      "observers": 50
+    }
+  ],
+  "matched_groups": [
+    {
+      "graph": 0,
+      "repeat": 0,
+      "fan_total": 0.04589585172109444,
+      "baseline_total": 0.02185721700218257,
+      "initial_expected_advocate_speakers": 0.019636495555848343
+    },
+    {
+      "graph": 0,
+      "repeat": 1,
+      "fan_total": 0.041891600086374436,
+      "baseline_total": 0.010733138393539055,
+      "initial_expected_advocate_speakers": 0.007270131090924405
+    },
+    {
+      "graph": 0,
+      "repeat": 2,
+      "fan_total": 0.044463818657367045,
+      "baseline_total": 0.02273906540679787,
+      "initial_expected_advocate_speakers": 0.019063407617511293
+    },
+    {
+      "graph": 1,
+      "repeat": 0,
+      "fan_total": 0.04421768707482993,
+      "baseline_total": 0.019197617310919214,
+      "initial_expected_advocate_speakers": 0.01027854594002909
+    },
+    {
+      "graph": 1,
+      "repeat": 1,
+      "fan_total": 0.046354825115887066,
+      "baseline_total": 0.026825018647045628,
+      "initial_expected_advocate_speakers": 0.02152455495177273
+    },
+    {
+      "graph": 1,
+      "repeat": 2,
+      "fan_total": 0.0406612198365951,
+      "baseline_total": 0.006505410963789248,
+      "initial_expected_advocate_speakers": 0.024322951276484702
+    },
+    {
+      "graph": 2,
+      "repeat": 0,
+      "fan_total": 0.045112781954887216,
+      "baseline_total": 0.009958762284315775,
+      "initial_expected_advocate_speakers": 0.024739380628174615
+    },
+    {
+      "graph": 2,
+      "repeat": 1,
+      "fan_total": 0.046021840873634944,
+      "baseline_total": 0.02352111076031264,
+      "initial_expected_advocate_speakers": 0.02293938328686553
+    },
+    {
+      "graph": 2,
+      "repeat": 2,
+      "fan_total": 0.04541118107231444,
+      "baseline_total": 0.03492369889617013,
+      "initial_expected_advocate_speakers": 0.00930968650726997
+    }
+  ]
+}

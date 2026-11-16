@@ -8,22 +8,20 @@
 
 ```mermaid
 flowchart TD
-    A[configs/study.json<br/>议题与倡议者立场] --> T[text_generation.py + prompts<br/>文本候选]
-    N[network.py / NetworkConfig<br/>有向度修正社团网络] --> P[preparation.py<br/>个人参数与种子位置搜索]
-    P --> E[experiments.py<br/>共享输入并组织独立分支]
-    T --> E
-    E --> S[simulation.py / RunConfig<br/>同步逐轮运行]
-    S --> F[feed.py<br/>信息池与评论引用]
-    F --> L[llm_perception.py + llm.py<br/>社区支持率判断]
-    L --> B[behavior.py / Coefficients<br/>Q更新与g、c、e抽样]
+    N["network.py<br/>网络生成"] --> P["preparation.py<br/>个人参数与种子搜索"]
+    T["text_generation.py + prompts<br/>原创与评论候选"] --> S
+    P --> E["experiments.py<br/>组织实验分支"]
+    E --> S["simulation.py<br/>同步轮次与状态更新"]
+    S --> F["feed.py<br/>阅读、引用与消息受众"]
+    F --> L["llm_perception.py + llm.py<br/>感知支持率"]
+    L --> B["behavior.py<br/>反馈Q与行为概率"]
     B --> S
-    R[randomness.py<br/>节点、轮次、用途独立随机流] --> F
+    R["randomness.py<br/>分用途随机数"] --> F
     R --> B
-    S --> M[analysis.py + judgments.py<br/>多数误判与行为指标]
-    M --> I[analysis.py<br/>网格阈值、成组bootstrap、Holm]
-    S --> O[storage.py + artifacts.py<br/>消息、状态、感知与调用日志]
+    S --> A["analysis.py + judgments.py<br/>指标与判断统计"]
+    A --> I["网格阈值<br/>成组bootstrap与Holm校正"]
+    S --> O["storage.py + artifacts.py<br/>消息、状态与实验日志"]
     L --> O
-    C[__main__.py<br/>命令行参数与输出目录] --> S
 ```
 
 单轮先统一发布已决定的消息，然后送达回复通知并抽取阅读内容。各节点更新感知后计算反馈 Q，再产生下一轮决策。所有节点共享同一个轮内消息快照，并发只用于缩短感知请求等待时间。
@@ -96,3 +94,10 @@ python -m majority run --network runs/networks/network-0.json --bank runs/candid
 | 5 | 0.000 | 0.033 | 0.300 | 0.000 | 0.700 |
 
 本次采用固定倡议者名单检验单分支时序，并用演示系数生成行为。种子位置搜索另在同一张图上完成1000次候选检查，获得高低结构幻觉差约0.01087，匹配诊断保存在 `runs/seed_search_check.json`。
+
+
+## 2026-11-16 网关兼容与实验初始化
+
+两个接口按同一DeepSeek Flash处理：`https://api.1nvictus.me/v1` 使用 `deepseek-flash`，`http://127.0.0.1:3000/v1` 使用 `deepseek-v4-flash`。`LLMConfig` 按URL选择请求名，缓存统一使用 `deepseek-flash` 标识；日志同时保留实际请求名与统一标识。
+
+本次50条原创/200条评论、N=1000、50名观察者、10轮实验的结果及初始化，见 [实验记录](experiments/2026-11-16/experiment_record.md) 和 `configs/initialized_20261116.json`。

@@ -1,0 +1,1644 @@
+{
+  "method": "random search with successive halving; observer author-count proxy, real LLM confirmation follows",
+  "seed": 2026111601,
+  "size": 100,
+  "observers": 50,
+  "alpha": 0.05,
+  "beta": 10,
+  "candidate_count": 96,
+  "candidates": [
+    {
+      "mean_degree": 8,
+      "s_out": 0.35,
+      "s_in": 1.0,
+      "w": 0.2,
+      "fraction": 0.16,
+      "rho": 3,
+      "kappa": 1,
+      "gamma": 1,
+      "theta": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "rounds": 6
+    },
+    {
+      "mean_degree": 12,
+      "s_out": 0.35,
+      "s_in": 0.5,
+      "w": 0.05,
+      "fraction": 0.2,
+      "rho": 1,
+      "kappa": 1,
+      "gamma": 2,
+      "theta": [
+        1,
+        0,
+        -1,
+        0
+      ],
+      "rounds": 6
+    },
+    {
+      "mean_degree": 12,
+      "s_out": 0.35,
+      "s_in": 1.0,
+      "w": 0.05,
+      "fraction": 0.08,
+      "rho": 1,
+      "kappa": 2,
+      "gamma": 0.5,
+      "theta": [
+        1,
+        -0.5,
+        0,
+        1
+      ],
+      "rounds": 6
+    },
+    {
+      "mean_degree": 6,
+      "s_out": 0.5,
+      "s_in": 1.5,
+      "w": 0.2,
+      "fraction": 0.2,
+      "rho": 6,
+      "kappa": 2,
+      "gamma": 0.5,
+      "theta": [
+        0,
+        -0.5,
+        0,
+        1
+      ],
+      "rounds": 6
+    },
+    {
+      "mean_degree": 4,
+      "s_out": 0.2,
+      "s_in": 1.0,
+      "w": 0.05,
+      "fraction": 0.2,
+      "rho": 6,
+      "kappa": 1.5,
+      "gamma": 1,
+      "theta": [
+        1,
+        0.5,
+        -1,
+        -1
+      ],
+      "rounds": 6
+    },
+    {
+      "mean_degree": 12,
+      "s_out": 0.35,
+      "s_in": 1.5,
+      "w": 0.05,
+      "fraction": 0.2,
+      "rho": 3,
+      "kappa": 1.5,
+      "gamma": 2,
+      "theta": [
+        0,
+        0.5,
+        1,
+        0
+      ],
+      "rounds": 6
+    },
+    {
+      "mean_degree": 6,
+      "s_out": 0.35,
+      "s_in": 1.5,
+      "w": 0.5,
+      "fraction": 0.08,
+      "rho": 1,
+      "kappa": 1.5,
+      "gamma": 2,
+      "theta": [
+        1,
+        0.5,
+        -1,
+        1
+      ],
+      "rounds": 6
+    },
+    {
+      "mean_degree": 4,
+      "s_out": 0.35,
+      "s_in": 1.5,
+      "w": 0.2,
+      "fraction": 0.16,
+      "rho": 3,
+      "kappa": 0.5,
+      "gamma": 2,
+      "theta": [
+        1,
+        -0.5,
+        -1,
+        1
+      ],
+      "rounds": 6
+    },
+    {
+      "mean_degree": 4,
+      "s_out": 0.2,
+      "s_in": 0.5,
+      "w": 0.2,
+      "fraction": 0.12,
+      "rho": 3,
+      "kappa": 1,
+      "gamma": 0.5,
+      "theta": [
+        0,
+        0.5,
+        0,
+        -1
+      ],
+      "rounds": 6
+    },
+    {
+      "mean_degree": 4,
+      "s_out": 0.2,
+      "s_in": 1.0,
+      "w": 0.2,
+      "fraction": 0.2,
+      "rho": 6,
+      "kappa": 2,
+      "gamma": 0.5,
+      "theta": [
+        0,
+        -0.5,
+        1,
+        0
+      ],
+      "rounds": 6
+    },
+    {
+      "mean_degree": 12,
+      "s_out": 0.5,
+      "s_in": 1.5,
+      "w": 0.2,
+      "fraction": 0.2,
+      "rho": 1,
+      "kappa": 1,
+      "gamma": 0.5,
+      "theta": [
+        -1,
+        0.5,
+        0,
+        0
+      ],
+      "rounds": 6
+    },
+    {
+      "mean_degree": 8,
+      "s_out": 0.2,
+      "s_in": 1.0,
+      "w": 0.2,
+      "fraction": 0.08,
+      "rho": 3,
+      "kappa": 0.5,
+      "gamma": 2,
+      "theta": [
+        0,
+        -0.5,
+        1,
+        -1
+      ],
+      "rounds": 6
+    },
+    {
+      "mean_degree": 8,
+      "s_out": 0.2,
+      "s_in": 1.5,
+      "w": 0.05,
+      "fraction": 0.16,
+      "rho": 1,
+      "kappa": 1.5,
+      "gamma": 0.5,
+      "theta": [
+        1,
+        -0.5,
+        -1,
+        0
+      ],
+      "rounds": 6
+    },
+    {
+      "mean_degree": 8,
+      "s_out": 0.35,
+      "s_in": 1.5,
+      "w": 0.5,
+      "fraction": 0.08,
+      "rho": 6,
+      "kappa": 1,
+      "gamma": 0.5,
+      "theta": [
+        0,
+        0,
+        1,
+        -1
+      ],
+      "rounds": 6
+    },
+    {
+      "mean_degree": 12,
+      "s_out": 0.5,
+      "s_in": 1.0,
+      "w": 0.2,
+      "fraction": 0.16,
+      "rho": 1,
+      "kappa": 1,
+      "gamma": 0.5,
+      "theta": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "rounds": 6
+    },
+    {
+      "mean_degree": 8,
+      "s_out": 0.5,
+      "s_in": 1.5,
+      "w": 0.2,
+      "fraction": 0.12,
+      "rho": 3,
+      "kappa": 2,
+      "gamma": 1,
+      "theta": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "rounds": 6
+    },
+    {
+      "mean_degree": 4,
+      "s_out": 0.2,
+      "s_in": 1.0,
+      "w": 0.05,
+      "fraction": 0.16,
+      "rho": 1,
+      "kappa": 0.5,
+      "gamma": 0.5,
+      "theta": [
+        -1,
+        0,
+        0,
+        -1
+      ],
+      "rounds": 6
+    },
+    {
+      "mean_degree": 12,
+      "s_out": 0.5,
+      "s_in": 1.0,
+      "w": 0.05,
+      "fraction": 0.2,
+      "rho": 1,
+      "kappa": 2,
+      "gamma": 2,
+      "theta": [
+        1,
+        -0.5,
+        -1,
+        1
+      ],
+      "rounds": 6
+    },
+    {
+      "mean_degree": 8,
+      "s_out": 0.5,
+      "s_in": 0.5,
+      "w": 0.5,
+      "fraction": 0.16,
+      "rho": 3,
+      "kappa": 1.5,
+      "gamma": 1,
+      "theta": [
+        0,
+        0.5,
+        0,
+        1
+      ],
+      "rounds": 6
+    },
+    {
+      "mean_degree": 6,
+      "s_out": 0.2,
+      "s_in": 1.0,
+      "w": 0.5,
+      "fraction": 0.08,
+      "rho": 6,
+      "kappa": 1.5,
+      "gamma": 2,
+      "theta": [
+        -1,
+        -0.5,
+        -1,
+        0
+      ],
+      "rounds": 6
+    },
+    {
+      "mean_degree": 6,
+      "s_out": 0.5,
+      "s_in": 1.5,
+      "w": 0.05,
+      "fraction": 0.2,
+      "rho": 3,
+      "kappa": 1.5,
+      "gamma": 1,
+      "theta": [
+        1,
+        0.5,
+        -1,
+        1
+      ],
+      "rounds": 6
+    },
+    {
+      "mean_degree": 6,
+      "s_out": 0.5,
+      "s_in": 0.5,
+      "w": 0.2,
+      "fraction": 0.2,
+      "rho": 1,
+      "kappa": 2,
+      "gamma": 1,
+      "theta": [
+        1,
+        0.5,
+        0,
+        1
+      ],
+      "rounds": 6
+    },
+    {
+      "mean_degree": 6,
+      "s_out": 0.5,
+      "s_in": 0.5,
+      "w": 0.2,
+      "fraction": 0.12,
+      "rho": 1,
+      "kappa": 1.5,
+      "gamma": 1,
+      "theta": [
+        -1,
+        0,
+        0,
+        0
+      ],
+      "rounds": 6
+    },
+    {
+      "mean_degree": 12,
+      "s_out": 0.5,
+      "s_in": 1.5,
+      "w": 0.2,
+      "fraction": 0.12,
+      "rho": 6,
+      "kappa": 2,
+      "gamma": 1,
+      "theta": [
+        0,
+        0,
+        -1,
+        -1
+      ],
+      "rounds": 6
+    },
+    {
+      "mean_degree": 8,
+      "s_out": 0.5,
+      "s_in": 0.5,
+      "w": 0.05,
+      "fraction": 0.2,
+      "rho": 6,
+      "kappa": 0.5,
+      "gamma": 1,
+      "theta": [
+        0,
+        -0.5,
+        -1,
+        1
+      ],
+      "rounds": 6
+    },
+    {
+      "mean_degree": 4,
+      "s_out": 0.5,
+      "s_in": 1.0,
+      "w": 0.2,
+      "fraction": 0.2,
+      "rho": 3,
+      "kappa": 1,
+      "gamma": 1,
+      "theta": [
+        -1,
+        0.5,
+        0,
+        0
+      ],
+      "rounds": 6
+    },
+    {
+      "mean_degree": 12,
+      "s_out": 0.35,
+      "s_in": 1.0,
+      "w": 0.5,
+      "fraction": 0.12,
+      "rho": 1,
+      "kappa": 1,
+      "gamma": 1,
+      "theta": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "rounds": 6
+    },
+    {
+      "mean_degree": 6,
+      "s_out": 0.35,
+      "s_in": 0.5,
+      "w": 0.2,
+      "fraction": 0.08,
+      "rho": 3,
+      "kappa": 2,
+      "gamma": 1,
+      "theta": [
+        -1,
+        -0.5,
+        -1,
+        1
+      ],
+      "rounds": 6
+    },
+    {
+      "mean_degree": 6,
+      "s_out": 0.5,
+      "s_in": 1.5,
+      "w": 0.2,
+      "fraction": 0.12,
+      "rho": 3,
+      "kappa": 2,
+      "gamma": 2,
+      "theta": [
+        -1,
+        0.5,
+        0,
+        -1
+      ],
+      "rounds": 6
+    },
+    {
+      "mean_degree": 6,
+      "s_out": 0.5,
+      "s_in": 1.0,
+      "w": 0.2,
+      "fraction": 0.12,
+      "rho": 6,
+      "kappa": 2,
+      "gamma": 2,
+      "theta": [
+        0,
+        0,
+        0,
+        -1
+      ],
+      "rounds": 6
+    },
+    {
+      "mean_degree": 4,
+      "s_out": 0.2,
+      "s_in": 1.0,
+      "w": 0.2,
+      "fraction": 0.08,
+      "rho": 6,
+      "kappa": 1.5,
+      "gamma": 1,
+      "theta": [
+        -1,
+        0.5,
+        1,
+        1
+      ],
+      "rounds": 6
+    },
+    {
+      "mean_degree": 6,
+      "s_out": 0.2,
+      "s_in": 1.0,
+      "w": 0.5,
+      "fraction": 0.2,
+      "rho": 1,
+      "kappa": 2,
+      "gamma": 0.5,
+      "theta": [
+        1,
+        -0.5,
+        -1,
+        0
+      ],
+      "rounds": 6
+    },
+    {
+      "mean_degree": 6,
+      "s_out": 0.5,
+      "s_in": 0.5,
+      "w": 0.05,
+      "fraction": 0.08,
+      "rho": 1,
+      "kappa": 0.5,
+      "gamma": 2,
+      "theta": [
+        1,
+        0.5,
+        0,
+        1
+      ],
+      "rounds": 6
+    },
+    {
+      "mean_degree": 4,
+      "s_out": 0.35,
+      "s_in": 0.5,
+      "w": 0.05,
+      "fraction": 0.12,
+      "rho": 6,
+      "kappa": 1,
+      "gamma": 1,
+      "theta": [
+        0,
+        0.5,
+        1,
+        -1
+      ],
+      "rounds": 6
+    },
+    {
+      "mean_degree": 4,
+      "s_out": 0.5,
+      "s_in": 0.5,
+      "w": 0.05,
+      "fraction": 0.12,
+      "rho": 3,
+      "kappa": 2,
+      "gamma": 2,
+      "theta": [
+        1,
+        0,
+        0,
+        -1
+      ],
+      "rounds": 6
+    },
+    {
+      "mean_degree": 12,
+      "s_out": 0.2,
+      "s_in": 1.5,
+      "w": 0.5,
+      "fraction": 0.08,
+      "rho": 6,
+      "kappa": 1.5,
+      "gamma": 2,
+      "theta": [
+        -1,
+        0,
+        -1,
+        1
+      ],
+      "rounds": 6
+    },
+    {
+      "mean_degree": 4,
+      "s_out": 0.35,
+      "s_in": 1.0,
+      "w": 0.5,
+      "fraction": 0.16,
+      "rho": 3,
+      "kappa": 0.5,
+      "gamma": 1,
+      "theta": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "rounds": 6
+    },
+    {
+      "mean_degree": 6,
+      "s_out": 0.5,
+      "s_in": 1.0,
+      "w": 0.05,
+      "fraction": 0.16,
+      "rho": 1,
+      "kappa": 1,
+      "gamma": 2,
+      "theta": [
+        -1,
+        -0.5,
+        1,
+        1
+      ],
+      "rounds": 6
+    },
+    {
+      "mean_degree": 8,
+      "s_out": 0.5,
+      "s_in": 1.5,
+      "w": 0.5,
+      "fraction": 0.16,
+      "rho": 6,
+      "kappa": 1,
+      "gamma": 1,
+      "theta": [
+        1,
+        0,
+        -1,
+        0
+      ],
+      "rounds": 6
+    },
+    {
+      "mean_degree": 12,
+      "s_out": 0.35,
+      "s_in": 1.0,
+      "w": 0.2,
+      "fraction": 0.16,
+      "rho": 6,
+      "kappa": 2,
+      "gamma": 1,
+      "theta": [
+        0,
+        0.5,
+        -1,
+        1
+      ],
+      "rounds": 6
+    },
+    {
+      "mean_degree": 4,
+      "s_out": 0.2,
+      "s_in": 0.5,
+      "w": 0.5,
+      "fraction": 0.2,
+      "rho": 6,
+      "kappa": 0.5,
+      "gamma": 2,
+      "theta": [
+        0,
+        -0.5,
+        0,
+        1
+      ],
+      "rounds": 6
+    },
+    {
+      "mean_degree": 8,
+      "s_out": 0.2,
+      "s_in": 1.0,
+      "w": 0.2,
+      "fraction": 0.16,
+      "rho": 3,
+      "kappa": 0.5,
+      "gamma": 0.5,
+      "theta": [
+        1,
+        0.5,
+        1,
+        1
+      ],
+      "rounds": 6
+    },
+    {
+      "mean_degree": 6,
+      "s_out": 0.5,
+      "s_in": 0.5,
+      "w": 0.5,
+      "fraction": 0.12,
+      "rho": 1,
+      "kappa": 1.5,
+      "gamma": 0.5,
+      "theta": [
+        0,
+        -0.5,
+        -1,
+        -1
+      ],
+      "rounds": 6
+    },
+    {
+      "mean_degree": 12,
+      "s_out": 0.2,
+      "s_in": 1.5,
+      "w": 0.05,
+      "fraction": 0.12,
+      "rho": 3,
+      "kappa": 0.5,
+      "gamma": 1,
+      "theta": [
+        -1,
+        -0.5,
+        0,
+        1
+      ],
+      "rounds": 6
+    },
+    {
+      "mean_degree": 6,
+      "s_out": 0.35,
+      "s_in": 1.0,
+      "w": 0.2,
+      "fraction": 0.2,
+      "rho": 3,
+      "kappa": 1,
+      "gamma": 1,
+      "theta": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "rounds": 6
+    },
+    {
+      "mean_degree": 6,
+      "s_out": 0.5,
+      "s_in": 1.5,
+      "w": 0.2,
+      "fraction": 0.16,
+      "rho": 6,
+      "kappa": 0.5,
+      "gamma": 0.5,
+      "theta": [
+        -1,
+        0,
+        -1,
+        -1
+      ],
+      "rounds": 6
+    },
+    {
+      "mean_degree": 4,
+      "s_out": 0.35,
+      "s_in": 1.0,
+      "w": 0.05,
+      "fraction": 0.08,
+      "rho": 1,
+      "kappa": 1,
+      "gamma": 0.5,
+      "theta": [
+        -1,
+        0,
+        1,
+        0
+      ],
+      "rounds": 6
+    },
+    {
+      "mean_degree": 4,
+      "s_out": 0.35,
+      "s_in": 1.5,
+      "w": 0.05,
+      "fraction": 0.12,
+      "rho": 3,
+      "kappa": 2,
+      "gamma": 1,
+      "theta": [
+        -1,
+        0.5,
+        -1,
+        0
+      ],
+      "rounds": 6
+    },
+    {
+      "mean_degree": 12,
+      "s_out": 0.5,
+      "s_in": 1.0,
+      "w": 0.05,
+      "fraction": 0.12,
+      "rho": 3,
+      "kappa": 1.5,
+      "gamma": 2,
+      "theta": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "rounds": 6
+    },
+    {
+      "mean_degree": 12,
+      "s_out": 0.35,
+      "s_in": 0.5,
+      "w": 0.5,
+      "fraction": 0.12,
+      "rho": 1,
+      "kappa": 2,
+      "gamma": 2,
+      "theta": [
+        0,
+        0.5,
+        0,
+        -1
+      ],
+      "rounds": 6
+    },
+    {
+      "mean_degree": 12,
+      "s_out": 0.2,
+      "s_in": 1.5,
+      "w": 0.05,
+      "fraction": 0.12,
+      "rho": 3,
+      "kappa": 1,
+      "gamma": 2,
+      "theta": [
+        0,
+        0.5,
+        -1,
+        -1
+      ],
+      "rounds": 6
+    },
+    {
+      "mean_degree": 4,
+      "s_out": 0.5,
+      "s_in": 1.0,
+      "w": 0.05,
+      "fraction": 0.16,
+      "rho": 1,
+      "kappa": 1.5,
+      "gamma": 1,
+      "theta": [
+        -1,
+        0,
+        1,
+        0
+      ],
+      "rounds": 6
+    },
+    {
+      "mean_degree": 6,
+      "s_out": 0.2,
+      "s_in": 0.5,
+      "w": 0.2,
+      "fraction": 0.16,
+      "rho": 1,
+      "kappa": 0.5,
+      "gamma": 1,
+      "theta": [
+        0,
+        0.5,
+        1,
+        1
+      ],
+      "rounds": 6
+    },
+    {
+      "mean_degree": 8,
+      "s_out": 0.35,
+      "s_in": 1.0,
+      "w": 0.5,
+      "fraction": 0.12,
+      "rho": 1,
+      "kappa": 1.5,
+      "gamma": 0.5,
+      "theta": [
+        1,
+        -0.5,
+        0,
+        -1
+      ],
+      "rounds": 6
+    },
+    {
+      "mean_degree": 8,
+      "s_out": 0.35,
+      "s_in": 1.0,
+      "w": 0.5,
+      "fraction": 0.12,
+      "rho": 6,
+      "kappa": 0.5,
+      "gamma": 0.5,
+      "theta": [
+        -1,
+        0,
+        -1,
+        -1
+      ],
+      "rounds": 6
+    },
+    {
+      "mean_degree": 4,
+      "s_out": 0.2,
+      "s_in": 0.5,
+      "w": 0.5,
+      "fraction": 0.12,
+      "rho": 6,
+      "kappa": 0.5,
+      "gamma": 0.5,
+      "theta": [
+        -1,
+        -0.5,
+        -1,
+        -1
+      ],
+      "rounds": 6
+    },
+    {
+      "mean_degree": 6,
+      "s_out": 0.2,
+      "s_in": 1.0,
+      "w": 0.2,
+      "fraction": 0.2,
+      "rho": 6,
+      "kappa": 1.5,
+      "gamma": 2,
+      "theta": [
+        -1,
+        -0.5,
+        -1,
+        0
+      ],
+      "rounds": 6
+    },
+    {
+      "mean_degree": 8,
+      "s_out": 0.35,
+      "s_in": 0.5,
+      "w": 0.2,
+      "fraction": 0.08,
+      "rho": 3,
+      "kappa": 0.5,
+      "gamma": 0.5,
+      "theta": [
+        1,
+        0,
+        1,
+        1
+      ],
+      "rounds": 6
+    },
+    {
+      "mean_degree": 6,
+      "s_out": 0.5,
+      "s_in": 1.5,
+      "w": 0.5,
+      "fraction": 0.08,
+      "rho": 6,
+      "kappa": 0.5,
+      "gamma": 1,
+      "theta": [
+        0,
+        0.5,
+        1,
+        -1
+      ],
+      "rounds": 6
+    },
+    {
+      "mean_degree": 6,
+      "s_out": 0.2,
+      "s_in": 1.5,
+      "w": 0.5,
+      "fraction": 0.16,
+      "rho": 3,
+      "kappa": 2,
+      "gamma": 1,
+      "theta": [
+        -1,
+        -0.5,
+        0,
+        -1
+      ],
+      "rounds": 6
+    },
+    {
+      "mean_degree": 6,
+      "s_out": 0.2,
+      "s_in": 1.5,
+      "w": 0.05,
+      "fraction": 0.12,
+      "rho": 3,
+      "kappa": 2,
+      "gamma": 0.5,
+      "theta": [
+        -1,
+        0,
+        0,
+        1
+      ],
+      "rounds": 6
+    },
+    {
+      "mean_degree": 12,
+      "s_out": 0.35,
+      "s_in": 0.5,
+      "w": 0.05,
+      "fraction": 0.2,
+      "rho": 1,
+      "kappa": 1.5,
+      "gamma": 2,
+      "theta": [
+        -1,
+        0.5,
+        -1,
+        -1
+      ],
+      "rounds": 6
+    },
+    {
+      "mean_degree": 12,
+      "s_out": 0.35,
+      "s_in": 1.0,
+      "w": 0.2,
+      "fraction": 0.16,
+      "rho": 6,
+      "kappa": 0.5,
+      "gamma": 1,
+      "theta": [
+        1,
+        0,
+        -1,
+        0
+      ],
+      "rounds": 6
+    },
+    {
+      "mean_degree": 12,
+      "s_out": 0.5,
+      "s_in": 0.5,
+      "w": 0.05,
+      "fraction": 0.08,
+      "rho": 3,
+      "kappa": 1,
+      "gamma": 0.5,
+      "theta": [
+        1,
+        -0.5,
+        1,
+        1
+      ],
+      "rounds": 6
+    },
+    {
+      "mean_degree": 8,
+      "s_out": 0.5,
+      "s_in": 0.5,
+      "w": 0.05,
+      "fraction": 0.2,
+      "rho": 6,
+      "kappa": 0.5,
+      "gamma": 0.5,
+      "theta": [
+        0,
+        -0.5,
+        -1,
+        -1
+      ],
+      "rounds": 6
+    },
+    {
+      "mean_degree": 8,
+      "s_out": 0.5,
+      "s_in": 1.5,
+      "w": 0.5,
+      "fraction": 0.2,
+      "rho": 3,
+      "kappa": 1.5,
+      "gamma": 0.5,
+      "theta": [
+        0,
+        0.5,
+        0,
+        -1
+      ],
+      "rounds": 6
+    },
+    {
+      "mean_degree": 6,
+      "s_out": 0.35,
+      "s_in": 1.5,
+      "w": 0.05,
+      "fraction": 0.16,
+      "rho": 6,
+      "kappa": 1,
+      "gamma": 1,
+      "theta": [
+        1,
+        0,
+        -1,
+        -1
+      ],
+      "rounds": 6
+    },
+    {
+      "mean_degree": 12,
+      "s_out": 0.5,
+      "s_in": 1.5,
+      "w": 0.2,
+      "fraction": 0.12,
+      "rho": 3,
+      "kappa": 2,
+      "gamma": 0.5,
+      "theta": [
+        1,
+        0,
+        1,
+        1
+      ],
+      "rounds": 6
+    },
+    {
+      "mean_degree": 12,
+      "s_out": 0.35,
+      "s_in": 1.0,
+      "w": 0.05,
+      "fraction": 0.2,
+      "rho": 3,
+      "kappa": 0.5,
+      "gamma": 1,
+      "theta": [
+        0,
+        -0.5,
+        0,
+        0
+      ],
+      "rounds": 6
+    },
+    {
+      "mean_degree": 8,
+      "s_out": 0.5,
+      "s_in": 0.5,
+      "w": 0.05,
+      "fraction": 0.16,
+      "rho": 3,
+      "kappa": 2,
+      "gamma": 0.5,
+      "theta": [
+        0,
+        0,
+        0,
+        -1
+      ],
+      "rounds": 6
+    },
+    {
+      "mean_degree": 6,
+      "s_out": 0.5,
+      "s_in": 1.0,
+      "w": 0.5,
+      "fraction": 0.12,
+      "rho": 6,
+      "kappa": 1.5,
+      "gamma": 2,
+      "theta": [
+        1,
+        -0.5,
+        -1,
+        1
+      ],
+      "rounds": 6
+    },
+    {
+      "mean_degree": 12,
+      "s_out": 0.35,
+      "s_in": 1.0,
+      "w": 0.05,
+      "fraction": 0.12,
+      "rho": 1,
+      "kappa": 2,
+      "gamma": 1,
+      "theta": [
+        -1,
+        0,
+        -1,
+        -1
+      ],
+      "rounds": 6
+    },
+    {
+      "mean_degree": 4,
+      "s_out": 0.2,
+      "s_in": 0.5,
+      "w": 0.5,
+      "fraction": 0.08,
+      "rho": 1,
+      "kappa": 0.5,
+      "gamma": 2,
+      "theta": [
+        1,
+        -0.5,
+        -1,
+        -1
+      ],
+      "rounds": 6
+    },
+    {
+      "mean_degree": 12,
+      "s_out": 0.2,
+      "s_in": 1.0,
+      "w": 0.2,
+      "fraction": 0.08,
+      "rho": 1,
+      "kappa": 1.5,
+      "gamma": 2,
+      "theta": [
+        0,
+        -0.5,
+        0,
+        1
+      ],
+      "rounds": 6
+    },
+    {
+      "mean_degree": 8,
+      "s_out": 0.5,
+      "s_in": 0.5,
+      "w": 0.5,
+      "fraction": 0.08,
+      "rho": 3,
+      "kappa": 0.5,
+      "gamma": 2,
+      "theta": [
+        0,
+        0,
+        1,
+        -1
+      ],
+      "rounds": 6
+    },
+    {
+      "mean_degree": 12,
+      "s_out": 0.35,
+      "s_in": 0.5,
+      "w": 0.5,
+      "fraction": 0.16,
+      "rho": 6,
+      "kappa": 1.5,
+      "gamma": 0.5,
+      "theta": [
+        1,
+        0,
+        1,
+        -1
+      ],
+      "rounds": 6
+    },
+    {
+      "mean_degree": 12,
+      "s_out": 0.5,
+      "s_in": 0.5,
+      "w": 0.2,
+      "fraction": 0.08,
+      "rho": 1,
+      "kappa": 0.5,
+      "gamma": 0.5,
+      "theta": [
+        0,
+        0,
+        1,
+        -1
+      ],
+      "rounds": 6
+    },
+    {
+      "mean_degree": 8,
+      "s_out": 0.2,
+      "s_in": 1.5,
+      "w": 0.5,
+      "fraction": 0.12,
+      "rho": 6,
+      "kappa": 1,
+      "gamma": 1,
+      "theta": [
+        1,
+        -0.5,
+        1,
+        1
+      ],
+      "rounds": 6
+    },
+    {
+      "mean_degree": 12,
+      "s_out": 0.35,
+      "s_in": 1.0,
+      "w": 0.5,
+      "fraction": 0.12,
+      "rho": 1,
+      "kappa": 1,
+      "gamma": 1,
+      "theta": [
+        1,
+        0,
+        1,
+        0
+      ],
+      "rounds": 6
+    },
+    {
+      "mean_degree": 6,
+      "s_out": 0.35,
+      "s_in": 1.0,
+      "w": 0.5,
+      "fraction": 0.12,
+      "rho": 6,
+      "kappa": 1.5,
+      "gamma": 1,
+      "theta": [
+        1,
+        -0.5,
+        1,
+        1
+      ],
+      "rounds": 6
+    },
+    {
+      "mean_degree": 12,
+      "s_out": 0.5,
+      "s_in": 0.5,
+      "w": 0.2,
+      "fraction": 0.2,
+      "rho": 1,
+      "kappa": 1,
+      "gamma": 2,
+      "theta": [
+        0,
+        0.5,
+        1,
+        1
+      ],
+      "rounds": 6
+    },
+    {
+      "mean_degree": 6,
+      "s_out": 0.2,
+      "s_in": 1.0,
+      "w": 0.5,
+      "fraction": 0.2,
+      "rho": 1,
+      "kappa": 1.5,
+      "gamma": 2,
+      "theta": [
+        1,
+        0.5,
+        -1,
+        1
+      ],
+      "rounds": 6
+    },
+    {
+      "mean_degree": 8,
+      "s_out": 0.5,
+      "s_in": 0.5,
+      "w": 0.5,
+      "fraction": 0.12,
+      "rho": 6,
+      "kappa": 2,
+      "gamma": 1,
+      "theta": [
+        1,
+        0,
+        1,
+        1
+      ],
+      "rounds": 6
+    },
+    {
+      "mean_degree": 8,
+      "s_out": 0.2,
+      "s_in": 1.5,
+      "w": 0.2,
+      "fraction": 0.2,
+      "rho": 1,
+      "kappa": 0.5,
+      "gamma": 2,
+      "theta": [
+        1,
+        0,
+        1,
+        0
+      ],
+      "rounds": 6
+    },
+    {
+      "mean_degree": 6,
+      "s_out": 0.5,
+      "s_in": 1.0,
+      "w": 0.05,
+      "fraction": 0.2,
+      "rho": 3,
+      "kappa": 0.5,
+      "gamma": 1,
+      "theta": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "rounds": 6
+    },
+    {
+      "mean_degree": 6,
+      "s_out": 0.5,
+      "s_in": 1.5,
+      "w": 0.05,
+      "fraction": 0.12,
+      "rho": 6,
+      "kappa": 1.5,
+      "gamma": 2,
+      "theta": [
+        0,
+        0.5,
+        -1,
+        0
+      ],
+      "rounds": 6
+    },
+    {
+      "mean_degree": 12,
+      "s_out": 0.2,
+      "s_in": 1.5,
+      "w": 0.2,
+      "fraction": 0.2,
+      "rho": 1,
+      "kappa": 2,
+      "gamma": 1,
+      "theta": [
+        -1,
+        0.5,
+        -1,
+        1
+      ],
+      "rounds": 6
+    },
+    {
+      "mean_degree": 8,
+      "s_out": 0.2,
+      "s_in": 0.5,
+      "w": 0.05,
+      "fraction": 0.12,
+      "rho": 1,
+      "kappa": 0.5,
+      "gamma": 1,
+      "theta": [
+        1,
+        0,
+        -1,
+        1
+      ],
+      "rounds": 6
+    },
+    {
+      "mean_degree": 4,
+      "s_out": 0.5,
+      "s_in": 0.5,
+      "w": 0.2,
+      "fraction": 0.16,
+      "rho": 6,
+      "kappa": 2,
+      "gamma": 2,
+      "theta": [
+        -1,
+        0.5,
+        0,
+        -1
+      ],
+      "rounds": 6
+    },
+    {
+      "mean_degree": 12,
+      "s_out": 0.2,
+      "s_in": 0.5,
+      "w": 0.05,
+      "fraction": 0.16,
+      "rho": 1,
+      "kappa": 1.5,
+      "gamma": 2,
+      "theta": [
+        -1,
+        0.5,
+        1,
+        -1
+      ],
+      "rounds": 6
+    },
+    {
+      "mean_degree": 6,
+      "s_out": 0.35,
+      "s_in": 0.5,
+      "w": 0.05,
+      "fraction": 0.08,
+      "rho": 6,
+      "kappa": 1.5,
+      "gamma": 2,
+      "theta": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "rounds": 6
+    },
+    {
+      "mean_degree": 12,
+      "s_out": 0.2,
+      "s_in": 1.0,
+      "w": 0.2,
+      "fraction": 0.08,
+      "rho": 6,
+      "kappa": 1,
+      "gamma": 0.5,
+      "theta": [
+        1,
+        0.5,
+        -1,
+        0
+      ],
+      "rounds": 6
+    },
+    {
+      "mean_degree": 6,
+      "s_out": 0.2,
+      "s_in": 1.0,
+      "w": 0.5,
+      "fraction": 0.2,
+      "rho": 3,
+      "kappa": 0.5,
+      "gamma": 2,
+      "theta": [
+        1,
+        0,
+        1,
+        0
+      ],
+      "rounds": 6
+    },
+    {
+      "mean_degree": 6,
+      "s_out": 0.35,
+      "s_in": 0.5,
+      "w": 0.05,
+      "fraction": 0.2,
+      "rho": 3,
+      "kappa": 1.5,
+      "gamma": 1,
+      "theta": [
+        -1,
+        -0.5,
+        1,
+        0
+      ],
+      "rounds": 6
+    },
+    {
+      "mean_degree": 4,
+      "s_out": 0.2,
+      "s_in": 0.5,
+      "w": 0.5,
+      "fraction": 0.08,
+      "rho": 6,
+      "kappa": 1.5,
+      "gamma": 2,
+      "theta": [
+        1,
+        0,
+        0,
+        -1
+      ],
+      "rounds": 6
+    },
+    {
+      "mean_degree": 8,
+      "s_out": 0.5,
+      "s_in": 0.5,
+      "w": 0.2,
+      "fraction": 0.08,
+      "rho": 6,
+      "kappa": 1,
+      "gamma": 0.5,
+      "theta": [
+        1,
+        0,
+        0,
+        -1
+      ],
+      "rounds": 6
+    }
+  ],
+  "selection": "Prefer tail Q >= .25; penalize larger minority and speech advantage; do not optimize TH-TL differences"
+}

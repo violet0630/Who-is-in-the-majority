@@ -1,0 +1,20 @@
+[
+  {
+    "test": "simple_json",
+    "ok": true,
+    "seconds": 1.32,
+    "requested_model": "deepseek-v4-flash",
+    "returned_model": "deepseek-flash",
+    "finish_reason": "stop"
+  },
+  {
+    "test": "real_perception",
+    "ok": true,
+    "seconds": 1.69,
+    "requested_model": "deepseek-v4-flash",
+    "returned_model": "deepseek-flash",
+    "finish_reason": "stop",
+    "support": 0.32,
+    "evidence_valid": true
+  }
+]

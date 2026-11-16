@@ -2,6 +2,18 @@
 
 # Who is in the majority?
 
+## 2026-11-16 三步实验
+
+已完成50条原创/200条评论、N=100初始化搜索，以及N=1000、50名观察者、27组10轮的连接位置实验。TH末3轮误判均值46.5%，选作后续位置初始化；TH−TL为+7.5个百分点，95% CI [+2.4,+13.2]，Holm p=0.1172。
+
+- [三步实验结果与结论（Markdown）](docs/三步实验结果与结论.md)
+- [完整实验归档与复现](experiments/2026-11-16/README.md)
+- [选定初始化](configs/initialized_20261116.json)
+
+安装实验依赖使用`python -m pip install -e ".[experiments]"`；核对保存结果使用`python -m scripts.verify_results`，重建图表与汇总使用`python -m scripts.summarize_study`。API配置见`.env.example`，实际密钥只在本地提供。
+
+以下为基础框架使用说明。
+
 多数幻觉与公开表达实验。数据结构、轮次语义和扩展边界见 [DESIGN.md](DESIGN.md)。
 
 当前设定写在 `configs/study.json`：**2024 年美国总统大选投票前，少数倡议者反对特朗普当选，其余节点初始支持**；私人立场在主实验中固定。LLM 输出始终是“支持特朗普当选的人数比例”，多数幻觉统计检查是否误认为反对者占多数。

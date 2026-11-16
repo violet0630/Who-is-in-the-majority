@@ -1,0 +1,84 @@
+{
+  "positions": {
+    "U0": [
+      6,
+      7,
+      18,
+      32,
+      36,
+      38,
+      44,
+      50,
+      54,
+      60,
+      63,
+      73,
+      75,
+      92,
+      95,
+      99
+    ],
+    "TH": [
+      6,
+      7,
+      18,
+      32,
+      38,
+      44,
+      50,
+      51,
+      54,
+      60,
+      63,
+      73,
+      75,
+      92,
+      95,
+      99
+    ],
+    "TL": [
+      6,
+      18,
+      32,
+      38,
+      42,
+      44,
+      50,
+      51,
+      54,
+      60,
+      63,
+      73,
+      75,
+      92,
+      95,
+      99
+    ]
+  },
+  "diagnostics": {
+    "U0": {
+      "illusion": 0.0,
+      "fan_total": 246,
+      "fan_union": 96,
+      "baseline_total": 3.1117946989181093,
+      "observer_illusion": 0.0,
+      "advocate_strong_count": 10
+    },
+    "TH": {
+      "illusion": 0.0,
+      "fan_total": 250,
+      "fan_union": 96,
+      "baseline_total": 3.1703113584488243,
+      "observer_illusion": 0.0,
+      "advocate_strong_count": 10
+    },
+    "TL": {
+      "illusion": 0.0,
+      "fan_total": 244,
+      "fan_union": 95,
+      "baseline_total": 3.1311208363397216,
+      "observer_illusion": 0.0,
+      "advocate_strong_count": 10
+    }
+  }
+}

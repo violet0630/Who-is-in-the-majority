@@ -1,0 +1,22 @@
+{
+  "recorded_at": "2026-11-16T14:33:41.245705+08:00",
+  "planned_rounds": 10,
+  "analysis_horizon": 8,
+  "user_permitted_rounds": [
+    5,
+    10
+  ],
+  "reason": "Configured gateway returned HTTP 502: Request failed on all available accounts; short health checks also failed after concurrency stopped.",
+  "rule": "Use the longest common completed prefix across all 27 runs, before calculating inference.",
+  "primary_window": [
+    6,
+    7,
+    8
+  ],
+  "early_window": [
+    3,
+    4,
+    5
+  ],
+  "original_attempts_retained": true
+}

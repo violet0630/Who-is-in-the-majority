@@ -1,0 +1,11 @@
+{
+  "old_gateway_model": "deepseek-flash",
+  "new_gateway_request_model": "deepseek-v4-flash",
+  "returned_model_both": "deepseek-flash",
+  "alias_mapping": {
+    "deepseek-flash": "deepseek-v4-flash"
+  },
+  "original_completed_round_metrics_checked_for_exact_equality": true,
+  "max_actual_gateway_concurrency": 16,
+  "resume_runner_sha256": "955e92468b305d6d1b70d6ba6989553bcda60e49fb85f5735a0e05ae28d2446e"
+}

@@ -1,0 +1,42 @@
+{
+  "reason": "increase minority fraction moderately while keeping the simpler stable candidate's remaining parameters",
+  "target": "tail Q >= .25; prefer the smaller fraction that reaches this observability target",
+  "candidates": [
+    {
+      "mean_degree": 12,
+      "s_out": 0.35,
+      "s_in": 1.0,
+      "w": 0.2,
+      "fraction": 0.2,
+      "rho": 6,
+      "kappa": 0.5,
+      "gamma": 1,
+      "theta": [
+        1,
+        0,
+        -1,
+        0
+      ],
+      "rounds": 6,
+      "llm_workers": 24
+    },
+    {
+      "mean_degree": 12,
+      "s_out": 0.35,
+      "s_in": 1.0,
+      "w": 0.2,
+      "fraction": 0.24,
+      "rho": 6,
+      "kappa": 0.5,
+      "gamma": 1,
+      "theta": [
+        1,
+        0,
+        -1,
+        0
+      ],
+      "rounds": 6,
+      "llm_workers": 24
+    }
+  ]
+}

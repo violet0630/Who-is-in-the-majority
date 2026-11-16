@@ -1,0 +1,60 @@
+{
+  "size": 1000,
+  "observers": 50,
+  "networks": 3,
+  "groups_per_network": 3,
+  "branches": [
+    "TH",
+    "TL",
+    "U0"
+  ],
+  "settings": {
+    "mean_degree": 12,
+    "s_out": 0.35,
+    "s_in": 1.0,
+    "w": 0.2,
+    "fraction": 0.2,
+    "rho": 6,
+    "kappa": 0.5,
+    "gamma": 1,
+    "theta": [
+      1,
+      0,
+      -1,
+      0
+    ],
+    "rounds": 10,
+    "llm_workers": 4,
+    "tail_rounds": 3,
+    "window": 2,
+    "read_limit": 5,
+    "cross_fan_comments": true,
+    "community_fractions": [
+      0.15,
+      0.2,
+      0.25,
+      0.4
+    ]
+  },
+  "primary_outcome": "mean observer perceived_majority over rounds 8 to 10",
+  "comparisons": [
+    [
+      "TH",
+      "TL"
+    ],
+    [
+      "TH",
+      "U0"
+    ],
+    [
+      "TL",
+      "U0"
+    ]
+  ],
+  "statistics": "10000 graph-stratified paired-group bootstrap draws; exact paired sign-flip test; Holm adjustment",
+  "time_analysis": "compare mean Q in rounds 8-10 with rounds 3-5; Holm adjustment across three branches",
+  "inference_population": "independent profile/process groups conditional on the three generated networks",
+  "selection_rule": "choose branch with largest graph-equally-weighted mean Q as subsequent position initialization",
+  "seed_pairing": "5% maximum pairwise fan-total, baseline-total, and rho-adjusted initial speech-total difference; preserve community/strength quotas",
+  "seed_objective": "structural IG on all ordinary nodes, not observer LLM outcomes"
+}

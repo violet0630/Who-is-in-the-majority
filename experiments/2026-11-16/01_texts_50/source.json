@@ -1,0 +1,17 @@
+{
+  "source": "D:\\ProgramData\\codex\\2026-11-16\\q-ni\\outputs\\majority_experiments_20261116\\01_texts\\bank.json",
+  "source_sha256": "1e37aa760f0e18bf74fa51bad4068f1ce71bb6587cef150dea1df13b75043df8",
+  "llm": {
+    "base_url": "https://api.1nvictus.me/v1",
+    "model": "deepseek-flash",
+    "timeout": 60.0,
+    "max_tokens": 4096
+  },
+  "originals_per_side": 25,
+  "comments_per_relation": 2,
+  "prompt_hashes": {
+    "originals": "52e268a3c898848f959516abdc24e9dbeb1839cf8d7cf2f37ef249fdede5e15a",
+    "comments": "94095dc8e36bf58fc6682f541a47b2e9e03f1780ce6c96fc9263838452f43923",
+    "perception": "0809e60460beed212da687b21e2569d9946088fdb3ae09ec061cb6ff64a07e6d"
+  }
+}

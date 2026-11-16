@@ -20,6 +20,23 @@ from .storage import write_record
 T = TypeVar("T")
 
 
+def canonical_model(model: str) -> str:
+    if model in {"deepseek-flash", "deepseek-v4-flash"}:
+        return "deepseek-flash"
+    return model
+
+
+def gateway_model(base_url: str, model: str) -> str:
+    if canonical_model(model) != "deepseek-flash":
+        return model
+    url = urlsplit(base_url)
+    if url.hostname == "api.1nvictus.me":
+        return "deepseek-flash"
+    if url.hostname in {"127.0.0.1", "localhost"} and url.port == 3000:
+        return "deepseek-v4-flash"
+    return model
+
+
 @dataclass(frozen=True)
 class LLMConfig:
     base_url: str = "http://127.0.0.1:3000/v1"
@@ -35,6 +52,7 @@ class LLMConfig:
             raise ValueError("SDK base_url 应以 /v1 结尾，不包含 /chat/completions")
         if self.timeout <= 0 or self.max_tokens < 1 or not self.model.strip():
             raise ValueError("模型、超时或最大输出长度无效")
+        object.__setattr__(self, "model", gateway_model(self.base_url, self.model))
 
 
 def load_settings(env_path: Path = Path(".env")) -> tuple[LLMConfig, str]:
@@ -87,7 +105,7 @@ class JsonChat:
                 item = json.loads(line)["data"]
                 if item["status"] == "ok":
                     key = json.dumps([item["task"], item["payload"], item["context"], item["prompt_sha256"],
-                                      item["model"], item["temperature"], item["max_tokens"]], sort_keys=True)
+                                      canonical_model(item["model"]), item["temperature"], item["max_tokens"]], sort_keys=True)
                     self.reuse[key] = item["response"]
 
     def _record(self, record: dict) -> None:
@@ -102,6 +120,7 @@ class JsonChat:
         system = load_prompt(prompt)
         record = {
             "task": prompt, "context": context or {}, "model": self.config.model,
+            "canonical_model": canonical_model(self.config.model),
             "prompt_sha256": hashlib.sha256(system.encode("utf-8")).hexdigest(),
             "temperature": temperature, "max_tokens": self.config.max_tokens,
             "payload": payload,
@@ -109,7 +128,7 @@ class JsonChat:
         start = perf_counter()
         try:
             key = json.dumps([prompt, payload, record["context"], record["prompt_sha256"],
-                              record["model"], temperature, record["max_tokens"]], sort_keys=True)
+                              canonical_model(record["model"]), temperature, record["max_tokens"]], sort_keys=True)
             record["reused"] = key in self.reuse
             if record["reused"]:
                 response = ChatCompletion.model_validate(self.reuse[key])

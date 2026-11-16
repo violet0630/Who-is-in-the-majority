@@ -1,0 +1,33 @@
+{
+  "size": 1000,
+  "seed": 20001,
+  "diagnostics": {
+    "U0": {
+      "illusion": 0.0011904761904761906,
+      "fan_total": 1764,
+      "fan_union": 801,
+      "baseline_total": 34.37424130906426,
+      "observer_illusion": 0.0,
+      "advocate_strong_count": 93,
+      "initial_expected_advocate_speakers": 62.02271441545138
+    },
+    "TH": {
+      "illusion": 0.05,
+      "fan_total": 1806,
+      "fan_union": 801,
+      "baseline_total": 35.1284309395804,
+      "observer_illusion": 0.02,
+      "advocate_strong_count": 93,
+      "initial_expected_advocate_speakers": 63.37955454946743
+    },
+    "TL": {
+      "illusion": 0.0,
+      "fan_total": 1724,
+      "fan_union": 788,
+      "baseline_total": 33.770290830430085,
+      "observer_illusion": 0.0,
+      "advocate_strong_count": 93,
+      "initial_expected_advocate_speakers": 61.042418864345294
+    }
+  }
+}

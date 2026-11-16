@@ -1,0 +1,34 @@
+{
+  "steps": 20000,
+  "restarts": 4,
+  "seconds": 19.43366019999985,
+  "diagnostics": {
+    "U0": {
+      "illusion": 0.0011904761904761906,
+      "fan_total": 1764,
+      "fan_union": 801,
+      "baseline_total": 34.37424130906426,
+      "observer_illusion": 0.0,
+      "advocate_strong_count": 93,
+      "initial_expected_advocate_speakers": 62.02271441545138
+    },
+    "TH": {
+      "illusion": 0.06785714285714285,
+      "fan_total": 1797,
+      "fan_union": 792,
+      "baseline_total": 34.12722243791446,
+      "observer_illusion": 0.06,
+      "advocate_strong_count": 93,
+      "initial_expected_advocate_speakers": 62.782804679942615
+    },
+    "TL": {
+      "illusion": 0.0,
+      "fan_total": 1722,
+      "fan_union": 779,
+      "baseline_total": 34.03772470452146,
+      "observer_illusion": 0.0,
+      "advocate_strong_count": 93,
+      "initial_expected_advocate_speakers": 61.31414859567108
+    }
+  }
+}
