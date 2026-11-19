@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "name": "main2-count-activity-v1",
+  "baseline": "configs/initialized_20261116.json",
+  "archive": "experiments/2026-11-16",
+  "graphs": [0, 1, 2],
+  "repeats": [0, 1, 2],
+  "k_grid": [100, 160, 200, 240],
+  "rho_grid": [1, 3, 6],
+  "position_strategy": "TH",
+  "search": {
+    "reference_k": 200,
+    "reference_rho": 6,
+    "steps": 20000,
+    "restarts": 4,
+    "tolerance": 0.05,
+    "seed_namespace": "main2-position-v1"
+  },
+  "pilot": {"graph": 0, "repeat": 0, "k_grid": [100, 200, 240]},
+  "execution": {"run_workers": 2, "llm_workers": 4, "gateway_limit": 16},
+  "analysis": {
+    "bootstrap_repeats": 10000,
+    "seed": 2026111801,
+    "confidence_level": 0.95,
+    "test_alpha": 0.05,
+    "coverage_target": 0.8,
+    "primary_comparisons": ["count_endpoints", "activity_endpoints", "interaction_endpoints"]
+  }
+}
