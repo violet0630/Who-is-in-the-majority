@@ -174,5 +174,9 @@ class JsonChat:
 
 
 def open_client(config: LLMConfig, api_key: str) -> OpenAI:
+    import httpx
+    # 本机网关必须直达：Windows 系统代理(注册表)会把 localhost 请求转发给代理导致 502，
+    # 显式禁用 trust_env，绕过系统代理。
+    transport = httpx.Client(trust_env=False, timeout=config.timeout)
     return OpenAI(api_key=api_key, base_url=config.base_url,
-                  timeout=config.timeout, max_retries=0)
+                  http_client=transport, max_retries=0)
