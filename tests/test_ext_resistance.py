@@ -80,11 +80,12 @@ class PrivateUpdateTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             next(simulation.run())
 
-    def test_missing_new_stance_raises(self):
-        """private_update=True 而感知结果缺少 new_stance（如误用 v1 提示词）必须报错，不静默。"""
+    def test_missing_new_stance_skips_node(self):
+        """new_stance 为 None 的节点（如非观察者）在更新开启时不更新也不报错；
+        观察者的 new_stance 缺失由 attitude 解析层强制拒绝（见 AttitudeParseTests）。"""
         simulation = self.simulation(RunConfig(rounds=3, private_update=True), DemoPerception())
-        with self.assertRaises(ValueError):
-            next(simulation.run())
+        for record in simulation.run():
+            self.assertTrue(all(row.after.stance == row.before.stance for row in record.nodes))
 
 
 class AttitudeParseTests(unittest.TestCase):

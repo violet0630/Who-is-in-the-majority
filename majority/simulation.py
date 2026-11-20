@@ -115,9 +115,9 @@ class Simulation:
             reading = readings[node]
             result = results.get(node)
             after = replace(before, perceived_support=result.support) if result else before
-            if result is not None and self.config.private_update:
-                if result.new_stance is None:
-                    raise ValueError("private_update 开启时感知结果必须包含 new_stance")
+            if result is not None and self.config.private_update and result.new_stance is not None:
+                # new_stance 为 None 的节点（如非观察者）不更新；观察者缺字段由感知解析层保证
+                # （attitude 提示词解析强制四字段），非法值在此拦截。
                 if type(result.new_stance) is not int or result.new_stance not in (1, -1):
                     raise ValueError("私人立场更新必须是整数 1 或 -1")
                 if node not in self.advocates:
