@@ -1,11 +1,16 @@
+import gzip
+import json
 import unittest
 from dataclasses import replace
+from pathlib import Path
+from tempfile import TemporaryDirectory
 
 from examples.demo import DemoPerception, demo_inputs
 from majority.models import Action, Coefficients, RunConfig
 from majority.randomness import RandomStreams
 from majority.simulation import Simulation
 from scripts.ext_common import parse_attitude
+from scripts.ext_resistance import extract_conversions
 
 
 def flip_perception():
@@ -101,6 +106,32 @@ class AttitudeParseTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             parse_attitude({"support": 0.3, "reason": "x", "evidence_ids": ["m9"], "new_stance": 1},
                            {"m1"})
+
+
+class ConversionsTests(unittest.TestCase):
+    def test_extract_conversions_counts_flips_and_support(self):
+        lines = []
+        for round_number, stance_pairs in ((1, [(1, 1), (1, -1), (-1, -1)]),
+                                           (2, [(-1, 1), (-1, -1), (1, 1)])):
+            nodes = [{"node": i, "before": {"stance": before, "perceived_support": 0.5, "feedback_value": 0.0},
+                      "after": {"stance": after, "perceived_support": 0.5, "feedback_value": 0.0}}
+                     for i, (before, after) in enumerate(stance_pairs)]
+            lines.append(json.dumps({"kind": "round",
+                                     "data": {"round": round_number, "branch": "TH",
+                                              "published": [], "nodes": nodes,
+                                              "advocate_stance": -1}}))
+        with TemporaryDirectory() as directory:
+            path = Path(directory) / "trajectory.jsonl.gz"
+            with gzip.open(path, "wt", encoding="utf-8") as stream:
+                for line in lines:
+                    stream.write(line + "\n")
+            per_round = extract_conversions(path)
+        self.assertEqual(per_round[1]["flipped_to_oppose"], 1)
+        self.assertEqual(per_round[1]["flipped_to_support"], 0)
+        self.assertAlmostEqual(per_round[1]["true_support"], 2 / 3)
+        self.assertEqual(per_round[2]["flipped_to_oppose"], 0)
+        self.assertEqual(per_round[2]["flipped_to_support"], 1)
+        self.assertAlmostEqual(per_round[2]["true_support"], 1 / 3)
 
 
 if __name__ == "__main__":

@@ -1,0 +1,52 @@
+{
+  "experiment": "extension-1 individual resistance",
+  "date": "2026-11-20",
+  "base": "main experiment 1 frozen settings; TH positions; prompt perception_attitude (v2) in both conditions",
+  "conditions": {
+    "R0": {
+      "private_update": false,
+      "label": "坚持（固定私人立场）"
+    },
+    "R1": {
+      "private_update": true,
+      "label": "更新（LLM 每轮更新立场）"
+    }
+  },
+  "primary_outcome": "mean observer perceived_majority over rounds 8-10",
+  "secondary_outcomes": [
+    "perceived_majority",
+    "feed_majority",
+    "public_conformity",
+    "opponent_silence"
+  ],
+  "comparisons": [
+    [
+      "R1",
+      "R0"
+    ]
+  ],
+  "statistics": "paired groups identical to main experiment; 10000 graph-stratified bootstrap; exact sign-flip; Holm over 4 outcomes (Qill, J, C, S-) and persistence separately",
+  "mechanics": "new_stance applied to observers only; committed with next-round decisions/messages; advocates and non-observers stay fixed; R0 parses but ignores new_stance (same prompt)",
+  "guard": "true advocate share <= (200+50)/1000 = 25% < 50% so Qill definition holds",
+  "new_runs": 18,
+  "prompt_hashes": {
+    "perception": "0809e60460beed212da687b21e2569d9946088fdb3ae09ec061cb6ff64a07e6d",
+    "perception_attitude": "2c749c7941ba6c427f4cfc1a9d087f3210a6aa38a322e0cd6457be50d1b2d090"
+  },
+  "frozen_input_sha256": {
+    "experiments\\2026-11-16\\03_positions\\network-0.json": "301c076a5fa41f0a924ed6c50f0b2e2927df4967a6a02de0ee13765e6b750b9d",
+    "experiments\\2026-11-16\\03_positions\\network-1.json": "3984a4eeaa1dfebe3a35ced64000d60f6b209008e352bc18ad2f791aacf7820f",
+    "experiments\\2026-11-16\\03_positions\\network-2.json": "64120fb65a95b54ec8e538089abdd3fd988c8eca1a2bf32e70dcf7c7e978b14c",
+    "experiments\\2026-11-16\\03_positions\\g0-r0_positions.json": "aa33b73cb63ae03d545644472679f6ac2dfc8b7d5639a67c63173155ff8fc274",
+    "experiments\\2026-11-16\\03_positions\\g0-r1_positions.json": "c8258ff0d99ddfc5e8140279afbf2f590fe49845a1c494a5b59ae8e61b41b4ee",
+    "experiments\\2026-11-16\\03_positions\\g0-r2_positions.json": "448bb93b7227cd0930ecf3e03b7d4cb4edadbbc748d68b2e54201abd13405293",
+    "experiments\\2026-11-16\\03_positions\\g1-r0_positions.json": "0320fbd7d764d91986a252fb2647008aded2a3e539c52590736a0e673210e039",
+    "experiments\\2026-11-16\\03_positions\\g1-r1_positions.json": "7bc01f4c144d65757815fbdefba34b2c993dc88f9cde7938a817b8aa77df997b",
+    "experiments\\2026-11-16\\03_positions\\g1-r2_positions.json": "9eb5c5a2863c89ec956aee8fea95abc8e17bfafedd62b97eeba0caa54c571806",
+    "experiments\\2026-11-16\\03_positions\\g2-r0_positions.json": "be15c05fc6c62184a131f15d221522de919a06eb1e68100d3b91e908b11c35ca",
+    "experiments\\2026-11-16\\03_positions\\g2-r1_positions.json": "3a6b6edb1bc3e4c56b55bd20309d25b10f696ad056a12658207c2b2c095834cf",
+    "experiments\\2026-11-16\\03_positions\\g2-r2_positions.json": "b5e4c3ff13c0bc34b8ed012cdc41b28c65be4ca45e202e1eff87395976a5ab38",
+    "experiments\\2026-11-16\\01_texts_50\\bank.json": "14eb7690f95a35c6af42043d2e3418580ab44521eda3c1018d7e53f633b38b89"
+  },
+  "runner_sha256": "9c68e86eadf51db5a75047025de8cbc89639e0758185bf5e883065dba5c292c4"
+}

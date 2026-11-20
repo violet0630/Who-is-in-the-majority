@@ -267,8 +267,9 @@ class StudyChat(JsonChat):
 
 
 class StudyPerception:
-    def __init__(self, chat, topic, scenario, run_id):
+    def __init__(self, chat, topic, scenario, run_id, attitude=False):
         self.chat, self.topic, self.scenario, self.run_id = chat, topic, scenario, run_id
+        self.attitude = attitude
 
     def estimate(self, request):
         payload = perception_payload(self.topic, request, self.scenario)
@@ -277,7 +278,7 @@ class StudyPerception:
         payload["allowed_evidence_ids"] = sorted(allowed)
         payload["output_guidance"] = "evidence_ids只能从allowed_evidence_ids选取，也可返回空数组；不能自行拼写不存在的编号。"
 
-        def parse(data):
+        def parse_three(data):
             if set(data) != {"support", "reason", "evidence_ids"}:
                 raise ValueError("Exactly support, reason, evidence_ids are required")
             support, reason, evidence = data["support"], data["reason"], data["evidence_ids"]
@@ -291,16 +292,28 @@ class StudyPerception:
                 raise ValueError(f"Unknown or duplicate evidence IDs: {sorted(set(evidence) - allowed)}")
             return float(support), reason, tuple(evidence)
 
+        def parse_attitude_data(data):
+            from scripts.ext_common import parse_attitude
+            return parse_attitude(data, allowed)
+
+        parse = parse_attitude_data if self.attitude else parse_three
+        prompt = "perception_attitude" if self.attitude else "perception"
         for attempt in range(3):
             try:
-                parsed, completion = self.chat.request("perception", payload, parse, temperature=0,
+                parsed, completion = self.chat.request(prompt, payload, parse, temperature=0,
                     context={"run_id": self.run_id, "node": request.node, "round": request.current.round,
                              "schema_attempt": attempt})
                 break
             except LLMValidationError as exc:
                 if attempt == 2:
                     raise
-                payload = {**payload, "validation_feedback": str(exc) + "; evidence_ids可设为空数组。重新输出三个字段的JSON。"}
+                fields = "四个字段(support、reason、evidence_ids、new_stance)" if self.attitude else "三个字段"
+                payload = {**payload, "validation_feedback": str(exc) + f"; evidence_ids可设为空数组。重新输出规定的{fields}的JSON。"}
+        if self.attitude:
+            support, reason, evidence, stance = parsed
+            return PerceptionResult(support, completion.raw_json, completion.input_tokens, completion.output_tokens,
+                                    reason, evidence, completion.request_id, completion.model,
+                                    prompt_hash("perception_attitude"), completion.elapsed_seconds, stance)
         support, reason, evidence = parsed
         return PerceptionResult(support, completion.raw_json, completion.input_tokens, completion.output_tokens,
                                 reason, evidence, completion.request_id, completion.model,
@@ -505,12 +518,14 @@ def screening():
     save_json(destination / "finalists.json", sorted(finalists, key=lambda row: row["score"], reverse=True))
 
 
-def run_one(network, profiles, advocates, bank, settings, seed, branch, output=None, llm=False):
+def run_one(network, profiles, advocates, bank, settings, seed, branch, output=None, llm=False,
+            attitude=False, private_update=False):
     study = json.loads((PROJECT / "configs/study.json").read_text(encoding="utf-8"))
     config = RunConfig(rounds=settings["rounds"], alpha=settings.get("alpha", 0.05), rho=settings["rho"],
                        advocate_stance=Stance.OPPOSE, window=settings.get("window", 2),
                        read_limit=settings.get("read_limit", 5),
-                       cross_fan_comments=settings.get("cross_fan_comments", True))
+                       cross_fan_comments=settings.get("cross_fan_comments", True),
+                       private_update=private_update)
     coefficients = coefficients_from(settings)
     metrics, diagnostic_rows = [], []
     prefix_reference = None
@@ -532,14 +547,17 @@ def run_one(network, profiles, advocates, bank, settings, seed, branch, output=N
             audit_path = output / "calls.jsonl"
             audit = audit_path.open("a", encoding="utf-8")
             chat = StudyChat(client, llm_config, audit, audit_path)
-            perception_llm = StudyPerception(chat, study["topic"], study["scenario"], output.name)
+            perception_llm = StudyPerception(chat, study["topic"], study["scenario"], output.name, attitude)
             trajectory = gzip.open(output / "trajectory.partial.jsonl.gz", "wt", encoding="utf-8")
             write_record(trajectory, "manifest", {
                 "network": network, "profiles": profiles, "advocates": advocates,
                 "config": config, "coefficients": coefficients, "group_seed": seed, "branch": branch,
                 "observer_count": len(network.observers), "llm": llm_config,
                 "perception_scope": "observers_only; nonobservers gamma=theta_d=theta_hd=0",
-                "settings": settings, "prompt_sha256": prompt_hash("perception"), "thinking": "disabled",
+                "prompt": "perception_attitude" if attitude else "perception",
+                "private_update": private_update,
+                "settings": settings, "prompt_sha256": prompt_hash("perception_attitude" if attitude else "perception"),
+                "thinking": "disabled",
             })
         perception = ObserverPerception(network.observers, bank, perception_llm)
         simulation = ObserverSimulation(network, profiles, advocates, bank, coefficients, config,
