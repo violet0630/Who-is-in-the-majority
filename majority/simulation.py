@@ -115,6 +115,14 @@ class Simulation:
             reading = readings[node]
             result = results.get(node)
             after = replace(before, perceived_support=result.support) if result else before
+            if result is not None and self.config.private_update:
+                if result.new_stance is None:
+                    raise ValueError("private_update 开启时感知结果必须包含 new_stance")
+                if type(result.new_stance) is not int or result.new_stance not in (1, -1):
+                    raise ValueError("私人立场更新必须是整数 1 或 -1")
+                if node not in self.advocates:
+                    after = replace(after, stance=Stance(result.new_stance))
+            # private_update=False 时按设计忽略 new_stance（拓展一 R0 坚持条件）
             replies = notifications[node]
             agree = sum(message.action == Action.AGREE for message in replies)
             after = update_feedback(after, agree, len(replies) - agree, self.config.alpha)

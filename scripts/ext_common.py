@@ -1,6 +1,7 @@
 """Shared helpers for the three extension experiments (gxy branch)."""
 
 import csv
+import hashlib
 import json
 from itertools import product
 from pathlib import Path
@@ -13,6 +14,42 @@ MAIN_ARCHIVE = PROJECT / "experiments/2026-11-16"
 FROZEN_SETTINGS = json.loads((PROJECT / "configs/initialized_20261116.json")
                              .read_text(encoding="utf-8"))["settings"]
 
+FROZEN_INPUT_FILES = (
+    [MAIN_ARCHIVE / "03_positions" / f"network-{graph}.json" for graph in range(3)]
+    + [MAIN_ARCHIVE / "03_positions" / f"g{graph}-r{repeat}_positions.json"
+       for graph in range(3) for repeat in range(3)]
+    + [MAIN_ARCHIVE / "01_texts_50" / "bank.json"]
+)
+
+
+def frozen_input_hashes() -> dict:
+    """sha256 of every reused frozen input; protocols embed and verify these bytes."""
+    return {str(path.relative_to(PROJECT)): hashlib.sha256(path.read_bytes()).hexdigest()
+            for path in FROZEN_INPUT_FILES}
+
+
+def runner_sha256() -> str:
+    return hashlib.sha256((PROJECT / "scripts/majority_study.py").read_bytes()).hexdigest()
+
+
+def verify_frozen_inputs(protocol: dict) -> None:
+    """Assert the frozen inputs on disk match the protocol's recorded hashes."""
+    recorded = protocol.get("frozen_input_sha256")
+    if recorded is None:
+        raise ValueError("protocol.json lacks frozen_input_sha256; prepare must run first")
+    current = frozen_input_hashes()
+    if current != recorded:
+        raise ValueError("Frozen inputs changed since protocol freeze; refusing to run")
+    if protocol.get("runner_sha256") != runner_sha256():
+        raise ValueError("Runner scripts/majority_study.py changed since protocol freeze")
+
+
+def write_json(path: Path, data: object) -> None:
+    """Derived outputs (results/inference/reports) may be regenerated on rerun."""
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with path.open("w", encoding="utf-8") as stream:
+        json.dump(data, stream, ensure_ascii=False, indent=2, allow_nan=False)
+
 
 def load_frozen_group(graph: int, repeat: int) -> dict:
     """Main-experiment frozen group; identical network/profiles/TH positions/group seed."""
@@ -21,6 +58,8 @@ def load_frozen_group(graph: int, repeat: int) -> dict:
     network = load_network(MAIN_ARCHIVE / "03_positions" / f"network-{graph}.json")
     path = MAIN_ARCHIVE / "03_positions" / f"g{graph}-r{repeat}_positions.json"
     prepared = json.loads(path.read_text(encoding="utf-8"))
+    if prepared.get("graph") != graph or prepared.get("repeat") != repeat:
+        raise ValueError(f"Positions file {path} does not match requested group {graph}-{repeat}")
     return {"graph": graph, "repeat": repeat, "network": network,
             "profiles": tuple(Profile(**row) for row in prepared["profiles"]),
             "advocates": frozenset(prepared["positions"]["TH"]),
@@ -29,7 +68,12 @@ def load_frozen_group(graph: int, repeat: int) -> dict:
 
 
 def load_main_baseline(condition: str) -> list[dict]:
-    """Archived main-experiment TH runs, tagged as a baseline condition (not rerun)."""
+    """Archived main-experiment TH runs, tagged as a descriptive reference condition.
+
+    NOT used as the paired/unpaired statistical baseline: the 2026-11-16 archive was
+    produced by a different runner revision and a two-gateway model mix, so comparisons
+    against it would conflate treatment with code/model drift. Extension baselines are
+    rerun with the current code and gateway instead."""
     rows = []
     for graph in range(3):
         for repeat in range(3):
@@ -135,7 +179,8 @@ def unpaired_condition_inference(rows: list[dict], comparisons: list[tuple[str, 
     for first, second in comparisons:
         difference = observed[first] - observed[second]
         values = sorted(a - b for a, b in zip(draws[first], draws[second]))
-        pvalue = 2 * min(sum(v <= 0 for v in values), sum(v >= 0 for v in values)) / repeats
+        pvalue = (2 * min(sum(v < 0 for v in values), sum(v > 0 for v in values))
+                  + sum(v == 0 for v in values)) / repeats
         result.append({"conditions": [first, second], "difference": difference,
                        "ci95": [values[int(0.025 * (repeats - 1))], values[int(0.975 * (repeats - 1))]],
                        "p_value": pvalue, "paired": False})
@@ -148,6 +193,43 @@ def _finish(comparison_rows: list[dict], conditions: list[str], repeats: int, *,
         row["p_holm"] = adjusted
     return {"conditions": conditions, "comparisons": comparison_rows, "paired": paired,
             "statistics": f"{repeats} graph-stratified bootstrap draws; 95% CI; Holm adjustment"}
+
+
+def tail_rows(rows: list[dict], field: str) -> list[dict]:
+    """Rows whose inference value becomes the tail-3 mean of the given per-round metric."""
+    return [{**row, "summary": {**row["summary"],
+             "perceived_majority": float(np.mean([m[field] for m in row["metrics"][-3:]]))}}
+            for row in rows]
+
+
+def persistence_rows(rows: list[dict]) -> list[dict]:
+    """Rows whose inference value is rounds 8-10 minus rounds 3-5 mean Qill (持续性)."""
+    return [{**row, "summary": {**row["summary"],
+             "perceived_majority": float(np.mean([m["perceived_majority"] for m in row["metrics"][-3:]])
+                                         - np.mean([m["perceived_majority"] for m in row["metrics"][2:5]]))}}
+            for row in rows]
+
+
+def mean_summary(rows: list[dict], condition: str, field: str) -> float:
+    return float(np.mean([row["summary"][field] for row in rows if row["condition"] == condition]))
+
+
+def parse_attitude(data: dict, allowed: set[str]):
+    """拓展一感知输出解析：support/reason/evidence_ids/new_stance 四个字段严格校验。"""
+    if set(data) != {"support", "reason", "evidence_ids", "new_stance"}:
+        raise ValueError("Exactly support, reason, evidence_ids, new_stance are required")
+    support, reason, ids, stance = data["support"], data["reason"], data["evidence_ids"], data["new_stance"]
+    if type(support) not in (int, float) or not 0 <= support <= 1:
+        raise ValueError("support must be a number between 0 and 1")
+    if not isinstance(reason, str) or not 1 <= len(reason.strip()) <= 120:
+        raise ValueError("reason must contain 1 to 120 characters")
+    if not isinstance(ids, list) or len(ids) > 5 or any(not isinstance(x, str) for x in ids):
+        raise ValueError("evidence_ids must contain at most five strings")
+    if len(set(ids)) != len(ids) or not set(ids) <= allowed:
+        raise ValueError(f"Unknown or duplicate evidence IDs: {sorted(set(ids) - allowed)}")
+    if type(stance) is not int or stance not in (1, -1):
+        raise ValueError("new_stance must be the integer 1 or -1")
+    return float(support), reason, tuple(ids), stance
 
 
 def percent(value: float) -> str:

@@ -80,6 +80,7 @@ class RunConfig:
     rho: float = 1.0
     cross_fan_comments: bool = True
     advocate_stance: Stance = Stance.OPPOSE
+    private_update: bool = False
 
     def __post_init__(self) -> None:
         if min(self.rounds, self.window, self.read_limit) < 1:

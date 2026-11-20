@@ -43,6 +43,7 @@ class PerceptionResult:
     model: str = ""
     prompt_sha256: str = ""
     elapsed_seconds: float = 0.0
+    new_stance: int | None = None
 
     def __post_init__(self) -> None:
         if not 0 <= self.support <= 1:
