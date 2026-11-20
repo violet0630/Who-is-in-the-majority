@@ -10,6 +10,18 @@
 - [完整实验归档与复现](experiments/2026-11-16/README.md)
 - [选定初始化](configs/initialized_20261116.json)
 
+## 2026-11-20 三项拓展实验
+
+三项拓展已经在 `gxy` 分支完成并归档。反馈机制、网络环境和个体抵抗力分别使用 `scripts/ext_feedback.py`、`scripts/ext_network.py` 和 `scripts/ext_resistance.py`，每项都提供 `prepare`、`run`、`analyze` 阶段，个体抵抗力另有 `conversions` 阶段。
+
+- 共 108 条真实 API 轨迹，全部 10 轮完成，无缺失或插补。
+- 三项协议记录冻结输入与当前运行器的 SHA-256，运行前会拒绝输入或代码漂移。
+- `python -m unittest discover -s tests -v` 验证 47 项测试。
+- `python -m scripts.verify_results` 验证主实验一的 203 个归档文件。
+- 三个拓展目录的 `archive_manifest.json` 均可独立校验。
+
+完整结果、统计口径与限制见 [拓展实验方案与结果](docs/拓展实验方案与结果.md)，实施步骤见 [三项拓展实验计划](docs/superpowers/plans/2026-11-20-three-extension-experiments.md)。
+
 安装实验依赖使用`python -m pip install -e ".[experiments]"`；核对保存结果使用`python -m scripts.verify_results`，重建图表与汇总使用`python -m scripts.summarize_study`。API配置见`.env.example`，实际密钥只在本地提供。
 
 以下为基础框架使用说明。
@@ -89,8 +101,8 @@ python -m majority run --network runs/networks/network-0.json --bank runs/candid
 
 空阅读保留在观测分母中且 J 计为 0；沿用感知照常进入 Qill，另统计 `carried_forward`。恰好 0.5 不算任一方多数。描述性判断分布与误差不等于成组实验差异的置信区间。
 
-## 待实现
+## 当前仍待实现
 
-种子高低配对搜索、预试拟合、预筛与 k 网格补测、成组 bootstrap/Holm、绘图、推荐曝光和私人态度更新。网络与 LLM 管线已实现，这些研究阶段仍保留明确边界。
+三项拓展所需的种子配对、成组 bootstrap/Holm、绘图和私人态度更新已经由拓展脚本落地。基础包仍保留明确边界：`majority.preparation.calibrate()` 尚未实现，基础 CLI 也没有把预试拟合、正式预筛、k 网格补测和推荐曝光编排成一条通用流水线。拓展实验使用冻结协议和独立入口，不把这些未实现的基础接口宣称为已完成。
 
 兼容接口参考：[OpenAI Chat Completions](https://developers.openai.com/api/reference/python/resources/chat/subresources/completions/methods/create)。

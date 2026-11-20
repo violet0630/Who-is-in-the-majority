@@ -1,7 +1,9 @@
+import json
 import unittest
+from pathlib import Path
 
 from majority.models import RunConfig
-from scripts.ext_common import holm, paired_condition_inference, unpaired_condition_inference
+from scripts.ext_common import holm, paired_condition_inference, runner_sha256, unpaired_condition_inference
 from scripts.majority_study import coefficients_from
 
 
@@ -54,6 +56,13 @@ class InferenceTests(unittest.TestCase):
     def test_holm_order(self):
         self.assertEqual(holm([0.01, 0.03, 0.9]), [0.03, 0.06, 0.9])
         self.assertEqual(holm([0.01]), [0.01])
+
+    def test_extension_protocols_pin_current_runner(self):
+        project = Path(__file__).resolve().parents[1]
+        current = runner_sha256()
+        for path in sorted((project / "experiments").glob("2026-11-20-ext-*/protocol.json")):
+            protocol = json.loads(path.read_text(encoding="utf-8"))
+            self.assertEqual(protocol.get("runner_sha256"), current, path)
 
 
 if __name__ == "__main__":

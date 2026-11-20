@@ -117,7 +117,7 @@
 
 **Files:** 无代码改动；本地 `.env`（不入库）。
 
-- [ ] **Step 1: 确认分支与测试基线**
+- [x] **Step 1: 确认分支与测试基线**
 
 Run: `git status --short && git branch --show-current`
 Expected: 分支 `gxy`，无已跟踪文件改动（`复杂系统 (1).pdf` 保持未跟踪、不入库）。
@@ -125,7 +125,7 @@ Expected: 分支 `gxy`，无已跟踪文件改动（`复杂系统 (1).pdf` 保�
 Run: `python -m unittest discover -s tests -v`
 Expected: 24 项测试全部通过（此基线必须在每个后续任务结束时保持）。
 
-- [ ] **Step 2: 创建本地 .env（凭据不入库）**
+- [x] **Step 2: 创建本地 .env（凭据不入库）**
 
 Write `e:\work\Who-is-in-the-majority\.env`（密钥由用户提供，仅写入本地 `.env`，不写入任何入库文件；此处以占位符示意）：
 
@@ -139,12 +139,12 @@ DEEPSEEK_MAX_TOKENS=4096
 
 （`llm.py` 的 `gateway_model` 已按 `127.0.0.1:3000` 把请求模型映射为 `deepseek-v4-flash`；与主实验一同一模型，保证可比与调用复用语义。）
 
-- [ ] **Step 3: 网关连通性冒烟**
+- [x] **Step 3: 网关连通性冒烟**
 
 Run: `python -c "from majority.llm import load_settings, open_client; cfg,key=load_settings(); c=open_client(cfg,key); print(cfg); print(c.models.list().data[0].id)"`
 Expected: 打印 `LLMConfig(base_url='http://127.0.0.1:3000/v1', model='deepseek-v4-flash', ...)` 且模型列表非空。
 
-- [ ] **Step 4: Commit**
+- [x] **Step 4: Commit**
 
 ```bash
 git add docs/superpowers/plans/2026-11-20-three-extension-experiments.md
@@ -161,7 +161,7 @@ git commit -m "docs: plan three extension experiments on gxy branch"
 - Consumes: 无。
 - Produces: `coefficients_from(settings)` 返回 `Coefficients(theta, kappa, gamma, beta=settings.get("beta", 10.0))`；`run_one` 的 RunConfig 使用 `alpha=settings.get("alpha", 0.05)`。后续所有拓展脚本依赖此语义。
 
-- [ ] **Step 1: 写失败测试**
+- [x] **Step 1: 写失败测试**
 
 ```python
 # tests/test_ext_common.py
@@ -184,12 +184,12 @@ if __name__ == "__main__":
     unittest.main()
 ```
 
-- [ ] **Step 2: 运行确认失败**
+- [x] **Step 2: 运行确认失败**
 
 Run: `python -m unittest tests.test_ext_common -v`
 Expected: `test_coefficients_beta_from_settings` FAIL（当前 beta 恒为 10.0，`beta=50` 断言失败）。
 
-- [ ] **Step 3: 最小实现**
+- [x] **Step 3: 最小实现**
 
 在 `scripts/majority_study.py` 改两处：
 
@@ -206,12 +206,12 @@ def coefficients_from(settings):
                        cross_fan_comments=settings.get("cross_fan_comments", True))
 ```
 
-- [ ] **Step 4: 运行确认通过 + 全量回归**
+- [x] **Step 4: 运行确认通过 + 全量回归**
 
 Run: `python -m unittest tests.test_ext_common -v && python -m unittest discover -s tests`
 Expected: 新测试 PASS，原有 24 项仍全绿。
 
-- [ ] **Step 5: Commit**
+- [x] **Step 5: Commit**
 
 ```bash
 git add scripts/majority_study.py tests/test_ext_common.py
@@ -232,7 +232,7 @@ git commit -m "feat: propagate alpha/beta from settings for extension conditions
   - `unpaired_condition_inference(rows, comparisons, *, repeats=10000, seed=42) -> dict`：每条件独立图内分层 bootstrap 均值分布；差值分布 = 两条件独立抽样之差；95% CI 取 2.5/97.5 分位；双侧 p = `2*min(mean(diff<=0), mean(diff>=0))`；Holm。
   - `holm(pvalues: list[float]) -> list[float]`、`percent(v)`、`pp(v)`、`csv_file(path, rows)`。
 
-- [ ] **Step 1: 写失败测试（配对推断与 Holm）**
+- [x] **Step 1: 写失败测试（配对推断与 Holm）**
 
 ```python
 # 追加到 tests/test_ext_common.py
@@ -271,12 +271,12 @@ class InferenceTests(unittest.TestCase):
         self.assertEqual(holm([0.01]), [0.01])
 ```
 
-- [ ] **Step 2: 运行确认失败**
+- [x] **Step 2: 运行确认失败**
 
 Run: `python -m unittest tests.test_ext_common -v`
 Expected: `ModuleNotFoundError: scripts.ext_common`。
 
-- [ ] **Step 3: 实现 ext_common.py（完整参考实现）**
+- [x] **Step 3: 实现 ext_common.py（完整参考实现）**
 
 ```python
 """Shared helpers for the three extension experiments (gxy branch)."""
@@ -430,12 +430,12 @@ def csv_file(path: Path, rows: list[dict]) -> None:
         writer.writerows(rows)
 ```
 
-- [ ] **Step 4: 运行确认通过 + 全量回归**
+- [x] **Step 4: 运行确认通过 + 全量回归**
 
 Run: `python -m unittest tests.test_ext_common -v && python -m unittest discover -s tests`
 Expected: 全绿。
 
-- [ ] **Step 5: Commit**
+- [x] **Step 5: Commit**
 
 ```bash
 git add scripts/ext_common.py tests/test_ext_common.py
@@ -452,7 +452,7 @@ git commit -m "feat: shared extension helpers with paired/unpaired inference"
 - Consumes: `scripts.ext_common.{FROZEN_SETTINGS, load_frozen_group, load_main_baseline, paired_condition_inference, percent, pp, csv_file}`；`scripts.majority_study.{run_one, active_bank, load_bank, save_json}`。
 - Produces: CLI `python -m scripts.ext_feedback {prepare|run|analyze}`，输出到 `experiments/2026-11-20-ext-feedback/`。
 
-- [ ] **Step 1: 写失败测试（协议与条件派生）**
+- [x] **Step 1: 写失败测试（协议与条件派生）**
 
 ```python
 # tests/test_ext_feedback.py
@@ -482,12 +482,12 @@ if __name__ == "__main__":
     unittest.main()
 ```
 
-- [ ] **Step 2: 运行确认失败**
+- [x] **Step 2: 运行确认失败**
 
 Run: `python -m unittest tests.test_ext_feedback -v`
 Expected: `ModuleNotFoundError: scripts.ext_feedback`。
 
-- [ ] **Step 3: 实现 ext_feedback.py（完整参考实现）**
+- [x] **Step 3: 实现 ext_feedback.py（完整参考实现）**
 
 ```python
 """Extension 2: feedback mechanism — beta (sensitivity) and alpha (memory speed) conditions."""
@@ -610,12 +610,12 @@ if __name__ == "__main__":
     main()
 ```
 
-- [ ] **Step 4: 运行确认通过 + 全量回归**
+- [x] **Step 4: 运行确认通过 + 全量回归**
 
 Run: `python -m unittest tests.test_ext_feedback -v && python -m unittest discover -s tests`
 Expected: 全绿。
 
-- [ ] **Step 5: Commit**
+- [x] **Step 5: Commit**
 
 ```bash
 git add scripts/ext_feedback.py configs/ext_feedback.json tests/test_ext_feedback.py
@@ -626,27 +626,27 @@ git commit -m "feat: extension 2 feedback-mechanism experiment script"
 
 **Files:** 输出 `experiments/2026-11-20-ext-feedback/`（不提交运行产物，仅提交 protocol/config/脚本；结果归档目录不 gitignore——与主实验一归档同规，最终随 commit 入库）。
 
-- [ ] **Step 1: 协议冻结**
+- [x] **Step 1: 协议冻结**
 
 Run: `python -m scripts.ext_feedback prepare`
 Expected: 生成 `protocol.json` 与 `configs/ext_feedback.json`；重跑同一命令不报错（断言一致）。
 
-- [ ] **Step 2: 批量运行 36 条轨迹**
+- [x] **Step 2: 批量运行 36 条轨迹**
 
 Run: `python -m scripts.ext_feedback run`（前台运行，预计 30–90 分钟；GATEWAY_SLOTS=16 自动限流，每条轨迹断点可恢复：result.json 存在即跳过，calls.jsonl 自动复用）
 Expected: `results.json` 含 36 行，每行 `metrics` 为 10 轮、`tail_rounds==3`；运行日志每条轨迹打印 10 轮 Q/J。
 
-- [ ] **Step 3: 完整性核查（如实核对）**
+- [x] **Step 3: 完整性核查（如实核对）**
 
 Run: `python -c "import json; from pathlib import Path; rows=json.loads((Path('experiments/2026-11-20-ext-feedback/results.json')).read_text()); print(len(rows)); print({r['condition'] for r in rows}); assert len(rows)==36; assert all(len(r['metrics'])==10 for r in rows); print('36/36 complete')"`
 Expected: 36/36 complete；若任何轨迹缺轮次，先查其 `calls.jsonl` 末行错误留痕再重跑该轨迹（不静默补数）。
 
-- [ ] **Step 4: 推断与报告**
+- [x] **Step 4: 推断与报告**
 
 Run: `python -m scripts.ext_feedback analyze`
 Expected: `inference.json`、`summary.csv`、`trajectories.json`、`report.md` 生成；报告含 4 项 Holm 比较的差异/CI/p 值。
 
-- [ ] **Step 5: Commit 结果归档**
+- [x] **Step 5: Commit 结果归档**
 
 ```bash
 git add experiments/2026-11-20-ext-feedback configs/ext_feedback.json
@@ -663,7 +663,7 @@ git commit -m "results: extension 2 feedback mechanism (36 trajectories)"
 - Consumes: `scripts.ext_common.{FROZEN_SETTINGS, load_main_baseline, unpaired_condition_inference, csv_file, percent, pp}`；`scripts.majority_study.{make_network, network_config, draw_profiles, select_positions, run_one, active_bank, load_bank, save_json}`；`majority.artifacts.save_artifact`、`majority.network.network_statistics`。
 - Produces: CLI `python -m scripts.ext_network {prepare|run|analyze}`；`prepare` 生成 12 张新网络 + 36 份位置搜索（离线）。
 
-- [ ] **Step 1: 写失败测试（网络约束与种子公式）**
+- [x] **Step 1: 写失败测试（网络约束与种子公式）**
 
 ```python
 # tests/test_ext_network.py
@@ -706,12 +706,12 @@ if __name__ == "__main__":
     unittest.main()
 ```
 
-- [ ] **Step 2: 运行确认失败**
+- [x] **Step 2: 运行确认失败**
 
 Run: `python -m unittest tests.test_ext_network -v`
 Expected: `ModuleNotFoundError: scripts.ext_network`。
 
-- [ ] **Step 3: 实现 ext_network.py（完整参考实现）**
+- [x] **Step 3: 实现 ext_network.py（完整参考实现）**
 
 ```python
 """Extension 3: network environment — fan heterogeneity (s_in) and community isolation (w)."""
@@ -900,12 +900,12 @@ if __name__ == "__main__":
     main()
 ```
 
-- [ ] **Step 4: 运行确认通过 + 全量回归**
+- [x] **Step 4: 运行确认通过 + 全量回归**
 
 Run: `python -m unittest tests.test_ext_network -v && python -m unittest discover -s tests`
 Expected: 全绿（生成网络测试每个条件只生成 1 张，秒级）。
 
-- [ ] **Step 5: Commit**
+- [x] **Step 5: Commit**
 
 ```bash
 git add scripts/ext_network.py configs/ext_network.json tests/test_ext_network.py
@@ -916,27 +916,27 @@ git commit -m "feat: extension 3 network-environment experiment script"
 
 **Files:** 输出 `experiments/2026-11-20-ext-network/`。
 
-- [ ] **Step 1: 网络与位置准备（离线，约 1–2 小时 CPU）**
+- [x] **Step 1: 网络与位置准备（离线，约 1–2 小时 CPU）**
 
 Run: `python -m scripts.ext_network prepare`
 Expected: 12 张网络全部满足约束（打印 network ready）；36 份位置搜索完成；`protocol.json` 冻结。
 
-- [ ] **Step 2: 位置配对核查**
+- [x] **Step 2: 位置配对核查**
 
 Run: `python -c "import json; from pathlib import Path; root=Path('experiments/2026-11-20-ext-network/inputs'); rows=[json.loads(p.read_text(encoding='utf-8')) for p in root.glob('*_positions.json')]; assert len(rows)==36; print('pairs:', len(rows)); print('TH-IG range:', min(r['diagnostics']['TH']['illusion'] for r in rows), max(r['diagnostics']['TH']['illusion'] for r in rows))"`
 Expected: 36 份；TH 结构幻觉 IG 在 0–1 之间并打印。
 
-- [ ] **Step 3: 批量运行 36 条轨迹**
+- [x] **Step 3: 批量运行 36 条轨迹**
 
 Run: `python -m scripts.ext_network run`
 Expected: `results.json` 36 行、每行 10 轮。
 
-- [ ] **Step 4: 完整性核查与推断**
+- [x] **Step 4: 完整性核查与推断**
 
 Run: `python -c "import json; from pathlib import Path; rows=json.loads((Path('experiments/2026-11-20-ext-network/results.json')).read_text()); assert len(rows)==36 and all(len(r['metrics'])==10 for r in rows); print('36/36 complete')" && python -m scripts.ext_network analyze`
 Expected: 核查通过；`inference.json`/`report.md` 等生成。
 
-- [ ] **Step 5: Commit 结果归档**
+- [x] **Step 5: Commit 结果归档**
 
 ```bash
 git add experiments/2026-11-20-ext-network configs/ext_network.json
@@ -954,7 +954,7 @@ git commit -m "results: extension 3 network environment (36 trajectories)"
 - Consumes: 无。
 - Produces: `RunConfig(..., private_update=False)`；`PerceptionResult(..., new_stance=None)`；`Simulation.step()` 在 `private_update=True` 且 `result.new_stance in (1, -1)` 时把观察者私人立场更新到下一轮状态；提示词文件 `perception_attitude.md` 供 Task 9 解析调用。
 
-- [ ] **Step 1: 写失败测试（时序与校验）**
+- [x] **Step 1: 写失败测试（时序与校验）**
 
 ```python
 # tests/test_ext_resistance.py（核心机制部分）
@@ -1020,12 +1020,12 @@ if __name__ == "__main__":
 
 （`examples/demo.py` 的 `DemoPerception.estimate` 返回不带 new_stance 的 PerceptionResult；测试用 `replace` 注入。）
 
-- [ ] **Step 2: 运行确认失败**
+- [x] **Step 2: 运行确认失败**
 
 Run: `python -m unittest tests.test_ext_resistance -v`
 Expected: FAIL（`RunConfig` 无 `private_update` 参数 / `replace(...)` 找不到 new_stance 字段）。
 
-- [ ] **Step 3: 实现框架改动**
+- [x] **Step 3: 实现框架改动**
 
 `majority/models.py` 的 RunConfig 增加一行（追加在 advocate_stance 之后）：
 
@@ -1080,12 +1080,12 @@ new_stance 是你经过本轮阅读后的私人立场：1 表示支持议题，-
 support 必须是 0 到 1 的数值，表示支持者占全社区人数的比例；0.5 表示约一半。reason 不超过 120 字，不编造未见到的证据。evidence_ids 只能填写输入中实际出现的消息 id，最多 5 个，可为空。new_stance 只能是整数 1 或 -1。
 ```
 
-- [ ] **Step 4: 运行确认通过 + 全量回归**
+- [x] **Step 4: 运行确认通过 + 全量回归**
 
 Run: `python -m unittest tests.test_ext_resistance -v && python -m unittest discover -s tests`
 Expected: 新测试 PASS，原有 24 项仍全绿（默认 `private_update=False` 保证行为不变）。
 
-- [ ] **Step 5: Commit**
+- [x] **Step 5: Commit**
 
 ```bash
 git add majority/models.py majority/perception.py majority/simulation.py majority/prompts/perception_attitude.md tests/test_ext_resistance.py
@@ -1102,7 +1102,7 @@ git commit -m "feat: private stance update mechanism for extension 1"
 - Consumes: Task 8 的机制；`scripts.ext_common.{load_frozen_group, paired_condition_inference, ...}`；`scripts.majority_study.{run_one, active_bank, load_bank, save_json, StudyChat, GATEWAY_SLOTS}`。
 - Produces: CLI `python -m scripts.ext_resistance {prepare|run|analyze}`；`AttitudePerception` 解析四字段（含 schema 纠正路径）。
 
-- [ ] **Step 1: 写失败测试（四字段解析器）**
+- [x] **Step 1: 写失败测试（四字段解析器）**
 
 ```python
 # 追加到 tests/test_ext_resistance.py
@@ -1128,12 +1128,12 @@ if __name__ == "__main__":
     unittest.main()
 ```
 
-- [ ] **Step 2: 运行确认失败**
+- [x] **Step 2: 运行确认失败**
 
 Run: `python -m unittest tests.test_ext_resistance -v`
 Expected: `ImportError: parse_attitude`。
 
-- [ ] **Step 3: 实现 ext_resistance.py（完整参考实现）**
+- [x] **Step 3: 实现 ext_resistance.py（完整参考实现）**
 
 ```python
 """Extension 1: individual resistance — fixed vs LLM-updated private stance."""
@@ -1286,12 +1286,12 @@ def run_one(network, profiles, advocates, bank, settings, seed, branch, output=N
 
 StudyPerception 的 parse 处按 `attitude` 选择解析器与提示词名（`"perception_attitude"`），`prompt_hash` 记录相应提示词哈希；manifest 增加 `"prompt": "perception_attitude" if attitude else "perception"` 与 `"private_update": private_update` 字段。
 
-- [ ] **Step 4: 运行确认通过 + 全量回归**
+- [x] **Step 4: 运行确认通过 + 全量回归**
 
 Run: `python -m unittest tests.test_ext_resistance -v && python -m unittest discover -s tests`
 Expected: 全绿。
 
-- [ ] **Step 5: Commit**
+- [x] **Step 5: Commit**
 
 ```bash
 git add scripts/ext_resistance.py scripts/majority_study.py configs/ext_resistance.json tests/test_ext_resistance.py
@@ -1302,27 +1302,27 @@ git commit -m "feat: extension 1 individual-resistance experiment script"
 
 **Files:** 输出 `experiments/2026-11-20-ext-resistance/`。
 
-- [ ] **Step 1: 协议冻结与离线冒烟**
+- [x] **Step 1: 协议冻结与离线冒烟**
 
 Run: `python -m scripts.ext_resistance prepare && python -m unittest discover -s tests`
 Expected: 协议文件生成；全测试绿。
 
-- [ ] **Step 2: 批量运行 18 条轨迹**
+- [x] **Step 2: 批量运行 18 条轨迹**
 
 Run: `python -m scripts.ext_resistance run`（预计 20–60 分钟）
 Expected: `results.json` 18 行、每行 10 轮；R1 轨迹的 manifest 记录 `private_update=true` 与 `perception_attitude` 提示词哈希。
 
-- [ ] **Step 3: 完整性核查与推断**
+- [x] **Step 3: 完整性核查与推断**
 
 Run: `python -c "import json; from pathlib import Path; rows=json.loads((Path('experiments/2026-11-20-ext-resistance/results.json')).read_text()); assert len(rows)==18 and all(len(r['metrics'])==10 for r in rows); assert all(0.2 <= m['true_advocate_support'] <= 0.25 for r in rows for m in r['metrics']); print('18/18 complete')" && python -m scripts.ext_resistance analyze`
 Expected: 核查通过；Qill 与 C 两项比较含 Holm p 值。
 
-- [ ] **Step 4: 私人转变统计（从轨迹回放）**
+- [x] **Step 4: 私人转变统计（从轨迹回放）**
 
 Run: `python -c "`（用 `ext_common` 读 `runs/R1-*/trajectory.jsonl.gz`，逐轮统计观察者 `after.stance != before.stance` 的人数与方向，写 `experiments/2026-11-20-ext-resistance/conversions.json`）
 Expected: 每轮转变人数在 0–50 之间，两方向计数与真实支持率变化自洽。
 
-- [ ] **Step 5: Commit 结果归档**
+- [x] **Step 5: Commit 结果归档**
 
 ```bash
 git add experiments/2026-11-20-ext-resistance configs/ext_resistance.json
@@ -1335,16 +1335,16 @@ git commit -m "results: extension 1 individual resistance (18 trajectories)"
 - Create: `docs/拓展实验方案与结果.md`
 - Modify: `docs/superpowers/plans/2026-11-20-three-extension-experiments.md`（勾选完成状态）
 
-- [ ] **Step 1: 全量验证**
+- [x] **Step 1: 全量验证**
 
 Run: `python -m unittest discover -s tests && python -m scripts.verify_results`
 Expected: 全部测试通过；主实验一归档校验仍通过（未被动过）。
 
-- [ ] **Step 2: 写总报告**
+- [x] **Step 2: 写总报告**
 
 `docs/拓展实验方案与结果.md` 结构：① 三个拓展实验的状态定位与出处；② 共同基底与纪律；③ 各拓展的协议、结果表（Qill/J/C/S−、轨迹、比较与 Holm p）、结论与局限（含非配对推断的条件化口径、观察者子集更新的界限）；④ 复现命令（prepare/run/analyze）与归档清单；⑤ 与主实验一结果的衔接说明（TH 46.5% 基准）。
 
-- [ ] **Step 3: 更新内存与 Commit**
+- [x] **Step 3: 更新内存与 Commit**
 
 Run: `git add docs/ && git commit -m "docs: three extension experiments report"`
 （同时把 gxy 分支三实验状态写入会话内存 `repo-overview.md` 的后续条目。）
