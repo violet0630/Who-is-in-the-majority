@@ -1,0 +1,404 @@
+{
+  "historical_runs": [
+    {
+      "run": "g0-r0-TH",
+      "actual_calls": 580,
+      "reused_rows": 466,
+      "known_input_tokens": 1560788,
+      "known_output_tokens": 1415817,
+      "known_cached_input_tokens": 262400,
+      "missing_usage": 30,
+      "statuses": {
+        "ok": 547,
+        "api_error": 30,
+        "invalid_response": 3
+      }
+    },
+    {
+      "run": "g0-r0-TL",
+      "actual_calls": 570,
+      "reused_rows": 475,
+      "known_input_tokens": 1549217,
+      "known_output_tokens": 1318048,
+      "known_cached_input_tokens": 298880,
+      "missing_usage": 23,
+      "statuses": {
+        "ok": 546,
+        "invalid_response": 1,
+        "api_error": 23
+      }
+    },
+    {
+      "run": "g0-r0-U0",
+      "actual_calls": 563,
+      "reused_rows": 463,
+      "known_input_tokens": 1556118,
+      "known_output_tokens": 1354342,
+      "known_cached_input_tokens": 252672,
+      "missing_usage": 16,
+      "statuses": {
+        "ok": 544,
+        "invalid_response": 3,
+        "api_error": 16
+      }
+    },
+    {
+      "run": "g0-r1-TH",
+      "actual_calls": 571,
+      "reused_rows": 403,
+      "known_input_tokens": 1614612,
+      "known_output_tokens": 1419428,
+      "known_cached_input_tokens": 240768,
+      "missing_usage": 18,
+      "statuses": {
+        "ok": 553,
+        "api_error": 18
+      }
+    },
+    {
+      "run": "g0-r1-TL",
+      "actual_calls": 575,
+      "reused_rows": 410,
+      "known_input_tokens": 1604302,
+      "known_output_tokens": 1375013,
+      "known_cached_input_tokens": 258048,
+      "missing_usage": 24,
+      "statuses": {
+        "ok": 551,
+        "api_error": 24
+      }
+    },
+    {
+      "run": "g0-r1-U0",
+      "actual_calls": 559,
+      "reused_rows": 431,
+      "known_input_tokens": 1598359,
+      "known_output_tokens": 1433537,
+      "known_cached_input_tokens": 261239,
+      "missing_usage": 10,
+      "statuses": {
+        "ok": 545,
+        "api_error": 10,
+        "invalid_response": 4
+      }
+    },
+    {
+      "run": "g0-r2-TH",
+      "actual_calls": 575,
+      "reused_rows": 436,
+      "known_input_tokens": 1615082,
+      "known_output_tokens": 1477223,
+      "known_cached_input_tokens": 236416,
+      "missing_usage": 16,
+      "statuses": {
+        "ok": 558,
+        "invalid_response": 1,
+        "api_error": 16
+      }
+    },
+    {
+      "run": "g0-r2-TL",
+      "actual_calls": 579,
+      "reused_rows": 420,
+      "known_input_tokens": 1593095,
+      "known_output_tokens": 1421892,
+      "known_cached_input_tokens": 207613,
+      "missing_usage": 19,
+      "statuses": {
+        "ok": 558,
+        "invalid_response": 2,
+        "api_error": 19
+      }
+    },
+    {
+      "run": "g0-r2-U0",
+      "actual_calls": 572,
+      "reused_rows": 450,
+      "known_input_tokens": 1592959,
+      "known_output_tokens": 1354820,
+      "known_cached_input_tokens": 289536,
+      "missing_usage": 14,
+      "statuses": {
+        "ok": 555,
+        "invalid_response": 3,
+        "api_error": 14
+      }
+    },
+    {
+      "run": "g1-r0-TH",
+      "actual_calls": 598,
+      "reused_rows": 467,
+      "known_input_tokens": 1620761,
+      "known_output_tokens": 1465363,
+      "known_cached_input_tokens": 237312,
+      "missing_usage": 21,
+      "statuses": {
+        "ok": 573,
+        "api_error": 21,
+        "invalid_response": 4
+      }
+    },
+    {
+      "run": "g1-r0-TL",
+      "actual_calls": 592,
+      "reused_rows": 472,
+      "known_input_tokens": 1579363,
+      "known_output_tokens": 1262005,
+      "known_cached_input_tokens": 288896,
+      "missing_usage": 24,
+      "statuses": {
+        "ok": 565,
+        "api_error": 24,
+        "invalid_response": 3
+      }
+    },
+    {
+      "run": "g1-r0-U0",
+      "actual_calls": 586,
+      "reused_rows": 444,
+      "known_input_tokens": 1605208,
+      "known_output_tokens": 1395944,
+      "known_cached_input_tokens": 230144,
+      "missing_usage": 11,
+      "statuses": {
+        "ok": 572,
+        "invalid_response": 3,
+        "api_error": 11
+      }
+    },
+    {
+      "run": "g1-r1-TH",
+      "actual_calls": 571,
+      "reused_rows": 445,
+      "known_input_tokens": 1618833,
+      "known_output_tokens": 1464259,
+      "known_cached_input_tokens": 244864,
+      "missing_usage": 8,
+      "statuses": {
+        "ok": 561,
+        "api_error": 8,
+        "invalid_response": 2
+      }
+    },
+    {
+      "run": "g1-r1-TL",
+      "actual_calls": 586,
+      "reused_rows": 442,
+      "known_input_tokens": 1603978,
+      "known_output_tokens": 1434093,
+      "known_cached_input_tokens": 241792,
+      "missing_usage": 18,
+      "statuses": {
+        "ok": 566,
+        "api_error": 18,
+        "invalid_response": 2
+      }
+    },
+    {
+      "run": "g1-r1-U0",
+      "actual_calls": 579,
+      "reused_rows": 445,
+      "known_input_tokens": 1645849,
+      "known_output_tokens": 1529308,
+      "known_cached_input_tokens": 236288,
+      "missing_usage": 11,
+      "statuses": {
+        "ok": 563,
+        "invalid_response": 5,
+        "api_error": 11
+      }
+    },
+    {
+      "run": "g1-r2-TH",
+      "actual_calls": 579,
+      "reused_rows": 425,
+      "known_input_tokens": 1594846,
+      "known_output_tokens": 1400383,
+      "known_cached_input_tokens": 214528,
+      "missing_usage": 8,
+      "statuses": {
+        "ok": 568,
+        "invalid_response": 3,
+        "api_error": 8
+      }
+    },
+    {
+      "run": "g1-r2-TL",
+      "actual_calls": 601,
+      "reused_rows": 430,
+      "known_input_tokens": 1591620,
+      "known_output_tokens": 1351006,
+      "known_cached_input_tokens": 261758,
+      "missing_usage": 26,
+      "statuses": {
+        "ok": 570,
+        "invalid_response": 5,
+        "api_error": 26
+      }
+    },
+    {
+      "run": "g1-r2-U0",
+      "actual_calls": 589,
+      "reused_rows": 488,
+      "known_input_tokens": 1574321,
+      "known_output_tokens": 1350358,
+      "known_cached_input_tokens": 279552,
+      "missing_usage": 16,
+      "statuses": {
+        "ok": 571,
+        "invalid_response": 2,
+        "api_error": 16
+      }
+    },
+    {
+      "run": "g2-r0-TH",
+      "actual_calls": 575,
+      "reused_rows": 451,
+      "known_input_tokens": 1506120,
+      "known_output_tokens": 1286001,
+      "known_cached_input_tokens": 263293,
+      "missing_usage": 24,
+      "statuses": {
+        "ok": 548,
+        "invalid_response": 3,
+        "api_error": 24
+      }
+    },
+    {
+      "run": "g2-r0-TL",
+      "actual_calls": 568,
+      "reused_rows": 479,
+      "known_input_tokens": 1534754,
+      "known_output_tokens": 1358718,
+      "known_cached_input_tokens": 241019,
+      "missing_usage": 12,
+      "statuses": {
+        "ok": 553,
+        "invalid_response": 3,
+        "api_error": 12
+      }
+    },
+    {
+      "run": "g2-r0-U0",
+      "actual_calls": 488,
+      "reused_rows": 0,
+      "known_input_tokens": 1473140,
+      "known_output_tokens": 1473866,
+      "known_cached_input_tokens": 272384,
+      "missing_usage": 2,
+      "statuses": {
+        "ok": 480,
+        "api_error": 2,
+        "invalid_response": 6
+      }
+    },
+    {
+      "run": "g2-r1-TH",
+      "actual_calls": 570,
+      "reused_rows": 458,
+      "known_input_tokens": 1555276,
+      "known_output_tokens": 1353266,
+      "known_cached_input_tokens": 274048,
+      "missing_usage": 21,
+      "statuses": {
+        "ok": 548,
+        "api_error": 21,
+        "invalid_response": 1
+      }
+    },
+    {
+      "run": "g2-r1-TL",
+      "actual_calls": 566,
+      "reused_rows": 472,
+      "known_input_tokens": 1532875,
+      "known_output_tokens": 1420555,
+      "known_cached_input_tokens": 259840,
+      "missing_usage": 12,
+      "statuses": {
+        "ok": 551,
+        "invalid_response": 3,
+        "api_error": 12
+      }
+    },
+    {
+      "run": "g2-r1-U0",
+      "actual_calls": 558,
+      "reused_rows": 485,
+      "known_input_tokens": 1563121,
+      "known_output_tokens": 1492646,
+      "known_cached_input_tokens": 254464,
+      "missing_usage": 4,
+      "statuses": {
+        "ok": 554,
+        "api_error": 4
+      }
+    },
+    {
+      "run": "g2-r2-TH",
+      "actual_calls": 572,
+      "reused_rows": 450,
+      "known_input_tokens": 1519017,
+      "known_output_tokens": 1387547,
+      "known_cached_input_tokens": 245376,
+      "missing_usage": 17,
+      "statuses": {
+        "ok": 552,
+        "api_error": 17,
+        "invalid_response": 3
+      }
+    },
+    {
+      "run": "g2-r2-TL",
+      "actual_calls": 483,
+      "reused_rows": 0,
+      "known_input_tokens": 1407646,
+      "known_output_tokens": 1425114,
+      "known_cached_input_tokens": 227712,
+      "missing_usage": 13,
+      "statuses": {
+        "ok": 469,
+        "api_error": 13,
+        "invalid_response": 1
+      }
+    },
+    {
+      "run": "g2-r2-U0",
+      "actual_calls": 556,
+      "reused_rows": 471,
+      "known_input_tokens": 1491669,
+      "known_output_tokens": 1460954,
+      "known_cached_input_tokens": 260096,
+      "missing_usage": 10,
+      "statuses": {
+        "ok": 543,
+        "invalid_response": 3,
+        "api_error": 10
+      }
+    }
+  ],
+  "projections": {
+    "9": {
+      "actual_calls": 5120,
+      "known_input_tokens": 14100976,
+      "known_output_tokens": 12627169,
+      "known_cached_input_tokens": 2280313,
+      "missing_usage": 143
+    },
+    "54": {
+      "actual_calls": 30722,
+      "known_input_tokens": 84605858,
+      "known_output_tokens": 75763012,
+      "known_cached_input_tokens": 13681876,
+      "missing_usage": 856
+    },
+    "63": {
+      "actual_calls": 35842,
+      "known_input_tokens": 98706834,
+      "known_output_tokens": 88390181,
+      "known_cached_input_tokens": 15962189,
+      "missing_usage": 999
+    }
+  },
+  "caveat": "Historical actual calls exclude reused rows but include failed/invalid attempts with reported usage. Missing usage not zero. Historical retries inflate estimates; full-history token growth, model and cache changes may alter cost. No currency estimate without gateway prices.",
+  "nominal_first_attempt_request_ceiling_per_trajectory": 500
+}

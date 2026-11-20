@@ -1,0 +1,53 @@
+{
+  "runs": 18,
+  "rounds": 180,
+  "observer_rounds": 9000,
+  "paired_observers": 450,
+  "summary_Q_matches_archive": true,
+  "paired_observers_match": true,
+  "api_calls": 0,
+  "source_hashes": {
+    "g0-r0-TH": "d20477196286a282002654ad51312c32b89c28d81ec1616b837a5bbfe4cfac8b",
+    "g0-r0-TL": "ad85ef64776439a001c85428e3ef02885b4b174f4c07f7fdf8e23776913e6f84",
+    "g0-r1-TH": "6f81c5ee53ae94e64cee7d60d041bed82ac2168fabe757755c955b02a0b2c69f",
+    "g0-r1-TL": "ed3d9f559dcfd3ac97143bda22481be8fbeb9c5f6b613fef77f1f9c2677f0adc",
+    "g0-r2-TH": "6eef0df99ad921cf688c11aef72a7809cf377d89b19b31d3bda53fa615d008cb",
+    "g0-r2-TL": "cb891439cc13147417bbbc580804699d3d0ee5aff11b16e5ab707aa001eb2679",
+    "g1-r0-TH": "c158fe8371c1ad4302c85713531077a220bd75ea6c41a7e503d1f57c3de71db2",
+    "g1-r0-TL": "a888c8d848370882a38ed23be4a023bfafe5d1cc727c3a322dc62d1ff30c1c9f",
+    "g1-r1-TH": "ffa028d34c9b70eb5401c1c56e77a553fc2f6d6904671c7693ad2e4eed7fc4eb",
+    "g1-r1-TL": "152a9806379ced38cb3109632a47c522cb5063c7196e9a5aaa8754679a676a8f",
+    "g1-r2-TH": "ba53968daab28d81b64c197e0716079eaefcf3ec78b94f668a870d2d2ae8aa5e",
+    "g1-r2-TL": "27762bf02c938e95be8d5d3d3558ec1a4ccc489a925ec43985b470e1edab35db",
+    "g2-r0-TH": "8a31d0be0831154b466865419f66ed775cbb98b3440af44f3b35b00bfe908779",
+    "g2-r0-TL": "fff96dc1b5093e4284fc923d46b4bff52b1bb99b8dd0fe5b84af8d381059b2ba",
+    "g2-r1-TH": "f77b03a3e913297ee3f3e49ab42df223a96227b29a2e12be8d19fe514f2af9b1",
+    "g2-r1-TL": "f1ce9b23c24d07bee18751a2f0fe4e7d52a558158d43e913ac96ecfe0ce31960",
+    "g2-r2-TH": "0d1d2824bd5f6fc1323b74097019dda6a9716648a444b692fe036eb3d10492a3",
+    "g2-r2-TL": "649b90bab170439a5290a97837e583d6ad05a8a474e095ce5bccb91b32d6d767"
+  },
+  "selected_groups": [
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      2
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      2,
+      0
+    ],
+    [
+      2,
+      2
+    ]
+  ],
+  "selection_rule": "negative TH-TL; abs difference <=1pp; maximum positive",
+  "limitations": "Post-hoc selected cases, descriptive only. Repeated rounds/observers not independent samples. LLM reasons not causal explanations."
+}

@@ -1,0 +1,85 @@
+{
+  "status": "offline_prepared_not_run",
+  "base_commit": "fb537a65216b816f2039b73282dd95afcc82b8ac",
+  "objective": "Confirm position effect using 21 new matched groups on the SAME three fixed networks",
+  "size": 1000,
+  "k": 200,
+  "observers": 50,
+  "new_groups_per_network": 7,
+  "new_repeat_indices": [
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "branches": [
+    "TH",
+    "TL",
+    "U0"
+  ],
+  "new_trajectories": 63,
+  "existing_trajectories": 27,
+  "settings": {
+    "mean_degree": 12,
+    "s_out": 0.35,
+    "s_in": 1.0,
+    "w": 0.2,
+    "fraction": 0.2,
+    "rho": 6,
+    "kappa": 0.5,
+    "gamma": 1,
+    "theta": [
+      1,
+      0,
+      -1,
+      0
+    ],
+    "rounds": 10,
+    "llm_workers": 4,
+    "tail_rounds": 3,
+    "window": 2,
+    "read_limit": 5,
+    "cross_fan_comments": true,
+    "community_fractions": [
+      0.15,
+      0.2,
+      0.25,
+      0.4
+    ]
+  },
+  "search": {
+    "steps": 20000,
+    "restarts": 4,
+    "rho": 6,
+    "algorithm": "unchanged select_positions from scripts/majority_study.py"
+  },
+  "seeds": "profiles=16000+graph*10+repeat; search=17000+graph*10+repeat; process=18000+graph*10+repeat",
+  "primary": "mean observer Q rounds 8-10; report new-only first, then old/new and pooled",
+  "comparisons": [
+    [
+      "TH",
+      "TL"
+    ],
+    [
+      "TH",
+      "U0"
+    ],
+    [
+      "TL",
+      "U0"
+    ]
+  ],
+  "bootstrap_repeats": 10000,
+  "analysis_seed": 20261120,
+  "inference": "Graph-stratified whole-group paired bootstrap; paired sign-flip Monte Carlo for 21 or 30 groups, with documented exchangeability assumption and Holm within 3 comparisons. Do not enumerate 2^30 signs.",
+  "stopping": "Fixed preparation budget; no selection or extension based on Q or statistical significance. Pairing failure is reported; do not silently redraw.",
+  "observer_count_80": "Not part of this batch",
+  "technical_trial": "First new group on each network, all 3 branches: 9 full-length trajectories; remaining 54 held until technical/cost review",
+  "trial_acceptance": "10 rounds, immutable inputs verified, metrics reproducible, only observers call model, no unresolved response errors; no condition on Q size",
+  "technical_trials_inclusion": "Include in final batch only with unchanged inputs/code/model/settings and complete successful trajectories",
+  "api_authorized": false,
+  "hash_policy": "SHA256 of text bytes with CRLF normalized to LF"
+}

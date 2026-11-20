@@ -1,0 +1,6106 @@
+[
+  {
+    "graph": 0,
+    "repeat": 1,
+    "node": 62,
+    "selection": "minimum/maximum tail paired Q difference; ties smallest node",
+    "trajectory": [
+      {
+        "graph": 0,
+        "repeat": 1,
+        "branch": "TH",
+        "round": 8,
+        "node": 62,
+        "phi": 0.3333333333333333,
+        "Q": 1,
+        "support": 0.28,
+        "J": 1,
+        "read_n": 5,
+        "read_opposition": 0.8,
+        "current_with_context_opposition": 0.8333333333333334,
+        "historical_exposure_opposition": 0.7843137254901961,
+        "historical_unique_opposition": 0.75,
+        "historical_unique_messages": 32,
+        "historical_unique_authors": 18,
+        "carried_forward": false,
+        "near_half": false,
+        "reason": "不同作者中明确反特朗普者约占七成，支持者仅四五人；结合先前约25%的判断，估计支持比例约28%。",
+        "evidence_ids": [
+          "r1-u672",
+          "r3-u945",
+          "r2-u458",
+          "r5-u941",
+          "r7-u728"
+        ],
+        "read_messages": [
+          {
+            "id": "TH:7:705",
+            "author": 705,
+            "stance": -1,
+            "text": {
+              "id": "post--1-017-agree-0",
+              "body": "我也担心邮政预算被砍会影响老人收药，所以这届我不支持特朗普当选，他的邮政做法让人不放心。"
+            }
+          },
+          {
+            "id": "TH:7:728",
+            "author": 728,
+            "stance": 1,
+            "text": {
+              "id": "post--1-017-disagree-0",
+              "body": "邮政改革不等于耽误送药，原帖把两件事硬绑在一起；我支持特朗普当选，他能让邮政少浪费、把服务理顺。"
+            }
+          },
+          {
+            "id": "TH:7:804",
+            "author": 804,
+            "stance": -1,
+            "text": {
+              "id": "post--1-017-agree-1",
+              "body": "原帖说得对，邮局一折腾最先受影响的就是拿药老人；正因为这样，我反对特朗普当选，不想看他继续动邮政。"
+            }
+          },
+          {
+            "id": "TH:8:672",
+            "author": 672,
+            "stance": -1,
+            "text": {
+              "id": "post--1-013",
+              "body": "我们小地方就靠地方报纸盯着市政，他天天骂媒体是人民公敌，记者被骂得不敢写，最后吃亏的是想知道真相的普通人。"
+            }
+          },
+          {
+            "id": "TH:8:877",
+            "author": 877,
+            "stance": -1,
+            "text": {
+              "id": "post--1-002",
+              "body": "我邻居是移民家庭，孩子在学校被同学起了外号，那种排外的气氛让我实在没法把票投给他。"
+            }
+          }
+        ],
+        "context_messages": [
+          {
+            "id": "TH:5:877",
+            "author": 877,
+            "stance": -1,
+            "text": {
+              "id": "post--1-017",
+              "body": "我们社区老人常靠邮局寄药，他老盯着邮政服务砍预算、换管理层，真怕哪天包裹和药都被耽误。"
+            }
+          }
+        ]
+      },
+      {
+        "graph": 0,
+        "repeat": 1,
+        "branch": "TH",
+        "round": 9,
+        "node": 62,
+        "phi": 0.3333333333333333,
+        "Q": 1,
+        "support": 0.3,
+        "J": 1,
+        "read_n": 5,
+        "read_opposition": 0.8,
+        "current_with_context_opposition": 0.5714285714285714,
+        "historical_exposure_opposition": 0.7586206896551724,
+        "historical_unique_opposition": 0.7027027027027027,
+        "historical_unique_messages": 37,
+        "historical_unique_authors": 20,
+        "carried_forward": false,
+        "near_half": false,
+        "reason": "明确表态的去重作者中支持者约五至六人、反对者约十人，支持理由多集中经济、边境和放松管制，反对集中在贸易、规则、邮政与移民议题；结合先前约0.28的估计，全社区支持率约三成。",
+        "evidence_ids": [
+          "r2-u458",
+          "r9-u817",
+          "r7-u728",
+          "r8-u672",
+          "r9-u877"
+        ],
+        "read_messages": [
+          {
+            "id": "TH:8:672",
+            "author": 672,
+            "stance": -1,
+            "text": {
+              "id": "post--1-013",
+              "body": "我们小地方就靠地方报纸盯着市政，他天天骂媒体是人民公敌，记者被骂得不敢写，最后吃亏的是想知道真相的普通人。"
+            }
+          },
+          {
+            "id": "TH:8:877",
+            "author": 877,
+            "stance": -1,
+            "text": {
+              "id": "post--1-002",
+              "body": "我邻居是移民家庭，孩子在学校被同学起了外号，那种排外的气氛让我实在没法把票投给他。"
+            }
+          },
+          {
+            "id": "TH:9:672",
+            "author": 672,
+            "stance": -1,
+            "text": {
+              "id": "post-1-004-disagree-0",
+              "body": "我不赞同你的看法，也不支持特朗普当选；交易式外交看似省事，却可能让盟友不安、让局势更难收拾。"
+            }
+          },
+          {
+            "id": "TH:9:817",
+            "author": 817,
+            "stance": 1,
+            "text": {
+              "id": "post--1-002-disagree-1",
+              "body": "我不赞成原帖因此不投票给他，个别孩子的外号不该决定大选选择，我支持特朗普当选，经济和边境政策才是我看重的重点。"
+            }
+          },
+          {
+            "id": "TH:9:877",
+            "author": 877,
+            "stance": -1,
+            "text": {
+              "id": "post-1-009-disagree-1",
+              "body": "我反对特朗普当选，原帖期待规则公平没错，但他的排外路线解决不了排队问题，反而让合法移民更不安心。"
+            }
+          }
+        ],
+        "context_messages": [
+          {
+            "id": "TH:7:446",
+            "author": 446,
+            "stance": 1,
+            "text": {
+              "id": "post-1-009",
+              "body": "这次我站特朗普。家里亲戚按规矩排队等亲属移民好多年，看到有人绕开程序先进来，心里很不平衡；我想要先把规则执行好，再谈其他。"
+            }
+          },
+          {
+            "id": "TH:7:894",
+            "author": 894,
+            "stance": 1,
+            "text": {
+              "id": "post-1-004",
+              "body": "这次选总统，我看重外交别再四处点火。特朗普任内那种谈交易、压着各方坐下来谈的路子，比无止境援助更让我放心，所以我支持他。"
+            }
+          },
+          {
+            "id": "TH:8:877",
+            "author": 877,
+            "stance": -1,
+            "text": {
+              "id": "post--1-002",
+              "body": "我邻居是移民家庭，孩子在学校被同学起了外号，那种排外的气氛让我实在没法把票投给他。"
+            }
+          }
+        ]
+      },
+      {
+        "graph": 0,
+        "repeat": 1,
+        "branch": "TH",
+        "round": 10,
+        "node": 62,
+        "phi": 0.3333333333333333,
+        "Q": 1,
+        "support": 0.3,
+        "J": 1,
+        "read_n": 5,
+        "read_opposition": 0.6,
+        "current_with_context_opposition": 0.5,
+        "historical_exposure_opposition": 0.7272727272727273,
+        "historical_unique_opposition": 0.6666666666666666,
+        "historical_unique_messages": 42,
+        "historical_unique_authors": 21,
+        "carried_forward": false,
+        "near_half": false,
+        "reason": "可见发言中明确反对特朗普者明显多于支持者，支持方仅零星出现；结合自身倾向，估计支持比例约三成。",
+        "evidence_ids": [
+          "r2-u389",
+          "r2-u458",
+          "r3-u945",
+          "r5-u941",
+          "r7-u728"
+        ],
+        "read_messages": [
+          {
+            "id": "TH:10:672",
+            "author": 672,
+            "stance": -1,
+            "text": {
+              "id": "post-1-019-disagree-1",
+              "body": "我不认同你的选择，也不支持特朗普当选；保护持枪权需要更稳妥的方案，他并不是能让人放心的候选人。"
+            }
+          },
+          {
+            "id": "TH:10:817",
+            "author": 817,
+            "stance": 1,
+            "text": {
+              "id": "post--1-002-disagree-1",
+              "body": "我不赞成原帖因此不投票给他，个别孩子的外号不该决定大选选择，我支持特朗普当选，经济和边境政策才是我看重的重点。"
+            }
+          },
+          {
+            "id": "TH:10:877",
+            "author": 877,
+            "stance": -1,
+            "text": {
+              "id": "post--1-004",
+              "body": "一个连选举结果都不肯认的人，我很难放心把国家交给他，规矩要是坏了，后面谁还守规矩。"
+            }
+          },
+          {
+            "id": "TH:10:894",
+            "author": 894,
+            "stance": 1,
+            "text": {
+              "id": "post--1-002-disagree-1",
+              "body": "我不赞成原帖因此不投票给他，个别孩子的外号不该决定大选选择，我支持特朗普当选，经济和边境政策才是我看重的重点。"
+            }
+          },
+          {
+            "id": "TH:9:877",
+            "author": 877,
+            "stance": -1,
+            "text": {
+              "id": "post-1-009-disagree-1",
+              "body": "我反对特朗普当选，原帖期待规则公平没错，但他的排外路线解决不了排队问题，反而让合法移民更不安心。"
+            }
+          }
+        ],
+        "context_messages": [
+          {
+            "id": "TH:7:446",
+            "author": 446,
+            "stance": 1,
+            "text": {
+              "id": "post-1-009",
+              "body": "这次我站特朗普。家里亲戚按规矩排队等亲属移民好多年，看到有人绕开程序先进来，心里很不平衡；我想要先把规则执行好，再谈其他。"
+            }
+          },
+          {
+            "id": "TH:8:479",
+            "author": 479,
+            "stance": 1,
+            "text": {
+              "id": "post-1-019",
+              "body": "我周末喜欢打猎，也担心合法持枪被一点点收紧。特朗普在拥枪权利上态度明确，我觉得他能守住这条线，所以愿意投他。"
+            }
+          },
+          {
+            "id": "TH:8:877",
+            "author": 877,
+            "stance": -1,
+            "text": {
+              "id": "post--1-002",
+              "body": "我邻居是移民家庭，孩子在学校被同学起了外号，那种排外的气氛让我实在没法把票投给他。"
+            }
+          }
+        ]
+      },
+      {
+        "graph": 0,
+        "repeat": 1,
+        "branch": "TL",
+        "round": 8,
+        "node": 62,
+        "phi": 0.16666666666666666,
+        "Q": 0,
+        "support": 0.56,
+        "J": 1,
+        "read_n": 5,
+        "read_opposition": 0.6,
+        "current_with_context_opposition": 0.5,
+        "historical_exposure_opposition": 0.325,
+        "historical_unique_opposition": 0.375,
+        "historical_unique_messages": 24,
+        "historical_unique_authors": 15,
+        "carried_forward": false,
+        "near_half": false,
+        "reason": "可见发言中支持与反对者数量接近，支持理由集中于通胀、住房和治安，反对者也形成规模；结合自身倾向，估计略高于半数。",
+        "evidence_ids": [
+          "r2-u672",
+          "r2-u877",
+          "r4-u489",
+          "r6-u728",
+          "r8-u672"
+        ],
+        "read_messages": [
+          {
+            "id": "TL:7:489",
+            "author": 489,
+            "stance": -1,
+            "text": {
+              "id": "post-1-017-disagree-1",
+              "body": "我反对原帖的结论，公共秩序不能靠驱赶露宿者解决，社区支持和治疗才是重点，因此我不支持特朗普当选。"
+            }
+          },
+          {
+            "id": "TL:7:672",
+            "author": 672,
+            "stance": 1,
+            "text": {
+              "id": "post-1-000",
+              "body": "这次我支持特朗普当选。小生意这几年被各种成本和手续压得喘不过气，我更信他能把税和监管往下压，让店先活下去。"
+            }
+          },
+          {
+            "id": "TL:7:728",
+            "author": 728,
+            "stance": -1,
+            "text": {
+              "id": "post-1-017-disagree-0",
+              "body": "我不认同你的看法，清营地只是把问题挪走，住房和成瘾服务跟不上会更糟，所以我不支持特朗普当选。"
+            }
+          },
+          {
+            "id": "TL:7:760",
+            "author": 760,
+            "stance": -1,
+            "text": {
+              "id": "post-1-017-disagree-1",
+              "body": "我反对原帖的结论，公共秩序不能靠驱赶露宿者解决，社区支持和治疗才是重点，因此我不支持特朗普当选。"
+            }
+          },
+          {
+            "id": "TL:8:672",
+            "author": 672,
+            "stance": 1,
+            "text": {
+              "id": "post-1-013",
+              "body": "我攒首付几年，房价和利率一涨再涨，租房也吃掉大半工资。特朗普说要砍建房审批、压能源和材料成本，我信这能缓解住房压力，所以支持他。"
+            }
+          }
+        ],
+        "context_messages": [
+          {
+            "id": "TL:5:877",
+            "author": 877,
+            "stance": 1,
+            "text": {
+              "id": "post-1-017",
+              "body": "我们市中心帐篷越搭越多，店家晚上不敢开门。特朗普强调清理街头营地、同时接上成瘾治疗，我觉得该先恢复公共秩序，所以支持他。"
+            }
+          }
+        ]
+      },
+      {
+        "graph": 0,
+        "repeat": 1,
+        "branch": "TL",
+        "round": 9,
+        "node": 62,
+        "phi": 0.16666666666666666,
+        "Q": 0,
+        "support": 0.57,
+        "J": 0,
+        "read_n": 5,
+        "read_opposition": 0.4,
+        "current_with_context_opposition": 0.3333333333333333,
+        "historical_exposure_opposition": 0.32608695652173914,
+        "historical_unique_opposition": 0.39285714285714285,
+        "historical_unique_messages": 28,
+        "historical_unique_authors": 18,
+        "carried_forward": false,
+        "near_half": false,
+        "reason": "可见发言中支持者略多于反对者（约10人对8人），与先前0.56的判断接近，故小幅上调至0.57。",
+        "evidence_ids": [
+          "r2-u672",
+          "r2-u877",
+          "r4-u489",
+          "r7-u166",
+          "r9-u927"
+        ],
+        "read_messages": [
+          {
+            "id": "TL:8:672",
+            "author": 672,
+            "stance": 1,
+            "text": {
+              "id": "post-1-013",
+              "body": "我攒首付几年，房价和利率一涨再涨，租房也吃掉大半工资。特朗普说要砍建房审批、压能源和材料成本，我信这能缓解住房压力，所以支持他。"
+            }
+          },
+          {
+            "id": "TL:8:696",
+            "author": 696,
+            "stance": -1,
+            "text": {
+              "id": "post-1-000-disagree-1",
+              "body": "我反对这个选择，减税口号未必能帮到普通小店，这次我不支持特朗普当选，他的做法可能让市场更不稳。"
+            }
+          },
+          {
+            "id": "TL:9:696",
+            "author": 696,
+            "stance": -1,
+            "text": {
+              "id": "post-1-013-disagree-1",
+              "body": "我反对原帖这种期待，住房问题需要更稳的政策组合，特朗普的方案难解近忧，我不支持他当选。"
+            }
+          },
+          {
+            "id": "TL:9:755",
+            "author": 755,
+            "stance": 1,
+            "text": {
+              "id": "post-1-000-agree-1",
+              "body": "同意，特朗普在减税和放松管制上更让店主有盼头，我支持他当选，先把经营成本压下来再说。"
+            }
+          },
+          {
+            "id": "TL:9:927",
+            "author": 927,
+            "stance": 1,
+            "text": {
+              "id": "post-1-000-agree-0",
+              "body": "我赞同你的说法，小生意确实需要更轻的税负和监管，这次我支持特朗普当选，让他来推动这些改变。"
+            }
+          }
+        ],
+        "context_messages": [
+          {
+            "id": "TL:7:672",
+            "author": 672,
+            "stance": 1,
+            "text": {
+              "id": "post-1-000",
+              "body": "这次我支持特朗普当选。小生意这几年被各种成本和手续压得喘不过气，我更信他能把税和监管往下压，让店先活下去。"
+            }
+          },
+          {
+            "id": "TL:8:672",
+            "author": 672,
+            "stance": 1,
+            "text": {
+              "id": "post-1-013",
+              "body": "我攒首付几年，房价和利率一涨再涨，租房也吃掉大半工资。特朗普说要砍建房审批、压能源和材料成本，我信这能缓解住房压力，所以支持他。"
+            }
+          }
+        ]
+      },
+      {
+        "graph": 0,
+        "repeat": 1,
+        "branch": "TL",
+        "round": 10,
+        "node": 62,
+        "phi": 0.16666666666666666,
+        "Q": 0,
+        "support": 0.6,
+        "J": 0,
+        "read_n": 5,
+        "read_opposition": 0.4,
+        "current_with_context_opposition": 0.375,
+        "historical_exposure_opposition": 0.3333333333333333,
+        "historical_unique_opposition": 0.4117647058823529,
+        "historical_unique_messages": 34,
+        "historical_unique_authors": 20,
+        "carried_forward": false,
+        "near_half": false,
+        "reason": "可见发言中支持特朗普的明确表态多于反对，且支持理由集中在通胀、外交、秩序等具体议题；结合自身倾向，估计社区支持者略过半。",
+        "evidence_ids": [
+          "r2-u672",
+          "r2-u877",
+          "r5-u941",
+          "r7-u672",
+          "r9-u927"
+        ],
+        "read_messages": [
+          {
+            "id": "TL:10:672",
+            "author": 672,
+            "stance": 1,
+            "text": {
+              "id": "post--1-008-disagree-1",
+              "body": "你把话讲重了，他质疑判决是在表达不满，不代表会把司法当工具；这届大选我支持特朗普当选，不能因此否定他的参选资格。"
+            }
+          },
+          {
+            "id": "TL:10:877",
+            "author": 877,
+            "stance": 1,
+            "text": {
+              "id": "post-1-004",
+              "body": "这次选总统，我看重外交别再四处点火。特朗普任内那种谈交易、压着各方坐下来谈的路子，比无止境援助更让我放心，所以我支持他。"
+            }
+          },
+          {
+            "id": "TL:9:133",
+            "author": 133,
+            "stance": -1,
+            "text": {
+              "id": "post-1-000-disagree-0",
+              "body": "我不赞同你的判断，特朗普的减税和松监管听起来好，但我不支持他当选，小生意更需要稳定的政策环境。"
+            }
+          },
+          {
+            "id": "TL:9:672",
+            "author": 672,
+            "stance": -1,
+            "text": {
+              "id": "post-1-004-disagree-0",
+              "body": "我不赞同你的看法，也不支持特朗普当选；交易式外交看似省事，却可能让盟友不安、让局势更难收拾。"
+            }
+          },
+          {
+            "id": "TL:9:927",
+            "author": 927,
+            "stance": 1,
+            "text": {
+              "id": "post-1-000-agree-0",
+              "body": "我赞同你的说法，小生意确实需要更轻的税负和监管，这次我支持特朗普当选，让他来推动这些改变。"
+            }
+          }
+        ],
+        "context_messages": [
+          {
+            "id": "TL:7:672",
+            "author": 672,
+            "stance": 1,
+            "text": {
+              "id": "post-1-000",
+              "body": "这次我支持特朗普当选。小生意这几年被各种成本和手续压得喘不过气，我更信他能把税和监管往下压，让店先活下去。"
+            }
+          },
+          {
+            "id": "TL:7:894",
+            "author": 894,
+            "stance": 1,
+            "text": {
+              "id": "post-1-004",
+              "body": "这次选总统，我看重外交别再四处点火。特朗普任内那种谈交易、压着各方坐下来谈的路子，比无止境援助更让我放心，所以我支持他。"
+            }
+          },
+          {
+            "id": "TL:8:808",
+            "author": 808,
+            "stance": -1,
+            "text": {
+              "id": "post--1-008",
+              "body": "官司缠身还天天骂法官、骂法院，说判决都是被操纵的，这样的人要是再掌权，我真怕司法也变成他手里的工具。"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "graph": 0,
+    "repeat": 1,
+    "node": 288,
+    "selection": "minimum/maximum tail paired Q difference; ties smallest node",
+    "trajectory": [
+      {
+        "graph": 0,
+        "repeat": 1,
+        "branch": "TH",
+        "round": 8,
+        "node": 288,
+        "phi": 0.08333333333333333,
+        "Q": 0,
+        "support": 0.68,
+        "J": 0,
+        "read_n": 5,
+        "read_opposition": 0.2,
+        "current_with_context_opposition": 0.2857142857142857,
+        "historical_exposure_opposition": 0.22033898305084745,
+        "historical_unique_opposition": 0.2549019607843137,
+        "historical_unique_messages": 51,
+        "historical_unique_authors": 35,
+        "carried_forward": false,
+        "near_half": false,
+        "reason": "按作者去重后，明确支持者仍略多于反对者，反对意见集中在宗教、劳工与外交；结合原估计0.65，估约0.68。",
+        "evidence_ids": [
+          "r1-u390",
+          "r1-u600",
+          "r2-u605",
+          "r6-u570",
+          "r8-u116"
+        ],
+        "read_messages": [
+          {
+            "id": "TH:7:106",
+            "author": 106,
+            "stance": 1,
+            "text": {
+              "id": "post--1-023-disagree-1",
+              "body": "你把劳工局说成只帮老板太片面了，特朗普的经济政策对普通工人也有好处；这次大选我支持特朗普当选，不觉得换人会更利于工会。"
+            }
+          },
+          {
+            "id": "TH:7:600",
+            "author": 600,
+            "stance": 1,
+            "text": {
+              "id": "post-1-012",
+              "body": "家里老人是退伍军人，排队等预约常拖很久。我希望特朗普扩大退伍军人自己选医生的渠道，别让人干等，所以支持他。"
+            }
+          },
+          {
+            "id": "TH:7:827",
+            "author": 827,
+            "stance": 1,
+            "text": {
+              "id": "post-1-010-agree-1",
+              "body": "你说得在理，服务员的小费本来就是辛苦钱，特朗普提小费免税让我更愿意支持他当选，这比泛泛谈工资实在。"
+            }
+          },
+          {
+            "id": "TH:8:116",
+            "author": 116,
+            "stance": -1,
+            "text": {
+              "id": "post--1-023-agree-1",
+              "body": "同感，工人要抱团已经够难了，特朗普那套做法只会让老板更强硬，我不支持他当选，也不愿再看到这种劳工政策。"
+            }
+          },
+          {
+            "id": "TH:8:891",
+            "author": 891,
+            "stance": 1,
+            "text": {
+              "id": "post-1-012-agree-1",
+              "body": "我也赞同原帖，等预约太久确实折腾老人，扩大自选医生渠道值得支持；因此我希望特朗普赢得大选。"
+            }
+          }
+        ],
+        "context_messages": [
+          {
+            "id": "TH:5:390",
+            "author": 390,
+            "stance": 1,
+            "text": {
+              "id": "post-1-010",
+              "body": "我在餐馆做服务员，小费是收入大头，报税时一笔笔算得心疼。特朗普提出小费免税，我觉得这比空谈最低工资更直接，所以支持他。"
+            }
+          },
+          {
+            "id": "TH:6:787",
+            "author": 787,
+            "stance": -1,
+            "text": {
+              "id": "post--1-023",
+              "body": "我在仓库干活，工会投票前公司天天开会吓唬人，他任内劳工局那套做法明显偏着老板，工人想抱团太难了。"
+            }
+          },
+          {
+            "id": "TH:7:600",
+            "author": 600,
+            "stance": 1,
+            "text": {
+              "id": "post-1-012",
+              "body": "家里老人是退伍军人，排队等预约常拖很久。我希望特朗普扩大退伍军人自己选医生的渠道，别让人干等，所以支持他。"
+            }
+          }
+        ]
+      },
+      {
+        "graph": 0,
+        "repeat": 1,
+        "branch": "TH",
+        "round": 9,
+        "node": 288,
+        "phi": 0.08333333333333333,
+        "Q": 0,
+        "support": 0.62,
+        "J": 1,
+        "read_n": 5,
+        "read_opposition": 0.8,
+        "current_with_context_opposition": 0.5555555555555556,
+        "historical_exposure_opposition": 0.2647058823529412,
+        "historical_unique_opposition": 0.2982456140350877,
+        "historical_unique_messages": 57,
+        "historical_unique_authors": 38,
+        "carried_forward": false,
+        "near_half": false,
+        "reason": "可见发言中支持特朗普者仍占多数，理由集中在能源、移民、宗教自由、小费免税等；但近几轮反对声音增多，故较此前0.68略下调。",
+        "evidence_ids": [
+          "r1-u390",
+          "r2-u927",
+          "r6-u570",
+          "r7-u600",
+          "r8-u301"
+        ],
+        "read_messages": [
+          {
+            "id": "TH:8:289",
+            "author": 289,
+            "stance": -1,
+            "text": {
+              "id": "post--1-023-agree-1",
+              "body": "同感，工人要抱团已经够难了，特朗普那套做法只会让老板更强硬，我不支持他当选，也不愿再看到这种劳工政策。"
+            }
+          },
+          {
+            "id": "TH:8:301",
+            "author": 301,
+            "stance": -1,
+            "text": {
+              "id": "post-1-015-disagree-1",
+              "body": "你把希望押在特朗普身上，我不认同，也不会支持他当选。药价透明不能只靠喊，我更担心他的做法反而让老人用药保障更不稳定。"
+            }
+          },
+          {
+            "id": "TH:8:570",
+            "author": 570,
+            "stance": -1,
+            "text": {
+              "id": "post-1-015-disagree-1",
+              "body": "你把希望押在特朗普身上，我不认同，也不会支持他当选。药价透明不能只靠喊，我更担心他的做法反而让老人用药保障更不稳定。"
+            }
+          },
+          {
+            "id": "TH:8:969",
+            "author": 969,
+            "stance": 1,
+            "text": {
+              "id": "post--1-023-disagree-1",
+              "body": "你把劳工局说成只帮老板太片面了，特朗普的经济政策对普通工人也有好处；这次大选我支持特朗普当选，不觉得换人会更利于工会。"
+            }
+          },
+          {
+            "id": "TH:9:447",
+            "author": 447,
+            "stance": -1,
+            "text": {
+              "id": "post-1-012-disagree-0",
+              "body": "我不赞同原帖把希望押在特朗普身上，退伍军人就医需要更稳的安排；我不支持他当选，也不认为他能解决排队问题。"
+            }
+          }
+        ],
+        "context_messages": [
+          {
+            "id": "TH:6:600",
+            "author": 600,
+            "stance": 1,
+            "text": {
+              "id": "post-1-015",
+              "body": "家里老人长期吃药，药价年年涨。特朗普说要让药价更透明、把中间环节的虚高挤一挤，我觉得这比听药企公关实在，所以支持他。"
+            }
+          },
+          {
+            "id": "TH:6:787",
+            "author": 787,
+            "stance": -1,
+            "text": {
+              "id": "post--1-023",
+              "body": "我在仓库干活，工会投票前公司天天开会吓唬人，他任内劳工局那套做法明显偏着老板，工人想抱团太难了。"
+            }
+          },
+          {
+            "id": "TH:6:893",
+            "author": 893,
+            "stance": 1,
+            "text": {
+              "id": "post-1-015",
+              "body": "家里老人长期吃药，药价年年涨。特朗普说要让药价更透明、把中间环节的虚高挤一挤，我觉得这比听药企公关实在，所以支持他。"
+            }
+          },
+          {
+            "id": "TH:7:600",
+            "author": 600,
+            "stance": 1,
+            "text": {
+              "id": "post-1-012",
+              "body": "家里老人是退伍军人，排队等预约常拖很久。我希望特朗普扩大退伍军人自己选医生的渠道，别让人干等，所以支持他。"
+            }
+          }
+        ]
+      },
+      {
+        "graph": 0,
+        "repeat": 1,
+        "branch": "TH",
+        "round": 10,
+        "node": 288,
+        "phi": 0.08333333333333333,
+        "Q": 0,
+        "support": 0.6,
+        "J": 0,
+        "read_n": 5,
+        "read_opposition": 0.4,
+        "current_with_context_opposition": 0.2222222222222222,
+        "historical_exposure_opposition": 0.2597402597402597,
+        "historical_unique_opposition": 0.2923076923076923,
+        "historical_unique_messages": 65,
+        "historical_unique_authors": 42,
+        "carried_forward": false,
+        "near_half": false,
+        "reason": "可见发言中支持特朗普的明显多于反对，且支持理由多样（能源、移民、宗教、小费、药价等），反对者虽持续出现但比例较低，故估计约六成支持。",
+        "evidence_ids": [
+          "r1-u390",
+          "r1-u600",
+          "r2-u927",
+          "r6-u570",
+          "r10-u927"
+        ],
+        "read_messages": [
+          {
+            "id": "TH:10:325",
+            "author": 325,
+            "stance": -1,
+            "text": {
+              "id": "post-1-000-disagree-1",
+              "body": "我反对这个选择，减税口号未必能帮到普通小店，这次我不支持特朗普当选，他的做法可能让市场更不稳。"
+            }
+          },
+          {
+            "id": "TH:10:927",
+            "author": 927,
+            "stance": 1,
+            "text": {
+              "id": "post-1-002",
+              "body": "支持特朗普回来。家里老人看病、孩子上学样样涨钱，我希望白宫先管住通胀和能源价格，别把精力都花在海外冲突上。"
+            }
+          },
+          {
+            "id": "TH:9:126",
+            "author": 126,
+            "stance": 1,
+            "text": {
+              "id": "post-1-002-agree-1",
+              "body": "你说到点子上了，我同样支持特朗普当选；比起把资源投到海外冲突，我更希望白宫先把能源价格和看病上学的负担降下来。"
+            }
+          },
+          {
+            "id": "TH:9:304",
+            "author": 304,
+            "stance": -1,
+            "text": {
+              "id": "post-1-012-disagree-0",
+              "body": "我不赞同原帖把希望押在特朗普身上，退伍军人就医需要更稳的安排；我不支持他当选，也不认为他能解决排队问题。"
+            }
+          },
+          {
+            "id": "TH:9:927",
+            "author": 927,
+            "stance": 1,
+            "text": {
+              "id": "post-1-011-agree-0",
+              "body": "你说得对，我支持特朗普当选，平台限流确实让人憋屈，普通人发声该有更多的保障空间。"
+            }
+          }
+        ],
+        "context_messages": [
+          {
+            "id": "TH:7:600",
+            "author": 600,
+            "stance": 1,
+            "text": {
+              "id": "post-1-012",
+              "body": "家里老人是退伍军人，排队等预约常拖很久。我希望特朗普扩大退伍军人自己选医生的渠道，别让人干等，所以支持他。"
+            }
+          },
+          {
+            "id": "TH:8:696",
+            "author": 696,
+            "stance": 1,
+            "text": {
+              "id": "post-1-011",
+              "body": "我平时在网上转新闻，常遇到帖子莫名其妙被限流。特朗普说要收拾大科技公司的审查，我觉得普通人说话的空间该有人撑腰，因此支持他。"
+            }
+          },
+          {
+            "id": "TH:8:761",
+            "author": 761,
+            "stance": 1,
+            "text": {
+              "id": "post-1-000",
+              "body": "这次我支持特朗普当选。小生意这几年被各种成本和手续压得喘不过气，我更信他能把税和监管往下压，让店先活下去。"
+            }
+          },
+          {
+            "id": "TH:8:927",
+            "author": 927,
+            "stance": 1,
+            "text": {
+              "id": "post-1-002",
+              "body": "支持特朗普回来。家里老人看病、孩子上学样样涨钱，我希望白宫先管住通胀和能源价格，别把精力都花在海外冲突上。"
+            }
+          }
+        ]
+      },
+      {
+        "graph": 0,
+        "repeat": 1,
+        "branch": "TL",
+        "round": 8,
+        "node": 288,
+        "phi": 0.25,
+        "Q": 1,
+        "support": 0.49,
+        "J": 0,
+        "read_n": 5,
+        "read_opposition": 0.4,
+        "current_with_context_opposition": 0.375,
+        "historical_exposure_opposition": 0.4153846153846154,
+        "historical_unique_opposition": 0.47058823529411764,
+        "historical_unique_messages": 51,
+        "historical_unique_authors": 35,
+        "carried_forward": false,
+        "near_half": true,
+        "reason": "多轮发言去重后，明确支持者与反对者人数接近，约17比18，支持率略低于半数；早期支持声量较高，末轮仍明显分歧。",
+        "evidence_ids": [
+          "r1-u390",
+          "r1-u893",
+          "r2-u367",
+          "r5-u639",
+          "r8-u607"
+        ],
+        "read_messages": [
+          {
+            "id": "TL:7:278",
+            "author": 278,
+            "stance": -1,
+            "text": {
+              "id": "post-1-010-disagree-1",
+              "body": "我反对你的看法，也明确不支持特朗普当选；小费免税并不能抵消他在其他议题上的问题，靠服务收入的人需要更全面的保障。"
+            }
+          },
+          {
+            "id": "TL:7:607",
+            "author": 607,
+            "stance": 1,
+            "text": {
+              "id": "post-1-010-agree-0",
+              "body": "我赞同你的看法，小费免税确实能让靠服务收入的人少些报税负担，我支持特朗普当选，他这类直接减负的提议更合我意。"
+            }
+          },
+          {
+            "id": "TL:8:343",
+            "author": 343,
+            "stance": 1,
+            "text": {
+              "id": "post--1-012-disagree-1",
+              "body": "你表弟看到的是个别扯皮，不能说明救灾制度不行；我支持特朗普当选，觉得他能减少低效。"
+            }
+          },
+          {
+            "id": "TL:8:570",
+            "author": 570,
+            "stance": 1,
+            "text": {
+              "id": "post--1-012-disagree-1",
+              "body": "你表弟看到的是个别扯皮，不能说明救灾制度不行；我支持特朗普当选，觉得他能减少低效。"
+            }
+          },
+          {
+            "id": "TL:8:607",
+            "author": 607,
+            "stance": -1,
+            "text": {
+              "id": "post-1-000-disagree-1",
+              "body": "我反对这个选择，减税口号未必能帮到普通小店，这次我不支持特朗普当选，他的做法可能让市场更不稳。"
+            }
+          }
+        ],
+        "context_messages": [
+          {
+            "id": "TL:5:390",
+            "author": 390,
+            "stance": 1,
+            "text": {
+              "id": "post-1-010",
+              "body": "我在餐馆做服务员，小费是收入大头，报税时一笔笔算得心疼。特朗普提出小费免税，我觉得这比空谈最低工资更直接，所以支持他。"
+            }
+          },
+          {
+            "id": "TL:7:390",
+            "author": 390,
+            "stance": 1,
+            "text": {
+              "id": "post-1-000",
+              "body": "这次我支持特朗普当选。小生意这几年被各种成本和手续压得喘不过气，我更信他能把税和监管往下压，让店先活下去。"
+            }
+          },
+          {
+            "id": "TL:7:600",
+            "author": 600,
+            "stance": -1,
+            "text": {
+              "id": "post--1-012",
+              "body": "我表弟在市政府做灾害救援，他说联邦救灾款常被拿来讨价还价，山火洪水来了还扯政治，这种时候真耽误事。"
+            }
+          }
+        ]
+      },
+      {
+        "graph": 0,
+        "repeat": 1,
+        "branch": "TL",
+        "round": 9,
+        "node": 288,
+        "phi": 0.25,
+        "Q": 1,
+        "support": 0.47,
+        "J": 1,
+        "read_n": 5,
+        "read_opposition": 0.6,
+        "current_with_context_opposition": 0.5,
+        "historical_exposure_opposition": 0.4246575342465753,
+        "historical_unique_opposition": 0.48214285714285715,
+        "historical_unique_messages": 56,
+        "historical_unique_authors": 37,
+        "carried_forward": false,
+        "near_half": true,
+        "reason": "可见消息中支持与反对特朗普当选的发言大致相当，支持者多基于经济、宗教自由和移民秩序，反对者多基于言辞风格、社会撕裂和制度稳定，整体接近对半。",
+        "evidence_ids": [
+          "r1-u390",
+          "r1-u893",
+          "r2-u367",
+          "r3-u430",
+          "r8-u541"
+        ],
+        "read_messages": [
+          {
+            "id": "TL:8:527",
+            "author": 527,
+            "stance": -1,
+            "text": {
+              "id": "post-1-000-disagree-0",
+              "body": "我不赞同你的判断，特朗普的减税和松监管听起来好，但我不支持他当选，小生意更需要稳定的政策环境。"
+            }
+          },
+          {
+            "id": "TL:8:541",
+            "author": 541,
+            "stance": 1,
+            "text": {
+              "id": "post-1-005",
+              "body": "我支持特朗普，是因为油价和电费实在压人。希望他上台后放开本土油气开采，让加油和取暖账单降下来，别老拿环保口号让普通家庭买单。"
+            }
+          },
+          {
+            "id": "TL:8:570",
+            "author": 570,
+            "stance": 1,
+            "text": {
+              "id": "post--1-012-disagree-1",
+              "body": "你表弟看到的是个别扯皮，不能说明救灾制度不行；我支持特朗普当选，觉得他能减少低效。"
+            }
+          },
+          {
+            "id": "TL:8:977",
+            "author": 977,
+            "stance": -1,
+            "text": {
+              "id": "post--1-013",
+              "body": "我们小地方就靠地方报纸盯着市政，他天天骂媒体是人民公敌，记者被骂得不敢写，最后吃亏的是想知道真相的普通人。"
+            }
+          },
+          {
+            "id": "TL:9:854",
+            "author": 854,
+            "stance": -1,
+            "text": {
+              "id": "post-1-002-disagree-0",
+              "body": "我不赞同你的判断，也不支持特朗普当选；把通胀和能源问题简单归咎于对外事务，并不能说明他上台后就有办法让看病上学更便宜。"
+            }
+          }
+        ],
+        "context_messages": [
+          {
+            "id": "TL:7:390",
+            "author": 390,
+            "stance": 1,
+            "text": {
+              "id": "post-1-000",
+              "body": "这次我支持特朗普当选。小生意这几年被各种成本和手续压得喘不过气，我更信他能把税和监管往下压，让店先活下去。"
+            }
+          },
+          {
+            "id": "TL:7:600",
+            "author": 600,
+            "stance": -1,
+            "text": {
+              "id": "post--1-012",
+              "body": "我表弟在市政府做灾害救援，他说联邦救灾款常被拿来讨价还价，山火洪水来了还扯政治，这种时候真耽误事。"
+            }
+          },
+          {
+            "id": "TL:7:893",
+            "author": 893,
+            "stance": 1,
+            "text": {
+              "id": "post-1-002",
+              "body": "支持特朗普回来。家里老人看病、孩子上学样样涨钱，我希望白宫先管住通胀和能源价格，别把精力都花在海外冲突上。"
+            }
+          }
+        ]
+      },
+      {
+        "graph": 0,
+        "repeat": 1,
+        "branch": "TL",
+        "round": 10,
+        "node": 288,
+        "phi": 0.25,
+        "Q": 1,
+        "support": 0.47,
+        "J": 1,
+        "read_n": 5,
+        "read_opposition": 0.6,
+        "current_with_context_opposition": 0.375,
+        "historical_exposure_opposition": 0.41975308641975306,
+        "historical_unique_opposition": 0.47619047619047616,
+        "historical_unique_messages": 63,
+        "historical_unique_authors": 40,
+        "carried_forward": false,
+        "near_half": true,
+        "reason": "可见消息中支持与反对大致相当，支持者多基于经济、宗教自由和移民秩序，反对者多基于言论风格、社会撕裂和制度担忧；结合自身倾向，估计社区支持比例略低于一半。",
+        "evidence_ids": [
+          "r1-u390",
+          "r1-u893",
+          "r1-u895",
+          "r2-u367",
+          "r10-u957"
+        ],
+        "read_messages": [
+          {
+            "id": "TL:10:957",
+            "author": 957,
+            "stance": -1,
+            "text": {
+              "id": "post-1-002-disagree-1",
+              "body": "我反对原帖的看法，也不希望特朗普当选；能源和物价受多重因素影响，换他回来未必管用，反而可能让政策焦点偏离普通家庭的实际需要。"
+            }
+          },
+          {
+            "id": "TL:9:605",
+            "author": 605,
+            "stance": -1,
+            "text": {
+              "id": "post-1-000-disagree-0",
+              "body": "我不赞同你的判断，特朗普的减税和松监管听起来好，但我不支持他当选，小生意更需要稳定的政策环境。"
+            }
+          },
+          {
+            "id": "TL:9:895",
+            "author": 895,
+            "stance": 1,
+            "text": {
+              "id": "post-1-021",
+              "body": "我在仓库常加班，超时那部分还要被税扣掉一部分。特朗普提出加班费免税，我觉得这比喊口号更直接帮到工薪族，所以支持他。"
+            }
+          },
+          {
+            "id": "TL:9:927",
+            "author": 927,
+            "stance": 1,
+            "text": {
+              "id": "post-1-000-agree-0",
+              "body": "我赞同你的说法，小生意确实需要更轻的税负和监管，这次我支持特朗普当选，让他来推动这些改变。"
+            }
+          },
+          {
+            "id": "TL:9:977",
+            "author": 977,
+            "stance": -1,
+            "text": {
+              "id": "post--1-007",
+              "body": "我女儿刚工作，她说选谁都行就是不能选他，因为那几年最高法院的判决把身体决定权从女性手里拿走了，我当妈的没法装看不见。"
+            }
+          }
+        ],
+        "context_messages": [
+          {
+            "id": "TL:7:390",
+            "author": 390,
+            "stance": 1,
+            "text": {
+              "id": "post-1-000",
+              "body": "这次我支持特朗普当选。小生意这几年被各种成本和手续压得喘不过气，我更信他能把税和监管往下压，让店先活下去。"
+            }
+          },
+          {
+            "id": "TL:7:672",
+            "author": 672,
+            "stance": 1,
+            "text": {
+              "id": "post-1-000",
+              "body": "这次我支持特朗普当选。小生意这几年被各种成本和手续压得喘不过气，我更信他能把税和监管往下压，让店先活下去。"
+            }
+          },
+          {
+            "id": "TL:8:927",
+            "author": 927,
+            "stance": 1,
+            "text": {
+              "id": "post-1-002",
+              "body": "支持特朗普回来。家里老人看病、孩子上学样样涨钱，我希望白宫先管住通胀和能源价格，别把精力都花在海外冲突上。"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "graph": 0,
+    "repeat": 2,
+    "node": 6,
+    "selection": "minimum/maximum tail paired Q difference; ties smallest node",
+    "trajectory": [
+      {
+        "graph": 0,
+        "repeat": 2,
+        "branch": "TH",
+        "round": 8,
+        "node": 6,
+        "phi": 0.18181818181818182,
+        "Q": 1,
+        "support": 0.4,
+        "J": 1,
+        "read_n": 5,
+        "read_opposition": 0.6,
+        "current_with_context_opposition": 0.5714285714285714,
+        "historical_exposure_opposition": 0.5,
+        "historical_unique_opposition": 0.5428571428571428,
+        "historical_unique_messages": 35,
+        "historical_unique_authors": 21,
+        "carried_forward": false,
+        "near_half": false,
+        "reason": "可见发言中支持与反对者数量接近，但多名早期支持者后来转为反对，且反对理由较集中；结合自身略偏支持但强度不高，估计支持者略少于一半。",
+        "evidence_ids": [
+          "r1-u249",
+          "r1-u417",
+          "r2-u366",
+          "r3-u417",
+          "r8-u417"
+        ],
+        "read_messages": [
+          {
+            "id": "TH:7:417",
+            "author": 417,
+            "stance": -1,
+            "text": {
+              "id": "post--1-014-agree-0",
+              "body": "我赞同你的看法，志愿者被骂、官员被施压这种做法都让人心寒，我也明确反对特朗普当选。"
+            }
+          },
+          {
+            "id": "TH:7:677",
+            "author": 677,
+            "stance": 1,
+            "text": {
+              "id": "post-1-016-agree-0",
+              "body": "我认同你的感受，也支持特朗普当选；柴油、化肥和贷款利息都在涨，他提出减轻农场监管和能源负担，至少让种粮家庭看到点盼头。"
+            }
+          },
+          {
+            "id": "TH:7:744",
+            "author": 744,
+            "stance": -1,
+            "text": {
+              "id": "post--1-014",
+              "body": "我邻居阿姨做选举志愿者，上一回被人在网上骂得不敢出门，他还打电话施压地方官员找票，这样谁还愿意去帮忙。"
+            }
+          },
+          {
+            "id": "TH:8:417",
+            "author": 417,
+            "stance": 1,
+            "text": {
+              "id": "post-1-015",
+              "body": "家里老人长期吃药，药价年年涨。特朗普说要让药价更透明、把中间环节的虚高挤一挤，我觉得这比听药企公关实在，所以支持他。"
+            }
+          },
+          {
+            "id": "TH:8:744",
+            "author": 744,
+            "stance": -1,
+            "text": {
+              "id": "post--1-003",
+              "body": "他老跟盟友吵架退群，我表哥在欧洲做生意，说那边现在都不太信美国了，这种不确定性太折腾人。"
+            }
+          }
+        ],
+        "context_messages": [
+          {
+            "id": "TH:5:843",
+            "author": 843,
+            "stance": 1,
+            "text": {
+              "id": "post-1-016",
+              "body": "我爸妈种地，柴油、化肥和贷款利息样样涨。特朗普说要减轻农场监管和能源负担，让他们种粮有盼头，我愿意支持他。"
+            }
+          },
+          {
+            "id": "TH:6:725",
+            "author": 725,
+            "stance": -1,
+            "text": {
+              "id": "post--1-014",
+              "body": "我邻居阿姨做选举志愿者，上一回被人在网上骂得不敢出门，他还打电话施压地方官员找票，这样谁还愿意去帮忙。"
+            }
+          }
+        ]
+      },
+      {
+        "graph": 0,
+        "repeat": 2,
+        "branch": "TH",
+        "round": 9,
+        "node": 6,
+        "phi": 0.18181818181818182,
+        "Q": 1,
+        "support": 0.45,
+        "J": 0,
+        "read_n": 5,
+        "read_opposition": 0.4,
+        "current_with_context_opposition": 0.3333333333333333,
+        "historical_exposure_opposition": 0.4838709677419355,
+        "historical_unique_opposition": 0.525,
+        "historical_unique_messages": 40,
+        "historical_unique_authors": 24,
+        "carried_forward": false,
+        "near_half": true,
+        "reason": "可见发言中支持与反对大致相当，支持者多基于关税、住房、教育、能源等具体诉求，反对者亦不少，且部分人立场反复，整体接近对半略偏反对。",
+        "evidence_ids": [
+          "r1-u249",
+          "r1-u417",
+          "r2-u366",
+          "r9-u645",
+          "r9-u502"
+        ],
+        "read_messages": [
+          {
+            "id": "TH:8:417",
+            "author": 417,
+            "stance": 1,
+            "text": {
+              "id": "post-1-015",
+              "body": "家里老人长期吃药，药价年年涨。特朗普说要让药价更透明、把中间环节的虚高挤一挤，我觉得这比听药企公关实在，所以支持他。"
+            }
+          },
+          {
+            "id": "TH:9:502",
+            "author": 502,
+            "stance": -1,
+            "text": {
+              "id": "post-1-005-disagree-1",
+              "body": "我不同意你的判断，油电压力需要更稳妥的长期方案，而不是靠特朗普放松开采；这次大选我不支持他当选，也不认同你的能源主张。"
+            }
+          },
+          {
+            "id": "TH:9:645",
+            "author": 645,
+            "stance": 1,
+            "text": {
+              "id": "post-1-005-agree-0",
+              "body": "我认同你的说法，普通家庭的油电账单确实该优先考虑；放宽本土油气开采比空喊环保口号实际，这次我支持特朗普当选。"
+            }
+          },
+          {
+            "id": "TH:9:751",
+            "author": 751,
+            "stance": 1,
+            "text": {
+              "id": "post-1-005-agree-1",
+              "body": "你说到点子上了，取暖和加油开销让我也盼着降低能源成本；因此这届大选我支持特朗普当选，期待他把开采限制松一松。"
+            }
+          },
+          {
+            "id": "TH:9:955",
+            "author": 955,
+            "stance": -1,
+            "text": {
+              "id": "post-1-005-disagree-1",
+              "body": "我不同意你的判断，油电压力需要更稳妥的长期方案，而不是靠特朗普放松开采；这次大选我不支持他当选，也不认同你的能源主张。"
+            }
+          }
+        ],
+        "context_messages": [
+          {
+            "id": "TH:8:677",
+            "author": 677,
+            "stance": 1,
+            "text": {
+              "id": "post-1-005",
+              "body": "我支持特朗普，是因为油价和电费实在压人。希望他上台后放开本土油气开采，让加油和取暖账单降下来，别老拿环保口号让普通家庭买单。"
+            }
+          }
+        ]
+      },
+      {
+        "graph": 0,
+        "repeat": 2,
+        "branch": "TH",
+        "round": 10,
+        "node": 6,
+        "phi": 0.18181818181818182,
+        "Q": 1,
+        "support": 0.42,
+        "J": 0,
+        "read_n": 5,
+        "read_opposition": 0.4,
+        "current_with_context_opposition": 0.2857142857142857,
+        "historical_exposure_opposition": 0.463768115942029,
+        "historical_unique_opposition": 0.5111111111111111,
+        "historical_unique_messages": 45,
+        "historical_unique_authors": 28,
+        "carried_forward": false,
+        "near_half": false,
+        "reason": "可见发言中支持与反对大致相当，反对者略多且部分早期支持者转向反对；结合自身略偏支持但强度不高，估计支持者约四成。",
+        "evidence_ids": [
+          "r1-u249",
+          "r1-u417",
+          "r2-u366",
+          "r3-u417",
+          "r10-u860"
+        ],
+        "read_messages": [
+          {
+            "id": "TH:10:577",
+            "author": 577,
+            "stance": 1,
+            "text": {
+              "id": "post-1-005-agree-0",
+              "body": "我认同你的说法，普通家庭的油电账单确实该优先考虑；放宽本土油气开采比空喊环保口号实际，这次我支持特朗普当选。"
+            }
+          },
+          {
+            "id": "TH:10:637",
+            "author": 637,
+            "stance": 1,
+            "text": {
+              "id": "post-1-005-agree-1",
+              "body": "你说到点子上了，取暖和加油开销让我也盼着降低能源成本；因此这届大选我支持特朗普当选，期待他把开采限制松一松。"
+            }
+          },
+          {
+            "id": "TH:10:860",
+            "author": 860,
+            "stance": -1,
+            "text": {
+              "id": "post-1-005-disagree-1",
+              "body": "我不同意你的判断，油电压力需要更稳妥的长期方案，而不是靠特朗普放松开采；这次大选我不支持他当选，也不认同你的能源主张。"
+            }
+          },
+          {
+            "id": "TH:9:677",
+            "author": 677,
+            "stance": -1,
+            "text": {
+              "id": "post-1-010-disagree-0",
+              "body": "我不赞同你的选择，小费免税听起来好，但不能因此支持特朗普当选；他的整体政策取向让我担心，我更看重稳定和公平。"
+            }
+          },
+          {
+            "id": "TH:9:751",
+            "author": 751,
+            "stance": 1,
+            "text": {
+              "id": "post-1-005-agree-1",
+              "body": "你说到点子上了，取暖和加油开销让我也盼着降低能源成本；因此这届大选我支持特朗普当选，期待他把开采限制松一松。"
+            }
+          }
+        ],
+        "context_messages": [
+          {
+            "id": "TH:8:677",
+            "author": 677,
+            "stance": 1,
+            "text": {
+              "id": "post-1-005",
+              "body": "我支持特朗普，是因为油价和电费实在压人。希望他上台后放开本土油气开采，让加油和取暖账单降下来，别老拿环保口号让普通家庭买单。"
+            }
+          },
+          {
+            "id": "TH:8:890",
+            "author": 890,
+            "stance": 1,
+            "text": {
+              "id": "post-1-010",
+              "body": "我在餐馆做服务员，小费是收入大头，报税时一笔笔算得心疼。特朗普提出小费免税，我觉得这比空谈最低工资更直接，所以支持他。"
+            }
+          }
+        ]
+      },
+      {
+        "graph": 0,
+        "repeat": 2,
+        "branch": "TL",
+        "round": 8,
+        "node": 6,
+        "phi": 0.0,
+        "Q": 0,
+        "support": 0.7,
+        "J": 0,
+        "read_n": 5,
+        "read_opposition": 0.2,
+        "current_with_context_opposition": 0.25,
+        "historical_exposure_opposition": 0.21153846153846154,
+        "historical_unique_opposition": 0.2647058823529412,
+        "historical_unique_messages": 34,
+        "historical_unique_authors": 22,
+        "carried_forward": false,
+        "near_half": false,
+        "reason": "可见发言中支持特朗普的明显多于反对，且支持理由多样、反复出现；反对者虽存在但较少，故估计支持者约占七成。",
+        "evidence_ids": [
+          "r1-u249",
+          "r1-u417",
+          "r2-u502",
+          "r6-u862",
+          "r8-u66"
+        ],
+        "read_messages": [
+          {
+            "id": "TL:7:677",
+            "author": 677,
+            "stance": 1,
+            "text": {
+              "id": "post-1-016-agree-0",
+              "body": "我认同你的感受，也支持特朗普当选；柴油、化肥和贷款利息都在涨，他提出减轻农场监管和能源负担，至少让种粮家庭看到点盼头。"
+            }
+          },
+          {
+            "id": "TL:7:744",
+            "author": 744,
+            "stance": 1,
+            "text": {
+              "id": "post-1-014",
+              "body": "我在汽车零件厂上班，家里饭碗跟燃油车产线绑着。特朗普反对强制电动车、要保本土制造，我觉得比一刀切转型更顾工人，所以支持他。"
+            }
+          },
+          {
+            "id": "TL:8:368",
+            "author": 368,
+            "stance": 1,
+            "text": {
+              "id": "post--1-013-disagree-0",
+              "body": "媒体老挑着报也有责任，不能全怪他；地方新闻要靠多元渠道，我支持特朗普当选，别把监督全寄托在几家报纸上。"
+            }
+          },
+          {
+            "id": "TL:8:66",
+            "author": 66,
+            "stance": -1,
+            "text": {
+              "id": "post-1-017-disagree-1",
+              "body": "我反对原帖的结论，公共秩序不能靠驱赶露宿者解决，社区支持和治疗才是重点，因此我不支持特朗普当选。"
+            }
+          },
+          {
+            "id": "TL:8:744",
+            "author": 744,
+            "stance": 1,
+            "text": {
+              "id": "post-1-003",
+              "body": "我倾向特朗普当选。现在街上零元购和暴力新闻太多，普通人下班回家都提心吊胆；我想要更硬的执法态度，让社区恢复安全感。"
+            }
+          }
+        ],
+        "context_messages": [
+          {
+            "id": "TL:6:224",
+            "author": 224,
+            "stance": 1,
+            "text": {
+              "id": "post-1-016",
+              "body": "我爸妈种地，柴油、化肥和贷款利息样样涨。特朗普说要减轻农场监管和能源负担，让他们种粮有盼头，我愿意支持他。"
+            }
+          },
+          {
+            "id": "TL:6:744",
+            "author": 744,
+            "stance": 1,
+            "text": {
+              "id": "post-1-017",
+              "body": "我们市中心帐篷越搭越多，店家晚上不敢开门。特朗普强调清理街头营地、同时接上成瘾治疗，我觉得该先恢复公共秩序，所以支持他。"
+            }
+          },
+          {
+            "id": "TL:7:329",
+            "author": 329,
+            "stance": -1,
+            "text": {
+              "id": "post--1-013",
+              "body": "我们小地方就靠地方报纸盯着市政，他天天骂媒体是人民公敌，记者被骂得不敢写，最后吃亏的是想知道真相的普通人。"
+            }
+          }
+        ]
+      },
+      {
+        "graph": 0,
+        "repeat": 2,
+        "branch": "TL",
+        "round": 9,
+        "node": 6,
+        "phi": 0.0,
+        "Q": 0,
+        "support": 0.62,
+        "J": 0,
+        "read_n": 5,
+        "read_opposition": 0.4,
+        "current_with_context_opposition": 0.2857142857142857,
+        "historical_exposure_opposition": 0.22033898305084745,
+        "historical_unique_opposition": 0.275,
+        "historical_unique_messages": 40,
+        "historical_unique_authors": 25,
+        "carried_forward": false,
+        "near_half": false,
+        "reason": "不同作者中多名明确支持特朗普，理由涉及就业、住房和能源；也有若干明确反对者，去重后支持方仍略多，故估约六成。",
+        "evidence_ids": [
+          "r1-u249",
+          "r1-u417",
+          "r9-u613",
+          "r2-u190",
+          "r2-u502"
+        ],
+        "read_messages": [
+          {
+            "id": "TL:8:417",
+            "author": 417,
+            "stance": 1,
+            "text": {
+              "id": "post-1-015",
+              "body": "家里老人长期吃药，药价年年涨。特朗普说要让药价更透明、把中间环节的虚高挤一挤，我觉得这比听药企公关实在，所以支持他。"
+            }
+          },
+          {
+            "id": "TL:8:744",
+            "author": 744,
+            "stance": 1,
+            "text": {
+              "id": "post-1-003",
+              "body": "我倾向特朗普当选。现在街上零元购和暴力新闻太多，普通人下班回家都提心吊胆；我想要更硬的执法态度，让社区恢复安全感。"
+            }
+          },
+          {
+            "id": "TL:9:613",
+            "author": 613,
+            "stance": 1,
+            "text": {
+              "id": "post-1-005-agree-0",
+              "body": "我认同你的说法，普通家庭的油电账单确实该优先考虑；放宽本土油气开采比空喊环保口号实际，这次我支持特朗普当选。"
+            }
+          },
+          {
+            "id": "TL:9:677",
+            "author": 677,
+            "stance": -1,
+            "text": {
+              "id": "post-1-010-disagree-0",
+              "body": "我不赞同你的选择，小费免税听起来好，但不能因此支持特朗普当选；他的整体政策取向让我担心，我更看重稳定和公平。"
+            }
+          },
+          {
+            "id": "TL:9:955",
+            "author": 955,
+            "stance": -1,
+            "text": {
+              "id": "post-1-015-disagree-1",
+              "body": "你把希望押在特朗普身上，我不认同，也不会支持他当选。药价透明不能只靠喊，我更担心他的做法反而让老人用药保障更不稳定。"
+            }
+          }
+        ],
+        "context_messages": [
+          {
+            "id": "TL:8:417",
+            "author": 417,
+            "stance": 1,
+            "text": {
+              "id": "post-1-015",
+              "body": "家里老人长期吃药，药价年年涨。特朗普说要让药价更透明、把中间环节的虚高挤一挤，我觉得这比听药企公关实在，所以支持他。"
+            }
+          },
+          {
+            "id": "TL:8:677",
+            "author": 677,
+            "stance": 1,
+            "text": {
+              "id": "post-1-005",
+              "body": "我支持特朗普，是因为油价和电费实在压人。希望他上台后放开本土油气开采，让加油和取暖账单降下来，别老拿环保口号让普通家庭买单。"
+            }
+          },
+          {
+            "id": "TL:8:890",
+            "author": 890,
+            "stance": 1,
+            "text": {
+              "id": "post-1-010",
+              "body": "我在餐馆做服务员，小费是收入大头，报税时一笔笔算得心疼。特朗普提出小费免税，我觉得这比空谈最低工资更直接，所以支持他。"
+            }
+          }
+        ]
+      },
+      {
+        "graph": 0,
+        "repeat": 2,
+        "branch": "TL",
+        "round": 10,
+        "node": 6,
+        "phi": 0.0,
+        "Q": 0,
+        "support": 0.62,
+        "J": 1,
+        "read_n": 5,
+        "read_opposition": 0.6,
+        "current_with_context_opposition": 0.42857142857142855,
+        "historical_exposure_opposition": 0.24242424242424243,
+        "historical_unique_opposition": 0.3111111111111111,
+        "historical_unique_messages": 45,
+        "historical_unique_authors": 29,
+        "carried_forward": false,
+        "near_half": false,
+        "reason": "可见发言中支持特朗普的明显多于反对者，且支持理由多样（经济、教育、治安、能源），反对者相对零散；结合自身倾向，估计支持者约占六成。",
+        "evidence_ids": [
+          "r1-u249",
+          "r1-u417",
+          "r1-u677",
+          "r2-u502",
+          "r10-u780"
+        ],
+        "read_messages": [
+          {
+            "id": "TL:10:577",
+            "author": 577,
+            "stance": 1,
+            "text": {
+              "id": "post-1-005-agree-0",
+              "body": "我认同你的说法，普通家庭的油电账单确实该优先考虑；放宽本土油气开采比空喊环保口号实际，这次我支持特朗普当选。"
+            }
+          },
+          {
+            "id": "TL:10:582",
+            "author": 582,
+            "stance": -1,
+            "text": {
+              "id": "post-1-005-disagree-0",
+              "body": "我不赞同把降账单寄望于特朗普；放开开采未必能迅速减轻家庭负担，还可能押后能源转型，所以这次我不支持他当选。"
+            }
+          },
+          {
+            "id": "TL:10:780",
+            "author": 780,
+            "stance": 1,
+            "text": {
+              "id": "post-1-005-agree-1",
+              "body": "你说到点子上了，取暖和加油开销让我也盼着降低能源成本；因此这届大选我支持特朗普当选，期待他把开采限制松一松。"
+            }
+          },
+          {
+            "id": "TL:9:862",
+            "author": 862,
+            "stance": -1,
+            "text": {
+              "id": "post-1-003-disagree-1",
+              "body": "我反对你的看法，也不希望特朗普当选。治安问题不能只靠强硬口号，我担心那会加剧对立，所以这届大选我不支持他。"
+            }
+          },
+          {
+            "id": "TL:9:899",
+            "author": 899,
+            "stance": -1,
+            "text": {
+              "id": "post-1-003-disagree-1",
+              "body": "我反对你的看法，也不希望特朗普当选。治安问题不能只靠强硬口号，我担心那会加剧对立，所以这届大选我不支持他。"
+            }
+          }
+        ],
+        "context_messages": [
+          {
+            "id": "TL:8:677",
+            "author": 677,
+            "stance": 1,
+            "text": {
+              "id": "post-1-005",
+              "body": "我支持特朗普，是因为油价和电费实在压人。希望他上台后放开本土油气开采，让加油和取暖账单降下来，别老拿环保口号让普通家庭买单。"
+            }
+          },
+          {
+            "id": "TL:8:744",
+            "author": 744,
+            "stance": 1,
+            "text": {
+              "id": "post-1-003",
+              "body": "我倾向特朗普当选。现在街上零元购和暴力新闻太多，普通人下班回家都提心吊胆；我想要更硬的执法态度，让社区恢复安全感。"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "graph": 0,
+    "repeat": 2,
+    "node": 93,
+    "selection": "minimum/maximum tail paired Q difference; ties smallest node",
+    "trajectory": [
+      {
+        "graph": 0,
+        "repeat": 2,
+        "branch": "TH",
+        "round": 8,
+        "node": 93,
+        "phi": 0.10526315789473684,
+        "Q": 0,
+        "support": 0.62,
+        "J": 0,
+        "read_n": 5,
+        "read_opposition": 0.2,
+        "current_with_context_opposition": 0.2222222222222222,
+        "historical_exposure_opposition": 0.25806451612903225,
+        "historical_unique_opposition": 0.2619047619047619,
+        "historical_unique_messages": 42,
+        "historical_unique_authors": 23,
+        "carried_forward": false,
+        "near_half": false,
+        "reason": "可见发言中支持特朗普的成员明显多于反对者，且支持理由多样（关税、治安、拥枪、宗教自由等），反对者虽持续出现但数量较少，故估计支持者略高于六成。",
+        "evidence_ids": [
+          "r1-u173",
+          "r2-u448",
+          "r3-u476",
+          "r5-u310",
+          "r8-u205"
+        ],
+        "read_messages": [
+          {
+            "id": "TH:7:173",
+            "author": 173,
+            "stance": 1,
+            "text": {
+              "id": "post-1-012",
+              "body": "家里老人是退伍军人，排队等预约常拖很久。我希望特朗普扩大退伍军人自己选医生的渠道，别让人干等，所以支持他。"
+            }
+          },
+          {
+            "id": "TH:7:263",
+            "author": 263,
+            "stance": 1,
+            "text": {
+              "id": "post-1-014-agree-0",
+              "body": "我也是看重他反对强制电动车，至少不会一刀切砍掉燃油车岗位，这次我支持特朗普当选。"
+            }
+          },
+          {
+            "id": "TH:7:310",
+            "author": 310,
+            "stance": 1,
+            "text": {
+              "id": "post--1-013-disagree-1",
+              "body": "记者该受监督，媒体也不能免批评；说他会让地方没人敢写太夸张，我支持特朗普当选，新闻来源多的是。"
+            }
+          },
+          {
+            "id": "TH:7:740",
+            "author": 740,
+            "stance": -1,
+            "text": {
+              "id": "post-1-023-disagree-1",
+              "body": "把林子全交给地方未必管得好，我不赞成这个理由。这次我不支持特朗普当选，防火需要跨区域统筹。"
+            }
+          },
+          {
+            "id": "TH:8:205",
+            "author": 205,
+            "stance": 1,
+            "text": {
+              "id": "post-1-019-agree-1",
+              "body": "同意你的判断，拥枪权利对我也是关键议题；特朗普在这方面的立场更让人放心，我明确支持他当选。"
+            }
+          }
+        ],
+        "context_messages": [
+          {
+            "id": "TH:5:381",
+            "author": 381,
+            "stance": 1,
+            "text": {
+              "id": "post-1-023",
+              "body": "我住在林区附近，山火季节一到就提心吊胆。特朗普说要放宽清理枯木的审批、让地方管好林子，我觉得比空喊口号实际，所以支持他。"
+            }
+          },
+          {
+            "id": "TH:5:49",
+            "author": 49,
+            "stance": -1,
+            "text": {
+              "id": "post--1-013",
+              "body": "我们小地方就靠地方报纸盯着市政，他天天骂媒体是人民公敌，记者被骂得不敢写，最后吃亏的是想知道真相的普通人。"
+            }
+          },
+          {
+            "id": "TH:5:795",
+            "author": 795,
+            "stance": 1,
+            "text": {
+              "id": "post-1-014",
+              "body": "我在汽车零件厂上班，家里饭碗跟燃油车产线绑着。特朗普反对强制电动车、要保本土制造，我觉得比一刀切转型更顾工人，所以支持他。"
+            }
+          },
+          {
+            "id": "TH:7:362",
+            "author": 362,
+            "stance": 1,
+            "text": {
+              "id": "post-1-019",
+              "body": "我周末喜欢打猎，也担心合法持枪被一点点收紧。特朗普在拥枪权利上态度明确，我觉得他能守住这条线，所以愿意投他。"
+            }
+          }
+        ]
+      },
+      {
+        "graph": 0,
+        "repeat": 2,
+        "branch": "TH",
+        "round": 9,
+        "node": 93,
+        "phi": 0.10526315789473684,
+        "Q": 0,
+        "support": 0.6,
+        "J": 1,
+        "read_n": 5,
+        "read_opposition": 0.6,
+        "current_with_context_opposition": 0.5555555555555556,
+        "historical_exposure_opposition": 0.29577464788732394,
+        "historical_unique_opposition": 0.32,
+        "historical_unique_messages": 50,
+        "historical_unique_authors": 27,
+        "carried_forward": false,
+        "near_half": false,
+        "reason": "可见发言中支持特朗普的明确表态多于反对，且多位此前支持者持续发声；但部分人立场反复，故略低于此前估计。",
+        "evidence_ids": [
+          "r1-u173",
+          "r2-u448",
+          "r5-u310",
+          "r8-u205",
+          "r9-u875"
+        ],
+        "read_messages": [
+          {
+            "id": "TH:8:173",
+            "author": 173,
+            "stance": -1,
+            "text": {
+              "id": "post--1-024-agree-0",
+              "body": "我同意你的感受，公交班次减少确实让人窝火，所以我这票不会投给特朗普，不支持他当选。"
+            }
+          },
+          {
+            "id": "TH:8:362",
+            "author": 362,
+            "stance": -1,
+            "text": {
+              "id": "post--1-008-agree-0",
+              "body": "我同意你的担心，他不断攻击法官和法院，真让他再当选，司法独立恐怕更难守住，所以我不支持他当选。"
+            }
+          },
+          {
+            "id": "TH:8:740",
+            "author": 740,
+            "stance": -1,
+            "text": {
+              "id": "post-1-023-disagree-0",
+              "body": "我不认同放宽审批就能防火，这更像推卸责任。我不支持特朗普当选，林区安全需要更可靠的联邦协调。"
+            }
+          },
+          {
+            "id": "TH:9:128",
+            "author": 128,
+            "stance": 1,
+            "text": {
+              "id": "post-1-012-agree-0",
+              "body": "我赞同你的想法，退伍军人不该被预约拖住；让老兵自己选医生更实在，我支持特朗普当选来推进这件事。"
+            }
+          },
+          {
+            "id": "TH:9:875",
+            "author": 875,
+            "stance": 1,
+            "text": {
+              "id": "post-1-012-agree-1",
+              "body": "我也赞同原帖，等预约太久确实折腾老人，扩大自选医生渠道值得支持；因此我希望特朗普赢得大选。"
+            }
+          }
+        ],
+        "context_messages": [
+          {
+            "id": "TH:6:232",
+            "author": 232,
+            "stance": 1,
+            "text": {
+              "id": "post-1-023",
+              "body": "我住在林区附近，山火季节一到就提心吊胆。特朗普说要放宽清理枯木的审批、让地方管好林子，我觉得比空喊口号实际，所以支持他。"
+            }
+          },
+          {
+            "id": "TH:6:576",
+            "author": 576,
+            "stance": -1,
+            "text": {
+              "id": "post--1-024",
+              "body": "我每天坐公交上班，他当年喊基建喊得震天响，可我们这条线班次越砍越少，普通人等车的时间谁管。"
+            }
+          },
+          {
+            "id": "TH:7:173",
+            "author": 173,
+            "stance": 1,
+            "text": {
+              "id": "post-1-012",
+              "body": "家里老人是退伍军人，排队等预约常拖很久。我希望特朗普扩大退伍军人自己选医生的渠道，别让人干等，所以支持他。"
+            }
+          },
+          {
+            "id": "TH:7:925",
+            "author": 925,
+            "stance": -1,
+            "text": {
+              "id": "post--1-008",
+              "body": "官司缠身还天天骂法官、骂法院，说判决都是被操纵的，这样的人要是再掌权，我真怕司法也变成他手里的工具。"
+            }
+          }
+        ]
+      },
+      {
+        "graph": 0,
+        "repeat": 2,
+        "branch": "TH",
+        "round": 10,
+        "node": 93,
+        "phi": 0.10526315789473684,
+        "Q": 0,
+        "support": 0.58,
+        "J": 0,
+        "read_n": 5,
+        "read_opposition": 0.2,
+        "current_with_context_opposition": 0.4444444444444444,
+        "historical_exposure_opposition": 0.3125,
+        "historical_unique_opposition": 0.3392857142857143,
+        "historical_unique_messages": 56,
+        "historical_unique_authors": 29,
+        "carried_forward": false,
+        "near_half": false,
+        "reason": "可见发言中支持特朗普的明确表态略多于反对，且支持理由覆盖经济、治安、教育、拥枪等多个议题；但反对声音也持续出现，故估计略高于半数。",
+        "evidence_ids": [
+          "r1-u173",
+          "r1-u740",
+          "r2-u448",
+          "r3-u310",
+          "r10-u740"
+        ],
+        "read_messages": [
+          {
+            "id": "TH:10:375",
+            "author": 375,
+            "stance": 1,
+            "text": {
+              "id": "post--1-013-disagree-1",
+              "body": "记者该受监督，媒体也不能免批评；说他会让地方没人敢写太夸张，我支持特朗普当选，新闻来源多的是。"
+            }
+          },
+          {
+            "id": "TH:10:740",
+            "author": 740,
+            "stance": 1,
+            "text": {
+              "id": "post-1-006",
+              "body": "我会投特朗普。我们这边工厂订单外流，年轻人只能去送外卖；他用关税逼企业把产线搬回来，我觉得比光喊培训口号更实在。"
+            }
+          },
+          {
+            "id": "TH:9:173",
+            "author": 173,
+            "stance": 1,
+            "text": {
+              "id": "post--1-003-disagree-1",
+              "body": "我不同意你这种担心，跟盟友重新谈条件不见得是坏事，这次总统大选我支持特朗普当选。"
+            }
+          },
+          {
+            "id": "TH:9:362",
+            "author": 362,
+            "stance": -1,
+            "text": {
+              "id": "post--1-008-agree-1",
+              "body": "你说得对，把判决都说成被操纵，这样的人掌权会侵蚀司法信任；这届大选我不支持特朗普当选。"
+            }
+          },
+          {
+            "id": "TH:9:875",
+            "author": 875,
+            "stance": 1,
+            "text": {
+              "id": "post-1-012-agree-1",
+              "body": "我也赞同原帖，等预约太久确实折腾老人，扩大自选医生渠道值得支持；因此我希望特朗普赢得大选。"
+            }
+          }
+        ],
+        "context_messages": [
+          {
+            "id": "TH:7:173",
+            "author": 173,
+            "stance": 1,
+            "text": {
+              "id": "post-1-012",
+              "body": "家里老人是退伍军人，排队等预约常拖很久。我希望特朗普扩大退伍军人自己选医生的渠道，别让人干等，所以支持他。"
+            }
+          },
+          {
+            "id": "TH:7:820",
+            "author": 820,
+            "stance": -1,
+            "text": {
+              "id": "post--1-003",
+              "body": "他老跟盟友吵架退群，我表哥在欧洲做生意，说那边现在都不太信美国了，这种不确定性太折腾人。"
+            }
+          },
+          {
+            "id": "TH:7:925",
+            "author": 925,
+            "stance": -1,
+            "text": {
+              "id": "post--1-008",
+              "body": "官司缠身还天天骂法官、骂法院，说判决都是被操纵的，这样的人要是再掌权，我真怕司法也变成他手里的工具。"
+            }
+          },
+          {
+            "id": "TH:9:49",
+            "author": 49,
+            "stance": -1,
+            "text": {
+              "id": "post--1-013",
+              "body": "我们小地方就靠地方报纸盯着市政，他天天骂媒体是人民公敌，记者被骂得不敢写，最后吃亏的是想知道真相的普通人。"
+            }
+          }
+        ]
+      },
+      {
+        "graph": 0,
+        "repeat": 2,
+        "branch": "TL",
+        "round": 8,
+        "node": 93,
+        "phi": 0.2631578947368421,
+        "Q": 1,
+        "support": 0.3,
+        "J": 0,
+        "read_n": 5,
+        "read_opposition": 0.4,
+        "current_with_context_opposition": 0.2857142857142857,
+        "historical_exposure_opposition": 0.5901639344262295,
+        "historical_unique_opposition": 0.6326530612244898,
+        "historical_unique_messages": 49,
+        "historical_unique_authors": 29,
+        "carried_forward": false,
+        "near_half": false,
+        "reason": "可见发言中反对特朗普当选的明显多于支持，且多名早期支持者后来转向反对；支持者虽持续出现但较分散，故估计支持比例约三成。",
+        "evidence_ids": [
+          "r1-u173",
+          "r2-u173",
+          "r2-u448",
+          "r5-u58",
+          "r8-u115"
+        ],
+        "read_messages": [
+          {
+            "id": "TL:7:173",
+            "author": 173,
+            "stance": 1,
+            "text": {
+              "id": "post-1-012",
+              "body": "家里老人是退伍军人，排队等预约常拖很久。我希望特朗普扩大退伍军人自己选医生的渠道，别让人干等，所以支持他。"
+            }
+          },
+          {
+            "id": "TL:7:263",
+            "author": 263,
+            "stance": 1,
+            "text": {
+              "id": "post-1-003",
+              "body": "我倾向特朗普当选。现在街上零元购和暴力新闻太多，普通人下班回家都提心吊胆；我想要更硬的执法态度，让社区恢复安全感。"
+            }
+          },
+          {
+            "id": "TL:7:310",
+            "author": 310,
+            "stance": -1,
+            "text": {
+              "id": "post-1-000-disagree-1",
+              "body": "我反对这个选择，减税口号未必能帮到普通小店，这次我不支持特朗普当选，他的做法可能让市场更不稳。"
+            }
+          },
+          {
+            "id": "TL:8:115",
+            "author": 115,
+            "stance": 1,
+            "text": {
+              "id": "post-1-012-agree-0",
+              "body": "我赞同你的想法，退伍军人不该被预约拖住；让老兵自己选医生更实在，我支持特朗普当选来推进这件事。"
+            }
+          },
+          {
+            "id": "TL:8:239",
+            "author": 239,
+            "stance": -1,
+            "text": {
+              "id": "post-1-007-disagree-0",
+              "body": "我不赞同这篇原帖，也不支持特朗普当选。家长参与教育可以讨论，但把选择权交给一位政客，并不能真正保障家长和孩子。"
+            }
+          }
+        ],
+        "context_messages": [
+          {
+            "id": "TL:5:860",
+            "author": 860,
+            "stance": 1,
+            "text": {
+              "id": "post-1-000",
+              "body": "这次我支持特朗普当选。小生意这几年被各种成本和手续压得喘不过气，我更信他能把税和监管往下压，让店先活下去。"
+            }
+          },
+          {
+            "id": "TL:7:173",
+            "author": 173,
+            "stance": 1,
+            "text": {
+              "id": "post-1-012",
+              "body": "家里老人是退伍军人，排队等预约常拖很久。我希望特朗普扩大退伍军人自己选医生的渠道，别让人干等，所以支持他。"
+            }
+          },
+          {
+            "id": "TL:7:591",
+            "author": 591,
+            "stance": 1,
+            "text": {
+              "id": "post-1-007",
+              "body": "支持特朗普当选。家里两个孩子上学，家长对课程和图书馆内容越来越没发言权；我希望把选择权和知情权还给家长，而不是让官僚替我们决定。"
+            }
+          }
+        ]
+      },
+      {
+        "graph": 0,
+        "repeat": 2,
+        "branch": "TL",
+        "round": 9,
+        "node": 93,
+        "phi": 0.2631578947368421,
+        "Q": 1,
+        "support": 0.35,
+        "J": 1,
+        "read_n": 5,
+        "read_opposition": 0.6,
+        "current_with_context_opposition": 0.4444444444444444,
+        "historical_exposure_opposition": 0.5714285714285714,
+        "historical_unique_opposition": 0.625,
+        "historical_unique_messages": 56,
+        "historical_unique_authors": 32,
+        "carried_forward": false,
+        "near_half": false,
+        "reason": "可见发言中反对特朗普当选的声音明显多于支持，且多名早期支持者后来转向反对；结合自身偏支持但强度不高，估计支持者约占三成半。",
+        "evidence_ids": [
+          "r1-u173",
+          "r2-u173",
+          "r3-u173",
+          "r9-u173",
+          "r8-u684"
+        ],
+        "read_messages": [
+          {
+            "id": "TL:8:115",
+            "author": 115,
+            "stance": 1,
+            "text": {
+              "id": "post-1-012-agree-0",
+              "body": "我赞同你的想法，退伍军人不该被预约拖住；让老兵自己选医生更实在，我支持特朗普当选来推进这件事。"
+            }
+          },
+          {
+            "id": "TL:8:173",
+            "author": 173,
+            "stance": 1,
+            "text": {
+              "id": "post-1-018-agree-0",
+              "body": "我也支持特朗普当选，宗教自由对办小教会太重要了，政府不该随意干预信仰团体的正常聚会。"
+            }
+          },
+          {
+            "id": "TL:8:310",
+            "author": 310,
+            "stance": -1,
+            "text": {
+              "id": "post--1-019-agree-0",
+              "body": "我理解你的感受，他在疫情初期的表现确实让人失望，所以这次大选我不支持特朗普当选。"
+            }
+          },
+          {
+            "id": "TL:8:684",
+            "author": 684,
+            "stance": -1,
+            "text": {
+              "id": "post--1-019",
+              "body": "我岳父在养老院走的，那阵子他天天淡化疫情、跟州里抢物资，我现在想起来还堵得慌，不可能支持他。"
+            }
+          },
+          {
+            "id": "TL:9:173",
+            "author": 173,
+            "stance": -1,
+            "text": {
+              "id": "post-1-003-disagree-1",
+              "body": "我反对你的看法，也不希望特朗普当选。治安问题不能只靠强硬口号，我担心那会加剧对立，所以这届大选我不支持他。"
+            }
+          }
+        ],
+        "context_messages": [
+          {
+            "id": "TL:6:795",
+            "author": 795,
+            "stance": 1,
+            "text": {
+              "id": "post-1-018",
+              "body": "我们小教会前几年为能不能正常聚会提心吊胆。特朗普强调宗教自由、不让政府随便插手信仰团体，我觉得这关系普通信徒，所以支持他。"
+            }
+          },
+          {
+            "id": "TL:7:173",
+            "author": 173,
+            "stance": 1,
+            "text": {
+              "id": "post-1-012",
+              "body": "家里老人是退伍军人，排队等预约常拖很久。我希望特朗普扩大退伍军人自己选医生的渠道，别让人干等，所以支持他。"
+            }
+          },
+          {
+            "id": "TL:7:820",
+            "author": 820,
+            "stance": 1,
+            "text": {
+              "id": "post-1-003",
+              "body": "我倾向特朗普当选。现在街上零元购和暴力新闻太多，普通人下班回家都提心吊胆；我想要更硬的执法态度，让社区恢复安全感。"
+            }
+          },
+          {
+            "id": "TL:7:848",
+            "author": 848,
+            "stance": -1,
+            "text": {
+              "id": "post--1-019",
+              "body": "我岳父在养老院走的，那阵子他天天淡化疫情、跟州里抢物资，我现在想起来还堵得慌，不可能支持他。"
+            }
+          }
+        ]
+      },
+      {
+        "graph": 0,
+        "repeat": 2,
+        "branch": "TL",
+        "round": 10,
+        "node": 93,
+        "phi": 0.2631578947368421,
+        "Q": 1,
+        "support": 0.32,
+        "J": 1,
+        "read_n": 5,
+        "read_opposition": 0.6,
+        "current_with_context_opposition": 0.5,
+        "historical_exposure_opposition": 0.5641025641025641,
+        "historical_unique_opposition": 0.6129032258064516,
+        "historical_unique_messages": 62,
+        "historical_unique_authors": 32,
+        "carried_forward": false,
+        "near_half": false,
+        "reason": "可见发言中反对特朗普当选的明确表态明显多于支持，且多名早期支持者后来转向反对；支持者虽持续出现但较分散，故估计支持比例约三成。",
+        "evidence_ids": [
+          "r1-u173",
+          "r2-u173",
+          "r3-u173",
+          "r9-u173",
+          "r10-u270"
+        ],
+        "read_messages": [
+          {
+            "id": "TL:10:239",
+            "author": 239,
+            "stance": -1,
+            "text": {
+              "id": "post-1-009-disagree-1",
+              "body": "我反对特朗普当选，原帖期待规则公平没错，但他的排外路线解决不了排队问题，反而让合法移民更不安心。"
+            }
+          },
+          {
+            "id": "TL:10:270",
+            "author": 270,
+            "stance": 1,
+            "text": {
+              "id": "post--1-019-disagree-0",
+              "body": "我不赞同你把养老院的事全归到他头上，疫情决策很复杂，这届大选我还是支持特朗普当选。"
+            }
+          },
+          {
+            "id": "TL:10:684",
+            "author": 684,
+            "stance": -1,
+            "text": {
+              "id": "post--1-009",
+              "body": "我最反感的是那种张嘴就嘲讽别人的说话风格，孩子刷到视频跟着学，觉得欺负人是本事，公职人员这么带节奏，影响太坏了。"
+            }
+          },
+          {
+            "id": "TL:9:239",
+            "author": 239,
+            "stance": -1,
+            "text": {
+              "id": "post-1-012-disagree-1",
+              "body": "我反对原帖的结论，老人等预约的问题不能靠支持特朗普当选解决；我不支持他当选，更希望换人把退伍军人医疗安排做好。"
+            }
+          },
+          {
+            "id": "TL:9:410",
+            "author": 410,
+            "stance": 1,
+            "text": {
+              "id": "post-1-023",
+              "body": "我住在林区附近，山火季节一到就提心吊胆。特朗普说要放宽清理枯木的审批、让地方管好林子，我觉得比空喊口号实际，所以支持他。"
+            }
+          }
+        ],
+        "context_messages": [
+          {
+            "id": "TL:7:173",
+            "author": 173,
+            "stance": 1,
+            "text": {
+              "id": "post-1-012",
+              "body": "家里老人是退伍军人，排队等预约常拖很久。我希望特朗普扩大退伍军人自己选医生的渠道，别让人干等，所以支持他。"
+            }
+          },
+          {
+            "id": "TL:8:161",
+            "author": 161,
+            "stance": 1,
+            "text": {
+              "id": "post-1-009",
+              "body": "这次我站特朗普。家里亲戚按规矩排队等亲属移民好多年，看到有人绕开程序先进来，心里很不平衡；我想要先把规则执行好，再谈其他。"
+            }
+          },
+          {
+            "id": "TL:8:684",
+            "author": 684,
+            "stance": -1,
+            "text": {
+              "id": "post--1-019",
+              "body": "我岳父在养老院走的，那阵子他天天淡化疫情、跟州里抢物资，我现在想起来还堵得慌，不可能支持他。"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "graph": 1,
+    "repeat": 1,
+    "node": 185,
+    "selection": "minimum/maximum tail paired Q difference; ties smallest node",
+    "trajectory": [
+      {
+        "graph": 1,
+        "repeat": 1,
+        "branch": "TH",
+        "round": 8,
+        "node": 185,
+        "phi": 0.46153846153846156,
+        "Q": 1,
+        "support": 0.18,
+        "J": 1,
+        "read_n": 5,
+        "read_opposition": 1.0,
+        "current_with_context_opposition": 0.8571428571428571,
+        "historical_exposure_opposition": 0.8301886792452831,
+        "historical_unique_opposition": 0.7714285714285715,
+        "historical_unique_messages": 35,
+        "historical_unique_authors": 24,
+        "carried_forward": false,
+        "near_half": false,
+        "reason": "可见发言中明确反对特朗普当选者占绝大多数，支持者仅零星出现；结合自身立场与上轮估计，支持比例应偏低。",
+        "evidence_ids": [
+          "r1-u702",
+          "r2-u735",
+          "r3-u292",
+          "r5-u92",
+          "r6-u502"
+        ],
+        "read_messages": [
+          {
+            "id": "TH:7:177",
+            "author": 177,
+            "stance": -1,
+            "text": {
+              "id": "post--1-003-agree-0",
+              "body": "我赞同你的担心，特朗普再当选只会让盟友关系更乱，这种不确定性我受不了，所以我不支持他当选。"
+            }
+          },
+          {
+            "id": "TH:7:818",
+            "author": 818,
+            "stance": -1,
+            "text": {
+              "id": "post--1-003-agree-1",
+              "body": "你说得对，他那种跟盟友翻脸的做法会让外部环境更不稳定，这次大选我也反对特朗普当选。"
+            }
+          },
+          {
+            "id": "TH:8:39",
+            "author": 39,
+            "stance": -1,
+            "text": {
+              "id": "post-1-020-disagree-0",
+              "body": "我不赞同原帖把严格核验寄托在特朗普当选上；我反对特朗普当选，主张用跨党派程序改革来保障选票可追溯。"
+            }
+          },
+          {
+            "id": "TH:8:541",
+            "author": 541,
+            "stance": -1,
+            "text": {
+              "id": "post-1-020-disagree-0",
+              "body": "我不赞同原帖把严格核验寄托在特朗普当选上；我反对特朗普当选，主张用跨党派程序改革来保障选票可追溯。"
+            }
+          },
+          {
+            "id": "TH:8:798",
+            "author": 798,
+            "stance": -1,
+            "text": {
+              "id": "post--1-007",
+              "body": "我女儿刚工作，她说选谁都行就是不能选他，因为那几年最高法院的判决把身体决定权从女性手里拿走了，我当妈的没法装看不见。"
+            }
+          }
+        ],
+        "context_messages": [
+          {
+            "id": "TH:5:541",
+            "author": 541,
+            "stance": -1,
+            "text": {
+              "id": "post--1-003",
+              "body": "他老跟盟友吵架退群，我表哥在欧洲做生意，说那边现在都不太信美国了，这种不确定性太折腾人。"
+            }
+          },
+          {
+            "id": "TH:7:702",
+            "author": 702,
+            "stance": 1,
+            "text": {
+              "id": "post-1-020",
+              "body": "我们这边投票站管理松散，我支持特朗普，是希望选民身份核验更严、纸质选票能追溯，别让普通人对投票程序心里犯嘀咕。"
+            }
+          }
+        ]
+      },
+      {
+        "graph": 1,
+        "repeat": 1,
+        "branch": "TH",
+        "round": 9,
+        "node": 185,
+        "phi": 0.46153846153846156,
+        "Q": 1,
+        "support": 0.22,
+        "J": 1,
+        "read_n": 5,
+        "read_opposition": 0.8,
+        "current_with_context_opposition": 0.625,
+        "historical_exposure_opposition": 0.8032786885245902,
+        "historical_unique_opposition": 0.75,
+        "historical_unique_messages": 40,
+        "historical_unique_authors": 27,
+        "carried_forward": false,
+        "near_half": false,
+        "reason": "可见发言中反对特朗普当选的明显占多数，支持者仅零星出现；结合自身支持立场但社区氛围偏反对，估计支持比例较低。",
+        "evidence_ids": [
+          "r2-u735",
+          "r3-u292",
+          "r5-u92",
+          "r9-u477",
+          "r9-u65"
+        ],
+        "read_messages": [
+          {
+            "id": "TH:8:541",
+            "author": 541,
+            "stance": -1,
+            "text": {
+              "id": "post-1-020-disagree-0",
+              "body": "我不赞同原帖把严格核验寄托在特朗普当选上；我反对特朗普当选，主张用跨党派程序改革来保障选票可追溯。"
+            }
+          },
+          {
+            "id": "TH:8:9",
+            "author": 9,
+            "stance": -1,
+            "text": {
+              "id": "post--1-008",
+              "body": "官司缠身还天天骂法官、骂法院，说判决都是被操纵的，这样的人要是再掌权，我真怕司法也变成他手里的工具。"
+            }
+          },
+          {
+            "id": "TH:9:477",
+            "author": 477,
+            "stance": 1,
+            "text": {
+              "id": "post--1-007-disagree-0",
+              "body": "我支持特朗普当选，原帖把最高法院判决全算在他头上不公平，女性议题不该成为唯一标准。"
+            }
+          },
+          {
+            "id": "TH:9:65",
+            "author": 65,
+            "stance": -1,
+            "text": {
+              "id": "post--1-007-agree-0",
+              "body": "我也不支持特朗普当选，女儿担心的身体自主权不是小事，这关系到我们下一代的切身权利。"
+            }
+          },
+          {
+            "id": "TH:9:9",
+            "author": 9,
+            "stance": -1,
+            "text": {
+              "id": "post-1-023-disagree-1",
+              "body": "把林子全交给地方未必管得好，我不赞成这个理由。这次我不支持特朗普当选，防火需要跨区域统筹。"
+            }
+          }
+        ],
+        "context_messages": [
+          {
+            "id": "TH:7:554",
+            "author": 554,
+            "stance": 1,
+            "text": {
+              "id": "post-1-023",
+              "body": "我住在林区附近，山火季节一到就提心吊胆。特朗普说要放宽清理枯木的审批、让地方管好林子，我觉得比空喊口号实际，所以支持他。"
+            }
+          },
+          {
+            "id": "TH:7:702",
+            "author": 702,
+            "stance": 1,
+            "text": {
+              "id": "post-1-020",
+              "body": "我们这边投票站管理松散，我支持特朗普，是希望选民身份核验更严、纸质选票能追溯，别让普通人对投票程序心里犯嘀咕。"
+            }
+          },
+          {
+            "id": "TH:8:798",
+            "author": 798,
+            "stance": -1,
+            "text": {
+              "id": "post--1-007",
+              "body": "我女儿刚工作，她说选谁都行就是不能选他，因为那几年最高法院的判决把身体决定权从女性手里拿走了，我当妈的没法装看不见。"
+            }
+          }
+        ]
+      },
+      {
+        "graph": 1,
+        "repeat": 1,
+        "branch": "TH",
+        "round": 10,
+        "node": 185,
+        "phi": 0.46153846153846156,
+        "Q": 1,
+        "support": 0.25,
+        "J": 1,
+        "read_n": 5,
+        "read_opposition": 0.8,
+        "current_with_context_opposition": 0.7,
+        "historical_exposure_opposition": 0.7887323943661971,
+        "historical_unique_opposition": 0.7446808510638298,
+        "historical_unique_messages": 47,
+        "historical_unique_authors": 31,
+        "carried_forward": false,
+        "near_half": false,
+        "reason": "可见发言中明确反对特朗普当选者占多数，支持者虽反复出现但数量较少；结合自身支持立场与此前约0.22的估计，判断社区支持比例仍偏低。",
+        "evidence_ids": [
+          "r2-u735",
+          "r3-u292",
+          "r5-u92",
+          "r9-u477",
+          "r10-u550"
+        ],
+        "read_messages": [
+          {
+            "id": "TH:10:116",
+            "author": 116,
+            "stance": -1,
+            "text": {
+              "id": "post--1-007-agree-0",
+              "body": "我也不支持特朗普当选，女儿担心的身体自主权不是小事，这关系到我们下一代的切身权利。"
+            }
+          },
+          {
+            "id": "TH:10:550",
+            "author": 550,
+            "stance": 1,
+            "text": {
+              "id": "post--1-019-disagree-1",
+              "body": "你的悲痛可以理解，但据此否定他整个任期太片面了，我反对这种看法，并支持特朗普在本届大选当选。"
+            }
+          },
+          {
+            "id": "TH:10:755",
+            "author": 755,
+            "stance": -1,
+            "text": {
+              "id": "post--1-018-agree-0",
+              "body": "我赞同你的担心，也不支持特朗普当选；跨性别者不该因为政策变动连看病和服役都提心吊胆。"
+            }
+          },
+          {
+            "id": "TH:10:9",
+            "author": 9,
+            "stance": -1,
+            "text": {
+              "id": "post-1-019-disagree-0",
+              "body": "你在意持枪权可以理解，但我不支持特朗普当选；他的做法未必真能守住权利，反而可能带来更多混乱。"
+            }
+          },
+          {
+            "id": "TH:9:9",
+            "author": 9,
+            "stance": -1,
+            "text": {
+              "id": "post-1-023-disagree-1",
+              "body": "把林子全交给地方未必管得好，我不赞成这个理由。这次我不支持特朗普当选，防火需要跨区域统筹。"
+            }
+          }
+        ],
+        "context_messages": [
+          {
+            "id": "TH:7:554",
+            "author": 554,
+            "stance": 1,
+            "text": {
+              "id": "post-1-023",
+              "body": "我住在林区附近，山火季节一到就提心吊胆。特朗普说要放宽清理枯木的审批、让地方管好林子，我觉得比空喊口号实际，所以支持他。"
+            }
+          },
+          {
+            "id": "TH:8:66",
+            "author": 66,
+            "stance": 1,
+            "text": {
+              "id": "post-1-019",
+              "body": "我周末喜欢打猎，也担心合法持枪被一点点收紧。特朗普在拥枪权利上态度明确，我觉得他能守住这条线，所以愿意投他。"
+            }
+          },
+          {
+            "id": "TH:8:798",
+            "author": 798,
+            "stance": -1,
+            "text": {
+              "id": "post--1-007",
+              "body": "我女儿刚工作，她说选谁都行就是不能选他，因为那几年最高法院的判决把身体决定权从女性手里拿走了，我当妈的没法装看不见。"
+            }
+          },
+          {
+            "id": "TH:9:541",
+            "author": 541,
+            "stance": -1,
+            "text": {
+              "id": "post--1-018",
+              "body": "我弟弟是跨性别者，他任内限制跨性别者服役和看病那套做法，让家里跟着揪心，我不想再回到那种气氛。"
+            }
+          },
+          {
+            "id": "TH:9:798",
+            "author": 798,
+            "stance": -1,
+            "text": {
+              "id": "post--1-019",
+              "body": "我岳父在养老院走的，那阵子他天天淡化疫情、跟州里抢物资，我现在想起来还堵得慌，不可能支持他。"
+            }
+          }
+        ]
+      },
+      {
+        "graph": 1,
+        "repeat": 1,
+        "branch": "TL",
+        "round": 8,
+        "node": 185,
+        "phi": 0.07692307692307693,
+        "Q": 0,
+        "support": 0.5,
+        "J": 1,
+        "read_n": 5,
+        "read_opposition": 0.6,
+        "current_with_context_opposition": 0.5714285714285714,
+        "historical_exposure_opposition": 0.5185185185185185,
+        "historical_unique_opposition": 0.4722222222222222,
+        "historical_unique_messages": 36,
+        "historical_unique_authors": 28,
+        "carried_forward": false,
+        "near_half": true,
+        "reason": "已见不同作者的支持与反对阵营人数接近，当前一轮也正反各半；重复发言和立场反复不应简单按消息数计，综合此前约0.45的估计，判断社区支持率约五成。",
+        "evidence_ids": [
+          "r7-u111",
+          "r7-u38",
+          "r7-u398",
+          "r7-u708",
+          "r5-u622"
+        ],
+        "read_messages": [
+          {
+            "id": "TL:7:111",
+            "author": 111,
+            "stance": -1,
+            "text": {
+              "id": "post--1-003-agree-0",
+              "body": "我赞同你的担心，特朗普再当选只会让盟友关系更乱，这种不确定性我受不了，所以我不支持他当选。"
+            }
+          },
+          {
+            "id": "TL:7:38",
+            "author": 38,
+            "stance": 1,
+            "text": {
+              "id": "post--1-003-disagree-1",
+              "body": "我不同意你这种担心，跟盟友重新谈条件不见得是坏事，这次总统大选我支持特朗普当选。"
+            }
+          },
+          {
+            "id": "TL:7:398",
+            "author": 398,
+            "stance": -1,
+            "text": {
+              "id": "post--1-003-agree-1",
+              "body": "你说得对，他那种跟盟友翻脸的做法会让外部环境更不稳定，这次大选我也反对特朗普当选。"
+            }
+          },
+          {
+            "id": "TL:7:541",
+            "author": 541,
+            "stance": -1,
+            "text": {
+              "id": "post-1-005-disagree-0",
+              "body": "我不赞同把降账单寄望于特朗普；放开开采未必能迅速减轻家庭负担，还可能押后能源转型，所以这次我不支持他当选。"
+            }
+          },
+          {
+            "id": "TL:7:708",
+            "author": 708,
+            "stance": 1,
+            "text": {
+              "id": "post--1-003-disagree-0",
+              "body": "我不赞同你的说法，盟友信任问题被夸大了，特朗普当选反而能逼欧洲多担责任，我支持他。"
+            }
+          }
+        ],
+        "context_messages": [
+          {
+            "id": "TL:5:40",
+            "author": 40,
+            "stance": 1,
+            "text": {
+              "id": "post-1-005",
+              "body": "我支持特朗普，是因为油价和电费实在压人。希望他上台后放开本土油气开采，让加油和取暖账单降下来，别老拿环保口号让普通家庭买单。"
+            }
+          },
+          {
+            "id": "TL:5:541",
+            "author": 541,
+            "stance": -1,
+            "text": {
+              "id": "post--1-003",
+              "body": "他老跟盟友吵架退群，我表哥在欧洲做生意，说那边现在都不太信美国了，这种不确定性太折腾人。"
+            }
+          }
+        ]
+      },
+      {
+        "graph": 1,
+        "repeat": 1,
+        "branch": "TL",
+        "round": 9,
+        "node": 185,
+        "phi": 0.07692307692307693,
+        "Q": 0,
+        "support": 0.55,
+        "J": 0,
+        "read_n": 5,
+        "read_opposition": 0.4,
+        "current_with_context_opposition": 0.2857142857142857,
+        "historical_exposure_opposition": 0.4918032786885246,
+        "historical_unique_opposition": 0.4418604651162791,
+        "historical_unique_messages": 43,
+        "historical_unique_authors": 31,
+        "carried_forward": false,
+        "near_half": true,
+        "reason": "支持与反对声量接近，去重后支持者略多；541多次发反对帖使反对条数偏高，估计支持率约五成半。",
+        "evidence_ids": [
+          "r8-u798",
+          "r9-u375",
+          "r9-u477",
+          "r9-u541",
+          "r7-u111"
+        ],
+        "read_messages": [
+          {
+            "id": "TL:8:541",
+            "author": 541,
+            "stance": -1,
+            "text": {
+              "id": "post-1-007-disagree-0",
+              "body": "我不赞同这篇原帖，也不支持特朗普当选。家长参与教育可以讨论，但把选择权交给一位政客，并不能真正保障家长和孩子。"
+            }
+          },
+          {
+            "id": "TL:8:798",
+            "author": 798,
+            "stance": 1,
+            "text": {
+              "id": "post-1-007",
+              "body": "支持特朗普当选。家里两个孩子上学，家长对课程和图书馆内容越来越没发言权；我希望把选择权和知情权还给家长，而不是让官僚替我们决定。"
+            }
+          },
+          {
+            "id": "TL:9:375",
+            "author": 375,
+            "stance": 1,
+            "text": {
+              "id": "post-1-007-agree-1",
+              "body": "我赞同原帖，也支持特朗普当选。家长在孩子教育上应有真正话语权，课程和读物不该把家长排除在外，公开透明很重要。"
+            }
+          },
+          {
+            "id": "TL:9:477",
+            "author": 477,
+            "stance": 1,
+            "text": {
+              "id": "post-1-007-agree-0",
+              "body": "我赞同你的看法，也支持特朗普当选。家长最了解孩子，学校课程和图书馆内容应让家长有更多知情与选择，而不是由官僚包办。"
+            }
+          },
+          {
+            "id": "TL:9:541",
+            "author": 541,
+            "stance": -1,
+            "text": {
+              "id": "post-1-010-disagree-0",
+              "body": "我不赞同你的选择，小费免税听起来好，但不能因此支持特朗普当选；他的整体政策取向让我担心，我更看重稳定和公平。"
+            }
+          }
+        ],
+        "context_messages": [
+          {
+            "id": "TL:6:337",
+            "author": 337,
+            "stance": 1,
+            "text": {
+              "id": "post-1-007",
+              "body": "支持特朗普当选。家里两个孩子上学，家长对课程和图书馆内容越来越没发言权；我希望把选择权和知情权还给家长，而不是让官僚替我们决定。"
+            }
+          },
+          {
+            "id": "TL:7:40",
+            "author": 40,
+            "stance": 1,
+            "text": {
+              "id": "post-1-010",
+              "body": "我在餐馆做服务员，小费是收入大头，报税时一笔笔算得心疼。特朗普提出小费免税，我觉得这比空谈最低工资更直接，所以支持他。"
+            }
+          },
+          {
+            "id": "TL:8:798",
+            "author": 798,
+            "stance": 1,
+            "text": {
+              "id": "post-1-007",
+              "body": "支持特朗普当选。家里两个孩子上学，家长对课程和图书馆内容越来越没发言权；我希望把选择权和知情权还给家长，而不是让官僚替我们决定。"
+            }
+          }
+        ]
+      },
+      {
+        "graph": 1,
+        "repeat": 1,
+        "branch": "TL",
+        "round": 10,
+        "node": 185,
+        "phi": 0.07692307692307693,
+        "Q": 0,
+        "support": 0.5,
+        "J": 0,
+        "read_n": 5,
+        "read_opposition": 0.2,
+        "current_with_context_opposition": 0.2222222222222222,
+        "historical_exposure_opposition": 0.45714285714285713,
+        "historical_unique_opposition": 0.4117647058823529,
+        "historical_unique_messages": 51,
+        "historical_unique_authors": 34,
+        "carried_forward": false,
+        "near_half": true,
+        "reason": "可见发言中支持与反对特朗普当选者数量大致相当，且部分成员立场前后有变化，难以判断沉默多数，故维持约半数。",
+        "evidence_ids": [
+          "r2-u735",
+          "r2-u899",
+          "r3-u292",
+          "r6-u256",
+          "r10-u978"
+        ],
+        "read_messages": [
+          {
+            "id": "TL:10:375",
+            "author": 375,
+            "stance": 1,
+            "text": {
+              "id": "post-1-007-agree-1",
+              "body": "我赞同原帖，也支持特朗普当选。家长在孩子教育上应有真正话语权，课程和读物不该把家长排除在外，公开透明很重要。"
+            }
+          },
+          {
+            "id": "TL:10:798",
+            "author": 798,
+            "stance": -1,
+            "text": {
+              "id": "post-1-001-disagree-0",
+              "body": "我不赞同你的投票选择，也不支持特朗普当选；边境问题需要细致治理，不能靠制造紧张和强硬口号来解决。"
+            }
+          },
+          {
+            "id": "TL:10:9",
+            "author": 9,
+            "stance": 1,
+            "text": {
+              "id": "post--1-019-disagree-0",
+              "body": "我不赞同你把养老院的事全归到他头上，疫情决策很复杂，这届大选我还是支持特朗普当选。"
+            }
+          },
+          {
+            "id": "TL:10:978",
+            "author": 978,
+            "stance": 1,
+            "text": {
+              "id": "post-1-008-agree-0",
+              "body": "我也有同感，审批拖太久确实磨人。正因如此我支持特朗普当选，他主张削减繁琐法规，让地方办事更快。"
+            }
+          },
+          {
+            "id": "TL:9:9",
+            "author": 9,
+            "stance": 1,
+            "text": {
+              "id": "post-1-010",
+              "body": "我在餐馆做服务员，小费是收入大头，报税时一笔笔算得心疼。特朗普提出小费免税，我觉得这比空谈最低工资更直接，所以支持他。"
+            }
+          }
+        ],
+        "context_messages": [
+          {
+            "id": "TL:8:261",
+            "author": 261,
+            "stance": -1,
+            "text": {
+              "id": "post--1-019",
+              "body": "我岳父在养老院走的，那阵子他天天淡化疫情、跟州里抢物资，我现在想起来还堵得慌，不可能支持他。"
+            }
+          },
+          {
+            "id": "TL:8:798",
+            "author": 798,
+            "stance": 1,
+            "text": {
+              "id": "post-1-007",
+              "body": "支持特朗普当选。家里两个孩子上学，家长对课程和图书馆内容越来越没发言权；我希望把选择权和知情权还给家长，而不是让官僚替我们决定。"
+            }
+          },
+          {
+            "id": "TL:8:875",
+            "author": 875,
+            "stance": 1,
+            "text": {
+              "id": "post-1-001",
+              "body": "我会投特朗普。朋友在边境州开店，说治安和非法越境让人心里没底；我需要一个把边境秩序管紧的人，而不是继续拖。"
+            }
+          },
+          {
+            "id": "TL:8:9",
+            "author": 9,
+            "stance": 1,
+            "text": {
+              "id": "post-1-008",
+              "body": "我倾向特朗普。办个小装修许可跑了几个月，层层审批把人耗死；我需要一个强调砍法规、让地方政府加快办事的总统，而不是继续加码管制。"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "graph": 1,
+    "repeat": 1,
+    "node": 316,
+    "selection": "minimum/maximum tail paired Q difference; ties smallest node",
+    "trajectory": [
+      {
+        "graph": 1,
+        "repeat": 1,
+        "branch": "TH",
+        "round": 8,
+        "node": 316,
+        "phi": 0.14285714285714285,
+        "Q": 0,
+        "support": 0.6,
+        "J": 1,
+        "read_n": 5,
+        "read_opposition": 0.6,
+        "current_with_context_opposition": 0.5714285714285714,
+        "historical_exposure_opposition": 0.24390243902439024,
+        "historical_unique_opposition": 0.2692307692307692,
+        "historical_unique_messages": 26,
+        "historical_unique_authors": 17,
+        "carried_forward": false,
+        "near_half": false,
+        "reason": "可见发言中支持特朗普者略多于反对者，且支持理由多样（教育、小生意、退伍军人、小费、住房、宗教自由等），反对者集中在租金议题；结合自身倾向，估计支持者约六成。",
+        "evidence_ids": [
+          "r1-u143",
+          "r3-u824",
+          "r4-u984",
+          "r5-u651",
+          "r8-u622"
+        ],
+        "read_messages": [
+          {
+            "id": "TH:7:143",
+            "author": 143,
+            "stance": -1,
+            "text": {
+              "id": "post-1-019-disagree-0",
+              "body": "你在意持枪权可以理解，但我不支持特朗普当选；他的做法未必真能守住权利，反而可能带来更多混乱。"
+            }
+          },
+          {
+            "id": "TH:7:984",
+            "author": 984,
+            "stance": 1,
+            "text": {
+              "id": "post-1-011",
+              "body": "我平时在网上转新闻，常遇到帖子莫名其妙被限流。特朗普说要收拾大科技公司的审查，我觉得普通人说话的空间该有人撑腰，因此支持他。"
+            }
+          },
+          {
+            "id": "TH:8:460",
+            "author": 460,
+            "stance": -1,
+            "text": {
+              "id": "post--1-022-agree-0",
+              "body": "我赞同你的担心，特朗普上台只会继续给房东和炒房客松绑，租金压力更难缓解，所以我不支持他当选。"
+            }
+          },
+          {
+            "id": "TH:8:622",
+            "author": 622,
+            "stance": 1,
+            "text": {
+              "id": "post--1-022-disagree-0",
+              "body": "我不赞同，把租金上涨全归到特朗普身上太简单；他减税放松监管未必害租户，本届大选我支持特朗普当选。"
+            }
+          },
+          {
+            "id": "TH:8:911",
+            "author": 911,
+            "stance": -1,
+            "text": {
+              "id": "post--1-022-agree-0",
+              "body": "我赞同你的担心，特朗普上台只会继续给房东和炒房客松绑，租金压力更难缓解，所以我不支持他当选。"
+            }
+          }
+        ],
+        "context_messages": [
+          {
+            "id": "TH:5:22",
+            "author": 22,
+            "stance": 1,
+            "text": {
+              "id": "post-1-019",
+              "body": "我周末喜欢打猎，也担心合法持枪被一点点收紧。特朗普在拥枪权利上态度明确，我觉得他能守住这条线，所以愿意投他。"
+            }
+          },
+          {
+            "id": "TH:6:742",
+            "author": 742,
+            "stance": -1,
+            "text": {
+              "id": "post--1-022",
+              "body": "我租房住了五年，房东每年涨租，他那边减税和放松监管那套只会让炒房的更来劲，普通租户更难熬。"
+            }
+          }
+        ]
+      },
+      {
+        "graph": 1,
+        "repeat": 1,
+        "branch": "TH",
+        "round": 9,
+        "node": 316,
+        "phi": 0.14285714285714285,
+        "Q": 0,
+        "support": 0.58,
+        "J": 1,
+        "read_n": 5,
+        "read_opposition": 0.6,
+        "current_with_context_opposition": 0.5714285714285714,
+        "historical_exposure_opposition": 0.2916666666666667,
+        "historical_unique_opposition": 0.3,
+        "historical_unique_messages": 30,
+        "historical_unique_authors": 19,
+        "carried_forward": false,
+        "near_half": false,
+        "reason": "所见不同作者中支持者略多，但租房与监管担忧带来集中反对；结合此前约六成，小幅下调至略高于半数。",
+        "evidence_ids": [
+          "r3-u824",
+          "r4-u984",
+          "r5-u651",
+          "r5-u390",
+          "r8-u460"
+        ],
+        "read_messages": [
+          {
+            "id": "TH:8:177",
+            "author": 177,
+            "stance": -1,
+            "text": {
+              "id": "post--1-022-agree-0",
+              "body": "我赞同你的担心，特朗普上台只会继续给房东和炒房客松绑，租金压力更难缓解，所以我不支持他当选。"
+            }
+          },
+          {
+            "id": "TH:8:199",
+            "author": 199,
+            "stance": -1,
+            "text": {
+              "id": "post--1-022-agree-1",
+              "body": "你说得对，放松监管只会让囤房涨价更肆无忌惮，租户日子更难过；这次大选我明确反对特朗普当选。"
+            }
+          },
+          {
+            "id": "TH:8:460",
+            "author": 460,
+            "stance": -1,
+            "text": {
+              "id": "post--1-022-agree-0",
+              "body": "我赞同你的担心，特朗普上台只会继续给房东和炒房客松绑，租金压力更难缓解，所以我不支持他当选。"
+            }
+          },
+          {
+            "id": "TH:8:622",
+            "author": 622,
+            "stance": 1,
+            "text": {
+              "id": "post--1-022-disagree-0",
+              "body": "我不赞同，把租金上涨全归到特朗普身上太简单；他减税放松监管未必害租户，本届大选我支持特朗普当选。"
+            }
+          },
+          {
+            "id": "TH:9:984",
+            "author": 984,
+            "stance": 1,
+            "text": {
+              "id": "post-1-018-agree-0",
+              "body": "我也支持特朗普当选，宗教自由对办小教会太重要了，政府不该随意干预信仰团体的正常聚会。"
+            }
+          }
+        ],
+        "context_messages": [
+          {
+            "id": "TH:6:742",
+            "author": 742,
+            "stance": -1,
+            "text": {
+              "id": "post--1-022",
+              "body": "我租房住了五年，房东每年涨租，他那边减税和放松监管那套只会让炒房的更来劲，普通租户更难熬。"
+            }
+          },
+          {
+            "id": "TH:7:949",
+            "author": 949,
+            "stance": 1,
+            "text": {
+              "id": "post-1-018",
+              "body": "我们小教会前几年为能不能正常聚会提心吊胆。特朗普强调宗教自由、不让政府随便插手信仰团体，我觉得这关系普通信徒，所以支持他。"
+            }
+          }
+        ]
+      },
+      {
+        "graph": 1,
+        "repeat": 1,
+        "branch": "TH",
+        "round": 10,
+        "node": 316,
+        "phi": 0.14285714285714285,
+        "Q": 0,
+        "support": 0.6,
+        "J": 0,
+        "read_n": 5,
+        "read_opposition": 0.2,
+        "current_with_context_opposition": 0.14285714285714285,
+        "historical_exposure_opposition": 0.2727272727272727,
+        "historical_unique_opposition": 0.2857142857142857,
+        "historical_unique_messages": 35,
+        "historical_unique_authors": 22,
+        "carried_forward": false,
+        "near_half": false,
+        "reason": "可见发言中支持特朗普者明显多于反对者，且支持理由多样（教育、小生意、退伍军人、小费、宗教自由、拥枪、审批），反对者集中在住房议题；结合自身倾向，估计支持者略过半。",
+        "evidence_ids": [
+          "r1-u143",
+          "r4-u984",
+          "r5-u651",
+          "r7-u502",
+          "r10-u154"
+        ],
+        "read_messages": [
+          {
+            "id": "TH:10:143",
+            "author": 143,
+            "stance": 1,
+            "text": {
+              "id": "post-1-019-agree-1",
+              "body": "同意你的判断，拥枪权利对我也是关键议题；特朗普在这方面的立场更让人放心，我明确支持他当选。"
+            }
+          },
+          {
+            "id": "TH:10:154",
+            "author": 154,
+            "stance": 1,
+            "text": {
+              "id": "post-1-008-agree-1",
+              "body": "你说得对，小装修被审批卡几个月很能理解；这次我站特朗普，希望他当选后推动砍法规、让基层审批别再层层加码。"
+            }
+          },
+          {
+            "id": "TH:10:632",
+            "author": 632,
+            "stance": -1,
+            "text": {
+              "id": "post-1-008-disagree-0",
+              "body": "我不赞同你把希望寄托在特朗普身上。砍法规未必解决审批拖延，我明确不支持他当选，也不认为该给他这种授权。"
+            }
+          },
+          {
+            "id": "TH:9:143",
+            "author": 143,
+            "stance": 1,
+            "text": {
+              "id": "post-1-008",
+              "body": "我倾向特朗普。办个小装修许可跑了几个月，层层审批把人耗死；我需要一个强调砍法规、让地方政府加快办事的总统，而不是继续加码管制。"
+            }
+          },
+          {
+            "id": "TH:9:984",
+            "author": 984,
+            "stance": 1,
+            "text": {
+              "id": "post-1-018-agree-0",
+              "body": "我也支持特朗普当选，宗教自由对办小教会太重要了，政府不该随意干预信仰团体的正常聚会。"
+            }
+          }
+        ],
+        "context_messages": [
+          {
+            "id": "TH:7:949",
+            "author": 949,
+            "stance": 1,
+            "text": {
+              "id": "post-1-018",
+              "body": "我们小教会前几年为能不能正常聚会提心吊胆。特朗普强调宗教自由、不让政府随便插手信仰团体，我觉得这关系普通信徒，所以支持他。"
+            }
+          },
+          {
+            "id": "TH:8:171",
+            "author": 171,
+            "stance": 1,
+            "text": {
+              "id": "post-1-019",
+              "body": "我周末喜欢打猎，也担心合法持枪被一点点收紧。特朗普在拥枪权利上态度明确，我觉得他能守住这条线，所以愿意投他。"
+            }
+          },
+          {
+            "id": "TH:9:143",
+            "author": 143,
+            "stance": 1,
+            "text": {
+              "id": "post-1-008",
+              "body": "我倾向特朗普。办个小装修许可跑了几个月，层层审批把人耗死；我需要一个强调砍法规、让地方政府加快办事的总统，而不是继续加码管制。"
+            }
+          }
+        ]
+      },
+      {
+        "graph": 1,
+        "repeat": 1,
+        "branch": "TL",
+        "round": 8,
+        "node": 316,
+        "phi": 0.21428571428571427,
+        "Q": 1,
+        "support": 0.4,
+        "J": 1,
+        "read_n": 5,
+        "read_opposition": 0.6,
+        "current_with_context_opposition": 0.5,
+        "historical_exposure_opposition": 0.5217391304347826,
+        "historical_unique_opposition": 0.5862068965517241,
+        "historical_unique_messages": 29,
+        "historical_unique_authors": 19,
+        "carried_forward": false,
+        "near_half": false,
+        "reason": "可见发言中支持与反对者数量接近，反对者略多且立场明确；结合自身倾向，估计支持者约占四成。",
+        "evidence_ids": [
+          "r3-u824",
+          "r4-u984",
+          "r5-u824",
+          "r6-u503",
+          "r7-u353"
+        ],
+        "read_messages": [
+          {
+            "id": "TL:7:143",
+            "author": 143,
+            "stance": -1,
+            "text": {
+              "id": "post-1-019-disagree-0",
+              "body": "你在意持枪权可以理解，但我不支持特朗普当选；他的做法未必真能守住权利，反而可能带来更多混乱。"
+            }
+          },
+          {
+            "id": "TL:7:711",
+            "author": 711,
+            "stance": -1,
+            "text": {
+              "id": "post-1-004-disagree-1",
+              "body": "我反对你支持他的理由，也不支持特朗普当选；把外交当成施压谈价，容易削弱长期伙伴关系，代价未必更小。"
+            }
+          },
+          {
+            "id": "TL:7:824",
+            "author": 824,
+            "stance": 1,
+            "text": {
+              "id": "post--1-009-disagree-0",
+              "body": "我不认同把嘲讽风格说成带坏孩子，公职人员说话有锋芒也正常；这次大选我支持特朗普当选。"
+            }
+          },
+          {
+            "id": "TL:7:911",
+            "author": 911,
+            "stance": -1,
+            "text": {
+              "id": "post-1-004-disagree-0",
+              "body": "我不赞同你的看法，也不支持特朗普当选；交易式外交看似省事，却可能让盟友不安、让局势更难收拾。"
+            }
+          },
+          {
+            "id": "TL:7:958",
+            "author": 958,
+            "stance": 1,
+            "text": {
+              "id": "post-1-004-agree-0",
+              "body": "我赞同你的判断，我也支持特朗普当选；他那种施压谈判虽不完美，但比不停卷入海外冲突更符合当下利益。"
+            }
+          }
+        ],
+        "context_messages": [
+          {
+            "id": "TL:5:22",
+            "author": 22,
+            "stance": 1,
+            "text": {
+              "id": "post-1-019",
+              "body": "我周末喜欢打猎，也担心合法持枪被一点点收紧。特朗普在拥枪权利上态度明确，我觉得他能守住这条线，所以愿意投他。"
+            }
+          },
+          {
+            "id": "TL:5:261",
+            "author": 261,
+            "stance": -1,
+            "text": {
+              "id": "post--1-009",
+              "body": "我最反感的是那种张嘴就嘲讽别人的说话风格，孩子刷到视频跟着学，觉得欺负人是本事，公职人员这么带节奏，影响太坏了。"
+            }
+          },
+          {
+            "id": "TL:5:824",
+            "author": 824,
+            "stance": 1,
+            "text": {
+              "id": "post-1-004",
+              "body": "这次选总统，我看重外交别再四处点火。特朗普任内那种谈交易、压着各方坐下来谈的路子，比无止境援助更让我放心，所以我支持他。"
+            }
+          }
+        ]
+      },
+      {
+        "graph": 1,
+        "repeat": 1,
+        "branch": "TL",
+        "round": 9,
+        "node": 316,
+        "phi": 0.21428571428571427,
+        "Q": 1,
+        "support": 0.4,
+        "J": 1,
+        "read_n": 5,
+        "read_opposition": 0.8,
+        "current_with_context_opposition": 0.625,
+        "historical_exposure_opposition": 0.5370370370370371,
+        "historical_unique_opposition": 0.5945945945945946,
+        "historical_unique_messages": 37,
+        "historical_unique_authors": 24,
+        "carried_forward": false,
+        "near_half": false,
+        "reason": "可见发言中反对者略多，且多名曾支持者（如984）转向反对；支持方虽持续出现，但整体未见明显多数，故估计约四成。",
+        "evidence_ids": [
+          "r5-u984",
+          "r6-u313",
+          "r6-u671",
+          "r7-u353",
+          "r8-u615"
+        ],
+        "read_messages": [
+          {
+            "id": "TL:8:143",
+            "author": 143,
+            "stance": -1,
+            "text": {
+              "id": "post--1-008",
+              "body": "官司缠身还天天骂法官、骂法院，说判决都是被操纵的，这样的人要是再掌权，我真怕司法也变成他手里的工具。"
+            }
+          },
+          {
+            "id": "TL:8:479",
+            "author": 479,
+            "stance": 1,
+            "text": {
+              "id": "post--1-018-disagree-1",
+              "body": "我觉得你因家人经历就否定特朗普不合适，我支持他当选；跨性别者服役和医疗需要审慎规则，不是一禁了之也不是全放开。"
+            }
+          },
+          {
+            "id": "TL:8:615",
+            "author": 615,
+            "stance": -1,
+            "text": {
+              "id": "post--1-018-agree-1",
+              "body": "你说得对，我也不希望特朗普再当选，他那种限制跨性别者服役和就医的做法会让很多家庭不安。"
+            }
+          },
+          {
+            "id": "TL:8:754",
+            "author": 754,
+            "stance": -1,
+            "text": {
+              "id": "post-1-007-disagree-1",
+              "body": "我反对原帖，也不支持特朗普当选。教育内容该让家长知情没错，但他的做法更像激化对立，不能靠他来保障家长的选择权。"
+            }
+          },
+          {
+            "id": "TL:9:143",
+            "author": 143,
+            "stance": -1,
+            "text": {
+              "id": "post-1-015-disagree-1",
+              "body": "你把希望押在特朗普身上，我不认同，也不会支持他当选。药价透明不能只靠喊，我更担心他的做法反而让老人用药保障更不稳定。"
+            }
+          }
+        ],
+        "context_messages": [
+          {
+            "id": "TL:6:143",
+            "author": 143,
+            "stance": -1,
+            "text": {
+              "id": "post--1-018",
+              "body": "我弟弟是跨性别者，他任内限制跨性别者服役和看病那套做法，让家里跟着揪心，我不想再回到那种气氛。"
+            }
+          },
+          {
+            "id": "TL:6:337",
+            "author": 337,
+            "stance": 1,
+            "text": {
+              "id": "post-1-007",
+              "body": "支持特朗普当选。家里两个孩子上学，家长对课程和图书馆内容越来越没发言权；我希望把选择权和知情权还给家长，而不是让官僚替我们决定。"
+            }
+          },
+          {
+            "id": "TL:8:105",
+            "author": 105,
+            "stance": 1,
+            "text": {
+              "id": "post-1-015",
+              "body": "家里老人长期吃药，药价年年涨。特朗普说要让药价更透明、把中间环节的虚高挤一挤，我觉得这比听药企公关实在，所以支持他。"
+            }
+          }
+        ]
+      },
+      {
+        "graph": 1,
+        "repeat": 1,
+        "branch": "TL",
+        "round": 10,
+        "node": 316,
+        "phi": 0.21428571428571427,
+        "Q": 1,
+        "support": 0.4,
+        "J": 1,
+        "read_n": 2,
+        "read_opposition": 1.0,
+        "current_with_context_opposition": 0.5,
+        "historical_exposure_opposition": 0.5344827586206896,
+        "historical_unique_opposition": 0.5897435897435898,
+        "historical_unique_messages": 39,
+        "historical_unique_authors": 25,
+        "carried_forward": false,
+        "near_half": false,
+        "reason": "可见发言中支持与反对者大致相当，反对者略多且立场明确；结合自身倾向，估计支持者约占四成。",
+        "evidence_ids": [
+          "r3-u824",
+          "r4-u984",
+          "r5-u824",
+          "r6-u503",
+          "r7-u353"
+        ],
+        "read_messages": [
+          {
+            "id": "TL:10:143",
+            "author": 143,
+            "stance": -1,
+            "text": {
+              "id": "post-1-019-disagree-1",
+              "body": "我不认同你的选择，也不支持特朗普当选；保护持枪权需要更稳妥的方案，他并不是能让人放心的候选人。"
+            }
+          },
+          {
+            "id": "TL:9:143",
+            "author": 143,
+            "stance": -1,
+            "text": {
+              "id": "post-1-015-disagree-1",
+              "body": "你把希望押在特朗普身上，我不认同，也不会支持他当选。药价透明不能只靠喊，我更担心他的做法反而让老人用药保障更不稳定。"
+            }
+          }
+        ],
+        "context_messages": [
+          {
+            "id": "TL:8:105",
+            "author": 105,
+            "stance": 1,
+            "text": {
+              "id": "post-1-015",
+              "body": "家里老人长期吃药，药价年年涨。特朗普说要让药价更透明、把中间环节的虚高挤一挤，我觉得这比听药企公关实在，所以支持他。"
+            }
+          },
+          {
+            "id": "TL:8:171",
+            "author": 171,
+            "stance": 1,
+            "text": {
+              "id": "post-1-019",
+              "body": "我周末喜欢打猎，也担心合法持枪被一点点收紧。特朗普在拥枪权利上态度明确，我觉得他能守住这条线，所以愿意投他。"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "graph": 2,
+    "repeat": 0,
+    "node": 145,
+    "selection": "minimum/maximum tail paired Q difference; ties smallest node",
+    "trajectory": [
+      {
+        "graph": 2,
+        "repeat": 0,
+        "branch": "TH",
+        "round": 8,
+        "node": 145,
+        "phi": 0.2857142857142857,
+        "Q": 1,
+        "support": 0.38,
+        "J": 1,
+        "read_n": 5,
+        "read_opposition": 1.0,
+        "current_with_context_opposition": 0.8333333333333334,
+        "historical_exposure_opposition": 0.4772727272727273,
+        "historical_unique_opposition": 0.6,
+        "historical_unique_messages": 25,
+        "historical_unique_authors": 19,
+        "carried_forward": false,
+        "near_half": false,
+        "reason": "可见发言中反对特朗普当选的声音在后期明显增多，尤其围绕信用卡利率上限的讨论几乎全是反对；支持者虽持续出现但较分散，故估计支持比例略低于半数。",
+        "evidence_ids": [
+          "r1-u459",
+          "r2-u674",
+          "r3-u355",
+          "r5-u459",
+          "r7-u302"
+        ],
+        "read_messages": [
+          {
+            "id": "TH:7:302",
+            "author": 302,
+            "stance": -1,
+            "text": {
+              "id": "post-1-024-disagree-0",
+              "body": "我不认同你的看法，信用卡利率上限听着好，但特朗普的贸易和政策思路会推高生活成本，我不支持他当选。"
+            }
+          },
+          {
+            "id": "TH:7:339",
+            "author": 339,
+            "stance": -1,
+            "text": {
+              "id": "post-1-024-disagree-0",
+              "body": "我不认同你的看法，信用卡利率上限听着好，但特朗普的贸易和政策思路会推高生活成本，我不支持他当选。"
+            }
+          },
+          {
+            "id": "TH:7:365",
+            "author": 365,
+            "stance": -1,
+            "text": {
+              "id": "post-1-024-disagree-1",
+              "body": "我反对你的建议，设利率上限可能让发卡更严、普通人更难借到钱；所以我这次大选不支持特朗普当选。"
+            }
+          },
+          {
+            "id": "TH:7:403",
+            "author": 403,
+            "stance": -1,
+            "text": {
+              "id": "post-1-024-disagree-1",
+              "body": "我反对你的建议，设利率上限可能让发卡更严、普通人更难借到钱；所以我这次大选不支持特朗普当选。"
+            }
+          },
+          {
+            "id": "TH:7:409",
+            "author": 409,
+            "stance": -1,
+            "text": {
+              "id": "post-1-024-disagree-1",
+              "body": "我反对你的建议，设利率上限可能让发卡更严、普通人更难借到钱；所以我这次大选不支持特朗普当选。"
+            }
+          }
+        ],
+        "context_messages": [
+          {
+            "id": "TH:5:459",
+            "author": 459,
+            "stance": 1,
+            "text": {
+              "id": "post-1-024",
+              "body": "家里信用卡欠款利息越滚越大，我支持特朗普，是因为他提过给信用卡利率设上限，让被账单追着跑的家庭能喘口气。"
+            }
+          }
+        ]
+      },
+      {
+        "graph": 2,
+        "repeat": 0,
+        "branch": "TH",
+        "round": 9,
+        "node": 145,
+        "phi": 0.2857142857142857,
+        "Q": 1,
+        "support": 0.4,
+        "J": 0,
+        "read_n": 4,
+        "read_opposition": 0.25,
+        "current_with_context_opposition": 0.2,
+        "historical_exposure_opposition": 0.4489795918367347,
+        "historical_unique_opposition": 0.5333333333333333,
+        "historical_unique_messages": 30,
+        "historical_unique_authors": 19,
+        "carried_forward": false,
+        "near_half": false,
+        "reason": "可见发言中支持与反对特朗普当选者数量接近，反对声在信用卡利率议题后集中出现，但支持者也有多种理由；结合自身略偏支持及此前估计，判断社区支持比例约四成。",
+        "evidence_ids": [
+          "r1-u459",
+          "r2-u220",
+          "r3-u355",
+          "r6-u339",
+          "r9-u459"
+        ],
+        "read_messages": [
+          {
+            "id": "TH:8:355",
+            "author": 355,
+            "stance": -1,
+            "text": {
+              "id": "post-1-010-disagree-1",
+              "body": "我反对你的看法，也明确不支持特朗普当选；小费免税并不能抵消他在其他议题上的问题，靠服务收入的人需要更全面的保障。"
+            }
+          },
+          {
+            "id": "TH:8:459",
+            "author": 459,
+            "stance": 1,
+            "text": {
+              "id": "post-1-010-agree-0",
+              "body": "我赞同你的看法，小费免税确实能让靠服务收入的人少些报税负担，我支持特朗普当选，他这类直接减负的提议更合我意。"
+            }
+          },
+          {
+            "id": "TH:9:355",
+            "author": 355,
+            "stance": 1,
+            "text": {
+              "id": "post-1-010-agree-1",
+              "body": "你说得在理，服务员的小费本来就是辛苦钱，特朗普提小费免税让我更愿意支持他当选，这比泛泛谈工资实在。"
+            }
+          },
+          {
+            "id": "TH:9:459",
+            "author": 459,
+            "stance": 1,
+            "text": {
+              "id": "post-1-012",
+              "body": "家里老人是退伍军人，排队等预约常拖很久。我希望特朗普扩大退伍军人自己选医生的渠道，别让人干等，所以支持他。"
+            }
+          }
+        ],
+        "context_messages": [
+          {
+            "id": "TH:7:722",
+            "author": 722,
+            "stance": 1,
+            "text": {
+              "id": "post-1-010",
+              "body": "我在餐馆做服务员，小费是收入大头，报税时一笔笔算得心疼。特朗普提出小费免税，我觉得这比空谈最低工资更直接，所以支持他。"
+            }
+          }
+        ]
+      },
+      {
+        "graph": 2,
+        "repeat": 0,
+        "branch": "TH",
+        "round": 10,
+        "node": 145,
+        "phi": 0.2857142857142857,
+        "Q": 1,
+        "support": 0.4,
+        "J": 0,
+        "read_n": 4,
+        "read_opposition": 0.0,
+        "current_with_context_opposition": 0.16666666666666666,
+        "historical_exposure_opposition": 0.41818181818181815,
+        "historical_unique_opposition": 0.5151515151515151,
+        "historical_unique_messages": 33,
+        "historical_unique_authors": 20,
+        "carried_forward": false,
+        "near_half": false,
+        "reason": "可见发言中支持与反对大致相当，反对者多集中在利率上限、贸易成本等议题，支持者则基于工人、小生意和减税等理由；结合自身略偏支持但强度不高，估计约四成。",
+        "evidence_ids": [
+          "r1-u459",
+          "r2-u220",
+          "r5-u459",
+          "r6-u339",
+          "r9-u313"
+        ],
+        "read_messages": [
+          {
+            "id": "TH:10:459",
+            "author": 459,
+            "stance": 1,
+            "text": {
+              "id": "post--1-001-disagree-1",
+              "body": "我不赞同你这四年不敢再让他折腾的判断；我支持特朗普当选，换人未必更稳，他的生意经验更值得一试。"
+            }
+          },
+          {
+            "id": "TH:10:764",
+            "author": 764,
+            "stance": 1,
+            "text": {
+              "id": "post-1-012-agree-1",
+              "body": "我也赞同原帖，等预约太久确实折腾老人，扩大自选医生渠道值得支持；因此我希望特朗普赢得大选。"
+            }
+          },
+          {
+            "id": "TH:9:355",
+            "author": 355,
+            "stance": 1,
+            "text": {
+              "id": "post-1-010-agree-1",
+              "body": "你说得在理，服务员的小费本来就是辛苦钱，特朗普提小费免税让我更愿意支持他当选，这比泛泛谈工资实在。"
+            }
+          },
+          {
+            "id": "TH:9:459",
+            "author": 459,
+            "stance": 1,
+            "text": {
+              "id": "post-1-012",
+              "body": "家里老人是退伍军人，排队等预约常拖很久。我希望特朗普扩大退伍军人自己选医生的渠道，别让人干等，所以支持他。"
+            }
+          }
+        ],
+        "context_messages": [
+          {
+            "id": "TH:7:722",
+            "author": 722,
+            "stance": 1,
+            "text": {
+              "id": "post-1-010",
+              "body": "我在餐馆做服务员，小费是收入大头，报税时一笔笔算得心疼。特朗普提出小费免税，我觉得这比空谈最低工资更直接，所以支持他。"
+            }
+          },
+          {
+            "id": "TH:9:313",
+            "author": 313,
+            "stance": -1,
+            "text": {
+              "id": "post--1-001",
+              "body": "我开小店，进货成本这两年涨得厉害，关税来来去去，政策说变就变，真不敢再让他折腾四年。"
+            }
+          },
+          {
+            "id": "TH:9:459",
+            "author": 459,
+            "stance": 1,
+            "text": {
+              "id": "post-1-012",
+              "body": "家里老人是退伍军人，排队等预约常拖很久。我希望特朗普扩大退伍军人自己选医生的渠道，别让人干等，所以支持他。"
+            }
+          }
+        ]
+      },
+      {
+        "graph": 2,
+        "repeat": 0,
+        "branch": "TL",
+        "round": 8,
+        "node": 145,
+        "phi": 0.14285714285714285,
+        "Q": 0,
+        "support": 0.55,
+        "J": 1,
+        "read_n": 5,
+        "read_opposition": 0.6,
+        "current_with_context_opposition": 0.5,
+        "historical_exposure_opposition": 0.38636363636363635,
+        "historical_unique_opposition": 0.4,
+        "historical_unique_messages": 25,
+        "historical_unique_authors": 17,
+        "carried_forward": false,
+        "near_half": true,
+        "reason": "可见发言中支持者略多于反对者，且支持理由多样（工人、小生意、边境、信用卡利率），但反对声音集中且重复，整体接近半数略偏支持。",
+        "evidence_ids": [
+          "r1-u459",
+          "r1-u421",
+          "r4-u475",
+          "r7-u305",
+          "r7-u896"
+        ],
+        "read_messages": [
+          {
+            "id": "TL:7:220",
+            "author": 220,
+            "stance": -1,
+            "text": {
+              "id": "post-1-024-disagree-0",
+              "body": "我不认同你的看法，信用卡利率上限听着好，但特朗普的贸易和政策思路会推高生活成本，我不支持他当选。"
+            }
+          },
+          {
+            "id": "TL:7:305",
+            "author": 305,
+            "stance": 1,
+            "text": {
+              "id": "post-1-024-agree-1",
+              "body": "你说到点子上了，给信用卡利率设上限能帮到被账单追着跑的人，因此我赞成特朗普的主张，并支持他赢得本届大选。"
+            }
+          },
+          {
+            "id": "TL:7:339",
+            "author": 339,
+            "stance": -1,
+            "text": {
+              "id": "post-1-024-disagree-0",
+              "body": "我不认同你的看法，信用卡利率上限听着好，但特朗普的贸易和政策思路会推高生活成本，我不支持他当选。"
+            }
+          },
+          {
+            "id": "TL:7:365",
+            "author": 365,
+            "stance": -1,
+            "text": {
+              "id": "post-1-024-disagree-1",
+              "body": "我反对你的建议，设利率上限可能让发卡更严、普通人更难借到钱；所以我这次大选不支持特朗普当选。"
+            }
+          },
+          {
+            "id": "TL:7:896",
+            "author": 896,
+            "stance": 1,
+            "text": {
+              "id": "post-1-024-agree-1",
+              "body": "你说到点子上了，给信用卡利率设上限能帮到被账单追着跑的人，因此我赞成特朗普的主张，并支持他赢得本届大选。"
+            }
+          }
+        ],
+        "context_messages": [
+          {
+            "id": "TL:5:459",
+            "author": 459,
+            "stance": 1,
+            "text": {
+              "id": "post-1-024",
+              "body": "家里信用卡欠款利息越滚越大，我支持特朗普，是因为他提过给信用卡利率设上限，让被账单追着跑的家庭能喘口气。"
+            }
+          }
+        ]
+      },
+      {
+        "graph": 2,
+        "repeat": 0,
+        "branch": "TL",
+        "round": 9,
+        "node": 145,
+        "phi": 0.14285714285714285,
+        "Q": 0,
+        "support": 0.62,
+        "J": 0,
+        "read_n": 4,
+        "read_opposition": 0.25,
+        "current_with_context_opposition": 0.14285714285714285,
+        "historical_exposure_opposition": 0.35294117647058826,
+        "historical_unique_opposition": 0.34375,
+        "historical_unique_messages": 32,
+        "historical_unique_authors": 18,
+        "carried_forward": false,
+        "near_half": false,
+        "reason": "可见的不同发言者中支持者明显多于反对者，支持理由涉及制造业、小生意、老兵和药价等多个群体；结合此前0.55的判断，小幅上调。",
+        "evidence_ids": [
+          "r1-u459",
+          "r4-u475",
+          "r7-u305",
+          "r2-u220",
+          "r7-u339"
+        ],
+        "read_messages": [
+          {
+            "id": "TL:8:355",
+            "author": 355,
+            "stance": -1,
+            "text": {
+              "id": "post-1-020-disagree-1",
+              "body": "原帖的担忧可以理解，但我不赞同把希望寄托在特朗普当选上，我反对他当选；程序问题应由地方选举机构公开改进，而不是靠候选人。"
+            }
+          },
+          {
+            "id": "TL:8:459",
+            "author": 459,
+            "stance": 1,
+            "text": {
+              "id": "post-1-015-agree-0",
+              "body": "我同意你的看法，药价透明确实该有人去推。就冲这一点，我支持特朗普当选，至少他愿意碰这块硬骨头。"
+            }
+          },
+          {
+            "id": "TL:9:355",
+            "author": 355,
+            "stance": 1,
+            "text": {
+              "id": "post-1-014-agree-1",
+              "body": "我家里靠制造业吃饭，最怕政策急转弯，他主张保本土工厂岗位，所以这次支持特朗普当选。"
+            }
+          },
+          {
+            "id": "TL:9:459",
+            "author": 459,
+            "stance": 1,
+            "text": {
+              "id": "post-1-012",
+              "body": "家里老人是退伍军人，排队等预约常拖很久。我希望特朗普扩大退伍军人自己选医生的渠道，别让人干等，所以支持他。"
+            }
+          }
+        ],
+        "context_messages": [
+          {
+            "id": "TL:7:475",
+            "author": 475,
+            "stance": 1,
+            "text": {
+              "id": "post-1-020",
+              "body": "我们这边投票站管理松散，我支持特朗普，是希望选民身份核验更严、纸质选票能追溯，别让普通人对投票程序心里犯嘀咕。"
+            }
+          },
+          {
+            "id": "TL:7:752",
+            "author": 752,
+            "stance": 1,
+            "text": {
+              "id": "post-1-014",
+              "body": "我在汽车零件厂上班，家里饭碗跟燃油车产线绑着。特朗普反对强制电动车、要保本土制造，我觉得比一刀切转型更顾工人，所以支持他。"
+            }
+          },
+          {
+            "id": "TL:7:994",
+            "author": 994,
+            "stance": 1,
+            "text": {
+              "id": "post-1-015",
+              "body": "家里老人长期吃药，药价年年涨。特朗普说要让药价更透明、把中间环节的虚高挤一挤，我觉得这比听药企公关实在，所以支持他。"
+            }
+          }
+        ]
+      },
+      {
+        "graph": 2,
+        "repeat": 0,
+        "branch": "TL",
+        "round": 10,
+        "node": 145,
+        "phi": 0.14285714285714285,
+        "Q": 0,
+        "support": 0.62,
+        "J": 0,
+        "read_n": 4,
+        "read_opposition": 0.25,
+        "current_with_context_opposition": 0.3333333333333333,
+        "historical_exposure_opposition": 0.3508771929824561,
+        "historical_unique_opposition": 0.37142857142857144,
+        "historical_unique_messages": 35,
+        "historical_unique_authors": 18,
+        "carried_forward": false,
+        "near_half": false,
+        "reason": "可见明确表态者中支持者略多于反对者，整体约六成；结合此前0.62的判断，维持相近估计。",
+        "evidence_ids": [
+          "r1-u459",
+          "r7-u305",
+          "r7-u896",
+          "r2-u220",
+          "r10-u674"
+        ],
+        "read_messages": [
+          {
+            "id": "TL:10:459",
+            "author": 459,
+            "stance": 1,
+            "text": {
+              "id": "post--1-019-disagree-1",
+              "body": "你的悲痛可以理解，但据此否定他整个任期太片面了，我反对这种看法，并支持特朗普在本届大选当选。"
+            }
+          },
+          {
+            "id": "TL:10:674",
+            "author": 674,
+            "stance": -1,
+            "text": {
+              "id": "post-1-012-disagree-0",
+              "body": "我不赞同原帖把希望押在特朗普身上，退伍军人就医需要更稳的安排；我不支持他当选，也不认为他能解决排队问题。"
+            }
+          },
+          {
+            "id": "TL:9:355",
+            "author": 355,
+            "stance": 1,
+            "text": {
+              "id": "post-1-014-agree-1",
+              "body": "我家里靠制造业吃饭，最怕政策急转弯，他主张保本土工厂岗位，所以这次支持特朗普当选。"
+            }
+          },
+          {
+            "id": "TL:9:459",
+            "author": 459,
+            "stance": 1,
+            "text": {
+              "id": "post-1-012",
+              "body": "家里老人是退伍军人，排队等预约常拖很久。我希望特朗普扩大退伍军人自己选医生的渠道，别让人干等，所以支持他。"
+            }
+          }
+        ],
+        "context_messages": [
+          {
+            "id": "TL:7:752",
+            "author": 752,
+            "stance": 1,
+            "text": {
+              "id": "post-1-014",
+              "body": "我在汽车零件厂上班，家里饭碗跟燃油车产线绑着。特朗普反对强制电动车、要保本土制造，我觉得比一刀切转型更顾工人，所以支持他。"
+            }
+          },
+          {
+            "id": "TL:9:283",
+            "author": 283,
+            "stance": -1,
+            "text": {
+              "id": "post--1-019",
+              "body": "我岳父在养老院走的，那阵子他天天淡化疫情、跟州里抢物资，我现在想起来还堵得慌，不可能支持他。"
+            }
+          },
+          {
+            "id": "TL:9:459",
+            "author": 459,
+            "stance": 1,
+            "text": {
+              "id": "post-1-012",
+              "body": "家里老人是退伍军人，排队等预约常拖很久。我希望特朗普扩大退伍军人自己选医生的渠道，别让人干等，所以支持他。"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "graph": 2,
+    "repeat": 0,
+    "node": 430,
+    "selection": "minimum/maximum tail paired Q difference; ties smallest node",
+    "trajectory": [
+      {
+        "graph": 2,
+        "repeat": 0,
+        "branch": "TH",
+        "round": 8,
+        "node": 430,
+        "phi": 0.1111111111111111,
+        "Q": 0,
+        "support": 0.8,
+        "J": 0,
+        "read_n": 5,
+        "read_opposition": 0.4,
+        "current_with_context_opposition": 0.2857142857142857,
+        "historical_exposure_opposition": 0.25,
+        "historical_unique_opposition": 0.23809523809523808,
+        "historical_unique_messages": 21,
+        "historical_unique_authors": 14,
+        "carried_forward": false,
+        "near_half": false,
+        "reason": "已知立场的发言者中支持者约11/13，多个独立作者从教育、宗教自由、制造就业等角度支持；仅少数明确反对，故较此前0.72上调。",
+        "evidence_ids": [
+          "r2-u64",
+          "r4-u747",
+          "r5-u985",
+          "r6-u386",
+          "r8-u488"
+        ],
+        "read_messages": [
+          {
+            "id": "TH:7:488",
+            "author": 488,
+            "stance": -1,
+            "text": {
+              "id": "post--1-005",
+              "body": "我住的地方这几年山火烟味一个夏天接一个夏天，他一上台就退出气候协定、放松环保监管，这种路子我实在不想再看四年。"
+            }
+          },
+          {
+            "id": "TH:7:923",
+            "author": 923,
+            "stance": 1,
+            "text": {
+              "id": "post-1-007-agree-1",
+              "body": "我赞同原帖，也支持特朗普当选。家长在孩子教育上应有真正话语权，课程和读物不该把家长排除在外，公开透明很重要。"
+            }
+          },
+          {
+            "id": "TH:8:488",
+            "author": 488,
+            "stance": -1,
+            "text": {
+              "id": "post--1-003",
+              "body": "他老跟盟友吵架退群，我表哥在欧洲做生意，说那边现在都不太信美国了，这种不确定性太折腾人。"
+            }
+          },
+          {
+            "id": "TH:8:747",
+            "author": 747,
+            "stance": 1,
+            "text": {
+              "id": "post-1-009",
+              "body": "这次我站特朗普。家里亲戚按规矩排队等亲属移民好多年，看到有人绕开程序先进来，心里很不平衡；我想要先把规则执行好，再谈其他。"
+            }
+          },
+          {
+            "id": "TH:8:923",
+            "author": 923,
+            "stance": 1,
+            "text": {
+              "id": "post-1-019-agree-0",
+              "body": "我理解你担心持枪权被收紧，也认为特朗普能在这点上更可靠，所以我支持他当选，愿意把票投给他。"
+            }
+          }
+        ],
+        "context_messages": [
+          {
+            "id": "TH:5:582",
+            "author": 582,
+            "stance": 1,
+            "text": {
+              "id": "post-1-007",
+              "body": "支持特朗普当选。家里两个孩子上学，家长对课程和图书馆内容越来越没发言权；我希望把选择权和知情权还给家长，而不是让官僚替我们决定。"
+            }
+          },
+          {
+            "id": "TH:6:750",
+            "author": 750,
+            "stance": 1,
+            "text": {
+              "id": "post-1-019",
+              "body": "我周末喜欢打猎，也担心合法持枪被一点点收紧。特朗普在拥枪权利上态度明确，我觉得他能守住这条线，所以愿意投他。"
+            }
+          }
+        ]
+      },
+      {
+        "graph": 2,
+        "repeat": 0,
+        "branch": "TH",
+        "round": 9,
+        "node": 430,
+        "phi": 0.1111111111111111,
+        "Q": 0,
+        "support": 0.62,
+        "J": 1,
+        "read_n": 5,
+        "read_opposition": 0.6,
+        "current_with_context_opposition": 0.5,
+        "historical_exposure_opposition": 0.2916666666666667,
+        "historical_unique_opposition": 0.32,
+        "historical_unique_messages": 25,
+        "historical_unique_authors": 16,
+        "carried_forward": false,
+        "near_half": false,
+        "reason": "可见发言中支持特朗普的明确表态明显多于反对，且支持理由多样（教育、宗教自由、制造业、移民、拥枪），反对者集中在少数几人，故估计支持者略多于一半。",
+        "evidence_ids": [
+          "r1-u923",
+          "r2-u64",
+          "r4-u747",
+          "r5-u985",
+          "r8-u747"
+        ],
+        "read_messages": [
+          {
+            "id": "TH:8:488",
+            "author": 488,
+            "stance": -1,
+            "text": {
+              "id": "post--1-003",
+              "body": "他老跟盟友吵架退群，我表哥在欧洲做生意，说那边现在都不太信美国了，这种不确定性太折腾人。"
+            }
+          },
+          {
+            "id": "TH:8:923",
+            "author": 923,
+            "stance": 1,
+            "text": {
+              "id": "post-1-019-agree-0",
+              "body": "我理解你担心持枪权被收紧，也认为特朗普能在这点上更可靠，所以我支持他当选，愿意把票投给他。"
+            }
+          },
+          {
+            "id": "TH:9:404",
+            "author": 404,
+            "stance": 1,
+            "text": {
+              "id": "post-1-009-agree-1",
+              "body": "赞同原帖，我支持特朗普当选，先把现有移民规则落实到位，再讨论其他调整，这样对守规矩的人更公平。"
+            }
+          },
+          {
+            "id": "TH:9:488",
+            "author": 488,
+            "stance": -1,
+            "text": {
+              "id": "post--1-023",
+              "body": "我在仓库干活，工会投票前公司天天开会吓唬人，他任内劳工局那套做法明显偏着老板，工人想抱团太难了。"
+            }
+          },
+          {
+            "id": "TH:9:747",
+            "author": 747,
+            "stance": -1,
+            "text": {
+              "id": "post--1-021-agree-0",
+              "body": "我赞同你的担忧，特朗普若当选只会让下架种族和性别书籍的风气更盛，所以我不支持他当选。"
+            }
+          }
+        ],
+        "context_messages": [
+          {
+            "id": "TH:6:750",
+            "author": 750,
+            "stance": 1,
+            "text": {
+              "id": "post-1-019",
+              "body": "我周末喜欢打猎，也担心合法持枪被一点点收紧。特朗普在拥枪权利上态度明确，我觉得他能守住这条线，所以愿意投他。"
+            }
+          },
+          {
+            "id": "TH:8:246",
+            "author": 246,
+            "stance": -1,
+            "text": {
+              "id": "post--1-021",
+              "body": "我在社区图书馆上班，这两年总有人闹着下架讲种族和性别的书，他那边还跟着拱火，弄得我们借书都提心吊胆。"
+            }
+          },
+          {
+            "id": "TH:8:747",
+            "author": 747,
+            "stance": 1,
+            "text": {
+              "id": "post-1-009",
+              "body": "这次我站特朗普。家里亲戚按规矩排队等亲属移民好多年，看到有人绕开程序先进来，心里很不平衡；我想要先把规则执行好，再谈其他。"
+            }
+          }
+        ]
+      },
+      {
+        "graph": 2,
+        "repeat": 0,
+        "branch": "TH",
+        "round": 10,
+        "node": 430,
+        "phi": 0.1111111111111111,
+        "Q": 0,
+        "support": 0.62,
+        "J": 0,
+        "read_n": 5,
+        "read_opposition": 0.4,
+        "current_with_context_opposition": 0.42857142857142855,
+        "historical_exposure_opposition": 0.3090909090909091,
+        "historical_unique_opposition": 0.2962962962962963,
+        "historical_unique_messages": 27,
+        "historical_unique_authors": 16,
+        "carried_forward": false,
+        "near_half": false,
+        "reason": "可见发言中支持特朗普的明确表态明显多于反对，且支持理由多样（教育、宗教自由、移民、持枪、制造业等），反对者虽持续发声但人数较少，故维持略高于六成的估计。",
+        "evidence_ids": [
+          "r1-u923",
+          "r2-u64",
+          "r4-u747",
+          "r5-u985",
+          "r9-u404"
+        ],
+        "read_messages": [
+          {
+            "id": "TH:10:747",
+            "author": 747,
+            "stance": 1,
+            "text": {
+              "id": "post-1-022",
+              "body": "两个孩子上学，我不想只剩学区房一条路。特朗普主张让家长用教育储蓄选学校，我觉得普通家庭也该有选择，所以支持他。"
+            }
+          },
+          {
+            "id": "TH:9:404",
+            "author": 404,
+            "stance": 1,
+            "text": {
+              "id": "post-1-009-agree-1",
+              "body": "赞同原帖，我支持特朗普当选，先把现有移民规则落实到位，再讨论其他调整，这样对守规矩的人更公平。"
+            }
+          },
+          {
+            "id": "TH:9:488",
+            "author": 488,
+            "stance": -1,
+            "text": {
+              "id": "post--1-023",
+              "body": "我在仓库干活，工会投票前公司天天开会吓唬人，他任内劳工局那套做法明显偏着老板，工人想抱团太难了。"
+            }
+          },
+          {
+            "id": "TH:9:747",
+            "author": 747,
+            "stance": -1,
+            "text": {
+              "id": "post--1-021-agree-0",
+              "body": "我赞同你的担忧，特朗普若当选只会让下架种族和性别书籍的风气更盛，所以我不支持他当选。"
+            }
+          },
+          {
+            "id": "TH:9:923",
+            "author": 923,
+            "stance": 1,
+            "text": {
+              "id": "post-1-004",
+              "body": "这次选总统，我看重外交别再四处点火。特朗普任内那种谈交易、压着各方坐下来谈的路子，比无止境援助更让我放心，所以我支持他。"
+            }
+          }
+        ],
+        "context_messages": [
+          {
+            "id": "TH:8:246",
+            "author": 246,
+            "stance": -1,
+            "text": {
+              "id": "post--1-021",
+              "body": "我在社区图书馆上班，这两年总有人闹着下架讲种族和性别的书，他那边还跟着拱火，弄得我们借书都提心吊胆。"
+            }
+          },
+          {
+            "id": "TH:8:747",
+            "author": 747,
+            "stance": 1,
+            "text": {
+              "id": "post-1-009",
+              "body": "这次我站特朗普。家里亲戚按规矩排队等亲属移民好多年，看到有人绕开程序先进来，心里很不平衡；我想要先把规则执行好，再谈其他。"
+            }
+          }
+        ]
+      },
+      {
+        "graph": 2,
+        "repeat": 0,
+        "branch": "TL",
+        "round": 8,
+        "node": 430,
+        "phi": 0.2222222222222222,
+        "Q": 1,
+        "support": 0.33,
+        "J": 0,
+        "read_n": 5,
+        "read_opposition": 0.4,
+        "current_with_context_opposition": 0.42857142857142855,
+        "historical_exposure_opposition": 0.5952380952380952,
+        "historical_unique_opposition": 0.6086956521739131,
+        "historical_unique_messages": 23,
+        "historical_unique_authors": 17,
+        "carried_forward": false,
+        "near_half": false,
+        "reason": "可见明确表态者中去重后反对约为支持的两倍，支持者约三分之一，此前估计也在三成左右。",
+        "evidence_ids": [
+          "r1-u488",
+          "r4-u923",
+          "r2-u64",
+          "r3-u259",
+          "r8-u283"
+        ],
+        "read_messages": [
+          {
+            "id": "TL:7:123",
+            "author": 123,
+            "stance": -1,
+            "text": {
+              "id": "post--1-009-agree-1",
+              "body": "原帖说得对，那种张嘴就嘲讽的做派影响太坏，孩子容易模仿；所以这次我不支持特朗普当选。"
+            }
+          },
+          {
+            "id": "TL:7:392",
+            "author": 392,
+            "stance": 1,
+            "text": {
+              "id": "post--1-009-disagree-0",
+              "body": "我不认同把嘲讽风格说成带坏孩子，公职人员说话有锋芒也正常；这次大选我支持特朗普当选。"
+            }
+          },
+          {
+            "id": "TL:7:923",
+            "author": 923,
+            "stance": 1,
+            "text": {
+              "id": "post-1-007-agree-1",
+              "body": "我赞同原帖，也支持特朗普当选。家长在孩子教育上应有真正话语权，课程和读物不该把家长排除在外，公开透明很重要。"
+            }
+          },
+          {
+            "id": "TL:8:283",
+            "author": 283,
+            "stance": -1,
+            "text": {
+              "id": "post--1-009-agree-1",
+              "body": "原帖说得对，那种张嘴就嘲讽的做派影响太坏，孩子容易模仿；所以这次我不支持特朗普当选。"
+            }
+          },
+          {
+            "id": "TL:8:848",
+            "author": 848,
+            "stance": 1,
+            "text": {
+              "id": "post--1-009-disagree-1",
+              "body": "原帖有点上纲上线，公众人物说话带刺不等于教坏孩子；这次美国总统大选我支持特朗普当选。"
+            }
+          }
+        ],
+        "context_messages": [
+          {
+            "id": "TL:5:582",
+            "author": 582,
+            "stance": 1,
+            "text": {
+              "id": "post-1-007",
+              "body": "支持特朗普当选。家里两个孩子上学，家长对课程和图书馆内容越来越没发言权；我希望把选择权和知情权还给家长，而不是让官僚替我们决定。"
+            }
+          },
+          {
+            "id": "TL:6:39",
+            "author": 39,
+            "stance": -1,
+            "text": {
+              "id": "post--1-009",
+              "body": "我最反感的是那种张嘴就嘲讽别人的说话风格，孩子刷到视频跟着学，觉得欺负人是本事，公职人员这么带节奏，影响太坏了。"
+            }
+          }
+        ]
+      },
+      {
+        "graph": 2,
+        "repeat": 0,
+        "branch": "TL",
+        "round": 9,
+        "node": 430,
+        "phi": 0.2222222222222222,
+        "Q": 1,
+        "support": 0.35,
+        "J": 0,
+        "read_n": 5,
+        "read_opposition": 0.4,
+        "current_with_context_opposition": 0.5714285714285714,
+        "historical_exposure_opposition": 0.5918367346938775,
+        "historical_unique_opposition": 0.5862068965517241,
+        "historical_unique_messages": 29,
+        "historical_unique_authors": 21,
+        "carried_forward": false,
+        "near_half": false,
+        "reason": "可见发言中反对特朗普当选者明显多于支持者，支持理由分散在教育、制造业、外交等；结合自身倾向支持但社区整体偏反对，估计支持者约三成半。",
+        "evidence_ids": [
+          "r1-u488",
+          "r2-u64",
+          "r3-u259",
+          "r5-u582",
+          "r9-u923"
+        ],
+        "read_messages": [
+          {
+            "id": "TL:8:236",
+            "author": 236,
+            "stance": -1,
+            "text": {
+              "id": "post--1-009-agree-1",
+              "body": "原帖说得对，那种张嘴就嘲讽的做派影响太坏，孩子容易模仿；所以这次我不支持特朗普当选。"
+            }
+          },
+          {
+            "id": "TL:8:711",
+            "author": 711,
+            "stance": 1,
+            "text": {
+              "id": "post--1-009-disagree-1",
+              "body": "原帖有点上纲上线，公众人物说话带刺不等于教坏孩子；这次美国总统大选我支持特朗普当选。"
+            }
+          },
+          {
+            "id": "TL:8:804",
+            "author": 804,
+            "stance": 1,
+            "text": {
+              "id": "post--1-009-disagree-0",
+              "body": "我不认同把嘲讽风格说成带坏孩子，公职人员说话有锋芒也正常；这次大选我支持特朗普当选。"
+            }
+          },
+          {
+            "id": "TL:9:131",
+            "author": 131,
+            "stance": -1,
+            "text": {
+              "id": "post--1-018-agree-1",
+              "body": "你说得对，我也不希望特朗普再当选，他那种限制跨性别者服役和就医的做法会让很多家庭不安。"
+            }
+          },
+          {
+            "id": "TL:9:923",
+            "author": 923,
+            "stance": 1,
+            "text": {
+              "id": "post-1-004",
+              "body": "这次选总统，我看重外交别再四处点火。特朗普任内那种谈交易、压着各方坐下来谈的路子，比无止境援助更让我放心，所以我支持他。"
+            }
+          }
+        ],
+        "context_messages": [
+          {
+            "id": "TL:6:39",
+            "author": 39,
+            "stance": -1,
+            "text": {
+              "id": "post--1-009",
+              "body": "我最反感的是那种张嘴就嘲讽别人的说话风格，孩子刷到视频跟着学，觉得欺负人是本事，公职人员这么带节奏，影响太坏了。"
+            }
+          },
+          {
+            "id": "TL:8:39",
+            "author": 39,
+            "stance": -1,
+            "text": {
+              "id": "post--1-018",
+              "body": "我弟弟是跨性别者，他任内限制跨性别者服役和看病那套做法，让家里跟着揪心，我不想再回到那种气氛。"
+            }
+          }
+        ]
+      },
+      {
+        "graph": 2,
+        "repeat": 0,
+        "branch": "TL",
+        "round": 10,
+        "node": 430,
+        "phi": 0.2222222222222222,
+        "Q": 1,
+        "support": 0.48,
+        "J": 0,
+        "read_n": 5,
+        "read_opposition": 0.4,
+        "current_with_context_opposition": 0.5714285714285714,
+        "historical_exposure_opposition": 0.5892857142857143,
+        "historical_unique_opposition": 0.5714285714285714,
+        "historical_unique_messages": 35,
+        "historical_unique_authors": 23,
+        "carried_forward": false,
+        "near_half": true,
+        "reason": "可见讨论中正反大致相当，本轮新增支持表态略多，但此前反对声音仍强，故估计接近半数。",
+        "evidence_ids": [
+          "r10-u131",
+          "r10-u747",
+          "r10-u758",
+          "r9-u236",
+          "r9-u39"
+        ],
+        "read_messages": [
+          {
+            "id": "TL:10:131",
+            "author": 131,
+            "stance": 1,
+            "text": {
+              "id": "post--1-018-disagree-1",
+              "body": "我觉得你因家人经历就否定特朗普不合适，我支持他当选；跨性别者服役和医疗需要审慎规则，不是一禁了之也不是全放开。"
+            }
+          },
+          {
+            "id": "TL:10:747",
+            "author": 747,
+            "stance": 1,
+            "text": {
+              "id": "post-1-022",
+              "body": "两个孩子上学，我不想只剩学区房一条路。特朗普主张让家长用教育储蓄选学校，我觉得普通家庭也该有选择，所以支持他。"
+            }
+          },
+          {
+            "id": "TL:10:758",
+            "author": 758,
+            "stance": 1,
+            "text": {
+              "id": "post--1-018-disagree-1",
+              "body": "我觉得你因家人经历就否定特朗普不合适，我支持他当选；跨性别者服役和医疗需要审慎规则，不是一禁了之也不是全放开。"
+            }
+          },
+          {
+            "id": "TL:9:236",
+            "author": 236,
+            "stance": -1,
+            "text": {
+              "id": "post--1-018-agree-0",
+              "body": "我赞同你的担心，也不支持特朗普当选；跨性别者不该因为政策变动连看病和服役都提心吊胆。"
+            }
+          },
+          {
+            "id": "TL:9:39",
+            "author": 39,
+            "stance": -1,
+            "text": {
+              "id": "post--1-017-agree-1",
+              "body": "原帖说得对，邮局一折腾最先受影响的就是拿药老人；正因为这样，我反对特朗普当选，不想看他继续动邮政。"
+            }
+          }
+        ],
+        "context_messages": [
+          {
+            "id": "TL:7:615",
+            "author": 615,
+            "stance": -1,
+            "text": {
+              "id": "post--1-017",
+              "body": "我们社区老人常靠邮局寄药，他老盯着邮政服务砍预算、换管理层，真怕哪天包裹和药都被耽误。"
+            }
+          },
+          {
+            "id": "TL:8:39",
+            "author": 39,
+            "stance": -1,
+            "text": {
+              "id": "post--1-018",
+              "body": "我弟弟是跨性别者，他任内限制跨性别者服役和看病那套做法，让家里跟着揪心，我不想再回到那种气氛。"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "graph": 2,
+    "repeat": 2,
+    "node": 68,
+    "selection": "minimum/maximum tail paired Q difference; ties smallest node",
+    "trajectory": [
+      {
+        "graph": 2,
+        "repeat": 2,
+        "branch": "TH",
+        "round": 8,
+        "node": 68,
+        "phi": 0.5454545454545454,
+        "Q": 1,
+        "support": 0.4,
+        "J": 0,
+        "read_n": 5,
+        "read_opposition": 0.4,
+        "current_with_context_opposition": 0.5,
+        "historical_exposure_opposition": 0.5967741935483871,
+        "historical_unique_opposition": 0.6,
+        "historical_unique_messages": 45,
+        "historical_unique_authors": 27,
+        "carried_forward": false,
+        "near_half": false,
+        "reason": "可见发言中反对特朗普当选的成员略多于支持者，且反对理由涉及医保、跨性别、救灾等切身议题；我私人支持但估计社区支持比例约四成。",
+        "evidence_ids": [
+          "r1-u67",
+          "r2-u499",
+          "r7-u299",
+          "r3-u697",
+          "r5-u474"
+        ],
+        "read_messages": [
+          {
+            "id": "TH:7:274",
+            "author": 274,
+            "stance": -1,
+            "text": {
+              "id": "post--1-024-agree-0",
+              "body": "我同意你的感受，公交班次减少确实让人窝火，所以我这票不会投给特朗普，不支持他当选。"
+            }
+          },
+          {
+            "id": "TH:7:299",
+            "author": 299,
+            "stance": 1,
+            "text": {
+              "id": "post-1-022-agree-1",
+              "body": "原帖说到点子上了，家长能用教育储蓄选学校，普通家庭才不至于被学区房绑死；我支持特朗普当选，也支持这种选择。"
+            }
+          },
+          {
+            "id": "TH:7:802",
+            "author": 802,
+            "stance": -1,
+            "text": {
+              "id": "post--1-000-agree-0",
+              "body": "我同意你的感受，他那种煽动对立的风格确实让人疲惫，所以我也明确不支持他这次当选。"
+            }
+          },
+          {
+            "id": "TH:8:499",
+            "author": 499,
+            "stance": 1,
+            "text": {
+              "id": "post-1-016-agree-0",
+              "body": "我认同你的感受，也支持特朗普当选；柴油、化肥和贷款利息都在涨，他提出减轻农场监管和能源负担，至少让种粮家庭看到点盼头。"
+            }
+          },
+          {
+            "id": "TH:8:577",
+            "author": 577,
+            "stance": 1,
+            "text": {
+              "id": "post--1-012-disagree-1",
+              "body": "你表弟看到的是个别扯皮，不能说明救灾制度不行；我支持特朗普当选，觉得他能减少低效。"
+            }
+          }
+        ],
+        "context_messages": [
+          {
+            "id": "TH:5:54",
+            "author": 54,
+            "stance": -1,
+            "text": {
+              "id": "post--1-024",
+              "body": "我每天坐公交上班，他当年喊基建喊得震天响，可我们这条线班次越砍越少，普通人等车的时间谁管。"
+            }
+          },
+          {
+            "id": "TH:5:67",
+            "author": 67,
+            "stance": 1,
+            "text": {
+              "id": "post-1-022",
+              "body": "两个孩子上学，我不想只剩学区房一条路。特朗普主张让家长用教育储蓄选学校，我觉得普通家庭也该有选择，所以支持他。"
+            }
+          },
+          {
+            "id": "TH:6:34",
+            "author": 34,
+            "stance": -1,
+            "text": {
+              "id": "post--1-012",
+              "body": "我表弟在市政府做灾害救援，他说联邦救灾款常被拿来讨价还价，山火洪水来了还扯政治，这种时候真耽误事。"
+            }
+          },
+          {
+            "id": "TH:6:350",
+            "author": 350,
+            "stance": -1,
+            "text": {
+              "id": "post--1-000",
+              "body": "我不支持他，主要是受不了那种天天挑起对立的说话方式，家里饭桌一聊政治就吵起来，实在累。"
+            }
+          },
+          {
+            "id": "TH:7:67",
+            "author": 67,
+            "stance": 1,
+            "text": {
+              "id": "post-1-016",
+              "body": "我爸妈种地，柴油、化肥和贷款利息样样涨。特朗普说要减轻农场监管和能源负担，让他们种粮有盼头，我愿意支持他。"
+            }
+          }
+        ]
+      },
+      {
+        "graph": 2,
+        "repeat": 2,
+        "branch": "TH",
+        "round": 9,
+        "node": 68,
+        "phi": 0.5454545454545454,
+        "Q": 1,
+        "support": 0.4,
+        "J": 1,
+        "read_n": 5,
+        "read_opposition": 0.8,
+        "current_with_context_opposition": 0.625,
+        "historical_exposure_opposition": 0.6,
+        "historical_unique_opposition": 0.6078431372549019,
+        "historical_unique_messages": 51,
+        "historical_unique_authors": 30,
+        "carried_forward": false,
+        "near_half": false,
+        "reason": "可见发言中反对特朗普当选的成员略多于支持者，且反对理由涉及医保、跨性别、媒体、救灾等多方面；支持者虽持续出现但整体偏少，故估计约四成。",
+        "evidence_ids": [
+          "r1-u67",
+          "r1-u350",
+          "r3-u697",
+          "r7-u41",
+          "r9-u940"
+        ],
+        "read_messages": [
+          {
+            "id": "TH:8:138",
+            "author": 138,
+            "stance": -1,
+            "text": {
+              "id": "post-1-016-disagree-1",
+              "body": "我不同意你的判断，也不支持特朗普当选；光说减轻监管和能源负担解决不了种地成本，农户需要更实在且可持续的支持。"
+            }
+          },
+          {
+            "id": "TH:8:477",
+            "author": 477,
+            "stance": -1,
+            "text": {
+              "id": "post-1-013-disagree-1",
+              "body": "我反对原帖这种期待，住房问题需要更稳的政策组合，特朗普的方案难解近忧，我不支持他当选。"
+            }
+          },
+          {
+            "id": "TH:8:6",
+            "author": 6,
+            "stance": -1,
+            "text": {
+              "id": "post--1-000-agree-1",
+              "body": "同感，政治讨论弄得家里气氛紧张真的很烦，我也不希望他再当选来继续制造这种社会撕裂。"
+            }
+          },
+          {
+            "id": "TH:9:186",
+            "author": 186,
+            "stance": 1,
+            "text": {
+              "id": "post-1-016-agree-0",
+              "body": "我认同你的感受，也支持特朗普当选；柴油、化肥和贷款利息都在涨，他提出减轻农场监管和能源负担，至少让种粮家庭看到点盼头。"
+            }
+          },
+          {
+            "id": "TH:9:940",
+            "author": 940,
+            "stance": -1,
+            "text": {
+              "id": "post-1-016-disagree-0",
+              "body": "我不赞同你把希望押在特朗普身上，也不支持他当选；减轻监管未必能降农户成本，柴油化肥和贷款压力更需稳定政策。"
+            }
+          }
+        ],
+        "context_messages": [
+          {
+            "id": "TH:6:350",
+            "author": 350,
+            "stance": -1,
+            "text": {
+              "id": "post--1-000",
+              "body": "我不支持他，主要是受不了那种天天挑起对立的说话方式，家里饭桌一聊政治就吵起来，实在累。"
+            }
+          },
+          {
+            "id": "TH:6:455",
+            "author": 455,
+            "stance": 1,
+            "text": {
+              "id": "post-1-013",
+              "body": "我攒首付几年，房价和利率一涨再涨，租房也吃掉大半工资。特朗普说要砍建房审批、压能源和材料成本，我信这能缓解住房压力，所以支持他。"
+            }
+          },
+          {
+            "id": "TH:7:67",
+            "author": 67,
+            "stance": 1,
+            "text": {
+              "id": "post-1-016",
+              "body": "我爸妈种地，柴油、化肥和贷款利息样样涨。特朗普说要减轻农场监管和能源负担，让他们种粮有盼头，我愿意支持他。"
+            }
+          }
+        ]
+      },
+      {
+        "graph": 2,
+        "repeat": 2,
+        "branch": "TH",
+        "round": 10,
+        "node": 68,
+        "phi": 0.5454545454545454,
+        "Q": 1,
+        "support": 0.42,
+        "J": 1,
+        "read_n": 5,
+        "read_opposition": 0.6,
+        "current_with_context_opposition": 0.375,
+        "historical_exposure_opposition": 0.5769230769230769,
+        "historical_unique_opposition": 0.5862068965517241,
+        "historical_unique_messages": 58,
+        "historical_unique_authors": 35,
+        "carried_forward": false,
+        "near_half": false,
+        "reason": "可见发言中反对特朗普当选的声音略多于支持，且反对者理由分散但持续出现；支持者虽多轮重复出现，整体仍偏少数，故估计约四成。",
+        "evidence_ids": [
+          "r1-u67",
+          "r2-u499",
+          "r3-u697",
+          "r5-u950",
+          "r9-u891"
+        ],
+        "read_messages": [
+          {
+            "id": "TH:9:259",
+            "author": 259,
+            "stance": 1,
+            "text": {
+              "id": "post-1-016-agree-1",
+              "body": "你说得对，我支持特朗普当选；农场监管和能源成本确实压人，他愿意在这两块松绑，对靠种地还贷的家庭更实在。"
+            }
+          },
+          {
+            "id": "TH:9:274",
+            "author": 274,
+            "stance": -1,
+            "text": {
+              "id": "post-1-014-disagree-1",
+              "body": "他喊保本土制造听着护工人，可我不支持特朗普当选，产业升级需要配套，不能光靠回头路。"
+            }
+          },
+          {
+            "id": "TH:9:477",
+            "author": 477,
+            "stance": -1,
+            "text": {
+              "id": "post-1-003-disagree-1",
+              "body": "我反对你的看法，也不希望特朗普当选。治安问题不能只靠强硬口号，我担心那会加剧对立，所以这届大选我不支持他。"
+            }
+          },
+          {
+            "id": "TH:9:667",
+            "author": 667,
+            "stance": -1,
+            "text": {
+              "id": "post-1-016-disagree-0",
+              "body": "我不赞同你把希望押在特朗普身上，也不支持他当选；减轻监管未必能降农户成本，柴油化肥和贷款压力更需稳定政策。"
+            }
+          },
+          {
+            "id": "TH:9:891",
+            "author": 891,
+            "stance": 1,
+            "text": {
+              "id": "post-1-016-agree-1",
+              "body": "你说得对，我支持特朗普当选；农场监管和能源成本确实压人，他愿意在这两块松绑，对靠种地还贷的家庭更实在。"
+            }
+          }
+        ],
+        "context_messages": [
+          {
+            "id": "TH:7:375",
+            "author": 375,
+            "stance": 1,
+            "text": {
+              "id": "post-1-014",
+              "body": "我在汽车零件厂上班，家里饭碗跟燃油车产线绑着。特朗普反对强制电动车、要保本土制造，我觉得比一刀切转型更顾工人，所以支持他。"
+            }
+          },
+          {
+            "id": "TH:7:67",
+            "author": 67,
+            "stance": 1,
+            "text": {
+              "id": "post-1-016",
+              "body": "我爸妈种地，柴油、化肥和贷款利息样样涨。特朗普说要减轻农场监管和能源负担，让他们种粮有盼头，我愿意支持他。"
+            }
+          },
+          {
+            "id": "TH:8:109",
+            "author": 109,
+            "stance": 1,
+            "text": {
+              "id": "post-1-003",
+              "body": "我倾向特朗普当选。现在街上零元购和暴力新闻太多，普通人下班回家都提心吊胆；我想要更硬的执法态度，让社区恢复安全感。"
+            }
+          }
+        ]
+      },
+      {
+        "graph": 2,
+        "repeat": 2,
+        "branch": "TL",
+        "round": 8,
+        "node": 68,
+        "phi": 0.09090909090909091,
+        "Q": 0,
+        "support": 0.6,
+        "J": 0,
+        "read_n": 5,
+        "read_opposition": 0.4,
+        "current_with_context_opposition": 0.25,
+        "historical_exposure_opposition": 0.23636363636363636,
+        "historical_unique_opposition": 0.3,
+        "historical_unique_messages": 40,
+        "historical_unique_authors": 29,
+        "carried_forward": false,
+        "near_half": false,
+        "reason": "可见发言中支持特朗普的明确表态多于反对，且支持理由覆盖移民、药价、住房、宗教自由、治安、山火、教育、通胀等多个切身议题；反对者虽持续出现但相对分散，故估计支持者略占多数。",
+        "evidence_ids": [
+          "r1-u234",
+          "r1-u34",
+          "r1-u350",
+          "r5-u48",
+          "r7-u580"
+        ],
+        "read_messages": [
+          {
+            "id": "TL:7:195",
+            "author": 195,
+            "stance": -1,
+            "text": {
+              "id": "post-1-022-disagree-1",
+              "body": "原帖把选择权想得太简单，教育储蓄可能让学校挑学生，普通家庭未必受益；所以我反对特朗普当选，也不认同他的教育主张。"
+            }
+          },
+          {
+            "id": "TL:7:474",
+            "author": 474,
+            "stance": 1,
+            "text": {
+              "id": "post-1-012-agree-1",
+              "body": "我也赞同原帖，等预约太久确实折腾老人，扩大自选医生渠道值得支持；因此我希望特朗普赢得大选。"
+            }
+          },
+          {
+            "id": "TL:7:565",
+            "author": 565,
+            "stance": -1,
+            "text": {
+              "id": "post-1-022-disagree-1",
+              "body": "原帖把选择权想得太简单，教育储蓄可能让学校挑学生，普通家庭未必受益；所以我反对特朗普当选，也不认同他的教育主张。"
+            }
+          },
+          {
+            "id": "TL:7:580",
+            "author": 580,
+            "stance": 1,
+            "text": {
+              "id": "post-1-002-agree-0",
+              "body": "我赞同你的看法，也支持特朗普当选；通胀把日常开销压得太紧，先稳住能源和物价才是普通家庭最需要的。"
+            }
+          },
+          {
+            "id": "TL:8:477",
+            "author": 477,
+            "stance": 1,
+            "text": {
+              "id": "post-1-012",
+              "body": "家里老人是退伍军人，排队等预约常拖很久。我希望特朗普扩大退伍军人自己选医生的渠道，别让人干等，所以支持他。"
+            }
+          }
+        ],
+        "context_messages": [
+          {
+            "id": "TL:5:34",
+            "author": 34,
+            "stance": 1,
+            "text": {
+              "id": "post-1-012",
+              "body": "家里老人是退伍军人，排队等预约常拖很久。我希望特朗普扩大退伍军人自己选医生的渠道，别让人干等，所以支持他。"
+            }
+          },
+          {
+            "id": "TL:5:48",
+            "author": 48,
+            "stance": 1,
+            "text": {
+              "id": "post-1-002",
+              "body": "支持特朗普回来。家里老人看病、孩子上学样样涨钱，我希望白宫先管住通胀和能源价格，别把精力都花在海外冲突上。"
+            }
+          },
+          {
+            "id": "TL:5:67",
+            "author": 67,
+            "stance": 1,
+            "text": {
+              "id": "post-1-022",
+              "body": "两个孩子上学，我不想只剩学区房一条路。特朗普主张让家长用教育储蓄选学校，我觉得普通家庭也该有选择，所以支持他。"
+            }
+          }
+        ]
+      },
+      {
+        "graph": 2,
+        "repeat": 2,
+        "branch": "TL",
+        "round": 9,
+        "node": 68,
+        "phi": 0.09090909090909091,
+        "Q": 0,
+        "support": 0.63,
+        "J": 0,
+        "read_n": 5,
+        "read_opposition": 0.4,
+        "current_with_context_opposition": 0.2222222222222222,
+        "historical_exposure_opposition": 0.234375,
+        "historical_unique_opposition": 0.2916666666666667,
+        "historical_unique_messages": 48,
+        "historical_unique_authors": 33,
+        "carried_forward": false,
+        "near_half": false,
+        "reason": "按独立发言者归并后，支持者约18人、反对者约10人；虽有个别立场反复，整体支持面约六成，结合此前0.6判断略上调。",
+        "evidence_ids": [
+          "r1-u274",
+          "r1-u350",
+          "r3-u17",
+          "r4-u715",
+          "r8-u138"
+        ],
+        "read_messages": [
+          {
+            "id": "TL:8:138",
+            "author": 138,
+            "stance": 1,
+            "text": {
+              "id": "post-1-016-agree-1",
+              "body": "你说得对，我支持特朗普当选；农场监管和能源成本确实压人，他愿意在这两块松绑，对靠种地还贷的家庭更实在。"
+            }
+          },
+          {
+            "id": "TL:8:413",
+            "author": 413,
+            "stance": -1,
+            "text": {
+              "id": "post-1-024-disagree-0",
+              "body": "我不认同你的看法，信用卡利率上限听着好，但特朗普的贸易和政策思路会推高生活成本，我不支持他当选。"
+            }
+          },
+          {
+            "id": "TL:8:697",
+            "author": 697,
+            "stance": -1,
+            "text": {
+              "id": "post-1-016-disagree-1",
+              "body": "我不同意你的判断，也不支持特朗普当选；光说减轻监管和能源负担解决不了种地成本，农户需要更实在且可持续的支持。"
+            }
+          },
+          {
+            "id": "TL:9:274",
+            "author": 274,
+            "stance": 1,
+            "text": {
+              "id": "post-1-013-agree-1",
+              "body": "同意原帖，房租和首付让我也盼着降成本；特朗普说的放松建房审批值得试，我支持他当选。"
+            }
+          },
+          {
+            "id": "TL:9:48",
+            "author": 48,
+            "stance": 1,
+            "text": {
+              "id": "post-1-003-agree-1",
+              "body": "我也倾向特朗普当选。你说到的街头乱象让我有同感，我想要更强硬的治安政策，所以这届大选我会支持他。"
+            }
+          }
+        ],
+        "context_messages": [
+          {
+            "id": "TL:6:67",
+            "author": 67,
+            "stance": 1,
+            "text": {
+              "id": "post-1-024",
+              "body": "家里信用卡欠款利息越滚越大，我支持特朗普，是因为他提过给信用卡利率设上限，让被账单追着跑的家庭能喘口气。"
+            }
+          },
+          {
+            "id": "TL:7:514",
+            "author": 514,
+            "stance": 1,
+            "text": {
+              "id": "post-1-003",
+              "body": "我倾向特朗普当选。现在街上零元购和暴力新闻太多，普通人下班回家都提心吊胆；我想要更硬的执法态度，让社区恢复安全感。"
+            }
+          },
+          {
+            "id": "TL:7:67",
+            "author": 67,
+            "stance": 1,
+            "text": {
+              "id": "post-1-016",
+              "body": "我爸妈种地，柴油、化肥和贷款利息样样涨。特朗普说要减轻农场监管和能源负担，让他们种粮有盼头，我愿意支持他。"
+            }
+          },
+          {
+            "id": "TL:8:161",
+            "author": 161,
+            "stance": 1,
+            "text": {
+              "id": "post-1-013",
+              "body": "我攒首付几年，房价和利率一涨再涨，租房也吃掉大半工资。特朗普说要砍建房审批、压能源和材料成本，我信这能缓解住房压力，所以支持他。"
+            }
+          }
+        ]
+      },
+      {
+        "graph": 2,
+        "repeat": 2,
+        "branch": "TL",
+        "round": 10,
+        "node": 68,
+        "phi": 0.09090909090909091,
+        "Q": 0,
+        "support": 0.62,
+        "J": 0,
+        "read_n": 5,
+        "read_opposition": 0.4,
+        "current_with_context_opposition": 0.2857142857142857,
+        "historical_exposure_opposition": 0.23943661971830985,
+        "historical_unique_opposition": 0.3076923076923077,
+        "historical_unique_messages": 52,
+        "historical_unique_authors": 35,
+        "carried_forward": false,
+        "near_half": false,
+        "reason": "可见发言中支持特朗普的明确表态明显多于反对，且支持理由覆盖移民、药价、住房、宗教自由、治安、山火、教育、通胀等多个切身议题；反对者虽持续出现但数量较少，故估计支持者略高于六成。",
+        "evidence_ids": [
+          "r1-u234",
+          "r1-u274",
+          "r1-u34",
+          "r1-u350",
+          "r1-u67"
+        ],
+        "read_messages": [
+          {
+            "id": "TL:9:138",
+            "author": 138,
+            "stance": 1,
+            "text": {
+              "id": "post-1-016-agree-0",
+              "body": "我认同你的感受，也支持特朗普当选；柴油、化肥和贷款利息都在涨，他提出减轻农场监管和能源负担，至少让种粮家庭看到点盼头。"
+            }
+          },
+          {
+            "id": "TL:9:191",
+            "author": 191,
+            "stance": -1,
+            "text": {
+              "id": "post-1-016-disagree-0",
+              "body": "我不赞同你把希望押在特朗普身上，也不支持他当选；减轻监管未必能降农户成本，柴油化肥和贷款压力更需稳定政策。"
+            }
+          },
+          {
+            "id": "TL:9:234",
+            "author": 234,
+            "stance": 1,
+            "text": {
+              "id": "post-1-024",
+              "body": "家里信用卡欠款利息越滚越大，我支持特朗普，是因为他提过给信用卡利率设上限，让被账单追着跑的家庭能喘口气。"
+            }
+          },
+          {
+            "id": "TL:9:48",
+            "author": 48,
+            "stance": 1,
+            "text": {
+              "id": "post-1-003-agree-1",
+              "body": "我也倾向特朗普当选。你说到的街头乱象让我有同感，我想要更强硬的治安政策，所以这届大选我会支持他。"
+            }
+          },
+          {
+            "id": "TL:9:935",
+            "author": 935,
+            "stance": -1,
+            "text": {
+              "id": "post-1-016-disagree-0",
+              "body": "我不赞同你把希望押在特朗普身上，也不支持他当选；减轻监管未必能降农户成本，柴油化肥和贷款压力更需稳定政策。"
+            }
+          }
+        ],
+        "context_messages": [
+          {
+            "id": "TL:7:514",
+            "author": 514,
+            "stance": 1,
+            "text": {
+              "id": "post-1-003",
+              "body": "我倾向特朗普当选。现在街上零元购和暴力新闻太多，普通人下班回家都提心吊胆；我想要更硬的执法态度，让社区恢复安全感。"
+            }
+          },
+          {
+            "id": "TL:7:67",
+            "author": 67,
+            "stance": 1,
+            "text": {
+              "id": "post-1-016",
+              "body": "我爸妈种地，柴油、化肥和贷款利息样样涨。特朗普说要减轻农场监管和能源负担，让他们种粮有盼头，我愿意支持他。"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "graph": 2,
+    "repeat": 2,
+    "node": 148,
+    "selection": "minimum/maximum tail paired Q difference; ties smallest node",
+    "trajectory": [
+      {
+        "graph": 2,
+        "repeat": 2,
+        "branch": "TH",
+        "round": 8,
+        "node": 148,
+        "phi": 0.1111111111111111,
+        "Q": 0,
+        "support": 0.52,
+        "J": 0,
+        "read_n": 5,
+        "read_opposition": 0.4,
+        "current_with_context_opposition": 0.5,
+        "historical_exposure_opposition": 0.3793103448275862,
+        "historical_unique_opposition": 0.4523809523809524,
+        "historical_unique_messages": 42,
+        "historical_unique_authors": 16,
+        "carried_forward": false,
+        "near_half": true,
+        "reason": "讨论中支持和反对都活跃，且同一发言者多次转向；支持者多强调减税、药价与宗教自由，反对者担忧政治化、排外与政策波动，整体仍接近半数。",
+        "evidence_ids": [
+          "r1-u646",
+          "r3-u966",
+          "r8-u646",
+          "r8-u764",
+          "r8-u986"
+        ],
+        "read_messages": [
+          {
+            "id": "TH:7:569",
+            "author": 569,
+            "stance": 1,
+            "text": {
+              "id": "post-1-023-agree-0",
+              "body": "我赞同你的判断，林区防火就得靠放宽清理审批这种实招。这次大选我支持特朗普当选，他能把地方责任落实。"
+            }
+          },
+          {
+            "id": "TH:7:966",
+            "author": 966,
+            "stance": 1,
+            "text": {
+              "id": "post-1-009",
+              "body": "这次我站特朗普。家里亲戚按规矩排队等亲属移民好多年，看到有人绕开程序先进来，心里很不平衡；我想要先把规则执行好，再谈其他。"
+            }
+          },
+          {
+            "id": "TH:8:646",
+            "author": 646,
+            "stance": -1,
+            "text": {
+              "id": "post--1-016-agree-0",
+              "body": "我也担心他上台后拿公务员开刀，把专业岗位政治化，所以我不支持特朗普当选，这次不会投他。"
+            }
+          },
+          {
+            "id": "TH:8:764",
+            "author": 764,
+            "stance": -1,
+            "text": {
+              "id": "post--1-002-agree-1",
+              "body": "原帖说得对，这种针对移民孩子的绰号就是排外信号，我同样反对特朗普当选，领导人应让校园更包容而不是制造对立。"
+            }
+          },
+          {
+            "id": "TH:8:986",
+            "author": 986,
+            "stance": 1,
+            "text": {
+              "id": "post-1-012",
+              "body": "家里老人是退伍军人，排队等预约常拖很久。我希望特朗普扩大退伍军人自己选医生的渠道，别让人干等，所以支持他。"
+            }
+          }
+        ],
+        "context_messages": [
+          {
+            "id": "TH:5:764",
+            "author": 764,
+            "stance": 1,
+            "text": {
+              "id": "post-1-023",
+              "body": "我住在林区附近，山火季节一到就提心吊胆。特朗普说要放宽清理枯木的审批、让地方管好林子，我觉得比空喊口号实际，所以支持他。"
+            }
+          },
+          {
+            "id": "TH:6:459",
+            "author": 459,
+            "stance": -1,
+            "text": {
+              "id": "post--1-002",
+              "body": "我邻居是移民家庭，孩子在学校被同学起了外号，那种排外的气氛让我实在没法把票投给他。"
+            }
+          },
+          {
+            "id": "TH:6:779",
+            "author": 779,
+            "stance": -1,
+            "text": {
+              "id": "post--1-016",
+              "body": "我爸在联邦机构上班，最怕他动不动就说要清洗公务员，把懂业务的人换成听话的，政府办事哪能这么搞。"
+            }
+          }
+        ]
+      },
+      {
+        "graph": 2,
+        "repeat": 2,
+        "branch": "TH",
+        "round": 9,
+        "node": 148,
+        "phi": 0.1111111111111111,
+        "Q": 0,
+        "support": 0.5,
+        "J": 0,
+        "read_n": 5,
+        "read_opposition": 0.4,
+        "current_with_context_opposition": 0.375,
+        "historical_exposure_opposition": 0.3787878787878788,
+        "historical_unique_opposition": 0.43478260869565216,
+        "historical_unique_messages": 46,
+        "historical_unique_authors": 17,
+        "carried_forward": false,
+        "near_half": true,
+        "reason": "可见发言中支持与反对大致相当，且多名成员立场反复摇摆，整体接近对半，略高于此前估计。",
+        "evidence_ids": [
+          "r1-u646",
+          "r2-u885",
+          "r3-u24",
+          "r6-u764",
+          "r8-u764"
+        ],
+        "read_messages": [
+          {
+            "id": "TH:8:24",
+            "author": 24,
+            "stance": -1,
+            "text": {
+              "id": "post-1-008-disagree-1",
+              "body": "审批慢该改，但我不认同因此支持特朗普。他当选未必能让地方办事更快，反而可能带来更多混乱，所以我不支持他当选。"
+            }
+          },
+          {
+            "id": "TH:8:764",
+            "author": 764,
+            "stance": -1,
+            "text": {
+              "id": "post--1-002-agree-1",
+              "body": "原帖说得对，这种针对移民孩子的绰号就是排外信号，我同样反对特朗普当选，领导人应让校园更包容而不是制造对立。"
+            }
+          },
+          {
+            "id": "TH:8:986",
+            "author": 986,
+            "stance": 1,
+            "text": {
+              "id": "post-1-012",
+              "body": "家里老人是退伍军人，排队等预约常拖很久。我希望特朗普扩大退伍军人自己选医生的渠道，别让人干等，所以支持他。"
+            }
+          },
+          {
+            "id": "TH:9:646",
+            "author": 646,
+            "stance": 1,
+            "text": {
+              "id": "post-1-011-agree-1",
+              "body": "我赞同你的判断，所以支持特朗普当选；大公司权力太大，需要有人替普通用户说话，让表达少受压制。"
+            }
+          },
+          {
+            "id": "TH:9:764",
+            "author": 764,
+            "stance": 1,
+            "text": {
+              "id": "post-1-011",
+              "body": "我平时在网上转新闻，常遇到帖子莫名其妙被限流。特朗普说要收拾大科技公司的审查，我觉得普通人说话的空间该有人撑腰，因此支持他。"
+            }
+          }
+        ],
+        "context_messages": [
+          {
+            "id": "TH:6:459",
+            "author": 459,
+            "stance": -1,
+            "text": {
+              "id": "post--1-002",
+              "body": "我邻居是移民家庭，孩子在学校被同学起了外号，那种排外的气氛让我实在没法把票投给他。"
+            }
+          },
+          {
+            "id": "TH:6:764",
+            "author": 764,
+            "stance": 1,
+            "text": {
+              "id": "post-1-008",
+              "body": "我倾向特朗普。办个小装修许可跑了几个月，层层审批把人耗死；我需要一个强调砍法规、让地方政府加快办事的总统，而不是继续加码管制。"
+            }
+          },
+          {
+            "id": "TH:8:346",
+            "author": 346,
+            "stance": 1,
+            "text": {
+              "id": "post-1-011",
+              "body": "我平时在网上转新闻，常遇到帖子莫名其妙被限流。特朗普说要收拾大科技公司的审查，我觉得普通人说话的空间该有人撑腰，因此支持他。"
+            }
+          }
+        ]
+      },
+      {
+        "graph": 2,
+        "repeat": 2,
+        "branch": "TH",
+        "round": 10,
+        "node": 148,
+        "phi": 0.1111111111111111,
+        "Q": 0,
+        "support": 0.55,
+        "J": 0,
+        "read_n": 5,
+        "read_opposition": 0.2,
+        "current_with_context_opposition": 0.25,
+        "historical_exposure_opposition": 0.36486486486486486,
+        "historical_unique_opposition": 0.4230769230769231,
+        "historical_unique_messages": 52,
+        "historical_unique_authors": 19,
+        "carried_forward": false,
+        "near_half": true,
+        "reason": "可见发言中支持者略多，且多位用户反复表达支持；但反对声音也持续出现，部分人立场摇摆，整体接近略偏支持。",
+        "evidence_ids": [
+          "r1-u646",
+          "r1-u764",
+          "r1-u966",
+          "r10-u966",
+          "r10-u986"
+        ],
+        "read_messages": [
+          {
+            "id": "TH:10:176",
+            "author": 176,
+            "stance": -1,
+            "text": {
+              "id": "post-1-012-disagree-1",
+              "body": "我反对原帖的结论，老人等预约的问题不能靠支持特朗普当选解决；我不支持他当选，更希望换人把退伍军人医疗安排做好。"
+            }
+          },
+          {
+            "id": "TH:10:764",
+            "author": 764,
+            "stance": 1,
+            "text": {
+              "id": "post--1-020-disagree-1",
+              "body": "这次我支持特朗普当选，不认同你把停摆风险只归到他身上；联邦合同工需要的是可预期的预算，而不是一味换人。"
+            }
+          },
+          {
+            "id": "TH:10:966",
+            "author": 966,
+            "stance": 1,
+            "text": {
+              "id": "post-1-014",
+              "body": "我在汽车零件厂上班，家里饭碗跟燃油车产线绑着。特朗普反对强制电动车、要保本土制造，我觉得比一刀切转型更顾工人，所以支持他。"
+            }
+          },
+          {
+            "id": "TH:10:986",
+            "author": 986,
+            "stance": 1,
+            "text": {
+              "id": "post-1-003-agree-1",
+              "body": "我也倾向特朗普当选。你说到的街头乱象让我有同感，我想要更强硬的治安政策，所以这届大选我会支持他。"
+            }
+          },
+          {
+            "id": "TH:9:764",
+            "author": 764,
+            "stance": 1,
+            "text": {
+              "id": "post-1-011",
+              "body": "我平时在网上转新闻，常遇到帖子莫名其妙被限流。特朗普说要收拾大科技公司的审查，我觉得普通人说话的空间该有人撑腰，因此支持他。"
+            }
+          }
+        ],
+        "context_messages": [
+          {
+            "id": "TH:8:436",
+            "author": 436,
+            "stance": 1,
+            "text": {
+              "id": "post-1-003",
+              "body": "我倾向特朗普当选。现在街上零元购和暴力新闻太多，普通人下班回家都提心吊胆；我想要更硬的执法态度，让社区恢复安全感。"
+            }
+          },
+          {
+            "id": "TH:8:949",
+            "author": 949,
+            "stance": -1,
+            "text": {
+              "id": "post--1-020",
+              "body": "我对象是联邦合同工，上一回政府停摆，家里收入说断就断，他还拿这事当谈判筹码，我真怕再来一次。"
+            }
+          },
+          {
+            "id": "TH:8:986",
+            "author": 986,
+            "stance": 1,
+            "text": {
+              "id": "post-1-012",
+              "body": "家里老人是退伍军人，排队等预约常拖很久。我希望特朗普扩大退伍军人自己选医生的渠道，别让人干等，所以支持他。"
+            }
+          }
+        ]
+      },
+      {
+        "graph": 2,
+        "repeat": 2,
+        "branch": "TL",
+        "round": 8,
+        "node": 148,
+        "phi": 0.2222222222222222,
+        "Q": 1,
+        "support": 0.48,
+        "J": 0,
+        "read_n": 5,
+        "read_opposition": 0.4,
+        "current_with_context_opposition": 0.625,
+        "historical_exposure_opposition": 0.6111111111111112,
+        "historical_unique_opposition": 0.5365853658536586,
+        "historical_unique_messages": 41,
+        "historical_unique_authors": 20,
+        "carried_forward": false,
+        "near_half": true,
+        "reason": "所见正反发言接近，且同一作者多次出现、个别立场反复，不能按消息条数机械计算；结合先前0.4的估计与自身支持立场，判断社区支持率略低于半数。",
+        "evidence_ids": [
+          "r1-u966",
+          "r2-u646",
+          "r5-u569",
+          "r7-u72",
+          "r8-u319"
+        ],
+        "read_messages": [
+          {
+            "id": "TL:7:72",
+            "author": 72,
+            "stance": -1,
+            "text": {
+              "id": "post--1-007-agree-0",
+              "body": "我也不支持特朗普当选，女儿担心的身体自主权不是小事，这关系到我们下一代的切身权利。"
+            }
+          },
+          {
+            "id": "TL:7:966",
+            "author": 966,
+            "stance": 1,
+            "text": {
+              "id": "post-1-009",
+              "body": "这次我站特朗普。家里亲戚按规矩排队等亲属移民好多年，看到有人绕开程序先进来，心里很不平衡；我想要先把规则执行好，再谈其他。"
+            }
+          },
+          {
+            "id": "TL:7:986",
+            "author": 986,
+            "stance": -1,
+            "text": {
+              "id": "post--1-003-agree-1",
+              "body": "你说得对，他那种跟盟友翻脸的做法会让外部环境更不稳定，这次大选我也反对特朗普当选。"
+            }
+          },
+          {
+            "id": "TL:8:319",
+            "author": 319,
+            "stance": 1,
+            "text": {
+              "id": "post--1-008-disagree-0",
+              "body": "我不太同意，你批评他对法院的态度不等于不能选他；我支持特朗普当选，认为他能推动改变，司法争议该由制度来约束。"
+            }
+          },
+          {
+            "id": "TL:8:986",
+            "author": 986,
+            "stance": 1,
+            "text": {
+              "id": "post-1-012",
+              "body": "家里老人是退伍军人，排队等预约常拖很久。我希望特朗普扩大退伍军人自己选医生的渠道，别让人干等，所以支持他。"
+            }
+          }
+        ],
+        "context_messages": [
+          {
+            "id": "TL:5:24",
+            "author": 24,
+            "stance": -1,
+            "text": {
+              "id": "post--1-003",
+              "body": "他老跟盟友吵架退群，我表哥在欧洲做生意，说那边现在都不太信美国了，这种不确定性太折腾人。"
+            }
+          },
+          {
+            "id": "TL:5:646",
+            "author": 646,
+            "stance": -1,
+            "text": {
+              "id": "post--1-007",
+              "body": "我女儿刚工作，她说选谁都行就是不能选他，因为那几年最高法院的判决把身体决定权从女性手里拿走了，我当妈的没法装看不见。"
+            }
+          },
+          {
+            "id": "TL:6:764",
+            "author": 764,
+            "stance": -1,
+            "text": {
+              "id": "post--1-008",
+              "body": "官司缠身还天天骂法官、骂法院，说判决都是被操纵的，这样的人要是再掌权，我真怕司法也变成他手里的工具。"
+            }
+          }
+        ]
+      },
+      {
+        "graph": 2,
+        "repeat": 2,
+        "branch": "TL",
+        "round": 9,
+        "node": 148,
+        "phi": 0.2222222222222222,
+        "Q": 1,
+        "support": 0.48,
+        "J": 1,
+        "read_n": 5,
+        "read_opposition": 0.6,
+        "current_with_context_opposition": 0.6666666666666666,
+        "historical_exposure_opposition": 0.6166666666666667,
+        "historical_unique_opposition": 0.5555555555555556,
+        "historical_unique_messages": 45,
+        "historical_unique_authors": 23,
+        "carried_forward": false,
+        "near_half": true,
+        "reason": "可见发言中支持与反对大致相当，近期司法、退伍军人、教育等讨论略偏反对；活跃用户重复出现，故维持接近0.48的判断。",
+        "evidence_ids": [
+          "r8-u114",
+          "r8-u939",
+          "r8-u986",
+          "r9-u458",
+          "r9-u764"
+        ],
+        "read_messages": [
+          {
+            "id": "TL:8:114",
+            "author": 114,
+            "stance": 1,
+            "text": {
+              "id": "post--1-008-disagree-1",
+              "body": "你把话讲重了，他质疑判决是在表达不满，不代表会把司法当工具；这届大选我支持特朗普当选，不能因此否定他的参选资格。"
+            }
+          },
+          {
+            "id": "TL:8:939",
+            "author": 939,
+            "stance": -1,
+            "text": {
+              "id": "post--1-008-agree-0",
+              "body": "我同意你的担心，他不断攻击法官和法院，真让他再当选，司法独立恐怕更难守住，所以我不支持他当选。"
+            }
+          },
+          {
+            "id": "TL:8:986",
+            "author": 986,
+            "stance": 1,
+            "text": {
+              "id": "post-1-012",
+              "body": "家里老人是退伍军人，排队等预约常拖很久。我希望特朗普扩大退伍军人自己选医生的渠道，别让人干等，所以支持他。"
+            }
+          },
+          {
+            "id": "TL:9:458",
+            "author": 458,
+            "stance": -1,
+            "text": {
+              "id": "post-1-012-disagree-0",
+              "body": "我不赞同原帖把希望押在特朗普身上，退伍军人就医需要更稳的安排；我不支持他当选，也不认为他能解决排队问题。"
+            }
+          },
+          {
+            "id": "TL:9:764",
+            "author": 764,
+            "stance": -1,
+            "text": {
+              "id": "post--1-011",
+              "body": "我在学校做后勤，联邦教育经费一有动静，我们课后项目就得提心吊胆，他动不动说要砍教育部，真怕孩子受影响。"
+            }
+          }
+        ],
+        "context_messages": [
+          {
+            "id": "TL:6:764",
+            "author": 764,
+            "stance": -1,
+            "text": {
+              "id": "post--1-008",
+              "body": "官司缠身还天天骂法官、骂法院，说判决都是被操纵的，这样的人要是再掌权，我真怕司法也变成他手里的工具。"
+            }
+          },
+          {
+            "id": "TL:8:986",
+            "author": 986,
+            "stance": 1,
+            "text": {
+              "id": "post-1-012",
+              "body": "家里老人是退伍军人，排队等预约常拖很久。我希望特朗普扩大退伍军人自己选医生的渠道，别让人干等，所以支持他。"
+            }
+          }
+        ]
+      },
+      {
+        "graph": 2,
+        "repeat": 2,
+        "branch": "TL",
+        "round": 10,
+        "node": 148,
+        "phi": 0.2222222222222222,
+        "Q": 1,
+        "support": 0.42,
+        "J": 1,
+        "read_n": 5,
+        "read_opposition": 0.8,
+        "current_with_context_opposition": 0.5714285714285714,
+        "historical_exposure_opposition": 0.6119402985074627,
+        "historical_unique_opposition": 0.56,
+        "historical_unique_messages": 50,
+        "historical_unique_authors": 25,
+        "carried_forward": false,
+        "near_half": false,
+        "reason": "可见发言中反对特朗普当选的声音略多且理由集中（司法、权利、劳工、气候），支持者虽持续出现但整体偏少，故估计略低于半数。",
+        "evidence_ids": [
+          "r1-u646",
+          "r1-u764",
+          "r2-u846",
+          "r7-u265",
+          "r10-u764"
+        ],
+        "read_messages": [
+          {
+            "id": "TL:10:176",
+            "author": 176,
+            "stance": -1,
+            "text": {
+              "id": "post-1-012-disagree-1",
+              "body": "我反对原帖的结论，老人等预约的问题不能靠支持特朗普当选解决；我不支持他当选，更希望换人把退伍军人医疗安排做好。"
+            }
+          },
+          {
+            "id": "TL:10:764",
+            "author": 764,
+            "stance": -1,
+            "text": {
+              "id": "post--1-016",
+              "body": "我爸在联邦机构上班，最怕他动不动就说要清洗公务员，把懂业务的人换成听话的，政府办事哪能这么搞。"
+            }
+          },
+          {
+            "id": "TL:10:953",
+            "author": 953,
+            "stance": 1,
+            "text": {
+              "id": "post-1-012-agree-1",
+              "body": "我也赞同原帖，等预约太久确实折腾老人，扩大自选医生渠道值得支持；因此我希望特朗普赢得大选。"
+            }
+          },
+          {
+            "id": "TL:9:458",
+            "author": 458,
+            "stance": -1,
+            "text": {
+              "id": "post-1-012-disagree-0",
+              "body": "我不赞同原帖把希望押在特朗普身上，退伍军人就医需要更稳的安排；我不支持他当选，也不认为他能解决排队问题。"
+            }
+          },
+          {
+            "id": "TL:9:646",
+            "author": 646,
+            "stance": -1,
+            "text": {
+              "id": "post-1-003-disagree-1",
+              "body": "我反对你的看法，也不希望特朗普当选。治安问题不能只靠强硬口号，我担心那会加剧对立，所以这届大选我不支持他。"
+            }
+          }
+        ],
+        "context_messages": [
+          {
+            "id": "TL:8:779",
+            "author": 779,
+            "stance": 1,
+            "text": {
+              "id": "post-1-003",
+              "body": "我倾向特朗普当选。现在街上零元购和暴力新闻太多，普通人下班回家都提心吊胆；我想要更硬的执法态度，让社区恢复安全感。"
+            }
+          },
+          {
+            "id": "TL:8:986",
+            "author": 986,
+            "stance": 1,
+            "text": {
+              "id": "post-1-012",
+              "body": "家里老人是退伍军人，排队等预约常拖很久。我希望特朗普扩大退伍军人自己选医生的渠道，别让人干等，所以支持他。"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
