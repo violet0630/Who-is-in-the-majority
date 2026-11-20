@@ -1,0 +1,186 @@
+{
+  "experiment": "extension-2 feedback mechanism",
+  "date": "2026-11-20",
+  "base": "main experiment 1 frozen settings (alpha=0.05, beta=10 made explicit); TH positions; one factor at a time",
+  "conditions": {
+    "FB0": {
+      "mean_degree": 12,
+      "s_out": 0.35,
+      "s_in": 1.0,
+      "w": 0.2,
+      "fraction": 0.2,
+      "rho": 6,
+      "kappa": 0.5,
+      "gamma": 1,
+      "theta": [
+        1,
+        0,
+        -1,
+        0
+      ],
+      "rounds": 10,
+      "llm_workers": 4,
+      "tail_rounds": 3,
+      "window": 2,
+      "read_limit": 5,
+      "cross_fan_comments": true,
+      "community_fractions": [
+        0.15,
+        0.2,
+        0.25,
+        0.4
+      ],
+      "alpha": 0.05,
+      "beta": 10
+    },
+    "FB1": {
+      "mean_degree": 12,
+      "s_out": 0.35,
+      "s_in": 1.0,
+      "w": 0.2,
+      "fraction": 0.2,
+      "rho": 6,
+      "kappa": 0.5,
+      "gamma": 1,
+      "theta": [
+        1,
+        0,
+        -1,
+        0
+      ],
+      "rounds": 10,
+      "llm_workers": 4,
+      "tail_rounds": 3,
+      "window": 2,
+      "read_limit": 5,
+      "cross_fan_comments": true,
+      "community_fractions": [
+        0.15,
+        0.2,
+        0.25,
+        0.4
+      ],
+      "alpha": 0.05,
+      "beta": 0
+    },
+    "FB2": {
+      "mean_degree": 12,
+      "s_out": 0.35,
+      "s_in": 1.0,
+      "w": 0.2,
+      "fraction": 0.2,
+      "rho": 6,
+      "kappa": 0.5,
+      "gamma": 1,
+      "theta": [
+        1,
+        0,
+        -1,
+        0
+      ],
+      "rounds": 10,
+      "llm_workers": 4,
+      "tail_rounds": 3,
+      "window": 2,
+      "read_limit": 5,
+      "cross_fan_comments": true,
+      "community_fractions": [
+        0.15,
+        0.2,
+        0.25,
+        0.4
+      ],
+      "alpha": 0.05,
+      "beta": 50
+    },
+    "FB3": {
+      "mean_degree": 12,
+      "s_out": 0.35,
+      "s_in": 1.0,
+      "w": 0.2,
+      "fraction": 0.2,
+      "rho": 6,
+      "kappa": 0.5,
+      "gamma": 1,
+      "theta": [
+        1,
+        0,
+        -1,
+        0
+      ],
+      "rounds": 10,
+      "llm_workers": 4,
+      "tail_rounds": 3,
+      "window": 2,
+      "read_limit": 5,
+      "cross_fan_comments": true,
+      "community_fractions": [
+        0.15,
+        0.2,
+        0.25,
+        0.4
+      ],
+      "alpha": 0.1,
+      "beta": 10
+    },
+    "FB4": {
+      "mean_degree": 12,
+      "s_out": 0.35,
+      "s_in": 1.0,
+      "w": 0.2,
+      "fraction": 0.2,
+      "rho": 6,
+      "kappa": 0.5,
+      "gamma": 1,
+      "theta": [
+        1,
+        0,
+        -1,
+        0
+      ],
+      "rounds": 10,
+      "llm_workers": 4,
+      "tail_rounds": 3,
+      "window": 2,
+      "read_limit": 5,
+      "cross_fan_comments": true,
+      "community_fractions": [
+        0.15,
+        0.2,
+        0.25,
+        0.4
+      ],
+      "alpha": 0.5,
+      "beta": 10
+    }
+  },
+  "labels": {
+    "FB0": "基准 β=10, α=0.05",
+    "FB1": "β=0 无反馈",
+    "FB2": "β=50 高敏感",
+    "FB3": "α=0.1 快速记忆",
+    "FB4": "α=0.5 快速记忆"
+  },
+  "primary_outcome": "mean observer perceived_majority over rounds 8-10",
+  "comparisons": [
+    [
+      "FB1",
+      "FB0"
+    ],
+    [
+      "FB2",
+      "FB0"
+    ],
+    [
+      "FB3",
+      "FB0"
+    ],
+    [
+      "FB4",
+      "FB0"
+    ]
+  ],
+  "statistics": "paired groups identical to main experiment; 10000 graph-stratified bootstrap; exact sign-flip; Holm",
+  "baseline_source": "experiments/2026-11-16/03_positions/g{g}-r{r}-TH/result.json (not rerun)",
+  "new_runs": 36
+}
