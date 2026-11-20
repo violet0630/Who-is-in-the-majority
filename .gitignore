@@ -5,6 +5,8 @@ __pycache__/
 build/
 dist/
 runs/
+!experiments/*/runs/
+!experiments/*/runs/**
 .env
 .env.*
 !.env.example

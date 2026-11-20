@@ -215,6 +215,27 @@ def mean_summary(rows: list[dict], condition: str, field: str) -> float:
     return float(np.mean([row["summary"][field] for row in rows if row["condition"] == condition]))
 
 
+def write_archive_manifest(root: Path) -> dict:
+    """实验归档清单：全部文件的大小与 sha256（与主实验一 archive_manifest.json 同规）。"""
+    manifest = {"files": []}
+    for path in sorted(p for p in root.rglob("*") if p.is_file()):
+        relative = path.relative_to(root).as_posix()
+        if relative == "archive_manifest.json":
+            continue
+        manifest["files"].append({"path": relative, "bytes": path.stat().st_size,
+                                  "sha256": hashlib.sha256(path.read_bytes()).hexdigest()})
+    write_json(root / "archive_manifest.json", manifest)
+    return manifest
+
+
+def verify_archive_manifest(root: Path) -> None:
+    manifest = json.loads((root / "archive_manifest.json").read_text(encoding="utf-8"))
+    for entry in manifest["files"]:
+        path = root / entry["path"]
+        assert path.stat().st_size == entry["bytes"], entry["path"]
+        assert hashlib.sha256(path.read_bytes()).hexdigest() == entry["sha256"], entry["path"]
+
+
 def parse_attitude(data: dict, allowed: set[str]):
     """拓展一感知输出解析：support/reason/evidence_ids/new_stance 四个字段严格校验。"""
     if set(data) != {"support", "reason", "evidence_ids", "new_stance"}:

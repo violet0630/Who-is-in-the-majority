@@ -14,7 +14,7 @@ import numpy as np
 from majority.llm import prompt_hash
 from scripts.ext_common import (FROZEN_SETTINGS, csv_file, frozen_input_hashes, load_frozen_group,
                                 mean_summary, paired_condition_inference, persistence_rows, pp,
-                                runner_sha256, tail_rows, verify_frozen_inputs, write_json)
+                                runner_sha256, tail_rows, verify_frozen_inputs, write_archive_manifest, write_json)
 from scripts.majority_study import active_bank, load_bank, run_one, save_json
 
 PROJECT = Path(__file__).resolve().parents[1]
@@ -166,6 +166,7 @@ def analyze():
         for cond in CONDITIONS])
     _figures(per_round)
     _report(output, rows)
+    write_archive_manifest(OUTPUT)
     print(json.dumps(output["outcomes"], ensure_ascii=False, indent=2))
 
 

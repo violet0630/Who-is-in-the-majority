@@ -16,7 +16,8 @@ from majority.artifacts import save_artifact
 from majority.network import network_statistics
 from scripts.ext_common import (FROZEN_SETTINGS, csv_file, frozen_input_hashes, load_frozen_group,
                                 mean_summary, persistence_rows, pp, runner_sha256, tail_rows,
-                                unpaired_condition_inference, verify_frozen_inputs, write_json)
+                                unpaired_condition_inference, verify_frozen_inputs,
+                                write_archive_manifest, write_json)
 from scripts.majority_study import (active_bank, draw_profiles, load_bank, make_network,
                                     network_config, run_one, save_json, select_positions)
 
@@ -241,6 +242,7 @@ def analyze():
         for cond in per_round])
     _figures(rows, per_round, output["per_network"])
     _report(output, rows)
+    write_archive_manifest(OUTPUT)
     print(json.dumps(output["outcomes"], ensure_ascii=False, indent=2))
 
 
