@@ -1,0 +1,4644 @@
+{
+  "condition": "NW2",
+  "graph": 0,
+  "repeat": 0,
+  "profiles": [
+    {
+      "baseline": 0.04236050849879119,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.049921852799009084,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.0025786552635051474,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.08905645045074422,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.8164147997894563,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.28445376294033287,
+      "strength": 0.4
+    },
+    {
+      "baseline": 3.130677430302385e-05,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.2137798826926726,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.03915782495100235,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.6418373176106082,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.05969671917028546,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.09239272347033597,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.9064863598587656,
+      "strength": 0.8
+    },
+    {
+      "baseline": 2.483345005376364e-10,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.7323923740773446,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.6114978731403466,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.06337403884545058,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.027309821801078674,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.6785136895968791,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.00038529273612308943,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.01223051270385409,
+      "strength": 0.8
+    },
+    {
+      "baseline": 1.63654874463117e-05,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.5669114366622752,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.01587460010956323,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.12091709521054603,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.31786328820742227,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.09555553282795465,
+      "strength": 0.8
+    },
+    {
+      "baseline": 5.9949041416931725e-05,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.7757279162449935,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.5387064202726617,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.2616300332601381,
+      "strength": 0.8
+    },
+    {
+      "baseline": 6.863946701010918e-05,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.0023740620241697696,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.011561518964344134,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.0031775007914256644,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.13743731780717525,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.007016469415123533,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.10120795764947274,
+      "strength": 0.8
+    },
+    {
+      "baseline": 6.238565411293705e-05,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.022956328539682495,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.7831218478509071,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.007708670999688557,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.9732278495939589,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.14771655766588732,
+      "strength": 0.8
+    },
+    {
+      "baseline": 8.183974903884359e-05,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.00015262072766568084,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.04015937251158607,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.12129581930700462,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.12650035498203355,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.08990642406606081,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.852494825875607,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.0004771606307065823,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.21023609800892723,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.14880371161783626,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.012970473554016142,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.5725663538996737,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.3711326396656558,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.047511032312896884,
+      "strength": 0.4
+    },
+    {
+      "baseline": 1.614130697560319e-07,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.001439244495386165,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.7872503123252961,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.0029047586924819163,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.0021806496674658215,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.2691046568485955,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.38336528504693584,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.0006686434798557844,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.10179147046743793,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.9599881002519044,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.016173663461444956,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.011021268797697915,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.05990604085948304,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.07204650777933953,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.13247162192975342,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.33476155001037383,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.7735418945606836,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.5652967302407674,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.001250213293647177,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.020473820486988155,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.45891774626367515,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.5891041987581208,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.008739066547563373,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.007217372640449816,
+      "strength": 0.4
+    },
+    {
+      "baseline": 6.356004972683747e-06,
+      "strength": 0.4
+    },
+    {
+      "baseline": 1.0842579836178533e-05,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.027303298903078546,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.6970902062961569,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.1305508203827928,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.052343492126707934,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.4118962568888023,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.01408954330578638,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.3560470601898655,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.3015946441070622,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.012231363040617232,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.4015717652408508,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.7026723006750193,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.41194549837883965,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.9714695617923896,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.2333009331159985,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.016632682245057758,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.04475848385442073,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.00023714661985372662,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.02299461499278414,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.001036583251736467,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.005148991874855988,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.053965302688212154,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.8995982602224406,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.019242554848541375,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.8950744663722968,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.0669730550616004,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.1009584237883749,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.0020364242224336893,
+      "strength": 0.8
+    },
+    {
+      "baseline": 2.8189879333538224e-07,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.02388669900952815,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.1462679640651229,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.003541021464104148,
+      "strength": 0.8
+    },
+    {
+      "baseline": 1.1378560893755605e-05,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.7376577720585425,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.008675610250854575,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.3956015849320957,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.06443850981490834,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.37190989067183194,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.05270635846940235,
+      "strength": 0.4
+    },
+    {
+      "baseline": 9.498495161341474e-07,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.9304552086796138,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.025344361605355418,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.049378917170821386,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.054342240696195164,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.006709440819477736,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.2619391334025161,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.0005474809861592216,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.022598302736081318,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.019333089971790143,
+      "strength": 0.8
+    },
+    {
+      "baseline": 1.0785953594780211e-05,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.6033242355457281,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.03313197059429541,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.06539990235342592,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.7175174226430981,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.5471416098588368,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.1074765463663645,
+      "strength": 0.4
+    },
+    {
+      "baseline": 2.201204906058374e-05,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.004918446689996108,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.6891008173341003,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.0035417259909757853,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.13524619703502774,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.15622684669929918,
+      "strength": 0.4
+    },
+    {
+      "baseline": 1.175533989547622e-08,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.419331210412142,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.20246358448925092,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.288729921789981,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.0005272461273724298,
+      "strength": 0.8
+    },
+    {
+      "baseline": 1.618340809948306e-05,
+      "strength": 0.8
+    },
+    {
+      "baseline": 2.364919300122526e-06,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.28518280952167374,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.5776709109659333,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.1381708338447335,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.025781553989114768,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.7593971696658708,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.09222497296827133,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.20312573432154557,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.5285042547465134,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.7620875374584943,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.6302492866051287,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.021993192989418518,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.2183297300222432,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.3272034574895127,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.4133231325944615,
+      "strength": 0.4
+    },
+    {
+      "baseline": 5.024452163061543e-05,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.01623612720159456,
+      "strength": 0.4
+    },
+    {
+      "baseline": 5.335909255601194e-09,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.00026195967482260966,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.8507437898421347,
+      "strength": 0.4
+    },
+    {
+      "baseline": 2.580853685018091e-06,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.8662418197326032,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.9019139288898725,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.09963120676561439,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.0004427101124394536,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.021493663476568385,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.6682504459346185,
+      "strength": 0.4
+    },
+    {
+      "baseline": 9.367594136548807e-05,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.04516803705464416,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.1723606041543985,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.049099359913747934,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.05550734315574102,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.0009858850001431133,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.0007882570915291344,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.5387467633992459,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.005716961825161157,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.0212540488579199,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.21356791465446254,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.4480263963522128,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.10094730925348734,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.3120988451131135,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.1795105522369407,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.4657263258278248,
+      "strength": 0.8
+    },
+    {
+      "baseline": 1.1439843721613122e-05,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.7169264948009935,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.09273013557943828,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.9727397885087686,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.7695415211651444,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.3192268369199561,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.05578999201444025,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.32106142185361625,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.3845001035177737,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.005195087496007209,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.010706871443843352,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.028205780863541044,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.005890723274141448,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.8887657666369075,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.45270086857913183,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.6862104531703964,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.0010437752536983638,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.38392124605168426,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.00017915517297490083,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.866210507906039,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.02972957716113863,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.8921891885518906,
+      "strength": 0.4
+    },
+    {
+      "baseline": 4.236046954710221e-06,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.3268906920020446,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.04339570954579036,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.3769500895741169,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.9970914597203103,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.012963642781290937,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.6342393180109094,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.8803217353507097,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.611514988731724,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.10555512185937006,
+      "strength": 0.8
+    },
+    {
+      "baseline": 2.26574511570098e-06,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.12279905239089503,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.7113995752240055,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.0003265621956270554,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.15532262785032006,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.49862898278412415,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.006159375356970883,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.2808104072885829,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.04718618202815057,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.7097189051316688,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.16027110016489818,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.0011018872857267447,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.004136445867459138,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.7176548059867158,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.00011438875268003394,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.00032174001823419236,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.039024897280996014,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.6019922213644356,
+      "strength": 0.8
+    },
+    {
+      "baseline": 1.161547896120877e-05,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.7502969631783778,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.01574811982770273,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.3847749897525824,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.0002139139142985047,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.7367694317844632,
+      "strength": 0.8
+    },
+    {
+      "baseline": 2.661360531327852e-11,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.0020556060144817125,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.3673613063166573,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.03069982211623395,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.0010426629261615326,
+      "strength": 0.8
+    },
+    {
+      "baseline": 1.2111746449981594e-08,
+      "strength": 0.8
+    },
+    {
+      "baseline": 1.4649368298602597e-05,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.03029874001436315,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.048130103432807624,
+      "strength": 0.4
+    },
+    {
+      "baseline": 1.4445181102019815e-06,
+      "strength": 0.8
+    },
+    {
+      "baseline": 1.0051690571084928e-07,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.44072039379610983,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.31579659105896585,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.033981761849146565,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.008683370700932813,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.0027568613721487053,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.0003283216218557623,
+      "strength": 0.4
+    },
+    {
+      "baseline": 4.8531454129903767e-05,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.00209280162198042,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.0017405690526033735,
+      "strength": 0.8
+    },
+    {
+      "baseline": 9.187652637306606e-07,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.22513814580106578,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.04896347587229387,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.04135082595699238,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.3782732101442964,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.005310848996469992,
+      "strength": 0.4
+    },
+    {
+      "baseline": 2.049535291947517e-05,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.06367193308545589,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.1547981859472651,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.35444092865154503,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.02754770629126027,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.7184905741423505,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.08456885376931968,
+      "strength": 0.8
+    },
+    {
+      "baseline": 8.178508838412017e-06,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.06019621097579845,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.0022007951270238226,
+      "strength": 0.8
+    },
+    {
+      "baseline": 1.3817214773877244e-08,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.41902289169027734,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.07129457058488597,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.08491190041661834,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.18914591622212754,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.004643278014790297,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.011172141810924793,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.4907129339589248,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.2474581188763298,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.07318681562230578,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.042313412452306694,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.014135615875462545,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.6513668492188874,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.11390489637458774,
+      "strength": 0.4
+    },
+    {
+      "baseline": 7.014515792458736e-05,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.00015213306878729055,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.5526726296206897,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.7656589394569225,
+      "strength": 0.4
+    },
+    {
+      "baseline": 4.080109649664211e-05,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.8589354924440575,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.35130993472607985,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.011414094272560835,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.5229395145365646,
+      "strength": 0.8
+    },
+    {
+      "baseline": 1.8866871852344823e-06,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.147484347424207,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.02928474848492797,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.21698234668257702,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.1644903894063703,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.7995648744685946,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.3326206035110548,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.0031077661208958472,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.00023382905136847562,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.025913745317151068,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.0007942029084445571,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.05423414717286338,
+      "strength": 0.8
+    },
+    {
+      "baseline": 2.1205331377633302e-05,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.0033809638345582574,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.00946289829132867,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.08552814987759247,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.01617884390532041,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.1952710580694036,
+      "strength": 0.4
+    },
+    {
+      "baseline": 4.4778373500723816e-05,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.06983948803601325,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.003677310430583343,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.03124719300127997,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.001913174320314305,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.018631653263659884,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.397710286422924,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.02119744957934804,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.008882405737185958,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.01723627715222606,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.053328210397574245,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.06491076175192306,
+      "strength": 0.8
+    },
+    {
+      "baseline": 1.8182585066250872e-05,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.42981127708014943,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.01372938658575764,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.040247397455838815,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.00045542163813654715,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.24241130533987565,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.0005269915673366825,
+      "strength": 0.4
+    },
+    {
+      "baseline": 2.5405962611621054e-05,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.6206241254856062,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.002479801111845895,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.8699546318918465,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.1486141647287176,
+      "strength": 0.8
+    },
+    {
+      "baseline": 6.0477941015218246e-05,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.17497304147021078,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.8569840758368833,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.7064491554780438,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.03164856881805596,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.003286254193331385,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.1529400172561247,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.139813110040537,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.08485245664841087,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.010909583888057,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.9092088840951574,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.537333196254531,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.001480733240279455,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.37964009109915053,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.5386185254518501,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.36228408960380065,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.04461645614450751,
+      "strength": 0.4
+    },
+    {
+      "baseline": 2.768772702400979e-06,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.0005667241339543112,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.026973378236386486,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.05981270856102143,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.0001369651105427267,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.20051019856698885,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.027403968874489537,
+      "strength": 0.4
+    },
+    {
+      "baseline": 5.6868954643653524e-08,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.0023064385856581774,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.0011475191728850722,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.8516739180282573,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.08269693282098618,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.00020316954420920575,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.011208580379854961,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.004793408673302899,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.48871018300035607,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.765650806641045,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.09424285286721207,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.004973926625727237,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.8696021455697859,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.11427686727086812,
+      "strength": 0.4
+    },
+    {
+      "baseline": 4.679935355046592e-05,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.0003072558545062786,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.35159349189397854,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.013961459197285428,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.001700857822796933,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.00022403033636612935,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.00024390131131185372,
+      "strength": 0.8
+    },
+    {
+      "baseline": 9.847032897486956e-06,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.45721422671989737,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.0005376256496412692,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.237814358127533,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.0025908292113737,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.7989507225199506,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.02141590956918752,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.05256835021886274,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.5893093735223486,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.0005780445620577031,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.00011853145956526762,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.5648295478728755,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.002742382328672617,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.010681376968126832,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.00016027844287704125,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.5131112865235453,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.17100524900687347,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.6016631876391666,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.005635763324801714,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.12361738016724323,
+      "strength": 0.8
+    },
+    {
+      "baseline": 2.0463504652305066e-05,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.023901111887561634,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.480204373730875,
+      "strength": 0.4
+    },
+    {
+      "baseline": 5.65995223053098e-07,
+      "strength": 0.4
+    },
+    {
+      "baseline": 5.264401670085543e-05,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.003113559767747717,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.008398340979997998,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.8903045747085387,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.0002633805738151922,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.0018358053147148035,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.27784660411176604,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.00045601361363286887,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.03963984313067034,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.5089990696946629,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.4831577768189291,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.3873468657753307,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.006860136418600724,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.2725580200579072,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.005246178942568258,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.19756895168146058,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.8886604733032388,
+      "strength": 0.8
+    },
+    {
+      "baseline": 8.557860788663522e-05,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.00015466586710350208,
+      "strength": 0.4
+    },
+    {
+      "baseline": 6.156591313538321e-07,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.6774912206960302,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.04752621877030653,
+      "strength": 0.4
+    },
+    {
+      "baseline": 2.3315018502460595e-10,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.3504365388470236,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.6337047549719653,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.055980302742788826,
+      "strength": 0.8
+    },
+    {
+      "baseline": 1.6971608479098742e-05,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.34739428458598126,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.13814533935877135,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.015922258661392973,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.0002982861249138181,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.5622509489716487,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.09416447967708298,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.05001827731059146,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.11786140575734413,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.5589353065594949,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.3010587097323883,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.17422809431033465,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.2133300913819153,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.025412383805273886,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.1248532250968844,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.8777969335067121,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.004810645576325605,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.025563068718442154,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.07236391344346857,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.00042556837569481437,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.0014973528426923276,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.0037909082967373313,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.8079219253864239,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.019655362634229144,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.004522451825390627,
+      "strength": 0.8
+    },
+    {
+      "baseline": 1.641995439012187e-08,
+      "strength": 0.8
+    },
+    {
+      "baseline": 4.69191891631737e-07,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.029687742970059185,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.012521221091890203,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.09487396225144373,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.29071370281154973,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.1304080926140474,
+      "strength": 0.4
+    },
+    {
+      "baseline": 1.109184716719138e-06,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.00060648813499541,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.5044518775886373,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.0010892161158703609,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.0520075022133808,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.36501840956149967,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.28569812320431903,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.010240639096991107,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.4119404618892067,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.12430553728401357,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.10332070541386536,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.18052322479343627,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.2732464059975632,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.30998800931339004,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.06479906670442065,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.22994030788234834,
+      "strength": 0.4
+    },
+    {
+      "baseline": 1.3797404798887271e-09,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.06344693307056372,
+      "strength": 0.8
+    },
+    {
+      "baseline": 7.511769941895462e-07,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.835524020536518,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.6302858300696285,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.031923280283174656,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.5124265873987235,
+      "strength": 0.8
+    },
+    {
+      "baseline": 9.023801687621412e-05,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.20511746145348553,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.17121194441305962,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.02337701315187377,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.5210533919743341,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.0372116811751072,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.2597870989713765,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.1909424606035633,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.47762111452747585,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.4622584353353771,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.00022136379143327197,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.02423447366668861,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.28075057029809547,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.6522879506842615,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.6292558230729736,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.2690235343628535,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.0030963331836540587,
+      "strength": 0.4
+    },
+    {
+      "baseline": 1.9912668385706057e-05,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.000679428482864844,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.3966964972455795,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.08255675593798123,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.16706820866428215,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.00031444136336872784,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.4706793646378869,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.8947062208768334,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.2864984397750514,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.5151452248965821,
+      "strength": 0.8
+    },
+    {
+      "baseline": 8.748998005245838e-05,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.6397409689342695,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.058364225919817464,
+      "strength": 0.8
+    },
+    {
+      "baseline": 1.8815369030877446e-05,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.04482383637056263,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.12578937995515305,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.08928674662799757,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.9913576740718235,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.013313452046061247,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.8481893804609738,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.42262048826697435,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.25477865155084384,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.03723775070716702,
+      "strength": 0.4
+    },
+    {
+      "baseline": 5.230505069267322e-07,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.0009285763050959657,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.9194956586711841,
+      "strength": 0.8
+    },
+    {
+      "baseline": 7.514781908107387e-06,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.6528602359081428,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.505194190424677,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.41233897710125855,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.003515677520194859,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.011734031112016442,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.9583360569812472,
+      "strength": 0.8
+    },
+    {
+      "baseline": 5.325634141647555e-09,
+      "strength": 0.4
+    },
+    {
+      "baseline": 4.307105333155607e-15,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.01240063921478222,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.6431936880374965,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.10330694295594138,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.9519061341740653,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.046018355904241956,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.09646933216324304,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.048872776155957524,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.9970602816542187,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.020820697340063855,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.12559242717187932,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.07318115285317027,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.11971523856369042,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.999813453889152,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.004402937249619325,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.8605555005423012,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.9353491219082838,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.005938354440494505,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.002601554324375412,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.10634135254063241,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.3701065070059117,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.005674254770253062,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.009874474922306043,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.09411131817054162,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.473672381630001,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.00043854973313769264,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.2634755075471673,
+      "strength": 0.4
+    },
+    {
+      "baseline": 6.372179261904484e-06,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.4876721887580185,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.04237336394502015,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.7136590542913008,
+      "strength": 0.4
+    },
+    {
+      "baseline": 3.5449662572596576e-08,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.0015187309034124235,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.031660300326670485,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.034739119435983984,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.48564981936757634,
+      "strength": 0.8
+    },
+    {
+      "baseline": 4.292000544914519e-05,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.0006972651834585323,
+      "strength": 0.8
+    },
+    {
+      "baseline": 9.664190860416597e-06,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.006951453478798495,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.0037856299211577317,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.06601270259658973,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.20352450730850907,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.5829169640641552,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.009439776696907987,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.16811514762227545,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.0014986345733244532,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.9685015462002985,
+      "strength": 0.4
+    },
+    {
+      "baseline": 7.6062135237323304e-06,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.9220924584264938,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.07533635567783897,
+      "strength": 0.4
+    },
+    {
+      "baseline": 1.418223799142957e-05,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.5714544969822797,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.060884210238882755,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.0010745069410591787,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.014590932351656226,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.2554104564535297,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.7984691265531517,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.0005024301679129356,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.11383299455700245,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.5655456255568002,
+      "strength": 0.4
+    },
+    {
+      "baseline": 8.99254207865874e-06,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.0006238502964540534,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.2252367828029766,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.0018281540982106733,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.8869252529290184,
+      "strength": 0.4
+    },
+    {
+      "baseline": 3.399337116631314e-05,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.0007866830246354763,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.07233253602161875,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.05819706773135188,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.1290749252173602,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.000189672075838258,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.3100884884931305,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.06020697349363017,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.00013923945446105523,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.43747883407483984,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.535402159950948,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.8814598694586003,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.982765321788606,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.09808492000903771,
+      "strength": 0.4
+    },
+    {
+      "baseline": 1.852604650505106e-05,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.12063840542096556,
+      "strength": 0.4
+    },
+    {
+      "baseline": 2.8070105953682687e-09,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.7241526277443541,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.0014155309946891604,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.12238049745556408,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.2447062628864273,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.25541905502222456,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.23542115253815699,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.07660027286583732,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.8838148484230081,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.16999281332017938,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.327382897692102,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.023099157984696816,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.6361358649676215,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.21632439337984272,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.7428278638759069,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.0004728432802477187,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.4652826665578261,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.8109764633216688,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.0038239590504479393,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.06314019296442908,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.9919565333889436,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.006755414931192145,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.4008752121399942,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.7313380313635728,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.196959398386655,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.469898512341744,
+      "strength": 0.8
+    },
+    {
+      "baseline": 3.826341805577304e-06,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.0003794085899193713,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.33268030933291803,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.47945024783358237,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.09116727308584391,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.1046930201381876,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.001988050664393244,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.2994271038019953,
+      "strength": 0.4
+    },
+    {
+      "baseline": 5.441974256857559e-06,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.22471040499668524,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.19254704440994877,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.3442064032366325,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.11725589596896185,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.20229455886575087,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.45281942876085585,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.7275183589426991,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.3403432265422364,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.6783029153468241,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.42663750276799567,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.007916824480245891,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.910713476601816,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.7412710630194198,
+      "strength": 0.4
+    },
+    {
+      "baseline": 2.718234539744838e-06,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.24750181724912726,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.0010111175509201066,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.00018581252260549183,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.10029717884192589,
+      "strength": 0.8
+    },
+    {
+      "baseline": 3.770395061985932e-05,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.02000472126506656,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.0022318129329992244,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.9808264529351083,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.1548916602411975,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.045381743847240405,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.003314642023768021,
+      "strength": 0.4
+    },
+    {
+      "baseline": 2.7338419170087358e-05,
+      "strength": 0.4
+    },
+    {
+      "baseline": 2.7167135857424987e-08,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.003995585225256736,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.024065155736217602,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.0021597327748642,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.015689945382340167,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.011343535428972143,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.03397333672622179,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.04973134943602303,
+      "strength": 0.4
+    },
+    {
+      "baseline": 3.049533834684868e-05,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.4508979593046364,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.05889695296449999,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.002045788223679917,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.0544770349971406,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.08215702212197502,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.006067288468670843,
+      "strength": 0.4
+    },
+    {
+      "baseline": 2.365543459404459e-06,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.00014176861650802675,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.5966974392555994,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.4296641615015026,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.7996904133698076,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.000577351226999936,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.3265459906470408,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.6330408539439085,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.1507682934794324,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.00076859774496957,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.05758694473839778,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.12356660508159471,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.9798943149719619,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.5876772331011156,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.8767405857782691,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.0005609243496723486,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.0022975925285815737,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.06202220723239703,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.09263925082838524,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.6465278570777802,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.022985511933518922,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.037512576845463476,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.10602541823336614,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.0067384931268613625,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.6390452052132805,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.021713439820189983,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.0018788493590340281,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.006333267268752204,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.89119120039846,
+      "strength": 0.8
+    },
+    {
+      "baseline": 3.5027848592548315e-06,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.4981647487526542,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.3756738129613306,
+      "strength": 0.4
+    },
+    {
+      "baseline": 7.510809112501935e-05,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.016963570151567645,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.32002675077094367,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.9888537536327215,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.5222629276633601,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.03738571001617473,
+      "strength": 0.4
+    },
+    {
+      "baseline": 7.204937796790796e-05,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.002915417916054428,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.02453260564081407,
+      "strength": 0.4
+    },
+    {
+      "baseline": 1.658848206363533e-05,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.2762645664056539,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.5664809655970244,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.0791759891189439,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.010038894323557571,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.0003181462481818977,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.3083488099741325,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.4881012881394234,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.4364287138518314,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.05077297094430862,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.41449518117048595,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.4885816790857961,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.6556102769218978,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.00023903135026590825,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.006861478945427425,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.024196675037529595,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.3373434008508309,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.007684462626640394,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.05050997322749334,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.27493934645778556,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.01270456666398686,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.048612063833532775,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.4733167603200201,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.007668111676224681,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.008121456607886098,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.30382653869675447,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.08189864678623127,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.017587939853406287,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.11972417644520514,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.06563334782321342,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.3671492888281804,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.5875703300055256,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.011239788143738324,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.09223479528654036,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.8180172760613882,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.5418542838633268,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.00017611883388388464,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.21066603091637098,
+      "strength": 0.4
+    },
+    {
+      "baseline": 1.511539279634573e-07,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.007726252302085163,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.017194407561355173,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.24648610177875854,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.00019268615382054307,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.011716597272978885,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.002307315203497415,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.6558309849043292,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.9771451963007469,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.3235660993994549,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.09518273005905921,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.00010257999376188887,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.5946532600564993,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.17569572701685893,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.11715555860042161,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.01384563688861883,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.0021930941355193015,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.06507183824780635,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.0003617183400264914,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.8108338397200581,
+      "strength": 0.4
+    },
+    {
+      "baseline": 4.3719311543679986e-05,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.6200138441591215,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.0004622997325706971,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.00012011449290854782,
+      "strength": 0.8
+    },
+    {
+      "baseline": 2.200053348077822e-06,
+      "strength": 0.4
+    },
+    {
+      "baseline": 2.541416192673493e-06,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.046959238922971984,
+      "strength": 0.8
+    },
+    {
+      "baseline": 5.367446889631963e-15,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.015552304912471011,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.001404394109348397,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.011462146423028953,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.31035913299641876,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.08231390455062672,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.008978677355918296,
+      "strength": 0.8
+    },
+    {
+      "baseline": 3.80054582205927e-06,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.17771436197419432,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.10149878498607413,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.08538624405431808,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.14511828574903246,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.024799092608493625,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.0019473681602131061,
+      "strength": 0.4
+    },
+    {
+      "baseline": 5.172111324699734e-05,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.995076786028736,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.32932628379391643,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.09437259230148817,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.0028415617870638215,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.05328666639072364,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.02535379314793687,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.36972216653626494,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.011981621674243178,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.012778791490142636,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.4800129555101352,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.016479683696513033,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.1901586104046117,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.41505735258735477,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.002747288999492104,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.004279765829866775,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.05003262116683338,
+      "strength": 0.4
+    },
+    {
+      "baseline": 2.2575673603147558e-05,
+      "strength": 0.8
+    },
+    {
+      "baseline": 3.631470594981035e-11,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.4863814752817078,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.06119316932647107,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.00021638318961650168,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.7431846610671405,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.3437110925838306,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.889793764967107,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.7101052413295528,
+      "strength": 0.4
+    },
+    {
+      "baseline": 1.4763890801941574e-05,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.2492824771225458,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.013967511742422938,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.025335465597488064,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.019221292710695462,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.8375641076311686,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.01624901664807382,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.34386738094187974,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.14151185393101393,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.005945566650833533,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.04564466171519134,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.12367725469756907,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.002800362040077758,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.0027377772725724506,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.00016656590061550915,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.0017830873525976772,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.4994910245382277,
+      "strength": 0.8
+    },
+    {
+      "baseline": 1.328268750661079e-05,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.8223771459567797,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.21795513247043838,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.29553882955241856,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.10616965670710457,
+      "strength": 0.4
+    },
+    {
+      "baseline": 1.2595962509570379e-08,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.00010834535670398594,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.981571701486085,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.06055871782680398,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.19809431804283387,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.00758567591260299,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.004767815084893284,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.03975912723101672,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.20048965844030905,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.012250553094214177,
+      "strength": 0.8
+    },
+    {
+      "baseline": 8.538860111203098e-05,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.06072480511629093,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.12651049904977651,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.3265969625291045,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.42234052116007603,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.01095561625422221,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.5809797014150826,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.02212670069026886,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.6429686655122716,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.20223318139687704,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.9020853930015429,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.7886959696504305,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.13116122840252048,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.4120843440417031,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.3675871261878654,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.014300622278449575,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.8700127531020654,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.7422176615037868,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.01259872356317878,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.0018221632327079962,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.02243703715301501,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.4343537863882542,
+      "strength": 0.8
+    },
+    {
+      "baseline": 1.7044118551420133e-05,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.0021129448468599032,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.4994200226307792,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.607480134016965,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.549449095127632,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.002325345784056723,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.8559084915581697,
+      "strength": 0.4
+    },
+    {
+      "baseline": 1.0754999814305707e-08,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.056595252348201334,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.30720869717601595,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.26796215762567527,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.023870792952928606,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.19467555197162165,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.0004335608157668676,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.08937608400537927,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.9661379698171564,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.14210766670445962,
+      "strength": 0.8
+    },
+    {
+      "baseline": 8.121517249987108e-05,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.007840746893190432,
+      "strength": 0.8
+    },
+    {
+      "baseline": 1.6386357939887384e-06,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.5219588796730615,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.014238676534275433,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.1863809727954519,
+      "strength": 0.8
+    },
+    {
+      "baseline": 1.730266789800706e-06,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.24438807511769145,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.001679392799645595,
+      "strength": 0.8
+    },
+    {
+      "baseline": 5.364831320917081e-07,
+      "strength": 0.4
+    },
+    {
+      "baseline": 5.824518761876706e-09,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.90414189194549,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.13543908026173151,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.423117020594665,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.4891037089652573,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.0488931389850656,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.4198012663622305,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.5973076933151337,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.5626951720849712,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.5890522356075475,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.06927039053340489,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.001962162951151438,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.12786252308295648,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.7541577250497568,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.2950369708752219,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.002582697436115799,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.5903127498251979,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.41549954043938275,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.5837763388803069,
+      "strength": 0.8
+    },
+    {
+      "baseline": 6.242962753288433e-10,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.04343051849097681,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.007253722401130672,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.026624490283133937,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.0655803957954,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.021037751478200646,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.17360634568426145,
+      "strength": 0.4
+    },
+    {
+      "baseline": 7.744720436349889e-11,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.515082094137431,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.28965681440448704,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.0006053640875812942,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.00011388001246788515,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.12042117747253057,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.5644395692993771,
+      "strength": 0.8
+    },
+    {
+      "baseline": 3.1169814860130738e-09,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.4170380315571439,
+      "strength": 0.4
+    },
+    {
+      "baseline": 4.0559566272511455e-05,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.9942390087833992,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.0024533566006310153,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.6484034263595788,
+      "strength": 0.8
+    },
+    {
+      "baseline": 2.0539523873630048e-05,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.5771468795305857,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.057736155221859584,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.004480888463062922,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.3435082167332823,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.7246912186446907,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.45618576028540725,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.5907749374408406,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.008729894785237554,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.002278331121807735,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.06127328736698534,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.008601188988750947,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.6265315912747857,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.9801666464835872,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.9128762465601751,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.4978038311329577,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.031528743520371806,
+      "strength": 0.4
+    },
+    {
+      "baseline": 4.035871788881334e-05,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.0029427722053124916,
+      "strength": 0.4
+    },
+    {
+      "baseline": 0.010984478624221297,
+      "strength": 0.8
+    },
+    {
+      "baseline": 1.6193947137647478e-05,
+      "strength": 0.8
+    },
+    {
+      "baseline": 4.180226982941233e-06,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.0005520859919941174,
+      "strength": 0.8
+    },
+    {
+      "baseline": 0.059081032939412005,
+      "strength": 0.4
+    }
+  ],
+  "positions": {
+    "U0": [
+      18,
+      19,
+      20,
+      22,
+      26,
+      27,
+      41,
+      45,
+      47,
+      50,
+      53,
+      62,
+      65,
+      73,
+      89,
+      91,
+      100,
+      104,
+      108,
+      116,
+      141,
+      151,
+      152,
+      156,
+      157,
+      166,
+      181,
+      182,
+      189,
+      195,
+      202,
+      203,
+      205,
+      208,
+      223,
+      230,
+      240,
+      243,
+      251,
+      252,
+      255,
+      267,
+      271,
+      272,
+      273,
+      275,
+      282,
+      299,
+      305,
+      309,
+      312,
+      320,
+      321,
+      322,
+      323,
+      325,
+      326,
+      330,
+      338,
+      339,
+      342,
+      343,
+      344,
+      352,
+      357,
+      363,
+      368,
+      372,
+      375,
+      377,
+      383,
+      395,
+      396,
+      399,
+      402,
+      406,
+      411,
+      421,
+      430,
+      446,
+      453,
+      470,
+      476,
+      477,
+      479,
+      489,
+      492,
+      494,
+      496,
+      497,
+      499,
+      503,
+      505,
+      513,
+      518,
+      528,
+      530,
+      532,
+      542,
+      546,
+      547,
+      550,
+      552,
+      554,
+      565,
+      570,
+      582,
+      589,
+      595,
+      599,
+      601,
+      604,
+      608,
+      613,
+      615,
+      617,
+      624,
+      627,
+      628,
+      629,
+      632,
+      637,
+      640,
+      642,
+      644,
+      651,
+      653,
+      656,
+      670,
+      671,
+      672,
+      677,
+      686,
+      687,
+      691,
+      693,
+      698,
+      704,
+      707,
+      720,
+      723,
+      730,
+      746,
+      749,
+      755,
+      758,
+      764,
+      766,
+      769,
+      785,
+      789,
+      793,
+      796,
+      799,
+      801,
+      807,
+      817,
+      820,
+      830,
+      831,
+      832,
+      838,
+      839,
+      840,
+      841,
+      849,
+      855,
+      858,
+      860,
+      870,
+      873,
+      876,
+      877,
+      884,
+      889,
+      891,
+      892,
+      897,
+      902,
+      903,
+      911,
+      915,
+      921,
+      929,
+      930,
+      937,
+      940,
+      941,
+      943,
+      944,
+      946,
+      959,
+      963,
+      964,
+      966,
+      968,
+      973,
+      976,
+      980,
+      986
+    ],
+    "TH": [
+      1,
+      32,
+      33,
+      37,
+      42,
+      49,
+      50,
+      56,
+      57,
+      58,
+      60,
+      73,
+      78,
+      83,
+      94,
+      97,
+      102,
+      108,
+      117,
+      127,
+      129,
+      137,
+      139,
+      142,
+      144,
+      154,
+      157,
+      174,
+      179,
+      184,
+      188,
+      194,
+      202,
+      208,
+      213,
+      221,
+      223,
+      224,
+      232,
+      234,
+      242,
+      243,
+      245,
+      252,
+      259,
+      260,
+      266,
+      268,
+      271,
+      273,
+      274,
+      288,
+      290,
+      292,
+      295,
+      296,
+      299,
+      301,
+      313,
+      315,
+      318,
+      320,
+      323,
+      325,
+      331,
+      334,
+      337,
+      343,
+      345,
+      347,
+      366,
+      372,
+      376,
+      380,
+      390,
+      394,
+      395,
+      409,
+      412,
+      419,
+      432,
+      437,
+      438,
+      440,
+      444,
+      462,
+      463,
+      470,
+      472,
+      474,
+      476,
+      478,
+      486,
+      489,
+      490,
+      493,
+      498,
+      509,
+      511,
+      513,
+      519,
+      531,
+      534,
+      535,
+      554,
+      556,
+      559,
+      564,
+      572,
+      577,
+      585,
+      586,
+      587,
+      590,
+      591,
+      612,
+      619,
+      627,
+      629,
+      643,
+      645,
+      646,
+      647,
+      649,
+      655,
+      656,
+      657,
+      674,
+      676,
+      687,
+      688,
+      703,
+      704,
+      710,
+      714,
+      725,
+      728,
+      736,
+      738,
+      747,
+      766,
+      768,
+      773,
+      777,
+      795,
+      796,
+      797,
+      798,
+      800,
+      803,
+      806,
+      807,
+      808,
+      809,
+      811,
+      812,
+      814,
+      815,
+      816,
+      824,
+      825,
+      832,
+      836,
+      837,
+      838,
+      840,
+      843,
+      848,
+      854,
+      858,
+      859,
+      861,
+      864,
+      867,
+      872,
+      879,
+      880,
+      882,
+      884,
+      897,
+      898,
+      899,
+      907,
+      910,
+      916,
+      920,
+      923,
+      927,
+      930,
+      936,
+      946,
+      950,
+      953,
+      954,
+      962,
+      964,
+      965,
+      975,
+      983,
+      999
+    ],
+    "TL": [
+      4,
+      6,
+      15,
+      21,
+      23,
+      26,
+      27,
+      32,
+      40,
+      41,
+      42,
+      43,
+      48,
+      61,
+      65,
+      75,
+      80,
+      91,
+      125,
+      126,
+      141,
+      142,
+      144,
+      145,
+      146,
+      147,
+      150,
+      159,
+      160,
+      161,
+      165,
+      174,
+      176,
+      187,
+      188,
+      190,
+      193,
+      194,
+      195,
+      198,
+      203,
+      209,
+      219,
+      223,
+      225,
+      233,
+      236,
+      242,
+      252,
+      254,
+      255,
+      261,
+      263,
+      264,
+      270,
+      275,
+      279,
+      285,
+      297,
+      315,
+      318,
+      326,
+      330,
+      337,
+      344,
+      345,
+      348,
+      349,
+      352,
+      357,
+      363,
+      365,
+      366,
+      378,
+      382,
+      387,
+      389,
+      390,
+      392,
+      393,
+      395,
+      396,
+      399,
+      409,
+      410,
+      414,
+      419,
+      433,
+      441,
+      451,
+      452,
+      454,
+      467,
+      473,
+      477,
+      488,
+      493,
+      499,
+      511,
+      514,
+      525,
+      545,
+      547,
+      549,
+      550,
+      551,
+      552,
+      554,
+      556,
+      565,
+      566,
+      576,
+      578,
+      582,
+      584,
+      595,
+      596,
+      599,
+      603,
+      605,
+      607,
+      611,
+      622,
+      630,
+      631,
+      641,
+      642,
+      643,
+      656,
+      661,
+      662,
+      663,
+      667,
+      672,
+      673,
+      679,
+      683,
+      690,
+      695,
+      698,
+      702,
+      710,
+      713,
+      739,
+      745,
+      753,
+      756,
+      757,
+      760,
+      763,
+      765,
+      769,
+      779,
+      785,
+      786,
+      795,
+      805,
+      811,
+      815,
+      822,
+      823,
+      826,
+      828,
+      830,
+      834,
+      835,
+      837,
+      839,
+      840,
+      851,
+      859,
+      870,
+      877,
+      879,
+      882,
+      885,
+      889,
+      895,
+      897,
+      909,
+      915,
+      919,
+      927,
+      928,
+      929,
+      930,
+      934,
+      939,
+      942,
+      943,
+      946,
+      950,
+      956,
+      959,
+      977,
+      979,
+      981,
+      985,
+      990,
+      995
+    ]
+  },
+  "diagnostics": {
+    "U0": {
+      "illusion": 0.015,
+      "fan_total": 2710,
+      "fan_union": 923,
+      "baseline_total": 46.98536658585141,
+      "observer_illusion": 0.0,
+      "advocate_strong_count": 99,
+      "initial_expected_advocate_speakers": 84.01778360567346
+    },
+    "TH": {
+      "illusion": 0.12375,
+      "fan_total": 2770,
+      "fan_union": 926,
+      "baseline_total": 46.867342387180635,
+      "observer_illusion": 0.1,
+      "advocate_strong_count": 99,
+      "initial_expected_advocate_speakers": 82.39212570478759
+    },
+    "TL": {
+      "illusion": 0.0,
+      "fan_total": 2645,
+      "fan_union": 908,
+      "baseline_total": 47.99476484760433,
+      "observer_illusion": 0.0,
+      "advocate_strong_count": 99,
+      "initial_expected_advocate_speakers": 83.75015303677634
+    }
+  }
+}

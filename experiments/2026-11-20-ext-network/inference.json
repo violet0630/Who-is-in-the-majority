@@ -1,0 +1,352 @@
+{
+  "outcomes": {
+    "perceived_majority": {
+      "conditions": [
+        "NW0",
+        "NW1",
+        "NW2",
+        "NW3",
+        "NW4"
+      ],
+      "comparisons": [
+        {
+          "conditions": [
+            "NW1",
+            "NW0"
+          ],
+          "difference": -0.055555555555555525,
+          "ci95": [
+            -0.11037037037037034,
+            -0.0029629629629630005
+          ],
+          "p_value": 0.0361,
+          "paired": false,
+          "p_holm": 0.10830000000000001
+        },
+        {
+          "conditions": [
+            "NW2",
+            "NW0"
+          ],
+          "difference": 0.05629629629629618,
+          "ci95": [
+            -0.05555555555555558,
+            0.17851851851851852
+          ],
+          "p_value": 0.358,
+          "paired": false,
+          "p_holm": 0.358
+        },
+        {
+          "conditions": [
+            "NW3",
+            "NW0"
+          ],
+          "difference": -0.04444444444444445,
+          "ci95": [
+            -0.10592592592592603,
+            0.017037037037036906
+          ],
+          "p_value": 0.1549,
+          "paired": false,
+          "p_holm": 0.3098
+        },
+        {
+          "conditions": [
+            "NW4",
+            "NW0"
+          ],
+          "difference": -0.07333333333333336,
+          "ci95": [
+            -0.13407407407407418,
+            -0.010370370370370419
+          ],
+          "p_value": 0.0199,
+          "paired": false,
+          "p_holm": 0.0796
+        }
+      ],
+      "paired": false,
+      "statistics": "10000 graph-stratified bootstrap draws; 95% CI; Holm adjustment"
+    },
+    "feed_majority": {
+      "conditions": [
+        "NW0",
+        "NW1",
+        "NW2",
+        "NW3",
+        "NW4"
+      ],
+      "comparisons": [
+        {
+          "conditions": [
+            "NW1",
+            "NW0"
+          ],
+          "difference": 0.00888888888888878,
+          "ci95": [
+            -0.03629629629629627,
+            0.05481481481481476
+          ],
+          "p_value": 0.7188,
+          "paired": false,
+          "p_holm": 0.9915
+        },
+        {
+          "conditions": [
+            "NW2",
+            "NW0"
+          ],
+          "difference": 0.04370370370370358,
+          "ci95": [
+            -0.008148148148148127,
+            0.09629629629629638
+          ],
+          "p_value": 0.1,
+          "paired": false,
+          "p_holm": 0.4
+        },
+        {
+          "conditions": [
+            "NW3",
+            "NW0"
+          ],
+          "difference": -0.02518518518518531,
+          "ci95": [
+            -0.07333333333333347,
+            0.025185185185185144
+          ],
+          "p_value": 0.3305,
+          "paired": false,
+          "p_holm": 0.9915
+        },
+        {
+          "conditions": [
+            "NW4",
+            "NW0"
+          ],
+          "difference": -0.022222222222222365,
+          "ci95": [
+            -0.0762962962962963,
+            0.034074074074074145
+          ],
+          "p_value": 0.4428,
+          "paired": false,
+          "p_holm": 0.9915
+        }
+      ],
+      "paired": false,
+      "statistics": "10000 graph-stratified bootstrap draws; 95% CI; Holm adjustment"
+    },
+    "public_conformity": {
+      "conditions": [
+        "NW0",
+        "NW1",
+        "NW2",
+        "NW3",
+        "NW4"
+      ],
+      "comparisons": [
+        {
+          "conditions": [
+            "NW1",
+            "NW0"
+          ],
+          "difference": -0.003703703703703695,
+          "ci95": [
+            -0.018518518518518517,
+            0.009629629629629634
+          ],
+          "p_value": 0.655,
+          "paired": false,
+          "p_holm": 1.0
+        },
+        {
+          "conditions": [
+            "NW2",
+            "NW0"
+          ],
+          "difference": 0.0014814814814814864,
+          "ci95": [
+            -0.012592592592592593,
+            0.014814814814814815
+          ],
+          "p_value": 0.8076,
+          "paired": false,
+          "p_holm": 1.0
+        },
+        {
+          "conditions": [
+            "NW3",
+            "NW0"
+          ],
+          "difference": 0.002962962962962973,
+          "ci95": [
+            -0.013333333333333336,
+            0.019259259259259254
+          ],
+          "p_value": 0.6987,
+          "paired": false,
+          "p_holm": 1.0
+        },
+        {
+          "conditions": [
+            "NW4",
+            "NW0"
+          ],
+          "difference": -0.008148148148148147,
+          "ci95": [
+            -0.022222222222222233,
+            0.0051851851851851954
+          ],
+          "p_value": 0.2803,
+          "paired": false,
+          "p_holm": 1.0
+        }
+      ],
+      "paired": false,
+      "statistics": "10000 graph-stratified bootstrap draws; 95% CI; Holm adjustment"
+    },
+    "opponent_silence": {
+      "conditions": [
+        "NW0",
+        "NW1",
+        "NW2",
+        "NW3",
+        "NW4"
+      ],
+      "comparisons": [
+        {
+          "conditions": [
+            "NW1",
+            "NW0"
+          ],
+          "difference": -0.002962962962962945,
+          "ci95": [
+            -0.02962962962962956,
+            0.021481481481481435
+          ],
+          "p_value": 0.838,
+          "paired": false,
+          "p_holm": 1.0
+        },
+        {
+          "conditions": [
+            "NW2",
+            "NW0"
+          ],
+          "difference": -0.00666666666666671,
+          "ci95": [
+            -0.04296296296296298,
+            0.027407407407407325
+          ],
+          "p_value": 0.7258,
+          "paired": false,
+          "p_holm": 1.0
+        },
+        {
+          "conditions": [
+            "NW3",
+            "NW0"
+          ],
+          "difference": 0.011851851851852002,
+          "ci95": [
+            -0.022222222222222365,
+            0.045925925925925926
+          ],
+          "p_value": 0.5205,
+          "paired": false,
+          "p_holm": 1.0
+        },
+        {
+          "conditions": [
+            "NW4",
+            "NW0"
+          ],
+          "difference": 0.001481481481481528,
+          "ci95": [
+            -0.034074074074074034,
+            0.03925925925925933
+          ],
+          "p_value": 0.9619,
+          "paired": false,
+          "p_holm": 1.0
+        }
+      ],
+      "paired": false,
+      "statistics": "10000 graph-stratified bootstrap draws; 95% CI; Holm adjustment"
+    }
+  },
+  "persistence": {
+    "conditions": [
+      "NW0",
+      "NW1",
+      "NW2",
+      "NW3",
+      "NW4"
+    ],
+    "comparisons": [
+      {
+        "conditions": [
+          "NW1",
+          "NW0"
+        ],
+        "difference": 0.011851851851851862,
+        "ci95": [
+          -0.02962962962962956,
+          0.05185185185185186
+        ],
+        "p_value": 0.5663,
+        "paired": false,
+        "p_holm": 1.0
+      },
+      {
+        "conditions": [
+          "NW2",
+          "NW0"
+        ],
+        "difference": 0.011111111111111098,
+        "ci95": [
+          -0.03407407407407406,
+          0.057777777777777754
+        ],
+        "p_value": 0.6375,
+        "paired": false,
+        "p_holm": 1.0
+      },
+      {
+        "conditions": [
+          "NW3",
+          "NW0"
+        ],
+        "difference": -0.00444444444444443,
+        "ci95": [
+          -0.03407407407407406,
+          0.02740740740740743
+        ],
+        "p_value": 0.7694,
+        "paired": false,
+        "p_holm": 1.0
+      },
+      {
+        "conditions": [
+          "NW4",
+          "NW0"
+        ],
+        "difference": -0.025925925925925904,
+        "ci95": [
+          -0.059259259259259234,
+          0.008888888888888927
+        ],
+        "p_value": 0.1492,
+        "paired": false,
+        "p_holm": 0.5968
+      }
+    ],
+    "paired": false,
+    "statistics": "10000 graph-stratified bootstrap draws; 95% CI; Holm adjustment"
+  },
+  "trajectories": {},
+  "per_network": {},
+  "scope": {}
+}
