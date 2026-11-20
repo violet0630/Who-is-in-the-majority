@@ -327,7 +327,8 @@ def network_config(size, settings):
 
 
 def coefficients_from(settings):
-    return Coefficients(tuple(settings["theta"]), settings["kappa"], settings["gamma"], beta=10.0)
+    return Coefficients(tuple(settings["theta"]), settings["kappa"], settings["gamma"],
+                        beta=settings.get("beta", 10.0))
 
 
 def make_network(size, settings, seed):
@@ -506,7 +507,7 @@ def screening():
 
 def run_one(network, profiles, advocates, bank, settings, seed, branch, output=None, llm=False):
     study = json.loads((PROJECT / "configs/study.json").read_text(encoding="utf-8"))
-    config = RunConfig(rounds=settings["rounds"], alpha=0.05, rho=settings["rho"],
+    config = RunConfig(rounds=settings["rounds"], alpha=settings.get("alpha", 0.05), rho=settings["rho"],
                        advocate_stance=Stance.OPPOSE, window=settings.get("window", 2),
                        read_limit=settings.get("read_limit", 5),
                        cross_fan_comments=settings.get("cross_fan_comments", True))
