@@ -27,7 +27,7 @@ class ExtensionSettingsTests(unittest.TestCase):
 class InferenceTests(unittest.TestCase):
     def test_paired_inference_matches_sign_flip(self):
         data = rows("A", 0.4) + rows("B", 0.1)
-        out = paired_condition_inference(data, [("A", "B")])
+        out = paired_condition_inference(data, [["A", "B"]])   # 列表形式比较对（真实脚本用法）
         self.assertAlmostEqual(out["comparisons"][0]["difference"], 0.3)
         self.assertAlmostEqual(out["comparisons"][0]["p_value"], 2 / 512)
         self.assertAlmostEqual(out["comparisons"][0]["p_holm"], 2 / 512)

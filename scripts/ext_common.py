@@ -134,6 +134,7 @@ def paired_condition_inference(rows: list[dict], comparisons: list[tuple[str, st
         return {cond: float(np.mean([group[cond] for group in flat])) for cond in conditions}
 
     observed = draw_means(list(graphs.values()))
+    comparisons = [tuple(pair) for pair in comparisons]
     draws = {pair: [] for pair in comparisons}
     for _ in range(repeats):
         sample = [[rng.choice(groups) for _ in groups] for groups in graphs.values()]
