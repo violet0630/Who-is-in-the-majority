@@ -54,6 +54,27 @@ def group_seed(condition: str, graph: int, repeat: int) -> int:
     return 44000 + INDEX[condition] * 100 + graph * 10 + repeat
 
 
+# 协议修订：NW1-g0-r0 原种子(44100)下节点403持续幻觉证据编号(6次schema纠正失败、两次独立运行)，
+# 拓展三为非配对设计，单位为可交换的过程实现，换一个记录的种子完成该单位；失败尝试全部保留归档。
+AMENDMENTS = [{
+    "unit": {"condition": "NW1", "graph": 0, "repeat": 0},
+    "original_group_seed": group_seed("NW1", 0, 0),
+    "replacement_group_seed": group_seed("NW1", 0, 0) + 1000,
+    "reason": "node 403 persistently hallucinated evidence id r4-u472 (real author, wrong round) across "
+              "6 schema attempts in 2 independent runs; unpaired design makes unit seeds exchangeable "
+              "process realizations; all failed attempts preserved in runs/NW1-g0-r0-attempt01/02",
+    "preserved_attempts": ["runs/NW1-g0-r0-attempt01", "runs/NW1-g0-r0-attempt02"],
+}]
+
+
+def amended_group_seed(condition: str, graph: int, repeat: int) -> int:
+    for amendment in AMENDMENTS:
+        unit = amendment["unit"]
+        if unit["condition"] == condition and unit["graph"] == graph and unit["repeat"] == repeat:
+            return amendment["replacement_group_seed"]
+    return group_seed(condition, graph, repeat)
+
+
 def condition_settings(condition: str) -> dict:
     return {**BASE_SETTINGS, **NETWORK_CONDITIONS[condition]}
 
@@ -78,6 +99,7 @@ def prepare():
                           "search": "43000+cond*100+graph*10+repeat", "group": "44000+cond*100+graph*10+repeat"},
         "frozen_input_sha256": frozen_input_hashes(),
         "runner_sha256": runner_sha256(),
+        "amendments": AMENDMENTS,
     }
     OUTPUT.mkdir(parents=True, exist_ok=True)
     path = OUTPUT / "protocol.json"
@@ -156,7 +178,7 @@ def run():
             profiles = tuple(Profile(**row) for row in prepared["profiles"])
             advocates = frozenset(prepared["positions"]["TH"])
             result = run_one(network, profiles, advocates, bank, settings,
-                             group_seed(name, graph, repeat), "TH", output, True)
+                             amended_group_seed(name, graph, repeat), "TH", output, True)
         return {"condition": name, "graph": graph, "repeat": repeat, **result}
 
     with ThreadPoolExecutor(max_workers=18) as pool:
