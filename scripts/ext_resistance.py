@@ -145,7 +145,8 @@ def analyze():
         if len(row["metrics"]) != 10:
             raise ValueError(f"{row['condition']}-g{row['graph']}-r{row['repeat']} has "
                              f"{len(row['metrics'])} rounds, expected 10")
-        if not all(0.2 <= metric["true_advocate_support"] <= 0.25 for metric in row["metrics"]):
+        if not all(0.2 - 1e-9 <= metric["true_advocate_support"] <= 0.25 + 1e-9
+                   for metric in row["metrics"]):
             raise ValueError(f"{row['condition']}-g{row['graph']}-r{row['repeat']}: true advocate share "
                              "outside [0.2, 0.25]; Qill definition check failed")
     output = {"outcomes": {}, "persistence": None, "trajectories": {}}
