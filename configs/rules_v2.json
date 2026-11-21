@@ -1,0 +1,27 @@
+{
+  "schema_version": 2,
+  "perception": {
+    "observer": "llm",
+    "nonobserver": "local_proxy",
+    "nonobserver_empty_reading": "carry_forward",
+    "observer_public_signal": "delayed_upper_bound_only"
+  },
+  "reading": {
+    "window": 2,
+    "read_limit": 11,
+    "sampling": "without_replacement",
+    "v1_baseline_read_limit": 5
+  },
+  "comments": {
+    "max_comments": 3,
+    "share_distribution": "Beta(1,9)",
+    "count_distribution": "1 + Binomial(max_comments - 1, share)",
+    "target_sampling": "without_replacement",
+    "message_identity": "node-round-comment-slot"
+  },
+  "migration": {
+    "v1_results_immutable": true,
+    "offline_replay_required": true,
+    "api_pilot_required": true
+  }
+}
