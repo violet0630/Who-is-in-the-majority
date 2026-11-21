@@ -43,7 +43,24 @@ class StudyTests(unittest.TestCase):
         self.assertEqual(set(spy.calls), set(self.network.observers))
         self.assertEqual(len(spy.calls), 50)
 
-    def test_nonobserver_decisions_ignore_perceived_climate(self):
+    def test_nonobserver_local_proxy_updates_perception(self):
+        class Spy:
+            calls = []
+            def estimate(self, request):
+                self.calls.append(request.node)
+                return PerceptionResult(0.7, "{}")
+        spy = Spy()
+        perception = ObserverPerception(self.network.observers, self.bank, spy)
+        node = next(i for i in range(100) if i not in self.network.observers)
+        text = next(item.text for item in self.bank.originals if item.stance == Stance.SUPPORT)
+        request = PerceptionRequest(node, self.profiles[node], AgentState(Stance.SUPPORT), (),
+                                    Exposure(1, (ViewedMessage("m", 1, 1, text.body, None),), ()))
+        result = perception.estimate(request)
+        self.assertGreater(result.support, 0.5)
+        self.assertEqual(result.model, "local_proxy")
+        self.assertNotIn(node, spy.calls)
+
+    def test_nonobserver_decisions_use_perceived_climate(self):
         simulation = ObserverSimulation(self.network, self.profiles, self.positions["U0"], self.bank,
             coefficients_from(SETTINGS), RunConfig(), ObserverPerception(self.network.observers, self.bank),
             RandomStreams(126, "paired"), "U0")
@@ -53,7 +70,7 @@ class StudyTests(unittest.TestCase):
                                             text, None, frozenset({node}))
         first = simulation._decide(node, 2, AgentState(Stance.SUPPORT, 0.1, 0.2), ("m",))
         second = simulation._decide(node, 2, AgentState(Stance.SUPPORT, 0.9, 0.2), ("m",))
-        self.assertEqual(first, second)
+        self.assertNotEqual(first, second)
 
     def test_position_matching_and_constraints(self):
         self.assertEqual(len(self.network.observers), 50)

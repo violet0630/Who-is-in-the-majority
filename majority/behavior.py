@@ -4,7 +4,7 @@ from dataclasses import replace
 from math import exp, log, log1p
 
 from .models import (
-    Action, ActionProbabilities, AgentState, Coefficients, Decision,
+    Action, ActionProbabilities, AgentState, Coefficients, CommentDecision, Decision,
     Message, Profile, RunConfig,
 )
 from .randomness import RandomStreams
@@ -56,9 +56,18 @@ def decide(
         return Decision(Action.SILENT, probabilities)
     if streams.for_event(node, round, "comment").random() >= c:
         return Decision(Action.POST, probabilities, int(state.stance))
-    index = streams.for_event(node, round, "target").randrange(len(targets))
-    target = targets[index]
-    agrees = streams.for_event(node, round, "stance").random() < agreement[index]
-    action = Action.AGREE if agrees else Action.DISAGREE
-    stance = int(target.stance) if agrees else -int(target.stance)
-    return Decision(action, probabilities, stance, target.id)
+    count_rng = streams.for_event(node, round, "comment_count")
+    share = count_rng.betavariate(config.comment_alpha, config.comment_beta)
+    count = 1 + sum(count_rng.random() < share for _ in range(config.max_comments - 1))
+    count = min(count, len(targets))
+    target_rng = streams.for_event(node, round, "comment_targets")
+    indexes = target_rng.sample(range(len(targets)), count)
+    comments = []
+    for slot, index in enumerate(indexes):
+        target = targets[index]
+        agrees = streams.for_event(node, round, f"stance:{slot}").random() < agreement[index]
+        action = Action.AGREE if agrees else Action.DISAGREE
+        stance = int(target.stance) if agrees else -int(target.stance)
+        comments.append(CommentDecision(action, target.id, stance))
+    first = comments[0]
+    return Decision(first.action, probabilities, first.public_stance, first.target_id, tuple(comments))

@@ -48,6 +48,21 @@ class CoreTests(unittest.TestCase):
             self.assertEqual(decision.probabilities.agree + decision.probabilities.disagree, 0)
             self.assertAlmostEqual(sum(asdict(decision.probabilities).values()), 1)
 
+    def test_v2_read_limit_and_comment_count_bounds(self):
+        self.assertEqual(RunConfig().read_limit, 11)
+        target_messages = tuple(self.original(f"target-{i}", author=i + 1) for i in range(5))
+        config = replace(self.config, max_comments=3, comment_alpha=9, comment_beta=1)
+        counts = []
+        for seed in range(50):
+            decision = decide(0, seed + 1, Profile(0.9, 0.8), AgentState(Stance.SUPPORT),
+                              False, target_messages, self.coefficients, config, RandomStreams(seed))
+            if decision.comments:
+                counts.append(decision.comments)
+                self.assertLessEqual(len(decision.comments), 3)
+                self.assertEqual(len({comment.target_id for comment in decision.comments}),
+                                 len(decision.comments))
+        self.assertTrue(any(len(comments) > 1 for comments in counts))
+
     def test_advocates_publicly_support_both_target_stances(self):
         coefficients = Coefficients((1000, 0, 0, 0), 1, 1)
         for stance in Stance:
