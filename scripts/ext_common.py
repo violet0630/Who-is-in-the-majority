@@ -171,8 +171,7 @@ def paired_condition_inference(rows: list[dict], comparisons: list[tuple[str, st
 
 def unpaired_condition_inference(rows: list[dict], comparisons: list[tuple[str, str]],
                                  *, repeats: int = 10000, seed: int = 42) -> dict:
-    """Conditions on different networks: independent graph-stratified bootstrap per condition,
-    difference distribution, shifted-null two-sided p, Holm adjustment."""
+    """Bootstrap within fixed graphs and describe the uncentered difference distribution."""
     conditions = sorted({cond for pair in comparisons for cond in pair})
     per_graph = {cond: {} for cond in conditions}
     for row in rows:
@@ -200,7 +199,9 @@ def unpaired_condition_inference(rows: list[dict], comparisons: list[tuple[str, 
         result.append({"conditions": [first, second], "difference": difference,
                        "ci95": [values[int(0.025 * (repeats - 1))], values[int(0.975 * (repeats - 1))]],
                        "p_value": pvalue, "paired": False})
-    return _finish(result, conditions, repeats, paired=False)
+    output = _finish(result, conditions, repeats, paired=False)
+    output["statistics"] += "; p_value describes the uncentered bootstrap sign tails conditional on fixed graphs"
+    return output
 
 
 def _finish(comparison_rows: list[dict], conditions: list[str], repeats: int, *, paired: bool) -> dict:

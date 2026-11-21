@@ -12,8 +12,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 from majority.llm import prompt_hash
-from scripts.ext_common import (FROZEN_SETTINGS, check_archived_protocol, csv_file, frozen_input_hashes, load_frozen_group,
-                                mean_summary, paired_condition_inference, persistence_rows, pp,
+from scripts.ext_common import (FROZEN_SETTINGS, check_archived_protocol, csv_file, frozen_input_hashes, holm,
+                                load_frozen_group, mean_summary, paired_condition_inference, persistence_rows, pp,
                                 runner_sha256, tail_rows, verify_frozen_inputs, write_archive_manifest, write_json)
 from scripts.majority_study import active_bank, load_bank, run_one, save_json
 
@@ -154,6 +154,13 @@ def analyze():
     output = {"outcomes": {}, "persistence": None, "trajectories": {}}
     for field in METRIC_LABELS:
         output["outcomes"][field] = paired_condition_inference(tail_rows(rows, field), [["R1", "R0"]])
+    primary_comparisons = [result["comparisons"][0] for result in output["outcomes"].values()]
+    for comparison, adjusted in zip(primary_comparisons, holm([row["p_value"] for row in primary_comparisons])):
+        comparison["p_holm"] = adjusted
+    output["holm_family"] = {
+        "outcomes": list(METRIC_LABELS),
+        "persistence": "separate comparison",
+    }
     output["persistence"] = paired_condition_inference(persistence_rows(rows), [["R1", "R0"]])
     write_json(OUTPUT / "inference.json", output)
     per_round = {}
@@ -205,9 +212,9 @@ def _report(output, rows):
     lines = ["# 拓展一：个体抵抗力实验结果", "", "2026-11-20", "",
              "## 口径", "",
              "两条件共用提示词 perception_attitude（v2，输出四字段）；R0 解析但不应用 new_stance，R1 应用。",
-             "只有观察者的私人立场允许更新（倡议者与其余950名普通节点立场始终固定），反对派占比上限 (200+50)/1000=25%，",
+             "只有50名观察者的私人立场允许更新（其余950名节点包括倡议者，立场始终固定），反对派占比上限 (200+50)/1000=25%，",
              "Qill（反对者被误判为多数）的定义全程有效。新立场与下一轮消息一起提交，公开偏离按同一轮私人立场统计。",
-             "配对单位与主实验一完全一致；每个指标构成1项配对比较（符号翻转p=Holm p）。",
+             "配对单位与主实验一完全一致。Qill、J、C、S− 四个符号翻转检验统一作 Holm 校正，持续性单列。",
              "无缺失轨迹；如有缺失会停止分析而不插补。", "",
              "## 主要结果（R1 − R0）", "",
              "| 指标 | 差异（百分点） | 95% CI | p（Holm） |", "|---|---:|---:|---:|"]
