@@ -28,7 +28,7 @@ def read_feed(
 
 def make_message(
     branch: str, node: int, round: int, decision: Decision, network: Network,
-    bank: TextBank, messages: Mapping[str, Message], config: RunConfig, rng: Random,
+    bank: TextBank, messages: Mapping[str, Message], config: RunConfig, rng: Random, slot: int = 0,
 ) -> Message:
     audience = network.fans[node]
     if decision.action == Action.POST:
@@ -43,7 +43,8 @@ def make_message(
     else:
         raise ValueError("沉默不产生消息")
     text = rng.choice(sorted(candidates, key=lambda item: item.id))
+    message_id = f"{branch}:{round}:{node}" if slot == 0 else f"{branch}:{round}:{node}:c{slot}"
     return Message(
-        f"{branch}:{round}:{node}", node, round, decision.action,
+        message_id, node, round, decision.action,
         Stance(decision.public_stance), text, decision.target_id, audience - {node},
     )
