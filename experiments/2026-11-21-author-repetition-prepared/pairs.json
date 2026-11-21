@@ -1,0 +1,3898 @@
+{
+  "api_runs": 0,
+  "config_sha256": "01193584b6c2b836c68f0de37f3da23bdbe1b45225a5c63d1bd744623a93378d",
+  "prompt_sha256": "0809e60460beed212da687b21e2569d9946088fdb3ae09ec061cb6ff64a07e6d",
+  "seed": 20261121,
+  "model": "deepseek-v4-flash",
+  "temperature": 0,
+  "pairs": [
+    {
+      "id": "library_hours-support-01",
+      "topic_id": "library_hours",
+      "focal_stance": 1,
+      "counter_message_position": 0,
+      "conditions": {
+        "repeated_author": {
+          "topic": "你是否支持社区图书馆在周末延迟一小时闭馆？",
+          "scenario": "这是模拟社区中的虚构讨论。只根据个人实际阅读的内容作判断，请勿代入其他社区或真实调查结果。",
+          "self": {
+            "node": 0,
+            "private_stance": 1,
+            "strength": 0.4,
+            "previous_support": 0.5
+          },
+          "history": [
+            {
+              "round": 1,
+              "messages": [
+                {
+                  "id": "r1-u366",
+                  "author": 366,
+                  "round": 1,
+                  "text": "先改善现在的自习座位和借阅服务，暂时无需晚一小时闭馆。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 2,
+              "messages": [
+                {
+                  "id": "r2-u971",
+                  "author": 971,
+                  "round": 2,
+                  "text": "周末稍晚闭馆，让白天有事的人也能在傍晚借还书。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 3,
+              "messages": [
+                {
+                  "id": "r3-u971",
+                  "author": 971,
+                  "round": 3,
+                  "text": "多一小时可以给自习的人留出收尾时间，我支持延迟闭馆。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 4,
+              "messages": [
+                {
+                  "id": "r4-u971",
+                  "author": 971,
+                  "round": 4,
+                  "text": "如果只有周末调整，新增时段比较集中，值得试试看。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            }
+          ],
+          "current": {
+            "round": 5,
+            "messages": [
+              {
+                "id": "r5-u971",
+                "author": 971,
+                "round": 5,
+                "text": "周末晚上有个安静的公共空间，延长开放时间有用。",
+                "original_id": null
+              }
+            ],
+            "context": []
+          }
+        },
+        "distinct_authors": {
+          "topic": "你是否支持社区图书馆在周末延迟一小时闭馆？",
+          "scenario": "这是模拟社区中的虚构讨论。只根据个人实际阅读的内容作判断，请勿代入其他社区或真实调查结果。",
+          "self": {
+            "node": 0,
+            "private_stance": 1,
+            "strength": 0.4,
+            "previous_support": 0.5
+          },
+          "history": [
+            {
+              "round": 1,
+              "messages": [
+                {
+                  "id": "r1-u366",
+                  "author": 366,
+                  "round": 1,
+                  "text": "先改善现在的自习座位和借阅服务，暂时无需晚一小时闭馆。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 2,
+              "messages": [
+                {
+                  "id": "r2-u971",
+                  "author": 971,
+                  "round": 2,
+                  "text": "周末稍晚闭馆，让白天有事的人也能在傍晚借还书。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 3,
+              "messages": [
+                {
+                  "id": "r3-u549",
+                  "author": 549,
+                  "round": 3,
+                  "text": "多一小时可以给自习的人留出收尾时间，我支持延迟闭馆。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 4,
+              "messages": [
+                {
+                  "id": "r4-u188",
+                  "author": 188,
+                  "round": 4,
+                  "text": "如果只有周末调整，新增时段比较集中，值得试试看。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            }
+          ],
+          "current": {
+            "round": 5,
+            "messages": [
+              {
+                "id": "r5-u297",
+                "author": 297,
+                "round": 5,
+                "text": "周末晚上有个安静的公共空间，延长开放时间有用。",
+                "original_id": null
+              }
+            ],
+            "context": []
+          }
+        }
+      }
+    },
+    {
+      "id": "library_hours-support-02",
+      "topic_id": "library_hours",
+      "focal_stance": 1,
+      "counter_message_position": 1,
+      "conditions": {
+        "repeated_author": {
+          "topic": "你是否支持社区图书馆在周末延迟一小时闭馆？",
+          "scenario": "这是模拟社区中的虚构讨论。只根据个人实际阅读的内容作判断，请勿代入其他社区或真实调查结果。",
+          "self": {
+            "node": 0,
+            "private_stance": -1,
+            "strength": 0.4,
+            "previous_support": 0.5
+          },
+          "history": [
+            {
+              "round": 1,
+              "messages": [
+                {
+                  "id": "r1-u818",
+                  "author": 818,
+                  "round": 1,
+                  "text": "多一小时可以给自习的人留出收尾时间，我支持延迟闭馆。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 2,
+              "messages": [
+                {
+                  "id": "r2-u85",
+                  "author": 85,
+                  "round": 2,
+                  "text": "保持时间稳定方便形成习惯，我更愿意沿用当前安排。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 3,
+              "messages": [
+                {
+                  "id": "r3-u818",
+                  "author": 818,
+                  "round": 3,
+                  "text": "如果只有周末调整，新增时段比较集中，值得试试看。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 4,
+              "messages": [
+                {
+                  "id": "r4-u818",
+                  "author": 818,
+                  "round": 4,
+                  "text": "周末晚上有个安静的公共空间，延长开放时间有用。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            }
+          ],
+          "current": {
+            "round": 5,
+            "messages": [
+              {
+                "id": "r5-u818",
+                "author": 818,
+                "round": 5,
+                "text": "公布新的安排后可以再统计人流，我倾向于先延迟闭馆。",
+                "original_id": null
+              }
+            ],
+            "context": []
+          }
+        },
+        "distinct_authors": {
+          "topic": "你是否支持社区图书馆在周末延迟一小时闭馆？",
+          "scenario": "这是模拟社区中的虚构讨论。只根据个人实际阅读的内容作判断，请勿代入其他社区或真实调查结果。",
+          "self": {
+            "node": 0,
+            "private_stance": -1,
+            "strength": 0.4,
+            "previous_support": 0.5
+          },
+          "history": [
+            {
+              "round": 1,
+              "messages": [
+                {
+                  "id": "r1-u818",
+                  "author": 818,
+                  "round": 1,
+                  "text": "多一小时可以给自习的人留出收尾时间，我支持延迟闭馆。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 2,
+              "messages": [
+                {
+                  "id": "r2-u85",
+                  "author": 85,
+                  "round": 2,
+                  "text": "保持时间稳定方便形成习惯，我更愿意沿用当前安排。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 3,
+              "messages": [
+                {
+                  "id": "r3-u633",
+                  "author": 633,
+                  "round": 3,
+                  "text": "如果只有周末调整，新增时段比较集中，值得试试看。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 4,
+              "messages": [
+                {
+                  "id": "r4-u94",
+                  "author": 94,
+                  "round": 4,
+                  "text": "周末晚上有个安静的公共空间，延长开放时间有用。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            }
+          ],
+          "current": {
+            "round": 5,
+            "messages": [
+              {
+                "id": "r5-u355",
+                "author": 355,
+                "round": 5,
+                "text": "公布新的安排后可以再统计人流，我倾向于先延迟闭馆。",
+                "original_id": null
+              }
+            ],
+            "context": []
+          }
+        }
+      }
+    },
+    {
+      "id": "library_hours-support-03",
+      "topic_id": "library_hours",
+      "focal_stance": 1,
+      "counter_message_position": 2,
+      "conditions": {
+        "repeated_author": {
+          "topic": "你是否支持社区图书馆在周末延迟一小时闭馆？",
+          "scenario": "这是模拟社区中的虚构讨论。只根据个人实际阅读的内容作判断，请勿代入其他社区或真实调查结果。",
+          "self": {
+            "node": 0,
+            "private_stance": 1,
+            "strength": 0.8,
+            "previous_support": 0.5
+          },
+          "history": [
+            {
+              "round": 1,
+              "messages": [
+                {
+                  "id": "r1-u14",
+                  "author": 14,
+                  "round": 1,
+                  "text": "如果只有周末调整，新增时段比较集中，值得试试看。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 2,
+              "messages": [
+                {
+                  "id": "r2-u14",
+                  "author": 14,
+                  "round": 2,
+                  "text": "周末晚上有个安静的公共空间，延长开放时间有用。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 3,
+              "messages": [
+                {
+                  "id": "r3-u380",
+                  "author": 380,
+                  "round": 3,
+                  "text": "夜间还要留出整理和维护时间，我倾向维持原来的闭馆时点。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 4,
+              "messages": [
+                {
+                  "id": "r4-u14",
+                  "author": 14,
+                  "round": 4,
+                  "text": "公布新的安排后可以再统计人流，我倾向于先延迟闭馆。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            }
+          ],
+          "current": {
+            "round": 5,
+            "messages": [
+              {
+                "id": "r5-u14",
+                "author": 14,
+                "round": 5,
+                "text": "增开这一小时能把集中借书的人流分散一些，我赞成。",
+                "original_id": null
+              }
+            ],
+            "context": []
+          }
+        },
+        "distinct_authors": {
+          "topic": "你是否支持社区图书馆在周末延迟一小时闭馆？",
+          "scenario": "这是模拟社区中的虚构讨论。只根据个人实际阅读的内容作判断，请勿代入其他社区或真实调查结果。",
+          "self": {
+            "node": 0,
+            "private_stance": 1,
+            "strength": 0.8,
+            "previous_support": 0.5
+          },
+          "history": [
+            {
+              "round": 1,
+              "messages": [
+                {
+                  "id": "r1-u14",
+                  "author": 14,
+                  "round": 1,
+                  "text": "如果只有周末调整，新增时段比较集中，值得试试看。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 2,
+              "messages": [
+                {
+                  "id": "r2-u993",
+                  "author": 993,
+                  "round": 2,
+                  "text": "周末晚上有个安静的公共空间，延长开放时间有用。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 3,
+              "messages": [
+                {
+                  "id": "r3-u380",
+                  "author": 380,
+                  "round": 3,
+                  "text": "夜间还要留出整理和维护时间，我倾向维持原来的闭馆时点。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 4,
+              "messages": [
+                {
+                  "id": "r4-u195",
+                  "author": 195,
+                  "round": 4,
+                  "text": "公布新的安排后可以再统计人流，我倾向于先延迟闭馆。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            }
+          ],
+          "current": {
+            "round": 5,
+            "messages": [
+              {
+                "id": "r5-u174",
+                "author": 174,
+                "round": 5,
+                "text": "增开这一小时能把集中借书的人流分散一些，我赞成。",
+                "original_id": null
+              }
+            ],
+            "context": []
+          }
+        }
+      }
+    },
+    {
+      "id": "library_hours-support-04",
+      "topic_id": "library_hours",
+      "focal_stance": 1,
+      "counter_message_position": 3,
+      "conditions": {
+        "repeated_author": {
+          "topic": "你是否支持社区图书馆在周末延迟一小时闭馆？",
+          "scenario": "这是模拟社区中的虚构讨论。只根据个人实际阅读的内容作判断，请勿代入其他社区或真实调查结果。",
+          "self": {
+            "node": 0,
+            "private_stance": -1,
+            "strength": 0.8,
+            "previous_support": 0.5
+          },
+          "history": [
+            {
+              "round": 1,
+              "messages": [
+                {
+                  "id": "r1-u368",
+                  "author": 368,
+                  "round": 1,
+                  "text": "周末晚上有个安静的公共空间，延长开放时间有用。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 2,
+              "messages": [
+                {
+                  "id": "r2-u368",
+                  "author": 368,
+                  "round": 2,
+                  "text": "公布新的安排后可以再统计人流，我倾向于先延迟闭馆。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 3,
+              "messages": [
+                {
+                  "id": "r3-u368",
+                  "author": 368,
+                  "round": 3,
+                  "text": "增开这一小时能把集中借书的人流分散一些，我赞成。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 4,
+              "messages": [
+                {
+                  "id": "r4-u382",
+                  "author": 382,
+                  "round": 4,
+                  "text": "多加一小时未必解决白天高峰的问题，先别改闭馆时间。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            }
+          ],
+          "current": {
+            "round": 5,
+            "messages": [
+              {
+                "id": "r5-u368",
+                "author": 368,
+                "round": 5,
+                "text": "周末稍晚闭馆，让白天有事的人也能在傍晚借还书。",
+                "original_id": null
+              }
+            ],
+            "context": []
+          }
+        },
+        "distinct_authors": {
+          "topic": "你是否支持社区图书馆在周末延迟一小时闭馆？",
+          "scenario": "这是模拟社区中的虚构讨论。只根据个人实际阅读的内容作判断，请勿代入其他社区或真实调查结果。",
+          "self": {
+            "node": 0,
+            "private_stance": -1,
+            "strength": 0.8,
+            "previous_support": 0.5
+          },
+          "history": [
+            {
+              "round": 1,
+              "messages": [
+                {
+                  "id": "r1-u368",
+                  "author": 368,
+                  "round": 1,
+                  "text": "周末晚上有个安静的公共空间，延长开放时间有用。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 2,
+              "messages": [
+                {
+                  "id": "r2-u184",
+                  "author": 184,
+                  "round": 2,
+                  "text": "公布新的安排后可以再统计人流，我倾向于先延迟闭馆。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 3,
+              "messages": [
+                {
+                  "id": "r3-u178",
+                  "author": 178,
+                  "round": 3,
+                  "text": "增开这一小时能把集中借书的人流分散一些，我赞成。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 4,
+              "messages": [
+                {
+                  "id": "r4-u382",
+                  "author": 382,
+                  "round": 4,
+                  "text": "多加一小时未必解决白天高峰的问题，先别改闭馆时间。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            }
+          ],
+          "current": {
+            "round": 5,
+            "messages": [
+              {
+                "id": "r5-u619",
+                "author": 619,
+                "round": 5,
+                "text": "周末稍晚闭馆，让白天有事的人也能在傍晚借还书。",
+                "original_id": null
+              }
+            ],
+            "context": []
+          }
+        }
+      }
+    },
+    {
+      "id": "library_hours-support-05",
+      "topic_id": "library_hours",
+      "focal_stance": 1,
+      "counter_message_position": 4,
+      "conditions": {
+        "repeated_author": {
+          "topic": "你是否支持社区图书馆在周末延迟一小时闭馆？",
+          "scenario": "这是模拟社区中的虚构讨论。只根据个人实际阅读的内容作判断，请勿代入其他社区或真实调查结果。",
+          "self": {
+            "node": 0,
+            "private_stance": 1,
+            "strength": 0.4,
+            "previous_support": 0.5
+          },
+          "history": [
+            {
+              "round": 1,
+              "messages": [
+                {
+                  "id": "r1-u413",
+                  "author": 413,
+                  "round": 1,
+                  "text": "公布新的安排后可以再统计人流，我倾向于先延迟闭馆。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 2,
+              "messages": [
+                {
+                  "id": "r2-u413",
+                  "author": 413,
+                  "round": 2,
+                  "text": "增开这一小时能把集中借书的人流分散一些，我赞成。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 3,
+              "messages": [
+                {
+                  "id": "r3-u413",
+                  "author": 413,
+                  "round": 3,
+                  "text": "周末稍晚闭馆，让白天有事的人也能在傍晚借还书。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 4,
+              "messages": [
+                {
+                  "id": "r4-u413",
+                  "author": 413,
+                  "round": 4,
+                  "text": "多一小时可以给自习的人留出收尾时间，我支持延迟闭馆。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            }
+          ],
+          "current": {
+            "round": 5,
+            "messages": [
+              {
+                "id": "r5-u932",
+                "author": 932,
+                "round": 5,
+                "text": "晚间时间里人流可能有限，维持现有闭馆时间更稳妥。",
+                "original_id": null
+              }
+            ],
+            "context": []
+          }
+        },
+        "distinct_authors": {
+          "topic": "你是否支持社区图书馆在周末延迟一小时闭馆？",
+          "scenario": "这是模拟社区中的虚构讨论。只根据个人实际阅读的内容作判断，请勿代入其他社区或真实调查结果。",
+          "self": {
+            "node": 0,
+            "private_stance": 1,
+            "strength": 0.4,
+            "previous_support": 0.5
+          },
+          "history": [
+            {
+              "round": 1,
+              "messages": [
+                {
+                  "id": "r1-u413",
+                  "author": 413,
+                  "round": 1,
+                  "text": "公布新的安排后可以再统计人流，我倾向于先延迟闭馆。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 2,
+              "messages": [
+                {
+                  "id": "r2-u369",
+                  "author": 369,
+                  "round": 2,
+                  "text": "增开这一小时能把集中借书的人流分散一些，我赞成。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 3,
+              "messages": [
+                {
+                  "id": "r3-u362",
+                  "author": 362,
+                  "round": 3,
+                  "text": "周末稍晚闭馆，让白天有事的人也能在傍晚借还书。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 4,
+              "messages": [
+                {
+                  "id": "r4-u626",
+                  "author": 626,
+                  "round": 4,
+                  "text": "多一小时可以给自习的人留出收尾时间，我支持延迟闭馆。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            }
+          ],
+          "current": {
+            "round": 5,
+            "messages": [
+              {
+                "id": "r5-u932",
+                "author": 932,
+                "round": 5,
+                "text": "晚间时间里人流可能有限，维持现有闭馆时间更稳妥。",
+                "original_id": null
+              }
+            ],
+            "context": []
+          }
+        }
+      }
+    },
+    {
+      "id": "library_hours-support-06",
+      "topic_id": "library_hours",
+      "focal_stance": 1,
+      "counter_message_position": 0,
+      "conditions": {
+        "repeated_author": {
+          "topic": "你是否支持社区图书馆在周末延迟一小时闭馆？",
+          "scenario": "这是模拟社区中的虚构讨论。只根据个人实际阅读的内容作判断，请勿代入其他社区或真实调查结果。",
+          "self": {
+            "node": 0,
+            "private_stance": -1,
+            "strength": 0.4,
+            "previous_support": 0.5
+          },
+          "history": [
+            {
+              "round": 1,
+              "messages": [
+                {
+                  "id": "r1-u89",
+                  "author": 89,
+                  "round": 1,
+                  "text": "延长开放需要增加值班安排，现阶段我不支持这项调整。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 2,
+              "messages": [
+                {
+                  "id": "r2-u128",
+                  "author": 128,
+                  "round": 2,
+                  "text": "增开这一小时能把集中借书的人流分散一些，我赞成。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 3,
+              "messages": [
+                {
+                  "id": "r3-u128",
+                  "author": 128,
+                  "round": 3,
+                  "text": "周末稍晚闭馆，让白天有事的人也能在傍晚借还书。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 4,
+              "messages": [
+                {
+                  "id": "r4-u128",
+                  "author": 128,
+                  "round": 4,
+                  "text": "多一小时可以给自习的人留出收尾时间，我支持延迟闭馆。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            }
+          ],
+          "current": {
+            "round": 5,
+            "messages": [
+              {
+                "id": "r5-u128",
+                "author": 128,
+                "round": 5,
+                "text": "如果只有周末调整，新增时段比较集中，值得试试看。",
+                "original_id": null
+              }
+            ],
+            "context": []
+          }
+        },
+        "distinct_authors": {
+          "topic": "你是否支持社区图书馆在周末延迟一小时闭馆？",
+          "scenario": "这是模拟社区中的虚构讨论。只根据个人实际阅读的内容作判断，请勿代入其他社区或真实调查结果。",
+          "self": {
+            "node": 0,
+            "private_stance": -1,
+            "strength": 0.4,
+            "previous_support": 0.5
+          },
+          "history": [
+            {
+              "round": 1,
+              "messages": [
+                {
+                  "id": "r1-u89",
+                  "author": 89,
+                  "round": 1,
+                  "text": "延长开放需要增加值班安排，现阶段我不支持这项调整。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 2,
+              "messages": [
+                {
+                  "id": "r2-u128",
+                  "author": 128,
+                  "round": 2,
+                  "text": "增开这一小时能把集中借书的人流分散一些，我赞成。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 3,
+              "messages": [
+                {
+                  "id": "r3-u260",
+                  "author": 260,
+                  "round": 3,
+                  "text": "周末稍晚闭馆，让白天有事的人也能在傍晚借还书。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 4,
+              "messages": [
+                {
+                  "id": "r4-u428",
+                  "author": 428,
+                  "round": 4,
+                  "text": "多一小时可以给自习的人留出收尾时间，我支持延迟闭馆。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            }
+          ],
+          "current": {
+            "round": 5,
+            "messages": [
+              {
+                "id": "r5-u950",
+                "author": 950,
+                "round": 5,
+                "text": "如果只有周末调整，新增时段比较集中，值得试试看。",
+                "original_id": null
+              }
+            ],
+            "context": []
+          }
+        }
+      }
+    },
+    {
+      "id": "library_hours-oppose-01",
+      "topic_id": "library_hours",
+      "focal_stance": -1,
+      "counter_message_position": 0,
+      "conditions": {
+        "repeated_author": {
+          "topic": "你是否支持社区图书馆在周末延迟一小时闭馆？",
+          "scenario": "这是模拟社区中的虚构讨论。只根据个人实际阅读的内容作判断，请勿代入其他社区或真实调查结果。",
+          "self": {
+            "node": 0,
+            "private_stance": -1,
+            "strength": 0.8,
+            "previous_support": 0.5
+          },
+          "history": [
+            {
+              "round": 1,
+              "messages": [
+                {
+                  "id": "r1-u104",
+                  "author": 104,
+                  "round": 1,
+                  "text": "如果只有周末调整，新增时段比较集中，值得试试看。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 2,
+              "messages": [
+                {
+                  "id": "r2-u490",
+                  "author": 490,
+                  "round": 2,
+                  "text": "晚间时间里人流可能有限，维持现有闭馆时间更稳妥。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 3,
+              "messages": [
+                {
+                  "id": "r3-u490",
+                  "author": 490,
+                  "round": 3,
+                  "text": "延长开放需要增加值班安排，现阶段我不支持这项调整。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 4,
+              "messages": [
+                {
+                  "id": "r4-u490",
+                  "author": 490,
+                  "round": 4,
+                  "text": "先改善现在的自习座位和借阅服务，暂时无需晚一小时闭馆。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            }
+          ],
+          "current": {
+            "round": 5,
+            "messages": [
+              {
+                "id": "r5-u490",
+                "author": 490,
+                "round": 5,
+                "text": "保持时间稳定方便形成习惯，我更愿意沿用当前安排。",
+                "original_id": null
+              }
+            ],
+            "context": []
+          }
+        },
+        "distinct_authors": {
+          "topic": "你是否支持社区图书馆在周末延迟一小时闭馆？",
+          "scenario": "这是模拟社区中的虚构讨论。只根据个人实际阅读的内容作判断，请勿代入其他社区或真实调查结果。",
+          "self": {
+            "node": 0,
+            "private_stance": -1,
+            "strength": 0.8,
+            "previous_support": 0.5
+          },
+          "history": [
+            {
+              "round": 1,
+              "messages": [
+                {
+                  "id": "r1-u104",
+                  "author": 104,
+                  "round": 1,
+                  "text": "如果只有周末调整，新增时段比较集中，值得试试看。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 2,
+              "messages": [
+                {
+                  "id": "r2-u490",
+                  "author": 490,
+                  "round": 2,
+                  "text": "晚间时间里人流可能有限，维持现有闭馆时间更稳妥。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 3,
+              "messages": [
+                {
+                  "id": "r3-u90",
+                  "author": 90,
+                  "round": 3,
+                  "text": "延长开放需要增加值班安排，现阶段我不支持这项调整。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 4,
+              "messages": [
+                {
+                  "id": "r4-u345",
+                  "author": 345,
+                  "round": 4,
+                  "text": "先改善现在的自习座位和借阅服务，暂时无需晚一小时闭馆。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            }
+          ],
+          "current": {
+            "round": 5,
+            "messages": [
+              {
+                "id": "r5-u162",
+                "author": 162,
+                "round": 5,
+                "text": "保持时间稳定方便形成习惯，我更愿意沿用当前安排。",
+                "original_id": null
+              }
+            ],
+            "context": []
+          }
+        }
+      }
+    },
+    {
+      "id": "library_hours-oppose-02",
+      "topic_id": "library_hours",
+      "focal_stance": -1,
+      "counter_message_position": 1,
+      "conditions": {
+        "repeated_author": {
+          "topic": "你是否支持社区图书馆在周末延迟一小时闭馆？",
+          "scenario": "这是模拟社区中的虚构讨论。只根据个人实际阅读的内容作判断，请勿代入其他社区或真实调查结果。",
+          "self": {
+            "node": 0,
+            "private_stance": 1,
+            "strength": 0.8,
+            "previous_support": 0.5
+          },
+          "history": [
+            {
+              "round": 1,
+              "messages": [
+                {
+                  "id": "r1-u246",
+                  "author": 246,
+                  "round": 1,
+                  "text": "延长开放需要增加值班安排，现阶段我不支持这项调整。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 2,
+              "messages": [
+                {
+                  "id": "r2-u12",
+                  "author": 12,
+                  "round": 2,
+                  "text": "周末晚上有个安静的公共空间，延长开放时间有用。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 3,
+              "messages": [
+                {
+                  "id": "r3-u246",
+                  "author": 246,
+                  "round": 3,
+                  "text": "先改善现在的自习座位和借阅服务，暂时无需晚一小时闭馆。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 4,
+              "messages": [
+                {
+                  "id": "r4-u246",
+                  "author": 246,
+                  "round": 4,
+                  "text": "保持时间稳定方便形成习惯，我更愿意沿用当前安排。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            }
+          ],
+          "current": {
+            "round": 5,
+            "messages": [
+              {
+                "id": "r5-u246",
+                "author": 246,
+                "round": 5,
+                "text": "夜间还要留出整理和维护时间，我倾向维持原来的闭馆时点。",
+                "original_id": null
+              }
+            ],
+            "context": []
+          }
+        },
+        "distinct_authors": {
+          "topic": "你是否支持社区图书馆在周末延迟一小时闭馆？",
+          "scenario": "这是模拟社区中的虚构讨论。只根据个人实际阅读的内容作判断，请勿代入其他社区或真实调查结果。",
+          "self": {
+            "node": 0,
+            "private_stance": 1,
+            "strength": 0.8,
+            "previous_support": 0.5
+          },
+          "history": [
+            {
+              "round": 1,
+              "messages": [
+                {
+                  "id": "r1-u246",
+                  "author": 246,
+                  "round": 1,
+                  "text": "延长开放需要增加值班安排，现阶段我不支持这项调整。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 2,
+              "messages": [
+                {
+                  "id": "r2-u12",
+                  "author": 12,
+                  "round": 2,
+                  "text": "周末晚上有个安静的公共空间，延长开放时间有用。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 3,
+              "messages": [
+                {
+                  "id": "r3-u705",
+                  "author": 705,
+                  "round": 3,
+                  "text": "先改善现在的自习座位和借阅服务，暂时无需晚一小时闭馆。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 4,
+              "messages": [
+                {
+                  "id": "r4-u225",
+                  "author": 225,
+                  "round": 4,
+                  "text": "保持时间稳定方便形成习惯，我更愿意沿用当前安排。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            }
+          ],
+          "current": {
+            "round": 5,
+            "messages": [
+              {
+                "id": "r5-u389",
+                "author": 389,
+                "round": 5,
+                "text": "夜间还要留出整理和维护时间，我倾向维持原来的闭馆时点。",
+                "original_id": null
+              }
+            ],
+            "context": []
+          }
+        }
+      }
+    },
+    {
+      "id": "library_hours-oppose-03",
+      "topic_id": "library_hours",
+      "focal_stance": -1,
+      "counter_message_position": 2,
+      "conditions": {
+        "repeated_author": {
+          "topic": "你是否支持社区图书馆在周末延迟一小时闭馆？",
+          "scenario": "这是模拟社区中的虚构讨论。只根据个人实际阅读的内容作判断，请勿代入其他社区或真实调查结果。",
+          "self": {
+            "node": 0,
+            "private_stance": -1,
+            "strength": 0.4,
+            "previous_support": 0.5
+          },
+          "history": [
+            {
+              "round": 1,
+              "messages": [
+                {
+                  "id": "r1-u941",
+                  "author": 941,
+                  "round": 1,
+                  "text": "先改善现在的自习座位和借阅服务，暂时无需晚一小时闭馆。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 2,
+              "messages": [
+                {
+                  "id": "r2-u941",
+                  "author": 941,
+                  "round": 2,
+                  "text": "保持时间稳定方便形成习惯，我更愿意沿用当前安排。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 3,
+              "messages": [
+                {
+                  "id": "r3-u892",
+                  "author": 892,
+                  "round": 3,
+                  "text": "公布新的安排后可以再统计人流，我倾向于先延迟闭馆。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 4,
+              "messages": [
+                {
+                  "id": "r4-u941",
+                  "author": 941,
+                  "round": 4,
+                  "text": "夜间还要留出整理和维护时间，我倾向维持原来的闭馆时点。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            }
+          ],
+          "current": {
+            "round": 5,
+            "messages": [
+              {
+                "id": "r5-u941",
+                "author": 941,
+                "round": 5,
+                "text": "多加一小时未必解决白天高峰的问题，先别改闭馆时间。",
+                "original_id": null
+              }
+            ],
+            "context": []
+          }
+        },
+        "distinct_authors": {
+          "topic": "你是否支持社区图书馆在周末延迟一小时闭馆？",
+          "scenario": "这是模拟社区中的虚构讨论。只根据个人实际阅读的内容作判断，请勿代入其他社区或真实调查结果。",
+          "self": {
+            "node": 0,
+            "private_stance": -1,
+            "strength": 0.4,
+            "previous_support": 0.5
+          },
+          "history": [
+            {
+              "round": 1,
+              "messages": [
+                {
+                  "id": "r1-u941",
+                  "author": 941,
+                  "round": 1,
+                  "text": "先改善现在的自习座位和借阅服务，暂时无需晚一小时闭馆。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 2,
+              "messages": [
+                {
+                  "id": "r2-u369",
+                  "author": 369,
+                  "round": 2,
+                  "text": "保持时间稳定方便形成习惯，我更愿意沿用当前安排。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 3,
+              "messages": [
+                {
+                  "id": "r3-u892",
+                  "author": 892,
+                  "round": 3,
+                  "text": "公布新的安排后可以再统计人流，我倾向于先延迟闭馆。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 4,
+              "messages": [
+                {
+                  "id": "r4-u543",
+                  "author": 543,
+                  "round": 4,
+                  "text": "夜间还要留出整理和维护时间，我倾向维持原来的闭馆时点。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            }
+          ],
+          "current": {
+            "round": 5,
+            "messages": [
+              {
+                "id": "r5-u778",
+                "author": 778,
+                "round": 5,
+                "text": "多加一小时未必解决白天高峰的问题，先别改闭馆时间。",
+                "original_id": null
+              }
+            ],
+            "context": []
+          }
+        }
+      }
+    },
+    {
+      "id": "library_hours-oppose-04",
+      "topic_id": "library_hours",
+      "focal_stance": -1,
+      "counter_message_position": 3,
+      "conditions": {
+        "repeated_author": {
+          "topic": "你是否支持社区图书馆在周末延迟一小时闭馆？",
+          "scenario": "这是模拟社区中的虚构讨论。只根据个人实际阅读的内容作判断，请勿代入其他社区或真实调查结果。",
+          "self": {
+            "node": 0,
+            "private_stance": 1,
+            "strength": 0.4,
+            "previous_support": 0.5
+          },
+          "history": [
+            {
+              "round": 1,
+              "messages": [
+                {
+                  "id": "r1-u936",
+                  "author": 936,
+                  "round": 1,
+                  "text": "保持时间稳定方便形成习惯，我更愿意沿用当前安排。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 2,
+              "messages": [
+                {
+                  "id": "r2-u936",
+                  "author": 936,
+                  "round": 2,
+                  "text": "夜间还要留出整理和维护时间，我倾向维持原来的闭馆时点。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 3,
+              "messages": [
+                {
+                  "id": "r3-u936",
+                  "author": 936,
+                  "round": 3,
+                  "text": "多加一小时未必解决白天高峰的问题，先别改闭馆时间。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 4,
+              "messages": [
+                {
+                  "id": "r4-u232",
+                  "author": 232,
+                  "round": 4,
+                  "text": "增开这一小时能把集中借书的人流分散一些，我赞成。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            }
+          ],
+          "current": {
+            "round": 5,
+            "messages": [
+              {
+                "id": "r5-u936",
+                "author": 936,
+                "round": 5,
+                "text": "晚间时间里人流可能有限，维持现有闭馆时间更稳妥。",
+                "original_id": null
+              }
+            ],
+            "context": []
+          }
+        },
+        "distinct_authors": {
+          "topic": "你是否支持社区图书馆在周末延迟一小时闭馆？",
+          "scenario": "这是模拟社区中的虚构讨论。只根据个人实际阅读的内容作判断，请勿代入其他社区或真实调查结果。",
+          "self": {
+            "node": 0,
+            "private_stance": 1,
+            "strength": 0.4,
+            "previous_support": 0.5
+          },
+          "history": [
+            {
+              "round": 1,
+              "messages": [
+                {
+                  "id": "r1-u936",
+                  "author": 936,
+                  "round": 1,
+                  "text": "保持时间稳定方便形成习惯，我更愿意沿用当前安排。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 2,
+              "messages": [
+                {
+                  "id": "r2-u669",
+                  "author": 669,
+                  "round": 2,
+                  "text": "夜间还要留出整理和维护时间，我倾向维持原来的闭馆时点。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 3,
+              "messages": [
+                {
+                  "id": "r3-u451",
+                  "author": 451,
+                  "round": 3,
+                  "text": "多加一小时未必解决白天高峰的问题，先别改闭馆时间。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 4,
+              "messages": [
+                {
+                  "id": "r4-u232",
+                  "author": 232,
+                  "round": 4,
+                  "text": "增开这一小时能把集中借书的人流分散一些，我赞成。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            }
+          ],
+          "current": {
+            "round": 5,
+            "messages": [
+              {
+                "id": "r5-u35",
+                "author": 35,
+                "round": 5,
+                "text": "晚间时间里人流可能有限，维持现有闭馆时间更稳妥。",
+                "original_id": null
+              }
+            ],
+            "context": []
+          }
+        }
+      }
+    },
+    {
+      "id": "library_hours-oppose-05",
+      "topic_id": "library_hours",
+      "focal_stance": -1,
+      "counter_message_position": 4,
+      "conditions": {
+        "repeated_author": {
+          "topic": "你是否支持社区图书馆在周末延迟一小时闭馆？",
+          "scenario": "这是模拟社区中的虚构讨论。只根据个人实际阅读的内容作判断，请勿代入其他社区或真实调查结果。",
+          "self": {
+            "node": 0,
+            "private_stance": -1,
+            "strength": 0.8,
+            "previous_support": 0.5
+          },
+          "history": [
+            {
+              "round": 1,
+              "messages": [
+                {
+                  "id": "r1-u210",
+                  "author": 210,
+                  "round": 1,
+                  "text": "夜间还要留出整理和维护时间，我倾向维持原来的闭馆时点。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 2,
+              "messages": [
+                {
+                  "id": "r2-u210",
+                  "author": 210,
+                  "round": 2,
+                  "text": "多加一小时未必解决白天高峰的问题，先别改闭馆时间。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 3,
+              "messages": [
+                {
+                  "id": "r3-u210",
+                  "author": 210,
+                  "round": 3,
+                  "text": "晚间时间里人流可能有限，维持现有闭馆时间更稳妥。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 4,
+              "messages": [
+                {
+                  "id": "r4-u210",
+                  "author": 210,
+                  "round": 4,
+                  "text": "延长开放需要增加值班安排，现阶段我不支持这项调整。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            }
+          ],
+          "current": {
+            "round": 5,
+            "messages": [
+              {
+                "id": "r5-u145",
+                "author": 145,
+                "round": 5,
+                "text": "周末稍晚闭馆，让白天有事的人也能在傍晚借还书。",
+                "original_id": null
+              }
+            ],
+            "context": []
+          }
+        },
+        "distinct_authors": {
+          "topic": "你是否支持社区图书馆在周末延迟一小时闭馆？",
+          "scenario": "这是模拟社区中的虚构讨论。只根据个人实际阅读的内容作判断，请勿代入其他社区或真实调查结果。",
+          "self": {
+            "node": 0,
+            "private_stance": -1,
+            "strength": 0.8,
+            "previous_support": 0.5
+          },
+          "history": [
+            {
+              "round": 1,
+              "messages": [
+                {
+                  "id": "r1-u210",
+                  "author": 210,
+                  "round": 1,
+                  "text": "夜间还要留出整理和维护时间，我倾向维持原来的闭馆时点。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 2,
+              "messages": [
+                {
+                  "id": "r2-u898",
+                  "author": 898,
+                  "round": 2,
+                  "text": "多加一小时未必解决白天高峰的问题，先别改闭馆时间。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 3,
+              "messages": [
+                {
+                  "id": "r3-u641",
+                  "author": 641,
+                  "round": 3,
+                  "text": "晚间时间里人流可能有限，维持现有闭馆时间更稳妥。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 4,
+              "messages": [
+                {
+                  "id": "r4-u189",
+                  "author": 189,
+                  "round": 4,
+                  "text": "延长开放需要增加值班安排，现阶段我不支持这项调整。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            }
+          ],
+          "current": {
+            "round": 5,
+            "messages": [
+              {
+                "id": "r5-u145",
+                "author": 145,
+                "round": 5,
+                "text": "周末稍晚闭馆，让白天有事的人也能在傍晚借还书。",
+                "original_id": null
+              }
+            ],
+            "context": []
+          }
+        }
+      }
+    },
+    {
+      "id": "library_hours-oppose-06",
+      "topic_id": "library_hours",
+      "focal_stance": -1,
+      "counter_message_position": 0,
+      "conditions": {
+        "repeated_author": {
+          "topic": "你是否支持社区图书馆在周末延迟一小时闭馆？",
+          "scenario": "这是模拟社区中的虚构讨论。只根据个人实际阅读的内容作判断，请勿代入其他社区或真实调查结果。",
+          "self": {
+            "node": 0,
+            "private_stance": 1,
+            "strength": 0.8,
+            "previous_support": 0.5
+          },
+          "history": [
+            {
+              "round": 1,
+              "messages": [
+                {
+                  "id": "r1-u389",
+                  "author": 389,
+                  "round": 1,
+                  "text": "多一小时可以给自习的人留出收尾时间，我支持延迟闭馆。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 2,
+              "messages": [
+                {
+                  "id": "r2-u279",
+                  "author": 279,
+                  "round": 2,
+                  "text": "多加一小时未必解决白天高峰的问题，先别改闭馆时间。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 3,
+              "messages": [
+                {
+                  "id": "r3-u279",
+                  "author": 279,
+                  "round": 3,
+                  "text": "晚间时间里人流可能有限，维持现有闭馆时间更稳妥。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 4,
+              "messages": [
+                {
+                  "id": "r4-u279",
+                  "author": 279,
+                  "round": 4,
+                  "text": "延长开放需要增加值班安排，现阶段我不支持这项调整。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            }
+          ],
+          "current": {
+            "round": 5,
+            "messages": [
+              {
+                "id": "r5-u279",
+                "author": 279,
+                "round": 5,
+                "text": "先改善现在的自习座位和借阅服务，暂时无需晚一小时闭馆。",
+                "original_id": null
+              }
+            ],
+            "context": []
+          }
+        },
+        "distinct_authors": {
+          "topic": "你是否支持社区图书馆在周末延迟一小时闭馆？",
+          "scenario": "这是模拟社区中的虚构讨论。只根据个人实际阅读的内容作判断，请勿代入其他社区或真实调查结果。",
+          "self": {
+            "node": 0,
+            "private_stance": 1,
+            "strength": 0.8,
+            "previous_support": 0.5
+          },
+          "history": [
+            {
+              "round": 1,
+              "messages": [
+                {
+                  "id": "r1-u389",
+                  "author": 389,
+                  "round": 1,
+                  "text": "多一小时可以给自习的人留出收尾时间，我支持延迟闭馆。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 2,
+              "messages": [
+                {
+                  "id": "r2-u279",
+                  "author": 279,
+                  "round": 2,
+                  "text": "多加一小时未必解决白天高峰的问题，先别改闭馆时间。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 3,
+              "messages": [
+                {
+                  "id": "r3-u645",
+                  "author": 645,
+                  "round": 3,
+                  "text": "晚间时间里人流可能有限，维持现有闭馆时间更稳妥。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 4,
+              "messages": [
+                {
+                  "id": "r4-u738",
+                  "author": 738,
+                  "round": 4,
+                  "text": "延长开放需要增加值班安排，现阶段我不支持这项调整。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            }
+          ],
+          "current": {
+            "round": 5,
+            "messages": [
+              {
+                "id": "r5-u868",
+                "author": 868,
+                "round": 5,
+                "text": "先改善现在的自习座位和借阅服务，暂时无需晚一小时闭馆。",
+                "original_id": null
+              }
+            ],
+            "context": []
+          }
+        }
+      }
+    },
+    {
+      "id": "room_booking-support-01",
+      "topic_id": "room_booking",
+      "focal_stance": 1,
+      "counter_message_position": 0,
+      "conditions": {
+        "repeated_author": {
+          "topic": "你是否支持社区活动室将周末预约上限从三小时改为两小时？",
+          "scenario": "这是模拟社区中的虚构讨论。只根据个人实际阅读的内容作判断，请勿代入其他社区或真实调查结果。",
+          "self": {
+            "node": 0,
+            "private_stance": 1,
+            "strength": 0.4,
+            "previous_support": 0.5
+          },
+          "history": [
+            {
+              "round": 1,
+              "messages": [
+                {
+                  "id": "r1-u964",
+                  "author": 964,
+                  "round": 1,
+                  "text": "长活动改成两段会增加排班冲突，三小时更方便。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 2,
+              "messages": [
+                {
+                  "id": "r2-u919",
+                  "author": 919,
+                  "round": 2,
+                  "text": "把预约上限改成两小时能把名额留给更多活动，我支持。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 3,
+              "messages": [
+                {
+                  "id": "r3-u919",
+                  "author": 919,
+                  "round": 3,
+                  "text": "短一些的时段便于周末轮换，改成两小时值得尝试。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 4,
+              "messages": [
+                {
+                  "id": "r4-u919",
+                  "author": 919,
+                  "round": 4,
+                  "text": "不少活动两小时能结束，缩短上限可以减少等待。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            }
+          ],
+          "current": {
+            "round": 5,
+            "messages": [
+              {
+                "id": "r5-u919",
+                "author": 919,
+                "round": 5,
+                "text": "紧张时段留出更多可选场次会更方便，我赞成调整。",
+                "original_id": null
+              }
+            ],
+            "context": []
+          }
+        },
+        "distinct_authors": {
+          "topic": "你是否支持社区活动室将周末预约上限从三小时改为两小时？",
+          "scenario": "这是模拟社区中的虚构讨论。只根据个人实际阅读的内容作判断，请勿代入其他社区或真实调查结果。",
+          "self": {
+            "node": 0,
+            "private_stance": 1,
+            "strength": 0.4,
+            "previous_support": 0.5
+          },
+          "history": [
+            {
+              "round": 1,
+              "messages": [
+                {
+                  "id": "r1-u964",
+                  "author": 964,
+                  "round": 1,
+                  "text": "长活动改成两段会增加排班冲突，三小时更方便。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 2,
+              "messages": [
+                {
+                  "id": "r2-u919",
+                  "author": 919,
+                  "round": 2,
+                  "text": "把预约上限改成两小时能把名额留给更多活动，我支持。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 3,
+              "messages": [
+                {
+                  "id": "r3-u392",
+                  "author": 392,
+                  "round": 3,
+                  "text": "短一些的时段便于周末轮换，改成两小时值得尝试。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 4,
+              "messages": [
+                {
+                  "id": "r4-u403",
+                  "author": 403,
+                  "round": 4,
+                  "text": "不少活动两小时能结束，缩短上限可以减少等待。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            }
+          ],
+          "current": {
+            "round": 5,
+            "messages": [
+              {
+                "id": "r5-u454",
+                "author": 454,
+                "round": 5,
+                "text": "紧张时段留出更多可选场次会更方便，我赞成调整。",
+                "original_id": null
+              }
+            ],
+            "context": []
+          }
+        }
+      }
+    },
+    {
+      "id": "room_booking-support-02",
+      "topic_id": "room_booking",
+      "focal_stance": 1,
+      "counter_message_position": 1,
+      "conditions": {
+        "repeated_author": {
+          "topic": "你是否支持社区活动室将周末预约上限从三小时改为两小时？",
+          "scenario": "这是模拟社区中的虚构讨论。只根据个人实际阅读的内容作判断，请勿代入其他社区或真实调查结果。",
+          "self": {
+            "node": 0,
+            "private_stance": -1,
+            "strength": 0.4,
+            "previous_support": 0.5
+          },
+          "history": [
+            {
+              "round": 1,
+              "messages": [
+                {
+                  "id": "r1-u607",
+                  "author": 607,
+                  "round": 1,
+                  "text": "短一些的时段便于周末轮换，改成两小时值得尝试。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 2,
+              "messages": [
+                {
+                  "id": "r2-u452",
+                  "author": 452,
+                  "round": 2,
+                  "text": "先观察实际预约需求，再考虑改变现在的上限。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 3,
+              "messages": [
+                {
+                  "id": "r3-u607",
+                  "author": 607,
+                  "round": 3,
+                  "text": "不少活动两小时能结束，缩短上限可以减少等待。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 4,
+              "messages": [
+                {
+                  "id": "r4-u607",
+                  "author": 607,
+                  "round": 4,
+                  "text": "紧张时段留出更多可选场次会更方便，我赞成调整。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            }
+          ],
+          "current": {
+            "round": 5,
+            "messages": [
+              {
+                "id": "r5-u607",
+                "author": 607,
+                "round": 5,
+                "text": "先改两小时，再统计使用率，可以检验是否更公平。",
+                "original_id": null
+              }
+            ],
+            "context": []
+          }
+        },
+        "distinct_authors": {
+          "topic": "你是否支持社区活动室将周末预约上限从三小时改为两小时？",
+          "scenario": "这是模拟社区中的虚构讨论。只根据个人实际阅读的内容作判断，请勿代入其他社区或真实调查结果。",
+          "self": {
+            "node": 0,
+            "private_stance": -1,
+            "strength": 0.4,
+            "previous_support": 0.5
+          },
+          "history": [
+            {
+              "round": 1,
+              "messages": [
+                {
+                  "id": "r1-u607",
+                  "author": 607,
+                  "round": 1,
+                  "text": "短一些的时段便于周末轮换，改成两小时值得尝试。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 2,
+              "messages": [
+                {
+                  "id": "r2-u452",
+                  "author": 452,
+                  "round": 2,
+                  "text": "先观察实际预约需求，再考虑改变现在的上限。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 3,
+              "messages": [
+                {
+                  "id": "r3-u686",
+                  "author": 686,
+                  "round": 3,
+                  "text": "不少活动两小时能结束，缩短上限可以减少等待。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 4,
+              "messages": [
+                {
+                  "id": "r4-u918",
+                  "author": 918,
+                  "round": 4,
+                  "text": "紧张时段留出更多可选场次会更方便，我赞成调整。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            }
+          ],
+          "current": {
+            "round": 5,
+            "messages": [
+              {
+                "id": "r5-u480",
+                "author": 480,
+                "round": 5,
+                "text": "先改两小时，再统计使用率，可以检验是否更公平。",
+                "original_id": null
+              }
+            ],
+            "context": []
+          }
+        }
+      }
+    },
+    {
+      "id": "room_booking-support-03",
+      "topic_id": "room_booking",
+      "focal_stance": 1,
+      "counter_message_position": 2,
+      "conditions": {
+        "repeated_author": {
+          "topic": "你是否支持社区活动室将周末预约上限从三小时改为两小时？",
+          "scenario": "这是模拟社区中的虚构讨论。只根据个人实际阅读的内容作判断，请勿代入其他社区或真实调查结果。",
+          "self": {
+            "node": 0,
+            "private_stance": 1,
+            "strength": 0.8,
+            "previous_support": 0.5
+          },
+          "history": [
+            {
+              "round": 1,
+              "messages": [
+                {
+                  "id": "r1-u281",
+                  "author": 281,
+                  "round": 1,
+                  "text": "不少活动两小时能结束，缩短上限可以减少等待。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 2,
+              "messages": [
+                {
+                  "id": "r2-u281",
+                  "author": 281,
+                  "round": 2,
+                  "text": "紧张时段留出更多可选场次会更方便，我赞成调整。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 3,
+              "messages": [
+                {
+                  "id": "r3-u622",
+                  "author": 622,
+                  "round": 3,
+                  "text": "两小时会压缩需要练习的活动，我倾向保持三小时。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 4,
+              "messages": [
+                {
+                  "id": "r4-u281",
+                  "author": 281,
+                  "round": 4,
+                  "text": "先改两小时，再统计使用率，可以检验是否更公平。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            }
+          ],
+          "current": {
+            "round": 5,
+            "messages": [
+              {
+                "id": "r5-u281",
+                "author": 281,
+                "round": 5,
+                "text": "预约时间短一些能减少长时间占用，我支持新上限。",
+                "original_id": null
+              }
+            ],
+            "context": []
+          }
+        },
+        "distinct_authors": {
+          "topic": "你是否支持社区活动室将周末预约上限从三小时改为两小时？",
+          "scenario": "这是模拟社区中的虚构讨论。只根据个人实际阅读的内容作判断，请勿代入其他社区或真实调查结果。",
+          "self": {
+            "node": 0,
+            "private_stance": 1,
+            "strength": 0.8,
+            "previous_support": 0.5
+          },
+          "history": [
+            {
+              "round": 1,
+              "messages": [
+                {
+                  "id": "r1-u281",
+                  "author": 281,
+                  "round": 1,
+                  "text": "不少活动两小时能结束，缩短上限可以减少等待。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 2,
+              "messages": [
+                {
+                  "id": "r2-u541",
+                  "author": 541,
+                  "round": 2,
+                  "text": "紧张时段留出更多可选场次会更方便，我赞成调整。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 3,
+              "messages": [
+                {
+                  "id": "r3-u622",
+                  "author": 622,
+                  "round": 3,
+                  "text": "两小时会压缩需要练习的活动，我倾向保持三小时。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 4,
+              "messages": [
+                {
+                  "id": "r4-u30",
+                  "author": 30,
+                  "round": 4,
+                  "text": "先改两小时，再统计使用率，可以检验是否更公平。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            }
+          ],
+          "current": {
+            "round": 5,
+            "messages": [
+              {
+                "id": "r5-u234",
+                "author": 234,
+                "round": 5,
+                "text": "预约时间短一些能减少长时间占用，我支持新上限。",
+                "original_id": null
+              }
+            ],
+            "context": []
+          }
+        }
+      }
+    },
+    {
+      "id": "room_booking-support-04",
+      "topic_id": "room_booking",
+      "focal_stance": 1,
+      "counter_message_position": 3,
+      "conditions": {
+        "repeated_author": {
+          "topic": "你是否支持社区活动室将周末预约上限从三小时改为两小时？",
+          "scenario": "这是模拟社区中的虚构讨论。只根据个人实际阅读的内容作判断，请勿代入其他社区或真实调查结果。",
+          "self": {
+            "node": 0,
+            "private_stance": -1,
+            "strength": 0.8,
+            "previous_support": 0.5
+          },
+          "history": [
+            {
+              "round": 1,
+              "messages": [
+                {
+                  "id": "r1-u717",
+                  "author": 717,
+                  "round": 1,
+                  "text": "紧张时段留出更多可选场次会更方便，我赞成调整。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 2,
+              "messages": [
+                {
+                  "id": "r2-u717",
+                  "author": 717,
+                  "round": 2,
+                  "text": "先改两小时，再统计使用率，可以检验是否更公平。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 3,
+              "messages": [
+                {
+                  "id": "r3-u717",
+                  "author": 717,
+                  "round": 3,
+                  "text": "预约时间短一些能减少长时间占用，我支持新上限。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 4,
+              "messages": [
+                {
+                  "id": "r4-u737",
+                  "author": 737,
+                  "round": 4,
+                  "text": "只缩短时段未必能增加可用场地，暂时保留三小时较合适。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            }
+          ],
+          "current": {
+            "round": 5,
+            "messages": [
+              {
+                "id": "r5-u717",
+                "author": 717,
+                "round": 5,
+                "text": "把预约上限改成两小时能把名额留给更多活动，我支持。",
+                "original_id": null
+              }
+            ],
+            "context": []
+          }
+        },
+        "distinct_authors": {
+          "topic": "你是否支持社区活动室将周末预约上限从三小时改为两小时？",
+          "scenario": "这是模拟社区中的虚构讨论。只根据个人实际阅读的内容作判断，请勿代入其他社区或真实调查结果。",
+          "self": {
+            "node": 0,
+            "private_stance": -1,
+            "strength": 0.8,
+            "previous_support": 0.5
+          },
+          "history": [
+            {
+              "round": 1,
+              "messages": [
+                {
+                  "id": "r1-u717",
+                  "author": 717,
+                  "round": 1,
+                  "text": "紧张时段留出更多可选场次会更方便，我赞成调整。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 2,
+              "messages": [
+                {
+                  "id": "r2-u259",
+                  "author": 259,
+                  "round": 2,
+                  "text": "先改两小时，再统计使用率，可以检验是否更公平。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 3,
+              "messages": [
+                {
+                  "id": "r3-u907",
+                  "author": 907,
+                  "round": 3,
+                  "text": "预约时间短一些能减少长时间占用，我支持新上限。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 4,
+              "messages": [
+                {
+                  "id": "r4-u737",
+                  "author": 737,
+                  "round": 4,
+                  "text": "只缩短时段未必能增加可用场地，暂时保留三小时较合适。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            }
+          ],
+          "current": {
+            "round": 5,
+            "messages": [
+              {
+                "id": "r5-u489",
+                "author": 489,
+                "round": 5,
+                "text": "把预约上限改成两小时能把名额留给更多活动，我支持。",
+                "original_id": null
+              }
+            ],
+            "context": []
+          }
+        }
+      }
+    },
+    {
+      "id": "room_booking-support-05",
+      "topic_id": "room_booking",
+      "focal_stance": 1,
+      "counter_message_position": 4,
+      "conditions": {
+        "repeated_author": {
+          "topic": "你是否支持社区活动室将周末预约上限从三小时改为两小时？",
+          "scenario": "这是模拟社区中的虚构讨论。只根据个人实际阅读的内容作判断，请勿代入其他社区或真实调查结果。",
+          "self": {
+            "node": 0,
+            "private_stance": 1,
+            "strength": 0.4,
+            "previous_support": 0.5
+          },
+          "history": [
+            {
+              "round": 1,
+              "messages": [
+                {
+                  "id": "r1-u549",
+                  "author": 549,
+                  "round": 1,
+                  "text": "先改两小时，再统计使用率，可以检验是否更公平。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 2,
+              "messages": [
+                {
+                  "id": "r2-u549",
+                  "author": 549,
+                  "round": 2,
+                  "text": "预约时间短一些能减少长时间占用，我支持新上限。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 3,
+              "messages": [
+                {
+                  "id": "r3-u549",
+                  "author": 549,
+                  "round": 3,
+                  "text": "把预约上限改成两小时能把名额留给更多活动，我支持。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 4,
+              "messages": [
+                {
+                  "id": "r4-u549",
+                  "author": 549,
+                  "round": 4,
+                  "text": "短一些的时段便于周末轮换，改成两小时值得尝试。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            }
+          ],
+          "current": {
+            "round": 5,
+            "messages": [
+              {
+                "id": "r5-u482",
+                "author": 482,
+                "round": 5,
+                "text": "有些活动连布置和收尾需要三个小时，应保留原上限。",
+                "original_id": null
+              }
+            ],
+            "context": []
+          }
+        },
+        "distinct_authors": {
+          "topic": "你是否支持社区活动室将周末预约上限从三小时改为两小时？",
+          "scenario": "这是模拟社区中的虚构讨论。只根据个人实际阅读的内容作判断，请勿代入其他社区或真实调查结果。",
+          "self": {
+            "node": 0,
+            "private_stance": 1,
+            "strength": 0.4,
+            "previous_support": 0.5
+          },
+          "history": [
+            {
+              "round": 1,
+              "messages": [
+                {
+                  "id": "r1-u549",
+                  "author": 549,
+                  "round": 1,
+                  "text": "先改两小时，再统计使用率，可以检验是否更公平。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 2,
+              "messages": [
+                {
+                  "id": "r2-u493",
+                  "author": 493,
+                  "round": 2,
+                  "text": "预约时间短一些能减少长时间占用，我支持新上限。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 3,
+              "messages": [
+                {
+                  "id": "r3-u415",
+                  "author": 415,
+                  "round": 3,
+                  "text": "把预约上限改成两小时能把名额留给更多活动，我支持。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 4,
+              "messages": [
+                {
+                  "id": "r4-u503",
+                  "author": 503,
+                  "round": 4,
+                  "text": "短一些的时段便于周末轮换，改成两小时值得尝试。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            }
+          ],
+          "current": {
+            "round": 5,
+            "messages": [
+              {
+                "id": "r5-u482",
+                "author": 482,
+                "round": 5,
+                "text": "有些活动连布置和收尾需要三个小时，应保留原上限。",
+                "original_id": null
+              }
+            ],
+            "context": []
+          }
+        }
+      }
+    },
+    {
+      "id": "room_booking-support-06",
+      "topic_id": "room_booking",
+      "focal_stance": 1,
+      "counter_message_position": 0,
+      "conditions": {
+        "repeated_author": {
+          "topic": "你是否支持社区活动室将周末预约上限从三小时改为两小时？",
+          "scenario": "这是模拟社区中的虚构讨论。只根据个人实际阅读的内容作判断，请勿代入其他社区或真实调查结果。",
+          "self": {
+            "node": 0,
+            "private_stance": -1,
+            "strength": 0.4,
+            "previous_support": 0.5
+          },
+          "history": [
+            {
+              "round": 1,
+              "messages": [
+                {
+                  "id": "r1-u611",
+                  "author": 611,
+                  "round": 1,
+                  "text": "减少空占更适合先改善签到规则，我不支持缩短所有预约。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 2,
+              "messages": [
+                {
+                  "id": "r2-u129",
+                  "author": 129,
+                  "round": 2,
+                  "text": "预约时间短一些能减少长时间占用，我支持新上限。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 3,
+              "messages": [
+                {
+                  "id": "r3-u129",
+                  "author": 129,
+                  "round": 3,
+                  "text": "把预约上限改成两小时能把名额留给更多活动，我支持。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 4,
+              "messages": [
+                {
+                  "id": "r4-u129",
+                  "author": 129,
+                  "round": 4,
+                  "text": "短一些的时段便于周末轮换，改成两小时值得尝试。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            }
+          ],
+          "current": {
+            "round": 5,
+            "messages": [
+              {
+                "id": "r5-u129",
+                "author": 129,
+                "round": 5,
+                "text": "不少活动两小时能结束，缩短上限可以减少等待。",
+                "original_id": null
+              }
+            ],
+            "context": []
+          }
+        },
+        "distinct_authors": {
+          "topic": "你是否支持社区活动室将周末预约上限从三小时改为两小时？",
+          "scenario": "这是模拟社区中的虚构讨论。只根据个人实际阅读的内容作判断，请勿代入其他社区或真实调查结果。",
+          "self": {
+            "node": 0,
+            "private_stance": -1,
+            "strength": 0.4,
+            "previous_support": 0.5
+          },
+          "history": [
+            {
+              "round": 1,
+              "messages": [
+                {
+                  "id": "r1-u611",
+                  "author": 611,
+                  "round": 1,
+                  "text": "减少空占更适合先改善签到规则，我不支持缩短所有预约。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 2,
+              "messages": [
+                {
+                  "id": "r2-u129",
+                  "author": 129,
+                  "round": 2,
+                  "text": "预约时间短一些能减少长时间占用，我支持新上限。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 3,
+              "messages": [
+                {
+                  "id": "r3-u889",
+                  "author": 889,
+                  "round": 3,
+                  "text": "把预约上限改成两小时能把名额留给更多活动，我支持。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 4,
+              "messages": [
+                {
+                  "id": "r4-u686",
+                  "author": 686,
+                  "round": 4,
+                  "text": "短一些的时段便于周末轮换，改成两小时值得尝试。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            }
+          ],
+          "current": {
+            "round": 5,
+            "messages": [
+              {
+                "id": "r5-u521",
+                "author": 521,
+                "round": 5,
+                "text": "不少活动两小时能结束，缩短上限可以减少等待。",
+                "original_id": null
+              }
+            ],
+            "context": []
+          }
+        }
+      }
+    },
+    {
+      "id": "room_booking-oppose-01",
+      "topic_id": "room_booking",
+      "focal_stance": -1,
+      "counter_message_position": 0,
+      "conditions": {
+        "repeated_author": {
+          "topic": "你是否支持社区活动室将周末预约上限从三小时改为两小时？",
+          "scenario": "这是模拟社区中的虚构讨论。只根据个人实际阅读的内容作判断，请勿代入其他社区或真实调查结果。",
+          "self": {
+            "node": 0,
+            "private_stance": -1,
+            "strength": 0.8,
+            "previous_support": 0.5
+          },
+          "history": [
+            {
+              "round": 1,
+              "messages": [
+                {
+                  "id": "r1-u720",
+                  "author": 720,
+                  "round": 1,
+                  "text": "不少活动两小时能结束，缩短上限可以减少等待。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 2,
+              "messages": [
+                {
+                  "id": "r2-u768",
+                  "author": 768,
+                  "round": 2,
+                  "text": "有些活动连布置和收尾需要三个小时，应保留原上限。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 3,
+              "messages": [
+                {
+                  "id": "r3-u768",
+                  "author": 768,
+                  "round": 3,
+                  "text": "减少空占更适合先改善签到规则，我不支持缩短所有预约。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 4,
+              "messages": [
+                {
+                  "id": "r4-u768",
+                  "author": 768,
+                  "round": 4,
+                  "text": "长活动改成两段会增加排班冲突，三小时更方便。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            }
+          ],
+          "current": {
+            "round": 5,
+            "messages": [
+              {
+                "id": "r5-u768",
+                "author": 768,
+                "round": 5,
+                "text": "先观察实际预约需求，再考虑改变现在的上限。",
+                "original_id": null
+              }
+            ],
+            "context": []
+          }
+        },
+        "distinct_authors": {
+          "topic": "你是否支持社区活动室将周末预约上限从三小时改为两小时？",
+          "scenario": "这是模拟社区中的虚构讨论。只根据个人实际阅读的内容作判断，请勿代入其他社区或真实调查结果。",
+          "self": {
+            "node": 0,
+            "private_stance": -1,
+            "strength": 0.8,
+            "previous_support": 0.5
+          },
+          "history": [
+            {
+              "round": 1,
+              "messages": [
+                {
+                  "id": "r1-u720",
+                  "author": 720,
+                  "round": 1,
+                  "text": "不少活动两小时能结束，缩短上限可以减少等待。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 2,
+              "messages": [
+                {
+                  "id": "r2-u768",
+                  "author": 768,
+                  "round": 2,
+                  "text": "有些活动连布置和收尾需要三个小时，应保留原上限。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 3,
+              "messages": [
+                {
+                  "id": "r3-u380",
+                  "author": 380,
+                  "round": 3,
+                  "text": "减少空占更适合先改善签到规则，我不支持缩短所有预约。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 4,
+              "messages": [
+                {
+                  "id": "r4-u838",
+                  "author": 838,
+                  "round": 4,
+                  "text": "长活动改成两段会增加排班冲突，三小时更方便。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            }
+          ],
+          "current": {
+            "round": 5,
+            "messages": [
+              {
+                "id": "r5-u795",
+                "author": 795,
+                "round": 5,
+                "text": "先观察实际预约需求，再考虑改变现在的上限。",
+                "original_id": null
+              }
+            ],
+            "context": []
+          }
+        }
+      }
+    },
+    {
+      "id": "room_booking-oppose-02",
+      "topic_id": "room_booking",
+      "focal_stance": -1,
+      "counter_message_position": 1,
+      "conditions": {
+        "repeated_author": {
+          "topic": "你是否支持社区活动室将周末预约上限从三小时改为两小时？",
+          "scenario": "这是模拟社区中的虚构讨论。只根据个人实际阅读的内容作判断，请勿代入其他社区或真实调查结果。",
+          "self": {
+            "node": 0,
+            "private_stance": 1,
+            "strength": 0.8,
+            "previous_support": 0.5
+          },
+          "history": [
+            {
+              "round": 1,
+              "messages": [
+                {
+                  "id": "r1-u87",
+                  "author": 87,
+                  "round": 1,
+                  "text": "减少空占更适合先改善签到规则，我不支持缩短所有预约。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 2,
+              "messages": [
+                {
+                  "id": "r2-u361",
+                  "author": 361,
+                  "round": 2,
+                  "text": "紧张时段留出更多可选场次会更方便，我赞成调整。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 3,
+              "messages": [
+                {
+                  "id": "r3-u87",
+                  "author": 87,
+                  "round": 3,
+                  "text": "长活动改成两段会增加排班冲突，三小时更方便。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 4,
+              "messages": [
+                {
+                  "id": "r4-u87",
+                  "author": 87,
+                  "round": 4,
+                  "text": "先观察实际预约需求，再考虑改变现在的上限。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            }
+          ],
+          "current": {
+            "round": 5,
+            "messages": [
+              {
+                "id": "r5-u87",
+                "author": 87,
+                "round": 5,
+                "text": "两小时会压缩需要练习的活动，我倾向保持三小时。",
+                "original_id": null
+              }
+            ],
+            "context": []
+          }
+        },
+        "distinct_authors": {
+          "topic": "你是否支持社区活动室将周末预约上限从三小时改为两小时？",
+          "scenario": "这是模拟社区中的虚构讨论。只根据个人实际阅读的内容作判断，请勿代入其他社区或真实调查结果。",
+          "self": {
+            "node": 0,
+            "private_stance": 1,
+            "strength": 0.8,
+            "previous_support": 0.5
+          },
+          "history": [
+            {
+              "round": 1,
+              "messages": [
+                {
+                  "id": "r1-u87",
+                  "author": 87,
+                  "round": 1,
+                  "text": "减少空占更适合先改善签到规则，我不支持缩短所有预约。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 2,
+              "messages": [
+                {
+                  "id": "r2-u361",
+                  "author": 361,
+                  "round": 2,
+                  "text": "紧张时段留出更多可选场次会更方便，我赞成调整。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 3,
+              "messages": [
+                {
+                  "id": "r3-u411",
+                  "author": 411,
+                  "round": 3,
+                  "text": "长活动改成两段会增加排班冲突，三小时更方便。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 4,
+              "messages": [
+                {
+                  "id": "r4-u130",
+                  "author": 130,
+                  "round": 4,
+                  "text": "先观察实际预约需求，再考虑改变现在的上限。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            }
+          ],
+          "current": {
+            "round": 5,
+            "messages": [
+              {
+                "id": "r5-u482",
+                "author": 482,
+                "round": 5,
+                "text": "两小时会压缩需要练习的活动，我倾向保持三小时。",
+                "original_id": null
+              }
+            ],
+            "context": []
+          }
+        }
+      }
+    },
+    {
+      "id": "room_booking-oppose-03",
+      "topic_id": "room_booking",
+      "focal_stance": -1,
+      "counter_message_position": 2,
+      "conditions": {
+        "repeated_author": {
+          "topic": "你是否支持社区活动室将周末预约上限从三小时改为两小时？",
+          "scenario": "这是模拟社区中的虚构讨论。只根据个人实际阅读的内容作判断，请勿代入其他社区或真实调查结果。",
+          "self": {
+            "node": 0,
+            "private_stance": -1,
+            "strength": 0.4,
+            "previous_support": 0.5
+          },
+          "history": [
+            {
+              "round": 1,
+              "messages": [
+                {
+                  "id": "r1-u328",
+                  "author": 328,
+                  "round": 1,
+                  "text": "长活动改成两段会增加排班冲突，三小时更方便。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 2,
+              "messages": [
+                {
+                  "id": "r2-u328",
+                  "author": 328,
+                  "round": 2,
+                  "text": "先观察实际预约需求，再考虑改变现在的上限。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 3,
+              "messages": [
+                {
+                  "id": "r3-u983",
+                  "author": 983,
+                  "round": 3,
+                  "text": "先改两小时，再统计使用率，可以检验是否更公平。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 4,
+              "messages": [
+                {
+                  "id": "r4-u328",
+                  "author": 328,
+                  "round": 4,
+                  "text": "两小时会压缩需要练习的活动，我倾向保持三小时。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            }
+          ],
+          "current": {
+            "round": 5,
+            "messages": [
+              {
+                "id": "r5-u328",
+                "author": 328,
+                "round": 5,
+                "text": "只缩短时段未必能增加可用场地，暂时保留三小时较合适。",
+                "original_id": null
+              }
+            ],
+            "context": []
+          }
+        },
+        "distinct_authors": {
+          "topic": "你是否支持社区活动室将周末预约上限从三小时改为两小时？",
+          "scenario": "这是模拟社区中的虚构讨论。只根据个人实际阅读的内容作判断，请勿代入其他社区或真实调查结果。",
+          "self": {
+            "node": 0,
+            "private_stance": -1,
+            "strength": 0.4,
+            "previous_support": 0.5
+          },
+          "history": [
+            {
+              "round": 1,
+              "messages": [
+                {
+                  "id": "r1-u328",
+                  "author": 328,
+                  "round": 1,
+                  "text": "长活动改成两段会增加排班冲突，三小时更方便。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 2,
+              "messages": [
+                {
+                  "id": "r2-u880",
+                  "author": 880,
+                  "round": 2,
+                  "text": "先观察实际预约需求，再考虑改变现在的上限。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 3,
+              "messages": [
+                {
+                  "id": "r3-u983",
+                  "author": 983,
+                  "round": 3,
+                  "text": "先改两小时，再统计使用率，可以检验是否更公平。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 4,
+              "messages": [
+                {
+                  "id": "r4-u108",
+                  "author": 108,
+                  "round": 4,
+                  "text": "两小时会压缩需要练习的活动，我倾向保持三小时。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            }
+          ],
+          "current": {
+            "round": 5,
+            "messages": [
+              {
+                "id": "r5-u195",
+                "author": 195,
+                "round": 5,
+                "text": "只缩短时段未必能增加可用场地，暂时保留三小时较合适。",
+                "original_id": null
+              }
+            ],
+            "context": []
+          }
+        }
+      }
+    },
+    {
+      "id": "room_booking-oppose-04",
+      "topic_id": "room_booking",
+      "focal_stance": -1,
+      "counter_message_position": 3,
+      "conditions": {
+        "repeated_author": {
+          "topic": "你是否支持社区活动室将周末预约上限从三小时改为两小时？",
+          "scenario": "这是模拟社区中的虚构讨论。只根据个人实际阅读的内容作判断，请勿代入其他社区或真实调查结果。",
+          "self": {
+            "node": 0,
+            "private_stance": 1,
+            "strength": 0.4,
+            "previous_support": 0.5
+          },
+          "history": [
+            {
+              "round": 1,
+              "messages": [
+                {
+                  "id": "r1-u324",
+                  "author": 324,
+                  "round": 1,
+                  "text": "先观察实际预约需求，再考虑改变现在的上限。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 2,
+              "messages": [
+                {
+                  "id": "r2-u324",
+                  "author": 324,
+                  "round": 2,
+                  "text": "两小时会压缩需要练习的活动，我倾向保持三小时。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 3,
+              "messages": [
+                {
+                  "id": "r3-u324",
+                  "author": 324,
+                  "round": 3,
+                  "text": "只缩短时段未必能增加可用场地，暂时保留三小时较合适。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 4,
+              "messages": [
+                {
+                  "id": "r4-u17",
+                  "author": 17,
+                  "round": 4,
+                  "text": "预约时间短一些能减少长时间占用，我支持新上限。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            }
+          ],
+          "current": {
+            "round": 5,
+            "messages": [
+              {
+                "id": "r5-u324",
+                "author": 324,
+                "round": 5,
+                "text": "有些活动连布置和收尾需要三个小时，应保留原上限。",
+                "original_id": null
+              }
+            ],
+            "context": []
+          }
+        },
+        "distinct_authors": {
+          "topic": "你是否支持社区活动室将周末预约上限从三小时改为两小时？",
+          "scenario": "这是模拟社区中的虚构讨论。只根据个人实际阅读的内容作判断，请勿代入其他社区或真实调查结果。",
+          "self": {
+            "node": 0,
+            "private_stance": 1,
+            "strength": 0.4,
+            "previous_support": 0.5
+          },
+          "history": [
+            {
+              "round": 1,
+              "messages": [
+                {
+                  "id": "r1-u324",
+                  "author": 324,
+                  "round": 1,
+                  "text": "先观察实际预约需求，再考虑改变现在的上限。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 2,
+              "messages": [
+                {
+                  "id": "r2-u956",
+                  "author": 956,
+                  "round": 2,
+                  "text": "两小时会压缩需要练习的活动，我倾向保持三小时。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 3,
+              "messages": [
+                {
+                  "id": "r3-u206",
+                  "author": 206,
+                  "round": 3,
+                  "text": "只缩短时段未必能增加可用场地，暂时保留三小时较合适。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 4,
+              "messages": [
+                {
+                  "id": "r4-u17",
+                  "author": 17,
+                  "round": 4,
+                  "text": "预约时间短一些能减少长时间占用，我支持新上限。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            }
+          ],
+          "current": {
+            "round": 5,
+            "messages": [
+              {
+                "id": "r5-u281",
+                "author": 281,
+                "round": 5,
+                "text": "有些活动连布置和收尾需要三个小时，应保留原上限。",
+                "original_id": null
+              }
+            ],
+            "context": []
+          }
+        }
+      }
+    },
+    {
+      "id": "room_booking-oppose-05",
+      "topic_id": "room_booking",
+      "focal_stance": -1,
+      "counter_message_position": 4,
+      "conditions": {
+        "repeated_author": {
+          "topic": "你是否支持社区活动室将周末预约上限从三小时改为两小时？",
+          "scenario": "这是模拟社区中的虚构讨论。只根据个人实际阅读的内容作判断，请勿代入其他社区或真实调查结果。",
+          "self": {
+            "node": 0,
+            "private_stance": -1,
+            "strength": 0.8,
+            "previous_support": 0.5
+          },
+          "history": [
+            {
+              "round": 1,
+              "messages": [
+                {
+                  "id": "r1-u600",
+                  "author": 600,
+                  "round": 1,
+                  "text": "两小时会压缩需要练习的活动，我倾向保持三小时。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 2,
+              "messages": [
+                {
+                  "id": "r2-u600",
+                  "author": 600,
+                  "round": 2,
+                  "text": "只缩短时段未必能增加可用场地，暂时保留三小时较合适。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 3,
+              "messages": [
+                {
+                  "id": "r3-u600",
+                  "author": 600,
+                  "round": 3,
+                  "text": "有些活动连布置和收尾需要三个小时，应保留原上限。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 4,
+              "messages": [
+                {
+                  "id": "r4-u600",
+                  "author": 600,
+                  "round": 4,
+                  "text": "减少空占更适合先改善签到规则，我不支持缩短所有预约。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            }
+          ],
+          "current": {
+            "round": 5,
+            "messages": [
+              {
+                "id": "r5-u838",
+                "author": 838,
+                "round": 5,
+                "text": "把预约上限改成两小时能把名额留给更多活动，我支持。",
+                "original_id": null
+              }
+            ],
+            "context": []
+          }
+        },
+        "distinct_authors": {
+          "topic": "你是否支持社区活动室将周末预约上限从三小时改为两小时？",
+          "scenario": "这是模拟社区中的虚构讨论。只根据个人实际阅读的内容作判断，请勿代入其他社区或真实调查结果。",
+          "self": {
+            "node": 0,
+            "private_stance": -1,
+            "strength": 0.8,
+            "previous_support": 0.5
+          },
+          "history": [
+            {
+              "round": 1,
+              "messages": [
+                {
+                  "id": "r1-u600",
+                  "author": 600,
+                  "round": 1,
+                  "text": "两小时会压缩需要练习的活动，我倾向保持三小时。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 2,
+              "messages": [
+                {
+                  "id": "r2-u413",
+                  "author": 413,
+                  "round": 2,
+                  "text": "只缩短时段未必能增加可用场地，暂时保留三小时较合适。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 3,
+              "messages": [
+                {
+                  "id": "r3-u393",
+                  "author": 393,
+                  "round": 3,
+                  "text": "有些活动连布置和收尾需要三个小时，应保留原上限。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 4,
+              "messages": [
+                {
+                  "id": "r4-u499",
+                  "author": 499,
+                  "round": 4,
+                  "text": "减少空占更适合先改善签到规则，我不支持缩短所有预约。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            }
+          ],
+          "current": {
+            "round": 5,
+            "messages": [
+              {
+                "id": "r5-u838",
+                "author": 838,
+                "round": 5,
+                "text": "把预约上限改成两小时能把名额留给更多活动，我支持。",
+                "original_id": null
+              }
+            ],
+            "context": []
+          }
+        }
+      }
+    },
+    {
+      "id": "room_booking-oppose-06",
+      "topic_id": "room_booking",
+      "focal_stance": -1,
+      "counter_message_position": 0,
+      "conditions": {
+        "repeated_author": {
+          "topic": "你是否支持社区活动室将周末预约上限从三小时改为两小时？",
+          "scenario": "这是模拟社区中的虚构讨论。只根据个人实际阅读的内容作判断，请勿代入其他社区或真实调查结果。",
+          "self": {
+            "node": 0,
+            "private_stance": 1,
+            "strength": 0.8,
+            "previous_support": 0.5
+          },
+          "history": [
+            {
+              "round": 1,
+              "messages": [
+                {
+                  "id": "r1-u497",
+                  "author": 497,
+                  "round": 1,
+                  "text": "短一些的时段便于周末轮换，改成两小时值得尝试。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 2,
+              "messages": [
+                {
+                  "id": "r2-u760",
+                  "author": 760,
+                  "round": 2,
+                  "text": "只缩短时段未必能增加可用场地，暂时保留三小时较合适。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 3,
+              "messages": [
+                {
+                  "id": "r3-u760",
+                  "author": 760,
+                  "round": 3,
+                  "text": "有些活动连布置和收尾需要三个小时，应保留原上限。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 4,
+              "messages": [
+                {
+                  "id": "r4-u760",
+                  "author": 760,
+                  "round": 4,
+                  "text": "减少空占更适合先改善签到规则，我不支持缩短所有预约。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            }
+          ],
+          "current": {
+            "round": 5,
+            "messages": [
+              {
+                "id": "r5-u760",
+                "author": 760,
+                "round": 5,
+                "text": "长活动改成两段会增加排班冲突，三小时更方便。",
+                "original_id": null
+              }
+            ],
+            "context": []
+          }
+        },
+        "distinct_authors": {
+          "topic": "你是否支持社区活动室将周末预约上限从三小时改为两小时？",
+          "scenario": "这是模拟社区中的虚构讨论。只根据个人实际阅读的内容作判断，请勿代入其他社区或真实调查结果。",
+          "self": {
+            "node": 0,
+            "private_stance": 1,
+            "strength": 0.8,
+            "previous_support": 0.5
+          },
+          "history": [
+            {
+              "round": 1,
+              "messages": [
+                {
+                  "id": "r1-u497",
+                  "author": 497,
+                  "round": 1,
+                  "text": "短一些的时段便于周末轮换，改成两小时值得尝试。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 2,
+              "messages": [
+                {
+                  "id": "r2-u760",
+                  "author": 760,
+                  "round": 2,
+                  "text": "只缩短时段未必能增加可用场地，暂时保留三小时较合适。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 3,
+              "messages": [
+                {
+                  "id": "r3-u325",
+                  "author": 325,
+                  "round": 3,
+                  "text": "有些活动连布置和收尾需要三个小时，应保留原上限。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            },
+            {
+              "round": 4,
+              "messages": [
+                {
+                  "id": "r4-u331",
+                  "author": 331,
+                  "round": 4,
+                  "text": "减少空占更适合先改善签到规则，我不支持缩短所有预约。",
+                  "original_id": null
+                }
+              ],
+              "context": []
+            }
+          ],
+          "current": {
+            "round": 5,
+            "messages": [
+              {
+                "id": "r5-u41",
+                "author": 41,
+                "round": 5,
+                "text": "长活动改成两段会增加排班冲突，三小时更方便。",
+                "original_id": null
+              }
+            ],
+            "context": []
+          }
+        }
+      }
+    }
+  ]
+}
