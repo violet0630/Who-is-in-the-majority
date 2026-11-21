@@ -1,0 +1,18 @@
+{
+  "bundle_id": "8aa4bf5d136a4d492b4c8400aa4668e7d10ad5324cc0ab7f26901ba81f34d6d8",
+  "pilot_only": false,
+  "input_results_digest": "b69553c69fd04049db687412768801a86e8453a80b1e5e0996784bc611eba914",
+  "analysis_source_sha256": "2efd67ad2000a538bc9dfd03672d5fe814bcc404f5181dd8f9f7965de186b11c",
+  "protocol": {
+    "bootstrap_repeats": 10000,
+    "seed": 2026111801,
+    "confidence_level": 0.95,
+    "test_alpha": 0.05,
+    "coverage_target": 0.8,
+    "primary_comparisons": [
+      "count_endpoints",
+      "activity_endpoints",
+      "interaction_endpoints"
+    ]
+  }
+}
