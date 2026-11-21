@@ -10,7 +10,7 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
 
-from scripts.ext_common import (FROZEN_SETTINGS, csv_file, frozen_input_hashes, load_frozen_group,
+from scripts.ext_common import (FROZEN_SETTINGS, check_archived_protocol, csv_file, frozen_input_hashes, load_frozen_group,
                                 load_main_baseline, mean_summary, paired_condition_inference,
                                 persistence_rows, pp, runner_sha256, tail_rows,
                                 verify_frozen_inputs, write_archive_manifest, write_json)
@@ -54,7 +54,9 @@ def prepare():
     OUTPUT.mkdir(parents=True, exist_ok=True)
     path = OUTPUT / "protocol.json"
     if path.exists():
-        assert json.loads(path.read_text(encoding="utf-8")) == protocol
+        protocol_on_disk = json.loads(path.read_text(encoding="utf-8"))
+        check_archived_protocol(protocol_on_disk, protocol)
+        protocol = protocol_on_disk
     else:
         save_json(path, protocol)
     (PROJECT / "configs/ext_feedback.json").write_text(

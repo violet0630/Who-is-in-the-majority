@@ -24,12 +24,27 @@ FROZEN_INPUT_FILES = (
 
 def frozen_input_hashes() -> dict:
     """sha256 of every reused frozen input; protocols embed and verify these bytes."""
-    return {str(path.relative_to(PROJECT)): hashlib.sha256(path.read_bytes()).hexdigest()
+    return {path.relative_to(PROJECT).as_posix(): hashlib.sha256(path.read_bytes()).hexdigest()
             for path in FROZEN_INPUT_FILES}
 
 
 def runner_sha256() -> str:
     return hashlib.sha256((PROJECT / "scripts/majority_study.py").read_bytes()).hexdigest()
+
+
+def _portable_protocol(protocol: dict) -> dict:
+    hashes = protocol["frozen_input_sha256"]
+    portable = {path.replace("\\", "/"): digest for path, digest in hashes.items()}
+    if len(portable) != len(hashes):
+        raise ValueError("Duplicate frozen input paths")
+    return {**protocol, "frozen_input_sha256": portable}
+
+
+def check_archived_protocol(recorded: dict, expected: dict) -> None:
+    """Verify an existing protocol without overwriting its historical runner identity."""
+    expected = {**expected, "runner_sha256": recorded["runner_sha256"]}
+    if _portable_protocol(recorded) != _portable_protocol(expected):
+        raise ValueError("Prepared inputs or experiment settings differ from the archived protocol")
 
 
 def verify_frozen_inputs(protocol: dict) -> None:
@@ -38,7 +53,7 @@ def verify_frozen_inputs(protocol: dict) -> None:
     if recorded is None:
         raise ValueError("protocol.json lacks frozen_input_sha256; prepare must run first")
     current = frozen_input_hashes()
-    if current != recorded:
+    if current != _portable_protocol(protocol)["frozen_input_sha256"]:
         raise ValueError("Frozen inputs changed since protocol freeze; refusing to run")
     if protocol.get("runner_sha256") != runner_sha256():
         raise ValueError("Runner scripts/majority_study.py changed since protocol freeze")
@@ -232,8 +247,16 @@ def verify_archive_manifest(root: Path) -> None:
     manifest = json.loads((root / "archive_manifest.json").read_text(encoding="utf-8"))
     for entry in manifest["files"]:
         path = root / entry["path"]
-        assert path.stat().st_size == entry["bytes"], entry["path"]
-        assert hashlib.sha256(path.read_bytes()).hexdigest() == entry["sha256"], entry["path"]
+        data = path.read_bytes()
+        if len(data) == entry["bytes"] and hashlib.sha256(data).hexdigest() == entry["sha256"]:
+            continue
+        # The original manifests hashed Windows text checkouts before Git
+        # normalized the text to LF. Reconstruct those bytes to verify the seal.
+        if path.suffix in {".json", ".jsonl", ".csv", ".md"} and b"\r" not in data:
+            windows = data.replace(b"\n", b"\r\n")
+            if len(windows) == entry["bytes"] and hashlib.sha256(windows).hexdigest() == entry["sha256"]:
+                continue
+        raise ValueError(f"Archive integrity mismatch: {path}")
 
 
 def parse_attitude(data: dict, allowed: set[str]):

@@ -15,7 +15,7 @@
 三项拓展已经在 `gxy` 分支完成并归档。反馈机制、网络环境和个体抵抗力分别使用 `scripts/ext_feedback.py`、`scripts/ext_network.py` 和 `scripts/ext_resistance.py`，每项都提供 `prepare`、`run`、`analyze` 阶段，个体抵抗力另有 `conversions` 阶段。
 
 - 共 108 条真实 API 轨迹，全部 10 轮完成，无缺失或插补。
-- 三项协议记录冻结输入与当前运行器的 SHA-256，运行前会拒绝输入或代码漂移。
+- 三项协议记录冻结输入和各自的运行器 SHA-256。准备阶段验证既有协议，运行阶段要求与该协议指定的代码版本一致。
 - `python -m unittest discover -s tests -v` 验证 47 项测试。
 - `python -m scripts.verify_results` 验证主实验一的 203 个归档文件。
 - 三个拓展目录的 `archive_manifest.json` 均可独立校验。
