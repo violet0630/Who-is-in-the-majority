@@ -39,12 +39,14 @@ python -B scripts/run_exp1_extension.py --repo . --prepared experiments/2026-11-
 目前仅验证了离线检查入口，尚未验证真实API连通性、收费执行及失败恢复。
 
 gxy 续接：已在独立工作树复验 21 组、63 条任务和 9 个既定技术试跑编号。
-网关对指定 ds-flash 的实际请求返回 503 model_not_found，等待模型路由可用后才启动该批。
+续跑使用 deepseek-v4-flash，已验证实际请求成功，响应模型标识为 deepseek-flash。
 试跑完成后按实际输出目录运行独立审计：
 python -B -m scripts.audit_exp1_extension --repo . --prepared experiments/2026-11-20-zjy-extension-prepared --runs runs/exp1-supplement --trial
 审计检查固定输入与模型请求身份、轨迹十轮完整性、逐轮 Q/J/D/S 重算、实际观察者调用和已知 Token 用量。技术试跑只输出描述统计。
 已使用归档轨迹校验逐轮指标复算，并用模拟 API 响应验证一条新增任务可完整运行和审计。模拟结果不纳入实验。
-全部 63 条完成后移除 --trial，按 21 个新增配对组输出 Q 的区间、符号翻转检验和 Holm 校正。旧 9 组和合并口径在评估模型与批次可比性后另行报告。
+完整技术试跑通过审阅后，按原任务定义运行剩余 54 条：
+python -B -m scripts.batch_exp1_extension --repo . --prepared experiments/2026-11-20-zjy-extension-prepared --runs runs/exp1-supplement --allow-api
+全部 63 条完成后移除 --trial，按 21 个新增配对组输出 Q 的区间、符号翻转检验和 Holm 校正。旧 9 组和合并口径作为描述性对照，正式推断限于新增组。
 
 结果怎么分析
 主指标Q：50名观察者中，估计议题支持率低于0.5的人占比；固定取第8—10轮均值。

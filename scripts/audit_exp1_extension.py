@@ -126,6 +126,27 @@ def paired_q(rows, protocol):
     }
 
 
+def historical_comparison(rows, repo):
+    """Describe the archived and new cohorts separately and together."""
+    historical = read(repo / "experiments/2026-11-16/03_positions/results.json")
+    historical_keys = {(row["graph"], row["repeat"], row["branch"]) for row in historical}
+    expected = {(graph, repeat, branch) for graph in range(3) for repeat in range(3)
+                for branch in ("TH", "TL", "U0")}
+    require(len(historical) == len(expected) and historical_keys == expected, "Incomplete historical grid")
+    hist = {branch: [row["summary"]["perceived_majority"] for row in historical if row["branch"] == branch]
+            for branch in ("TH", "TL", "U0")}
+    new = {branch: [row["tail"]["perceived_majority"] for row in rows if row["branch"] == branch]
+           for branch in hist}
+    return {
+        "scope": "Descriptive comparison. The old cohort used multiple model routes; inference uses only the new cohort.",
+        "historical_runs": len(historical),
+        "new_runs": len(rows),
+        "mean_q": {branch: {"historical": mean(hist[branch]), "new": mean(new[branch]),
+                            "combined_descriptive": mean(hist[branch] + new[branch])}
+                   for branch in hist},
+    }
+
+
 def audit(repo, prepared, runs, trial):
     protocol, tasks, groups, networks, _ = validate(repo, prepared)
     selected = [task for task in tasks if not trial or task["phase"] == "technical_trial"]
@@ -162,8 +183,68 @@ def audit(repo, prepared, runs, trial):
         usage, models = audit_calls(directory / "calls.jsonl", calls, runtime["model"], task["task_id"])
         rows.append({"graph": graph, "repeat": repeat, "branch": branch, "tail": tail,
                      "api_usage": usage, "response_models": models})
-    return {"batch": "technical_trial" if trial else "supplement", "runtime": runtime,
-            "trajectories": rows, "new_groups_inference": None if trial else paired_q(rows, protocol)}
+    report = {"batch": "technical_trial" if trial else "supplement", "runtime": runtime,
+              "trajectories": rows, "new_groups_inference": None}
+    if not trial:
+        require({model for row in rows for model in row["response_models"]} == {"deepseek-flash"},
+                "Response model changed across the supplemental batch")
+        report["new_groups_inference"] = paired_q(rows, protocol)
+        report["historical_comparison"] = historical_comparison(rows, repo)
+    return report
+
+
+def write_report(report, output):
+    output.mkdir(parents=True, exist_ok=False)
+    (output / "audit.json").write_text(json.dumps(report, ensure_ascii=False, indent=2, allow_nan=False) + "\n",
+                                       encoding="utf-8")
+    rows = report["trajectories"]
+    counts = Counter()
+    for row in rows:
+        counts.update(row["api_usage"])
+    lines = ["# 主实验一补充验证" if report["new_groups_inference"] else "# 主实验一补充验证技术试跑",
+             "", f"{len(rows)} 条十轮完整轨迹通过独立审计。Q 和 J 取第 8–10 轮均值。", "",
+             "| 网络 | 参数组 | 位置 | Q | J |", "|---:|---:|---|---:|---:|"]
+    for row in rows:
+        tail = row["tail"]
+        lines.append(f"| {row['graph'] + 1} | {row['repeat'] + 1} | {row['branch']} | "
+                     f"{tail['perceived_majority']:.2%} | {tail['feed_majority']:.2%} |")
+    if inference := report["new_groups_inference"]:
+        comparisons = inference["comparisons"]
+        lines += ["", "## 新增配对组的预定比较", "",
+                  "| 比较 | 差（百分点） | 95% 区间 | Holm p |", "|---|---:|---:|---:|"]
+        for row in comparisons:
+            low, high = row["ci95"]
+            lines.append(f"| {' − '.join(row['conditions'])} | {100 * row['difference']:+.2f} | "
+                         f"[{100 * low:+.2f}, {100 * high:+.2f}] | {row['p_holm']:.4f} |")
+        lines += ["", f"配对单位为新增的 {inference['groups']} 组，条件限定在原来的三张网络。"
+                  "历史组和合并结果作描述性参照，详见 audit.json。"]
+        plot_comparisons(comparisons, output / "paired_q.png")
+        lines += ["", "![新增组配对比较](paired_q.png)"]
+    else:
+        lines += ["", "技术试跑用于完整性与实际用量审阅。"]
+    lines += ["", "## 已知调用用量", "",
+              f"实际请求 {counts['actual_calls']:,} 次，已知输入 {counts['prompt_tokens']:,} Token，"
+              f"已知输出 {counts['completion_tokens']:,} Token。用量缺失情况见 audit.json。"]
+    (output / "report.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
+
+
+def plot_comparisons(comparisons, destination):
+    import matplotlib
+    matplotlib.use("Agg")
+    import matplotlib.pyplot as plt
+
+    fig, ax = plt.subplots(figsize=(7.2, 3), constrained_layout=True)
+    for index, row in enumerate(comparisons):
+        low, high = row["ci95"]
+        ax.hlines(index, 100 * low, 100 * high, color="#30627e", linewidth=2)
+        ax.scatter(100 * row["difference"], index, color="#164963")
+    ax.set_yticks(range(len(comparisons)), [" - ".join(row["conditions"]) for row in comparisons])
+    ax.invert_yaxis()
+    ax.axvline(0, color="#596574", linewidth=1, linestyle="--")
+    ax.set_xlabel("Q difference (percentage points), 95% bootstrap CI")
+    ax.set_title("Main experiment 1 supplement | 21 matched groups")
+    fig.savefig(destination, dpi=160)
+    plt.close(fig)
 
 
 def main():
@@ -172,9 +253,13 @@ def main():
     parser.add_argument("--prepared", type=Path, required=True)
     parser.add_argument("--runs", type=Path, required=True)
     parser.add_argument("--trial", action="store_true")
+    parser.add_argument("--output", type=Path, help="Write audit JSON and report to a new directory")
     args = parser.parse_args()
     report = audit(args.repo.resolve(), args.prepared.resolve(), args.runs.resolve(), args.trial)
-    print(json.dumps(report, ensure_ascii=False, allow_nan=False))
+    if args.output:
+        write_report(report, args.output)
+    else:
+        print(json.dumps(report, ensure_ascii=False, allow_nan=False))
 
 
 if __name__ == "__main__":
