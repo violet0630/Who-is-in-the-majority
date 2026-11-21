@@ -1,7 +1,6 @@
-"""Extension 1: individual resistance — fixed vs LLM-updated private stance."""
+﻿"""Extension 1: stance-expression parameters under network rules v2."""
 
 import argparse
-import gzip
 import json
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
@@ -11,50 +10,54 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
 
-from majority.llm import prompt_hash
-from scripts.ext_common import (FROZEN_SETTINGS, check_archived_protocol, csv_file, frozen_input_hashes, holm,
-                                load_frozen_group, mean_summary, paired_condition_inference, persistence_rows, pp,
-                                runner_sha256, tail_rows, verify_frozen_inputs, write_archive_manifest, write_json)
-from scripts.majority_study import active_bank, load_bank, run_one, save_json
+from scripts.ext_common import (V2_SETTINGS, csv_file, frozen_input_hashes, load_frozen_group,
+                                paired_condition_inference, persistence_rows_v2, runner_sha256,
+                                tail_rows_v2, verify_frozen_inputs, write_archive_manifest, write_json)
+from scripts.majority_study import active_bank, load_bank, run_one
 
 PROJECT = Path(__file__).resolve().parents[1]
-OUTPUT = PROJECT / "experiments/2026-11-20-ext-resistance"
+OUTPUT = PROJECT / "experiments/2026-11-21-ext-expression"
+CONDITIONS = {
+    "E0": {"label": "基准 theta_d=-1, kappa=0.5"},
+    "E1": {"label": "高表达阻力 theta_d=-2", "theta_d": -2.0},
+    "E2": {"label": "低表达阻力 theta_d=0", "theta_d": 0.0},
+    "E3": {"label": "强立场一致 kappa=1", "kappa": 1.0},
+}
+COMPARISONS = [[condition, "E0"] for condition in ("E1", "E2", "E3")]
+METRICS = ("perceived_majority", "feed_majority", "public_conformity", "opponent_silence")
+BASE_SETTINGS = {**V2_SETTINGS, "alpha": 0.05, "beta": 10, "llm_workers": 2}
 
-CONDITIONS = {"R0": {"private_update": False, "label": "坚持（固定私人立场）"},
-              "R1": {"private_update": True, "label": "更新（LLM 每轮更新立场）"}}
-BASE_SETTINGS = {**FROZEN_SETTINGS, "alpha": 0.05, "beta": 10}
-METRIC_LABELS = {"perceived_majority": "多数误判 Qill", "feed_majority": "信息流多数 J",
-                 "public_conformity": "公开顺从 C", "opponent_silence": "反对者沉默 S−"}
-plt.rcParams.update({"font.sans-serif": ["Microsoft YaHei", "SimHei", "DejaVu Sans"],
-                     "axes.unicode_minus": False})
+
+def settings_for(condition):
+    settings = {**BASE_SETTINGS}
+    theta = list(settings["theta"])
+    override = CONDITIONS[condition]
+    if "theta_d" in override:
+        theta[2] = override["theta_d"]
+    settings["theta"] = theta
+    if "kappa" in override:
+        settings["kappa"] = override["kappa"]
+    return settings
 
 
 def prepare():
     protocol = {
-        "experiment": "extension-1 individual resistance", "date": "2026-11-20",
-        "base": "main experiment 1 frozen settings; TH positions; prompt perception_attitude (v2) in both conditions",
-        "conditions": CONDITIONS, "primary_outcome": "mean observer perceived_majority over rounds 8-10",
-        "secondary_outcomes": list(METRIC_LABELS),
-        "comparisons": [["R1", "R0"]],
-        "statistics": "paired groups identical to main experiment; 10000 graph-stratified bootstrap; "
-                      "exact sign-flip; Holm over 4 outcomes (Qill, J, C, S-) and persistence separately",
-        "mechanics": "new_stance applied to observers only; committed with next-round decisions/messages; "
-                     "advocates and non-observers stay fixed; R0 parses but ignores new_stance (same prompt)",
-        "guard": "true advocate share <= (200+50)/1000 = 25% < 50% so Qill definition holds",
-        "new_runs": 18,
-        "prompt_hashes": {"perception": prompt_hash("perception"),
-                          "perception_attitude": prompt_hash("perception_attitude")},
-        "frozen_input_sha256": frozen_input_hashes(),
-        "runner_sha256": runner_sha256(),
+        "experiment": "extension-expression-parameters-v2", "date": "2026-11-21",
+        "rounds": 15, "tail_rounds": 5,
+        "base": "v2 local perception, read_limit=11, max_comments=3, and frozen TH positions",
+        "conditions": {name: settings_for(name) for name in CONDITIONS},
+        "labels": {name: value["label"] for name, value in CONDITIONS.items()},
+        "comparisons": COMPARISONS, "primary_outcomes": list(METRICS),
+        "statistics": "paired groups; graph-stratified bootstrap 10000; exact sign-flip; Holm over three expression comparisons",
+        "convergence": "early rounds 1-5 versus late rounds 11-15, final-step delta, and mean absolute last-five-step change",
+        "new_runs": 36, "frozen_input_sha256": frozen_input_hashes(), "runner_sha256": runner_sha256(),
     }
     OUTPUT.mkdir(parents=True, exist_ok=True)
     path = OUTPUT / "protocol.json"
-    if path.exists():
-        protocol_on_disk = json.loads(path.read_text(encoding="utf-8"))
-        check_archived_protocol(protocol_on_disk, protocol)
-        protocol = protocol_on_disk
-    else:
-        save_json(path, protocol)
+    if path.exists() and json.loads(path.read_text(encoding="utf-8")) != protocol:
+        raise ValueError("Expression protocol differs from frozen protocol")
+    if not path.exists():
+        write_json(path, protocol)
     (PROJECT / "configs/ext_resistance.json").write_text(
         json.dumps(protocol, ensure_ascii=False, indent=2), encoding="utf-8")
 
@@ -63,194 +66,108 @@ def run():
     protocol = json.loads((OUTPUT / "protocol.json").read_text(encoding="utf-8"))
     verify_frozen_inputs(protocol)
     _, bank = load_bank(active_bank())
-    jobs = []
-    for name in CONDITIONS:
-        for graph in range(3):
-            for repeat in range(3):
-                jobs.append((name, graph, repeat, bank))
+    jobs = [(condition, graph, repeat) for condition in CONDITIONS
+            for graph in range(3) for repeat in range(3)]
 
     def execute(job):
-        name, graph, repeat, bank = job
+        condition, graph, repeat = job
         group = load_frozen_group(graph, repeat)
-        output = OUTPUT / "runs" / f"{name}-g{graph}-r{repeat}"
+        output = OUTPUT / "runs" / f"{condition}-g{graph}-r{repeat}"
         if (output / "result.json").exists():
-            return {"condition": name, "graph": graph, "repeat": repeat,
+            return {"condition": condition, "graph": graph, "repeat": repeat,
                     **json.loads((output / "result.json").read_text(encoding="utf-8"))}
-        result = run_one(group["network"], group["profiles"], group["advocates"], bank, BASE_SETTINGS,
-                         group["group_seed"], "TH", output, True,
-                         attitude=True, private_update=CONDITIONS[name]["private_update"])
-        return {"condition": name, "graph": graph, "repeat": repeat, **result}
+        result = run_one(group["network"], group["profiles"], group["advocates"], bank,
+                         settings_for(condition), group["group_seed"], "TH", output, True)
+        return {"condition": condition, "graph": graph, "repeat": repeat, **result}
 
-    with ThreadPoolExecutor(max_workers=18) as pool:
+    with ThreadPoolExecutor(max_workers=4) as pool:
         results = list(pool.map(execute, jobs))
     write_json(OUTPUT / "results.json", results)
-    return results
 
 
-def extract_conversions(trajectory: Path) -> dict:
-    """从单条轨迹逐轮统计私人立场转变人数与真实支持率。"""
-    per_round = {}
-    with gzip.open(trajectory, "rt", encoding="utf-8") as stream:
-        for line in stream:
-            item = json.loads(line)
-            if item["kind"] != "round":
-                continue
-            data = item["data"]
-            round_number = data["round"]
-            flipped_to_oppose = flipped_to_support = 0
-            for node_row in data["nodes"]:
-                before, after = node_row["before"], node_row["after"]
-                if after["stance"] == before["stance"]:
-                    continue
-                if after["stance"] == -1:
-                    flipped_to_oppose += 1
-                else:
-                    flipped_to_support += 1
-            true_support = np.mean([node_row["before"]["stance"] == 1 for node_row in data["nodes"]])
-            per_round[round_number] = {"flipped_to_oppose": flipped_to_oppose,
-                                       "flipped_to_support": flipped_to_support,
-                                       "true_support": float(true_support)}
-    return per_round
-
-
-def conversions():
-    """私人转变 D 与真实支持率变化：从轨迹回放逐轮统计观察者立场转变。"""
-    rows = json.loads((OUTPUT / "results.json").read_text(encoding="utf-8"))
-    records = {}
-    for row in rows:
-        key = f"{row['condition']}-g{row['graph']}-r{row['repeat']}"
-        records[key] = extract_conversions(OUTPUT / "runs" / key / "trajectory.jsonl.gz")
-    summary = {}
-    for cond in CONDITIONS:
-        per_unit = {key: value for key, value in records.items() if key.startswith(f"{cond}-")}
-        oppose = [np.mean([value[t]["flipped_to_oppose"] for t in range(1, 11)]) for value in per_unit.values()]
-        support = [np.mean([value[t]["flipped_to_support"] for t in range(1, 11)]) for value in per_unit.values()]
-        final_oppose_share = [1 - value[10]["true_support"] for value in per_unit.values()]
-        summary[cond] = {"mean_flipped_to_oppose": float(np.mean(oppose)),
-                         "mean_flipped_to_support": float(np.mean(support)),
-                         "final_true_oppose_share": float(np.mean(final_oppose_share))}
-    write_json(OUTPUT / "conversions.json", {"per_run": records, "summary": summary})
-    print(json.dumps(summary, ensure_ascii=False, indent=2))
+def convergence(metrics):
+    output = {}
+    for field in METRICS:
+        values = np.array([row[field] for row in metrics], dtype=float)
+        output[field] = {
+            "early_mean": float(values[:5].mean()), "late_mean": float(values[-5:].mean()),
+            "late_minus_early": float(values[-5:].mean() - values[:5].mean()),
+            "final_step_delta": float(values[-1] - values[-2]),
+            "mean_abs_last_five_step": float(np.abs(np.diff(values[-5:])).mean()),
+        }
+    return output
 
 
 def analyze():
     results = json.loads((OUTPUT / "results.json").read_text(encoding="utf-8"))
+    expected = {(condition, graph, repeat) for condition in CONDITIONS
+                for graph in range(3) for repeat in range(3)}
+    actual = {(row["condition"], row["graph"], row["repeat"]) for row in results}
+    if actual != expected or any(len(row["metrics"]) != 15 for row in results):
+        raise ValueError("Expression grid is incomplete")
     rows = [{"condition": row["condition"], "graph": row["graph"], "repeat": row["repeat"],
-             "summary": row["summary"], "metrics": row["metrics"]} for row in results]
-    expected = {(name, graph, repeat) for name in CONDITIONS for graph in range(3) for repeat in range(3)}
-    completed = {(row["condition"], row["graph"], row["repeat"]) for row in rows}
-    missing = sorted(expected - completed)
-    if missing:
-        raise ValueError(f"Incomplete run: {len(missing)} trajectories missing, first: {missing[:5]}; "
-                         "no imputation is allowed — rerun the missing trajectories first")
-    for row in rows:
-        if len(row["metrics"]) != 10:
-            raise ValueError(f"{row['condition']}-g{row['graph']}-r{row['repeat']} has "
-                             f"{len(row['metrics'])} rounds, expected 10")
-        if not all(0.2 - 1e-9 <= metric["true_advocate_support"] <= 0.25 + 1e-9
-                   for metric in row["metrics"]):
-            raise ValueError(f"{row['condition']}-g{row['graph']}-r{row['repeat']}: true advocate share "
-                             "outside [0.2, 0.25]; Qill definition check failed")
-    output = {"outcomes": {}, "persistence": None, "trajectories": {}}
-    for field in METRIC_LABELS:
-        output["outcomes"][field] = paired_condition_inference(tail_rows(rows, field), [["R1", "R0"]])
-    primary_comparisons = [result["comparisons"][0] for result in output["outcomes"].values()]
-    for comparison, adjusted in zip(primary_comparisons, holm([row["p_value"] for row in primary_comparisons])):
-        comparison["p_holm"] = adjusted
-    output["holm_family"] = {
-        "outcomes": list(METRIC_LABELS),
-        "persistence": "separate comparison",
-    }
-    output["persistence"] = paired_condition_inference(persistence_rows(rows), [["R1", "R0"]])
-    write_json(OUTPUT / "inference.json", output)
-    per_round = {}
-    for row in rows:
-        per_round.setdefault(row["condition"], []).append(
-            [m["perceived_majority"] for m in row["metrics"]])
-    output["trajectories"] = {cond: np.mean(per_round[cond], axis=0).round(4).tolist()
-                              for cond in per_round}
-    write_json(OUTPUT / "trajectories.json", output["trajectories"])
+             "summary": {**row["summary"], "perceived_majority": float(np.mean(
+                 [m["perceived_majority"] for m in row["metrics"][-5:]]))},
+             "metrics": row["metrics"], "convergence": convergence(row["metrics"])}
+            for row in results]
+    inference = {field: paired_condition_inference(tail_rows_v2(rows, field), COMPARISONS)
+                 for field in METRICS}
+    persistence = paired_condition_inference(persistence_rows_v2(rows), COMPARISONS)
+    trajectories = {condition: np.mean([[m["perceived_majority"] for m in row["metrics"]]
+                                         for row in rows if row["condition"] == condition], axis=0).round(4).tolist()
+                    for condition in CONDITIONS}
+    convergence_summary = {condition: {
+        field: {key: float(np.mean([row["convergence"][field][key] for row in rows
+                                    if row["condition"] == condition]))
+                for key in ("early_mean", "late_mean", "late_minus_early",
+                            "final_step_delta", "mean_abs_last_five_step")}
+        for field in METRICS} for condition in CONDITIONS}
+    write_json(OUTPUT / "inference.json", {"outcomes": inference, "persistence": persistence,
+                                             "trajectories": trajectories,
+                                             "convergence": convergence_summary,
+                                             "scope": "v2 rules, fixed networks/profiles/TH positions"})
     csv_file(OUTPUT / "summary.csv", [
-        {"condition": cond, "label": CONDITIONS[cond]["label"],
-         **{field: mean_summary(rows, cond, field) for field in METRIC_LABELS}}
-        for cond in CONDITIONS])
-    _figures(per_round)
-    _report(output, rows)
+        {"condition": condition, "label": CONDITIONS[condition]["label"],
+         **{field: float(np.mean([row["summary"][field] for row in rows
+                                  if row["condition"] == condition])) for field in METRICS},
+         "q_early": convergence_summary[condition]["perceived_majority"]["early_mean"],
+         "q_late": convergence_summary[condition]["perceived_majority"]["late_mean"],
+         "q_late_minus_early": convergence_summary[condition]["perceived_majority"]["late_minus_early"],
+         "q_final_step_delta": convergence_summary[condition]["perceived_majority"]["final_step_delta"],
+         "q_last5_abs_step": convergence_summary[condition]["perceived_majority"]["mean_abs_last_five_step"]}
+        for condition in CONDITIONS])
+    figures = OUTPUT / "figures"; figures.mkdir(exist_ok=True)
+    colors = ["#285879", "#ba5a31", "#4e8b70", "#8a5ca8"]
+    fig, axes = plt.subplots(2, 1, figsize=(10, 8), sharex=True, constrained_layout=True)
+    for index, condition in enumerate(CONDITIONS):
+        axes[0].plot(range(1, 16), np.array(trajectories[condition]) * 100,
+                     marker="o", markersize=3, label=CONDITIONS[condition]["label"], color=colors[index])
+        j_values = np.mean([[m["feed_majority"] for m in row["metrics"]]
+                            for row in rows if row["condition"] == condition], axis=0) * 100
+        axes[1].plot(range(1, 16), j_values, marker="o", markersize=3,
+                     label=CONDITIONS[condition]["label"], color=colors[index])
+    axes[0].axvspan(1, 5, color="#dfe6eb", alpha=.4); axes[0].axvspan(11, 15, color="#dfe6eb", alpha=.4)
+    axes[0].set_ylabel("Qill (%)"); axes[1].set_ylabel("J (%)"); axes[1].set_xlabel("轮次")
+    axes[0].set_title("立场表达参数与 15 轮收敛")
+    for axis in axes:
+        axis.grid(axis="y", alpha=.2); axis.legend(frameon=False, ncol=2)
+    fig.savefig(figures / "expression_convergence.png", dpi=180); plt.close(fig)
+    lines = ["# 拓展一 v2：立场表达参数与 15 轮收敛", "", "## 口径", "",
+             "不再比较私人立场是否更新。条件只改变 theta_d（感知逆风对评论概率的作用）或 kappa（私人立场对评论赞同方向的作用）。",
+             "共同使用 v2 根规则、read_limit=11、Beta(1,9) 多评论、15 轮、三张冻结网络、九个 TH 配对组。", "",
+             "## 收敛结果", "", "| 条件 | Qill | J | C | S− | 后期−前期 Qill | 最后一步 Qill |", "|---|---:|---:|---:|---:|---:|---:|"]
+    import csv
+    with (OUTPUT / "summary.csv").open(encoding="utf-8-sig") as stream:
+        for row in csv.DictReader(stream):
+            lines.append(f"| {row['label']} | {float(row['perceived_majority']):.2%} | {float(row['feed_majority']):.2%} | {float(row['public_conformity']):.2%} | {float(row['opponent_silence']):.2%} | {float(row['q_late_minus_early']):+.2%} | {float(row['q_final_step_delta']):+.2%} |")
+    lines += ["", "## 现实解释", "theta_d 代表感到自己处于逆风时是否减少公开评论。kappa 代表私人立场对评论方向的坚持程度。早期、后期和最后一步变化分开报告，避免把单轮波动称为收敛。", "", "![收敛轨迹](figures/expression_convergence.png)"]
+    (OUTPUT / "report.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
     write_archive_manifest(OUTPUT)
-    print(json.dumps(output["outcomes"], ensure_ascii=False, indent=2))
-
-
-def _figures(per_round):
-    figures = OUTPUT / "figures"
-    figures.mkdir(exist_ok=True)
-    colors = ["#17669b", "#e28743"]
-    rng = np.random.default_rng(20261120)
-    fig, ax = plt.subplots(figsize=(9, 4.8), constrained_layout=True)
-    for index, cond in enumerate(CONDITIONS):
-        values = np.array(per_round[cond])
-        draws = [values[rng.choice(len(values), len(values), replace=True)].mean(axis=0)
-                 for _ in range(3000)]
-        low, high = np.quantile(np.array(draws), [0.025, 0.975], axis=0)
-        ax.plot(range(1, 11), values.mean(axis=0) * 100, label=CONDITIONS[cond]["label"],
-                color=colors[index], marker="o", markersize=4)
-        ax.fill_between(range(1, 11), low * 100, high * 100, color=colors[index], alpha=0.12)
-    ax.axvline(5, color="#758393", linestyle="--", linewidth=1)
-    ax.set_xlabel("轮次")
-    ax.set_ylabel("多数误判比例 Q（%）")
-    ax.set_title("个体抵抗力条件：9组平均轨迹，阴影为95%置信区间")
-    ax.legend(frameon=False)
-    ax.grid(axis="y", alpha=0.2)
-    fig.savefig(figures / "resistance_trajectories.png", dpi=180)
-    plt.close(fig)
-
-
-def _report(output, rows):
-    conversions_summary = None
-    conversions_path = OUTPUT / "conversions.json"
-    if conversions_path.exists():
-        conversions_summary = json.loads(conversions_path.read_text(encoding="utf-8"))["summary"]
-    lines = ["# 拓展一：个体抵抗力实验结果", "", "2026-11-20", "",
-             "## 口径", "",
-             "两条件共用提示词 perception_attitude（v2，输出四字段）；R0 解析但不应用 new_stance，R1 应用。",
-             "只有50名观察者的私人立场允许更新（其余950名节点包括倡议者，立场始终固定），反对派占比上限 (200+50)/1000=25%，",
-             "Qill（反对者被误判为多数）的定义全程有效。新立场与下一轮消息一起提交，公开偏离按同一轮私人立场统计。",
-             "配对单位与主实验一完全一致。Qill、J、C、S− 四个符号翻转检验统一作 Holm 校正，持续性单列。",
-             "无缺失轨迹；如有缺失会停止分析而不插补。", "",
-             "## 主要结果（R1 − R0）", "",
-             "| 指标 | 差异（百分点） | 95% CI | p（Holm） |", "|---|---:|---:|---:|"]
-    for field, label in METRIC_LABELS.items():
-        comp = output["outcomes"][field]["comparisons"][0]
-        lines.append(f"| {label} | {pp(comp['difference'])} | [{pp(comp['ci95'][0])}, {pp(comp['ci95'][1])}] "
-                     f"| {comp['p_value']:.4f}（{comp['p_holm']:.4f}） |")
-    comp = output["persistence"]["comparisons"][0]
-    lines.extend(["", "## 持续性（第8–10轮 − 第3–5轮 Qill，R1 − R0）", "",
-                  f"差异 {pp(comp['difference'])} 个百分点，95% CI [{pp(comp['ci95'][0])}, {pp(comp['ci95'][1])}]，"
-                  f"p={comp['p_value']:.4f}（Holm {comp['p_holm']:.4f}）。"])
-    if conversions_summary:
-        lines.extend(["", "## 私人转变 D 与真实支持率", "",
-                      "| 条件 | 每轮平均转向反对 | 每轮平均转向支持 | 末轮反对派真实占比 |",
-                      "|---|---:|---:|---:|"])
-        for cond in CONDITIONS:
-            summary = conversions_summary[cond]
-            lines.append(f"| {CONDITIONS[cond]['label']} | {summary['mean_flipped_to_oppose']:.2f} "
-                         f"| {summary['mean_flipped_to_support']:.2f} "
-                         f"| {summary['final_true_oppose_share'] * 100:.1f}% |")
-    lines.extend(["", "![轨迹](figures/resistance_trajectories.png)"])
-    (OUTPUT / "report.md").write_text("\n".join(lines), encoding="utf-8")
 
 
 def main():
-    parser = argparse.ArgumentParser()
-    parser.add_argument("stage", choices=("prepare", "run", "analyze", "conversions"))
-    args = parser.parse_args()
-    if args.stage == "prepare":
-        prepare()
-    elif args.stage == "run":
-        run()
-    elif args.stage == "conversions":
-        conversions()
-    else:
-        analyze()
+    parser = argparse.ArgumentParser(); parser.add_argument("stage", choices=("prepare", "run", "analyze")); args = parser.parse_args()
+    {"prepare": prepare, "run": run, "analyze": analyze}[args.stage]()
 
 
 if __name__ == "__main__":

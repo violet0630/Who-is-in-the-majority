@@ -21,6 +21,10 @@ FROZEN_INPUT_FILES = (
     + [MAIN_ARCHIVE / "01_texts_50" / "bank.json"]
 )
 
+V2_SETTINGS = {**FROZEN_SETTINGS, "rounds": 15, "tail_rounds": 5,
+               "read_limit": 11, "max_comments": 3,
+               "comment_alpha": 1.0, "comment_beta": 9.0}
+
 
 def frozen_input_hashes() -> dict:
     """sha256 of every reused frozen input; protocols embed and verify these bytes."""
@@ -225,6 +229,40 @@ def persistence_rows(rows: list[dict]) -> list[dict]:
              "perceived_majority": float(np.mean([m["perceived_majority"] for m in row["metrics"][-3:]])
                                          - np.mean([m["perceived_majority"] for m in row["metrics"][2:5]]))}}
             for row in rows]
+
+
+def tail_rows_v2(rows: list[dict], field: str) -> list[dict]:
+    """Use rounds 11–15 as the v2 tail summary."""
+    return [{**row, "summary": {**row["summary"],
+             "perceived_majority": float(np.mean([m[field] for m in row["metrics"][-5:]]))}}
+            for row in rows]
+
+
+def persistence_rows_v2(rows: list[dict]) -> list[dict]:
+    """Compare v2 late rounds 11–15 with early rounds 1–5."""
+    return [{**row, "summary": {**row["summary"],
+             "perceived_majority": float(np.mean([m["perceived_majority"] for m in row["metrics"][-5:]])
+                                         - np.mean([m["perceived_majority"] for m in row["metrics"][:5]]))}}
+            for row in rows]
+
+
+def convergence_summary(rows: list[dict], field: str = "perceived_majority",
+                        early: int = 5, late: int = 5) -> dict:
+    """Summarize early/late movement and last-step stability for a 15-round batch."""
+    output = {}
+    conditions = sorted({row["condition"] for row in rows})
+    for condition in conditions:
+        trajectories = [[metric[field] for metric in row["metrics"]]
+                        for row in rows if row["condition"] == condition]
+        values = np.asarray(trajectories, dtype=float).mean(axis=0)
+        output[condition] = {
+            "early_mean": float(values[:early].mean()),
+            "late_mean": float(values[-late:].mean()),
+            "late_minus_early": float(values[-late:].mean() - values[:early].mean()),
+            "final_step_delta": float(values[-1] - values[-2]),
+            "mean_abs_last_five_step": float(np.abs(np.diff(values[-late:])).mean()),
+        }
+    return output
 
 
 def mean_summary(rows: list[dict], condition: str, field: str) -> float:

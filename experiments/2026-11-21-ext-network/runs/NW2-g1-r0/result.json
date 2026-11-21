@@ -1,0 +1,387 @@
+{
+  "branch": "TH",
+  "seed": 44210,
+  "size": 1000,
+  "k": 200,
+  "settings": {
+    "mean_degree": 12,
+    "s_out": 0.35,
+    "s_in": 1.5,
+    "w": 0.2,
+    "fraction": 0.2,
+    "rho": 6,
+    "kappa": 0.5,
+    "gamma": 1,
+    "theta": [
+      1,
+      0,
+      -1,
+      0
+    ],
+    "rounds": 15,
+    "llm_workers": 2,
+    "tail_rounds": 5,
+    "window": 2,
+    "read_limit": 11,
+    "cross_fan_comments": true,
+    "community_fractions": [
+      0.15,
+      0.2,
+      0.25,
+      0.4
+    ],
+    "max_comments": 3,
+    "comment_alpha": 1.0,
+    "comment_beta": 9.0,
+    "alpha": 0.05,
+    "beta": 10
+  },
+  "tail_rounds": 5,
+  "summary": {
+    "perceived_majority": 0.544,
+    "feed_majority": 0.536,
+    "advocate_perception_bias": 0.34088,
+    "public_conformity": 0.028000000000000004,
+    "opponent_silence": 0.808
+  },
+  "metrics": [
+    {
+      "round": 1,
+      "true_support": 0.8,
+      "feed_majority": 0.2,
+      "perceived_majority": 0.22,
+      "perception_bias": -0.272,
+      "public_support": 0.1,
+      "opponent_silence": 0.9,
+      "public_conformity": 0,
+      "empty_readers": 2,
+      "advocate_stance": -1,
+      "true_advocate_support": 0.19999999999999996,
+      "advocate_perception_bias": 0.272,
+      "public_advocate_stance": 0.0
+    },
+    {
+      "round": 2,
+      "true_support": 0.8,
+      "feed_majority": 0.46,
+      "perceived_majority": 0.44,
+      "perception_bias": -0.30340000000000006,
+      "public_support": 0.2,
+      "opponent_silence": 0.78,
+      "public_conformity": 0.02,
+      "empty_readers": 2,
+      "advocate_stance": -1,
+      "true_advocate_support": 0.19999999999999996,
+      "advocate_perception_bias": 0.3034,
+      "public_advocate_stance": 0.02
+    },
+    {
+      "round": 3,
+      "true_support": 0.8,
+      "feed_majority": 0.52,
+      "perceived_majority": 0.5,
+      "perception_bias": -0.33440000000000003,
+      "public_support": 0.1,
+      "opponent_silence": 0.86,
+      "public_conformity": 0.04,
+      "empty_readers": 2,
+      "advocate_stance": -1,
+      "true_advocate_support": 0.19999999999999996,
+      "advocate_perception_bias": 0.33440000000000003,
+      "public_advocate_stance": 0.04
+    },
+    {
+      "round": 4,
+      "true_support": 0.8,
+      "feed_majority": 0.48,
+      "perceived_majority": 0.52,
+      "perception_bias": -0.33620000000000005,
+      "public_support": 0.12,
+      "opponent_silence": 0.82,
+      "public_conformity": 0.06,
+      "empty_readers": 2,
+      "advocate_stance": -1,
+      "true_advocate_support": 0.19999999999999996,
+      "advocate_perception_bias": 0.33620000000000005,
+      "public_advocate_stance": 0.06
+    },
+    {
+      "round": 5,
+      "true_support": 0.8,
+      "feed_majority": 0.52,
+      "perceived_majority": 0.52,
+      "perception_bias": -0.33460000000000006,
+      "public_support": 0.2,
+      "opponent_silence": 0.74,
+      "public_conformity": 0.06,
+      "empty_readers": 3,
+      "advocate_stance": -1,
+      "true_advocate_support": 0.19999999999999996,
+      "advocate_perception_bias": 0.3346,
+      "public_advocate_stance": 0.06
+    },
+    {
+      "round": 6,
+      "true_support": 0.8,
+      "feed_majority": 0.68,
+      "perceived_majority": 0.56,
+      "perception_bias": -0.34320000000000006,
+      "public_support": 0.16,
+      "opponent_silence": 0.82,
+      "public_conformity": 0.02,
+      "empty_readers": 4,
+      "advocate_stance": -1,
+      "true_advocate_support": 0.19999999999999996,
+      "advocate_perception_bias": 0.34320000000000006,
+      "public_advocate_stance": 0.02
+    },
+    {
+      "round": 7,
+      "true_support": 0.8,
+      "feed_majority": 0.58,
+      "perceived_majority": 0.54,
+      "perception_bias": -0.34320000000000006,
+      "public_support": 0.2,
+      "opponent_silence": 0.8,
+      "public_conformity": 0,
+      "empty_readers": 3,
+      "advocate_stance": -1,
+      "true_advocate_support": 0.19999999999999996,
+      "advocate_perception_bias": 0.34320000000000006,
+      "public_advocate_stance": 0.0
+    },
+    {
+      "round": 8,
+      "true_support": 0.8,
+      "feed_majority": 0.48,
+      "perceived_majority": 0.6,
+      "perception_bias": -0.34740000000000004,
+      "public_support": 0.14,
+      "opponent_silence": 0.86,
+      "public_conformity": 0,
+      "empty_readers": 3,
+      "advocate_stance": -1,
+      "true_advocate_support": 0.19999999999999996,
+      "advocate_perception_bias": 0.34740000000000004,
+      "public_advocate_stance": 0.0
+    },
+    {
+      "round": 9,
+      "true_support": 0.8,
+      "feed_majority": 0.62,
+      "perceived_majority": 0.6,
+      "perception_bias": -0.35500000000000004,
+      "public_support": 0.14,
+      "opponent_silence": 0.82,
+      "public_conformity": 0.04,
+      "empty_readers": 4,
+      "advocate_stance": -1,
+      "true_advocate_support": 0.19999999999999996,
+      "advocate_perception_bias": 0.3550000000000001,
+      "public_advocate_stance": 0.04
+    },
+    {
+      "round": 10,
+      "true_support": 0.8,
+      "feed_majority": 0.46,
+      "perceived_majority": 0.6,
+      "perception_bias": -0.34400000000000003,
+      "public_support": 0.12,
+      "opponent_silence": 0.78,
+      "public_conformity": 0.1,
+      "empty_readers": 3,
+      "advocate_stance": -1,
+      "true_advocate_support": 0.19999999999999996,
+      "advocate_perception_bias": 0.3440000000000001,
+      "public_advocate_stance": 0.1
+    },
+    {
+      "round": 11,
+      "true_support": 0.8,
+      "feed_majority": 0.56,
+      "perceived_majority": 0.58,
+      "perception_bias": -0.34520000000000006,
+      "public_support": 0.2,
+      "opponent_silence": 0.78,
+      "public_conformity": 0.02,
+      "empty_readers": 4,
+      "advocate_stance": -1,
+      "true_advocate_support": 0.19999999999999996,
+      "advocate_perception_bias": 0.34520000000000006,
+      "public_advocate_stance": 0.02
+    },
+    {
+      "round": 12,
+      "true_support": 0.8,
+      "feed_majority": 0.6,
+      "perceived_majority": 0.52,
+      "perception_bias": -0.33880000000000005,
+      "public_support": 0.2,
+      "opponent_silence": 0.74,
+      "public_conformity": 0.06,
+      "empty_readers": 4,
+      "advocate_stance": -1,
+      "true_advocate_support": 0.19999999999999996,
+      "advocate_perception_bias": 0.3388,
+      "public_advocate_stance": 0.06
+    },
+    {
+      "round": 13,
+      "true_support": 0.8,
+      "feed_majority": 0.48,
+      "perceived_majority": 0.54,
+      "perception_bias": -0.34140000000000004,
+      "public_support": 0.14,
+      "opponent_silence": 0.84,
+      "public_conformity": 0.02,
+      "empty_readers": 4,
+      "advocate_stance": -1,
+      "true_advocate_support": 0.19999999999999996,
+      "advocate_perception_bias": 0.34140000000000004,
+      "public_advocate_stance": 0.02
+    },
+    {
+      "round": 14,
+      "true_support": 0.8,
+      "feed_majority": 0.56,
+      "perceived_majority": 0.52,
+      "perception_bias": -0.3396,
+      "public_support": 0.12,
+      "opponent_silence": 0.88,
+      "public_conformity": 0,
+      "empty_readers": 3,
+      "advocate_stance": -1,
+      "true_advocate_support": 0.19999999999999996,
+      "advocate_perception_bias": 0.3396,
+      "public_advocate_stance": 0.0
+    },
+    {
+      "round": 15,
+      "true_support": 0.8,
+      "feed_majority": 0.48,
+      "perceived_majority": 0.56,
+      "perception_bias": -0.33940000000000003,
+      "public_support": 0.16,
+      "opponent_silence": 0.8,
+      "public_conformity": 0.04,
+      "empty_readers": 2,
+      "advocate_stance": -1,
+      "true_advocate_support": 0.19999999999999996,
+      "advocate_perception_bias": 0.33940000000000003,
+      "public_advocate_stance": 0.04
+    }
+  ],
+  "diagnostics": [
+    {
+      "round": 1,
+      "active_observers": 48,
+      "mean_perceived_advocate": 0.47200000000000003,
+      "mean_feedback_observers": 0.0,
+      "messages": 239
+    },
+    {
+      "round": 2,
+      "active_observers": 48,
+      "mean_perceived_advocate": 0.5034000000000001,
+      "mean_feedback_observers": 0.0005,
+      "messages": 283
+    },
+    {
+      "round": 3,
+      "active_observers": 48,
+      "mean_perceived_advocate": 0.5344,
+      "mean_feedback_observers": -2.500000000000002e-05,
+      "messages": 272
+    },
+    {
+      "round": 4,
+      "active_observers": 48,
+      "mean_perceived_advocate": 0.5362,
+      "mean_feedback_observers": 0.00047625,
+      "messages": 257
+    },
+    {
+      "round": 5,
+      "active_observers": 47,
+      "mean_perceived_advocate": 0.5346,
+      "mean_feedback_observers": 0.0012381517857142858,
+      "messages": 254
+    },
+    {
+      "round": 6,
+      "active_observers": 46,
+      "mean_perceived_advocate": 0.5432,
+      "mean_feedback_observers": 0.0008191013392857141,
+      "messages": 260
+    },
+    {
+      "round": 7,
+      "active_observers": 47,
+      "mean_perceived_advocate": 0.5432,
+      "mean_feedback_observers": 0.00027814627232142843,
+      "messages": 255
+    },
+    {
+      "round": 8,
+      "active_observers": 47,
+      "mean_perceived_advocate": 0.5474,
+      "mean_feedback_observers": 0.000264238958705357,
+      "messages": 257
+    },
+    {
+      "round": 9,
+      "active_observers": 46,
+      "mean_perceived_advocate": 0.555,
+      "mean_feedback_observers": 0.0017510270107700893,
+      "messages": 256
+    },
+    {
+      "round": 10,
+      "active_observers": 47,
+      "mean_perceived_advocate": 0.544,
+      "mean_feedback_observers": 0.002230142326898251,
+      "messages": 263
+    },
+    {
+      "round": 11,
+      "active_observers": 46,
+      "mean_perceived_advocate": 0.5452,
+      "mean_feedback_observers": 0.0023686352105533382,
+      "messages": 266
+    },
+    {
+      "round": 12,
+      "active_observers": 46,
+      "mean_perceived_advocate": 0.5388000000000001,
+      "mean_feedback_observers": 0.0022502034500256713,
+      "messages": 258
+    },
+    {
+      "round": 13,
+      "active_observers": 46,
+      "mean_perceived_advocate": 0.5414,
+      "mean_feedback_observers": 0.0013876932775243878,
+      "messages": 275
+    },
+    {
+      "round": 14,
+      "active_observers": 47,
+      "mean_perceived_advocate": 0.5396,
+      "mean_feedback_observers": 0.0018183086136481683,
+      "messages": 263
+    },
+    {
+      "round": 15,
+      "active_observers": 48,
+      "mean_perceived_advocate": 0.5394,
+      "mean_feedback_observers": 0.0017273931829657595,
+      "messages": 277
+    }
+  ],
+  "seed_diagnostics": {
+    "illusion": 0.1425,
+    "fan_total": 2895,
+    "fan_union": 911,
+    "baseline_total": 37.75895822182442
+  }
+}

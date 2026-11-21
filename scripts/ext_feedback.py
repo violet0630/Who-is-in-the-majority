@@ -10,14 +10,15 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
 
-from scripts.ext_common import (FROZEN_SETTINGS, check_archived_protocol, csv_file, frozen_input_hashes, load_frozen_group,
-                                load_main_baseline, mean_summary, paired_condition_inference,
-                                persistence_rows, pp, runner_sha256, tail_rows,
+from scripts.ext_common import (FROZEN_SETTINGS, V2_SETTINGS, check_archived_protocol, csv_file, frozen_input_hashes, load_frozen_group,
+                                convergence_summary, load_main_baseline, mean_summary, paired_condition_inference,
+                                persistence_rows, persistence_rows_v2, pp, runner_sha256, tail_rows, tail_rows_v2,
                                 verify_frozen_inputs, write_archive_manifest, write_json)
 from scripts.majority_study import active_bank, load_bank, run_one, save_json
 
 PROJECT = Path(__file__).resolve().parents[1]
 OUTPUT = PROJECT / "experiments/2026-11-20-ext-feedback"
+V2_MODE = False
 
 CONDITIONS = {"FB0": {}, "FB1": {"beta": 0}, "FB2": {"beta": 50},
               "FB3": {"alpha": 0.1}, "FB4": {"alpha": 0.5}}
@@ -31,16 +32,26 @@ plt.rcParams.update({"font.sans-serif": ["Microsoft YaHei", "SimHei", "DejaVu Sa
                      "axes.unicode_minus": False})
 
 
+def configure_v2() -> None:
+    global OUTPUT, BASE_SETTINGS, V2_MODE
+    V2_MODE = True
+    OUTPUT = PROJECT / "experiments/2026-11-21-ext-feedback"
+    BASE_SETTINGS = {**V2_SETTINGS, "alpha": 0.05, "beta": 10, "llm_workers": 2}
+
+
 def derive_settings(base: dict, condition: str) -> dict:
     return {**base, **CONDITIONS[condition]}
 
 
 def prepare():
     protocol = {
-        "experiment": "extension-2 feedback mechanism", "date": "2026-11-20",
-        "base": "main experiment 1 frozen settings (alpha=0.05, beta=10 explicit); TH positions; one factor at a time",
+        "experiment": "extension-2 feedback mechanism v2" if V2_MODE else "extension-2 feedback mechanism",
+        "date": "2026-11-21" if V2_MODE else "2026-11-20",
+        "base": ("v2 network rules; frozen TH positions; one factor at a time"
+                 if V2_MODE else "main experiment 1 frozen settings (alpha=0.05, beta=10 explicit); TH positions; one factor at a time"),
         "conditions": {name: derive_settings(BASE_SETTINGS, name) for name in CONDITIONS},
-        "labels": COND_LABELS, "primary_outcome": "mean observer perceived_majority over rounds 8-10",
+        "labels": COND_LABELS, "primary_outcome": ("mean observer perceived_majority over rounds 11-15"
+                                                      if V2_MODE else "mean observer perceived_majority over rounds 8-10"),
         "secondary_outcomes": list(METRIC_LABELS),
         "comparisons": COMPARISONS,
         "statistics": "paired groups identical to main experiment; 10000 graph-stratified bootstrap; "
@@ -84,7 +95,7 @@ def run():
                          group["group_seed"], "TH", output, True)
         return {"condition": name, "graph": graph, "repeat": repeat, **result}
 
-    with ThreadPoolExecutor(max_workers=18) as pool:
+    with ThreadPoolExecutor(max_workers=4 if V2_MODE else 18) as pool:
         results = list(pool.map(execute, jobs))
     write_json(OUTPUT / "results.json", results)
     return results
@@ -103,13 +114,16 @@ def analyze():
         raise ValueError(f"Incomplete run: {len(missing)} trajectories missing, first: {missing[:5]}; "
                          "no imputation is allowed — rerun the missing trajectories first")
     for row in rows:
-        if len(row["metrics"]) != 10:
+        expected_rounds = 15 if V2_MODE else 10
+        if len(row["metrics"]) != expected_rounds:
             raise ValueError(f"{row['condition']}-g{row['graph']}-r{row['repeat']} has "
-                             f"{len(row['metrics'])} rounds, expected 10")
+                             f"{len(row['metrics'])} rounds, expected {expected_rounds}")
     output = {"outcomes": {}, "persistence": None, "trajectories": {}}
     for field, label in METRIC_LABELS.items():
-        output["outcomes"][field] = paired_condition_inference(tail_rows(rows, field), COMPARISONS)
-    output["persistence"] = paired_condition_inference(persistence_rows(rows), COMPARISONS)
+        output["outcomes"][field] = paired_condition_inference(
+            (tail_rows_v2 if V2_MODE else tail_rows)(rows, field), COMPARISONS)
+    output["persistence"] = paired_condition_inference(
+        (persistence_rows_v2 if V2_MODE else persistence_rows)(rows), COMPARISONS)
     write_json(OUTPUT / "inference.json", output)
     per_round = {}
     for row in rows:
@@ -117,6 +131,7 @@ def analyze():
             [m["perceived_majority"] for m in row["metrics"]])
     output["trajectories"] = {cond: np.mean(per_round[cond], axis=0).round(4).tolist()
                               for cond in per_round}
+    output["convergence"] = convergence_summary(rows)
     write_json(OUTPUT / "trajectories.json", output["trajectories"])
     archive = load_main_baseline("FB0-archived")
     csv_file(OUTPUT / "summary.csv", [
@@ -142,13 +157,14 @@ def _figures(rows, per_round):
         draws = [values[rng.choice(len(values), len(values), replace=True)].mean(axis=0)
                  for _ in range(3000)]
         low, high = np.quantile(np.array(draws), [0.025, 0.975], axis=0)
-        ax.plot(range(1, 11), values.mean(axis=0) * 100, label=COND_LABELS[cond],
+        rounds = values.shape[1]
+        ax.plot(range(1, rounds + 1), values.mean(axis=0) * 100, label=COND_LABELS[cond],
                 color=colors[index], marker="o", markersize=4)
-        ax.fill_between(range(1, 11), low * 100, high * 100, color=colors[index], alpha=0.12)
-    ax.axvline(5, color="#758393", linestyle="--", linewidth=1)
+        ax.fill_between(range(1, rounds + 1), low * 100, high * 100, color=colors[index], alpha=0.12)
+    ax.axvline(5 if V2_MODE else 5, color="#758393", linestyle="--", linewidth=1)
     ax.set_xlabel("轮次")
     ax.set_ylabel("多数误判比例 Q（%）")
-    ax.set_title("反馈机制条件：9组平均轨迹，阴影为95%置信区间")
+    ax.set_title(f"反馈机制{'v2' if V2_MODE else ''}：9组平均轨迹，阴影为95%置信区间")
     ax.legend(frameon=False, ncol=2)
     ax.grid(axis="y", alpha=0.2)
     fig.savefig(figures / "feedback_trajectories.png", dpi=180)
@@ -158,7 +174,7 @@ def _figures(rows, per_round):
 def _report(output, rows, protocol):
     lines = ["# 拓展二：反馈机制实验结果", "", "2026-11-20", "",
              "## 口径", "",
-             "配对单位与主实验一完全一致（同网络/个人参数/TH位置/组种子）；每条件9条10轮轨迹。",
+             f"配对单位与主实验一完全一致（同网络/个人参数/TH位置/组种子）；每条件9条{15 if V2_MODE else 10}轮轨迹。",
              "主要比较预先指定：FB1–FB4 各自对比 FB0，每个指标构成4项Holm校正检验；持续性（第8–10轮−第3–5轮）另成4项Holm检验。",
              "FB0 基准用当前运行器与网关重跑（45条新轨迹）；2026-11-16归档的TH结果仅作描述性参考（当时为双网关双模型标识混合，见 summary.csv 的 _archived 列）。",
              "无缺失轨迹；如有缺失会停止分析而不插补。", "",
@@ -175,6 +191,12 @@ def _report(output, rows, protocol):
         lines.append(f"| {COND_LABELS[comp['conditions'][0]]} − {COND_LABELS[comp['conditions'][1]]} "
                      f"| {pp(comp['difference'])} | [{pp(comp['ci95'][0])}, {pp(comp['ci95'][1])}] "
                      f"| {comp['p_value']:.4f}（{comp['p_holm']:.4f}） |")
+    lines.extend(["", "## 收敛摘要", "", "| 条件 | 早期 Qill | 后期 Qill | 后期−早期 | 最后一步 | 后五步平均绝对变化 |",
+                  "|---|---:|---:|---:|---:|---:|"])
+    for condition, values in output["convergence"].items():
+        lines.append(f"| {COND_LABELS[condition]} | {values['early_mean']:.2%} | {values['late_mean']:.2%} | "
+                     f"{values['late_minus_early']:+.2%} | {values['final_step_delta']:+.2%} | "
+                     f"{values['mean_abs_last_five_step']:.2%} |")
     lines.extend(["", "![轨迹](figures/feedback_trajectories.png)"])
     (OUTPUT / "report.md").write_text("\n".join(lines), encoding="utf-8")
 
@@ -182,7 +204,10 @@ def _report(output, rows, protocol):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("stage", choices=("prepare", "run", "analyze"))
+    parser.add_argument("--rules-v2", action="store_true")
     args = parser.parse_args()
+    if args.rules_v2:
+        configure_v2()
     if args.stage == "prepare":
         prepare()
     elif args.stage == "run":

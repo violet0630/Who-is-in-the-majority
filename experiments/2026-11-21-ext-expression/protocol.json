@@ -1,0 +1,186 @@
+{
+  "experiment": "extension-expression-parameters-v2",
+  "date": "2026-11-21",
+  "rounds": 15,
+  "tail_rounds": 5,
+  "base": "v2 local perception, read_limit=11, max_comments=3, and frozen TH positions",
+  "conditions": {
+    "E0": {
+      "mean_degree": 12,
+      "s_out": 0.35,
+      "s_in": 1.0,
+      "w": 0.2,
+      "fraction": 0.2,
+      "rho": 6,
+      "kappa": 0.5,
+      "gamma": 1,
+      "theta": [
+        1,
+        0,
+        -1,
+        0
+      ],
+      "rounds": 15,
+      "llm_workers": 2,
+      "tail_rounds": 5,
+      "window": 2,
+      "read_limit": 11,
+      "cross_fan_comments": true,
+      "community_fractions": [
+        0.15,
+        0.2,
+        0.25,
+        0.4
+      ],
+      "max_comments": 3,
+      "comment_alpha": 1.0,
+      "comment_beta": 9.0,
+      "alpha": 0.05,
+      "beta": 10
+    },
+    "E1": {
+      "mean_degree": 12,
+      "s_out": 0.35,
+      "s_in": 1.0,
+      "w": 0.2,
+      "fraction": 0.2,
+      "rho": 6,
+      "kappa": 0.5,
+      "gamma": 1,
+      "theta": [
+        1,
+        0,
+        -2.0,
+        0
+      ],
+      "rounds": 15,
+      "llm_workers": 2,
+      "tail_rounds": 5,
+      "window": 2,
+      "read_limit": 11,
+      "cross_fan_comments": true,
+      "community_fractions": [
+        0.15,
+        0.2,
+        0.25,
+        0.4
+      ],
+      "max_comments": 3,
+      "comment_alpha": 1.0,
+      "comment_beta": 9.0,
+      "alpha": 0.05,
+      "beta": 10
+    },
+    "E2": {
+      "mean_degree": 12,
+      "s_out": 0.35,
+      "s_in": 1.0,
+      "w": 0.2,
+      "fraction": 0.2,
+      "rho": 6,
+      "kappa": 0.5,
+      "gamma": 1,
+      "theta": [
+        1,
+        0,
+        0.0,
+        0
+      ],
+      "rounds": 15,
+      "llm_workers": 2,
+      "tail_rounds": 5,
+      "window": 2,
+      "read_limit": 11,
+      "cross_fan_comments": true,
+      "community_fractions": [
+        0.15,
+        0.2,
+        0.25,
+        0.4
+      ],
+      "max_comments": 3,
+      "comment_alpha": 1.0,
+      "comment_beta": 9.0,
+      "alpha": 0.05,
+      "beta": 10
+    },
+    "E3": {
+      "mean_degree": 12,
+      "s_out": 0.35,
+      "s_in": 1.0,
+      "w": 0.2,
+      "fraction": 0.2,
+      "rho": 6,
+      "kappa": 1.0,
+      "gamma": 1,
+      "theta": [
+        1,
+        0,
+        -1,
+        0
+      ],
+      "rounds": 15,
+      "llm_workers": 2,
+      "tail_rounds": 5,
+      "window": 2,
+      "read_limit": 11,
+      "cross_fan_comments": true,
+      "community_fractions": [
+        0.15,
+        0.2,
+        0.25,
+        0.4
+      ],
+      "max_comments": 3,
+      "comment_alpha": 1.0,
+      "comment_beta": 9.0,
+      "alpha": 0.05,
+      "beta": 10
+    }
+  },
+  "labels": {
+    "E0": "基准 theta_d=-1, kappa=0.5",
+    "E1": "高表达阻力 theta_d=-2",
+    "E2": "低表达阻力 theta_d=0",
+    "E3": "强立场一致 kappa=1"
+  },
+  "comparisons": [
+    [
+      "E1",
+      "E0"
+    ],
+    [
+      "E2",
+      "E0"
+    ],
+    [
+      "E3",
+      "E0"
+    ]
+  ],
+  "primary_outcomes": [
+    "perceived_majority",
+    "feed_majority",
+    "public_conformity",
+    "opponent_silence"
+  ],
+  "statistics": "paired groups; graph-stratified bootstrap 10000; exact sign-flip; Holm over three expression comparisons",
+  "convergence": "early rounds 1-5 versus late rounds 11-15, final-step delta, and mean absolute last-five-step change",
+  "new_runs": 36,
+  "frozen_input_sha256": {
+    "experiments/2026-11-16/03_positions/network-0.json": "301c076a5fa41f0a924ed6c50f0b2e2927df4967a6a02de0ee13765e6b750b9d",
+    "experiments/2026-11-16/03_positions/network-1.json": "3984a4eeaa1dfebe3a35ced64000d60f6b209008e352bc18ad2f791aacf7820f",
+    "experiments/2026-11-16/03_positions/network-2.json": "64120fb65a95b54ec8e538089abdd3fd988c8eca1a2bf32e70dcf7c7e978b14c",
+    "experiments/2026-11-16/03_positions/g0-r0_positions.json": "aa33b73cb63ae03d545644472679f6ac2dfc8b7d5639a67c63173155ff8fc274",
+    "experiments/2026-11-16/03_positions/g0-r1_positions.json": "c8258ff0d99ddfc5e8140279afbf2f590fe49845a1c494a5b59ae8e61b41b4ee",
+    "experiments/2026-11-16/03_positions/g0-r2_positions.json": "448bb93b7227cd0930ecf3e03b7d4cb4edadbbc748d68b2e54201abd13405293",
+    "experiments/2026-11-16/03_positions/g1-r0_positions.json": "0320fbd7d764d91986a252fb2647008aded2a3e539c52590736a0e673210e039",
+    "experiments/2026-11-16/03_positions/g1-r1_positions.json": "7bc01f4c144d65757815fbdefba34b2c993dc88f9cde7938a817b8aa77df997b",
+    "experiments/2026-11-16/03_positions/g1-r2_positions.json": "9eb5c5a2863c89ec956aee8fea95abc8e17bfafedd62b97eeba0caa54c571806",
+    "experiments/2026-11-16/03_positions/g2-r0_positions.json": "be15c05fc6c62184a131f15d221522de919a06eb1e68100d3b91e908b11c35ca",
+    "experiments/2026-11-16/03_positions/g2-r1_positions.json": "3a6b6edb1bc3e4c56b55bd20309d25b10f696ad056a12658207c2b2c095834cf",
+    "experiments/2026-11-16/03_positions/g2-r2_positions.json": "b5e4c3ff13c0bc34b8ed012cdc41b28c65be4ca45e202e1eff87395976a5ab38",
+    "experiments/2026-11-16/01_texts_50/bank.json": "14eb7690f95a35c6af42043d2e3418580ab44521eda3c1018d7e53f633b38b89"
+  },
+  "runner_sha256": "f27517b3b6f04ff692124902f32b1d5bd08ade0f94aed1ce1b63236bdfa940ac"
+}

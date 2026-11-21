@@ -1,138 +1,33 @@
-import gzip
-import json
-import unittest
-from dataclasses import replace
+﻿import json
 from pathlib import Path
-from tempfile import TemporaryDirectory
+import unittest
 
-from examples.demo import DemoPerception, demo_inputs
-from majority.models import Action, Coefficients, RunConfig
-from majority.randomness import RandomStreams
-from majority.simulation import Simulation
-from scripts.ext_common import parse_attitude
-from scripts.ext_resistance import extract_conversions
+from scripts.ext_resistance import CONDITIONS, BASE_SETTINGS, settings_for
 
 
-def flip_perception():
-    class Perception(DemoPerception):
-        def estimate(self, request):
-            result = super().estimate(request)
-            return replace(result, new_stance=-int(request.state.stance))
-    return Perception()
+class ExpressionProtocolTests(unittest.TestCase):
+    def test_conditions_are_expression_parameters(self):
+        self.assertEqual(set(CONDITIONS), {"E0", "E1", "E2", "E3"})
+        self.assertEqual(CONDITIONS["E1"]["theta_d"], -2.0)
+        self.assertEqual(CONDITIONS["E2"]["theta_d"], 0.0)
+        self.assertEqual(CONDITIONS["E3"]["kappa"], 1.0)
+        self.assertNotIn("private_update", CONDITIONS["E0"])
 
+    def test_v2_settings_are_fifteen_rounds(self):
+        for condition in CONDITIONS:
+            settings = settings_for(condition)
+            self.assertEqual(settings["rounds"], 15)
+            self.assertEqual(settings["tail_rounds"], 5)
+            self.assertEqual(settings["read_limit"], 11)
+            self.assertEqual(settings["max_comments"], 3)
+            self.assertEqual(settings["comment_alpha"], 1.0)
+            self.assertEqual(settings["comment_beta"], 9.0)
 
-class PrivateUpdateTests(unittest.TestCase):
-    def setUp(self):
-        self.network, self.profiles, self.bank = demo_inputs()
-        self.coefficients = Coefficients((0, 0, 0, 0), 1, 1, beta=2)
-
-    def simulation(self, config, perception):
-        return Simulation(self.network, self.profiles, frozenset({0}), self.bank,
-                          self.coefficients, config, perception, RandomStreams(42), "TH")
-
-    def test_update_off_ignores_new_stance(self):
-        """R0 坚持条件：解析得到 new_stance 但 private_update=False，运行不报错、立场不变。"""
-        simulation = self.simulation(RunConfig(rounds=3, private_update=False), flip_perception())
-        for record in simulation.run():
-            self.assertTrue(all(row.after.stance == row.before.stance for row in record.nodes))
-
-    def test_update_on_commit_timing(self):
-        """本轮发布消息必须与 before 立场一致；翻转观察者的下一轮 POST 决策使用更新后立场。"""
-        simulation = self.simulation(RunConfig(rounds=3, private_update=True), flip_perception())
-        cases = 0
-        for record in simulation.run():
-            rows = {row.node: row for row in record.nodes}
-            for message in record.published:
-                row = rows[message.author]
-                if message.action == Action.POST:
-                    self.assertEqual(int(message.stance), int(row.before.stance),
-                                     "新立场不得与本轮消息一起提交")
-            for row in record.nodes:
-                if row.node in self.network.observers and row.after.stance != row.before.stance:
-                    if row.next_decision.action == Action.POST:
-                        self.assertEqual(row.next_decision.public_stance, int(row.after.stance),
-                                         "下一轮决策必须使用更新后的私人立场")
-                        cases += 1
-        self.assertGreater(cases, 0, "测试场景未产生翻转观察者的原创决策，fixture 失效")
-
-    def test_advocate_never_updates(self):
-        """倡议者（节点0）即使收到 new_stance 也保持固定立场。"""
-        simulation = self.simulation(RunConfig(rounds=3, private_update=True), flip_perception())
-        for record in simulation.run():
-            for row in record.nodes:
-                if row.node == 0:
-                    self.assertEqual(row.after.stance, row.before.stance)
-                self.assertNotEqual(row.after.stance.value, 0)
-
-    def test_invalid_new_stance_raises(self):
-        class Perception(DemoPerception):
-            def estimate(self, request):
-                return replace(super().estimate(request), new_stance=0)
-        simulation = self.simulation(RunConfig(rounds=3, private_update=True), Perception())
-        with self.assertRaises(ValueError):
-            next(simulation.run())
-
-    def test_bool_new_stance_raises(self):
-        class Perception(DemoPerception):
-            def estimate(self, request):
-                return replace(super().estimate(request), new_stance=True)
-        simulation = self.simulation(RunConfig(rounds=3, private_update=True), Perception())
-        with self.assertRaises(ValueError):
-            next(simulation.run())
-
-    def test_missing_new_stance_skips_node(self):
-        """new_stance 为 None 的节点（如非观察者）在更新开启时不更新也不报错；
-        观察者的 new_stance 缺失由 attitude 解析层强制拒绝（见 AttitudeParseTests）。"""
-        simulation = self.simulation(RunConfig(rounds=3, private_update=True), DemoPerception())
-        for record in simulation.run():
-            self.assertTrue(all(row.after.stance == row.before.stance for row in record.nodes))
-
-
-class AttitudeParseTests(unittest.TestCase):
-    def test_valid_payload(self):
-        support, reason, ids, stance = parse_attitude(
-            {"support": 0.3, "reason": "所见反对更多", "evidence_ids": [], "new_stance": -1}, set())
-        self.assertEqual((support, reason, ids, stance), (0.3, "所见反对更多", (), -1))
-
-    def test_rejects_invalid_payloads(self):
-        for data in ({"support": 0.3, "reason": "x", "evidence_ids": []},
-                     {"support": 0.3, "reason": "x", "evidence_ids": [], "new_stance": 0},
-                     {"support": 0.3, "reason": "x", "evidence_ids": [], "new_stance": True},
-                     {"support": 0.3, "reason": "x", "evidence_ids": [], "new_stance": 1.0},
-                     {"support": 0.3, "reason": "x", "evidence_ids": [], "new_stance": 1, "extra": 1}):
-            with self.assertRaises(ValueError):
-                parse_attitude(data, set())
-
-    def test_rejects_unknown_evidence(self):
-        with self.assertRaises(ValueError):
-            parse_attitude({"support": 0.3, "reason": "x", "evidence_ids": ["m9"], "new_stance": 1},
-                           {"m1"})
-
-
-class ConversionsTests(unittest.TestCase):
-    def test_extract_conversions_counts_flips_and_support(self):
-        lines = []
-        for round_number, stance_pairs in ((1, [(1, 1), (1, -1), (-1, -1)]),
-                                           (2, [(-1, 1), (-1, -1), (1, 1)])):
-            nodes = [{"node": i, "before": {"stance": before, "perceived_support": 0.5, "feedback_value": 0.0},
-                      "after": {"stance": after, "perceived_support": 0.5, "feedback_value": 0.0}}
-                     for i, (before, after) in enumerate(stance_pairs)]
-            lines.append(json.dumps({"kind": "round",
-                                     "data": {"round": round_number, "branch": "TH",
-                                              "published": [], "nodes": nodes,
-                                              "advocate_stance": -1}}))
-        with TemporaryDirectory() as directory:
-            path = Path(directory) / "trajectory.jsonl.gz"
-            with gzip.open(path, "wt", encoding="utf-8") as stream:
-                for line in lines:
-                    stream.write(line + "\n")
-            per_round = extract_conversions(path)
-        self.assertEqual(per_round[1]["flipped_to_oppose"], 1)
-        self.assertEqual(per_round[1]["flipped_to_support"], 0)
-        self.assertAlmostEqual(per_round[1]["true_support"], 2 / 3)
-        self.assertEqual(per_round[2]["flipped_to_oppose"], 0)
-        self.assertEqual(per_round[2]["flipped_to_support"], 1)
-        self.assertAlmostEqual(per_round[2]["true_support"], 1 / 3)
+    def test_conditions_change_only_expression_fields(self):
+        base = settings_for("E0")
+        self.assertEqual({k for k in settings_for("E1") if settings_for("E1")[k] != base[k]}, {"theta"})
+        self.assertEqual({k for k in settings_for("E2") if settings_for("E2")[k] != base[k]}, {"theta"})
+        self.assertEqual({k for k in settings_for("E3") if settings_for("E3")[k] != base[k]}, {"kappa"})
 
 
 if __name__ == "__main__":

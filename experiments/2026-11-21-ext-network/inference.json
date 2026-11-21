@@ -1,0 +1,352 @@
+{
+  "outcomes": {
+    "perceived_majority": {
+      "conditions": [
+        "NW0",
+        "NW1",
+        "NW2",
+        "NW3",
+        "NW4"
+      ],
+      "comparisons": [
+        {
+          "conditions": [
+            "NW1",
+            "NW0"
+          ],
+          "difference": -0.05244444444444446,
+          "ci95": [
+            -0.12488888888888883,
+            0.020444444444444543
+          ],
+          "p_value": 0.1699,
+          "paired": false,
+          "p_holm": 0.192
+        },
+        {
+          "conditions": [
+            "NW2",
+            "NW0"
+          ],
+          "difference": 0.10177777777777774,
+          "ci95": [
+            -0.015555555555555378,
+            0.22133333333333344
+          ],
+          "p_value": 0.096,
+          "paired": false,
+          "p_holm": 0.192
+        },
+        {
+          "conditions": [
+            "NW3",
+            "NW0"
+          ],
+          "difference": -0.10266666666666674,
+          "ci95": [
+            -0.18177777777777776,
+            -0.023555555555555496
+          ],
+          "p_value": 0.0097,
+          "paired": false,
+          "p_holm": 0.0332
+        },
+        {
+          "conditions": [
+            "NW4",
+            "NW0"
+          ],
+          "difference": -0.09288888888888891,
+          "ci95": [
+            -0.16133333333333333,
+            -0.022666666666666613
+          ],
+          "p_value": 0.0083,
+          "paired": false,
+          "p_holm": 0.0332
+        }
+      ],
+      "paired": false,
+      "statistics": "10000 graph-stratified bootstrap draws; 95% CI; Holm adjustment; p_value describes the uncentered bootstrap sign tails conditional on fixed graphs"
+    },
+    "feed_majority": {
+      "conditions": [
+        "NW0",
+        "NW1",
+        "NW2",
+        "NW3",
+        "NW4"
+      ],
+      "comparisons": [
+        {
+          "conditions": [
+            "NW1",
+            "NW0"
+          ],
+          "difference": -0.09866666666666674,
+          "ci95": [
+            -0.13644444444444448,
+            -0.06266666666666654
+          ],
+          "p_value": 0.0,
+          "paired": false,
+          "p_holm": 0.0
+        },
+        {
+          "conditions": [
+            "NW2",
+            "NW0"
+          ],
+          "difference": 0.04222222222222227,
+          "ci95": [
+            -0.008000000000000007,
+            0.09955555555555551
+          ],
+          "p_value": 0.1155,
+          "paired": false,
+          "p_holm": 0.1155
+        },
+        {
+          "conditions": [
+            "NW3",
+            "NW0"
+          ],
+          "difference": -0.07999999999999996,
+          "ci95": [
+            -0.1395555555555555,
+            -0.021777777777777785
+          ],
+          "p_value": 0.0058,
+          "paired": false,
+          "p_holm": 0.0116
+        },
+        {
+          "conditions": [
+            "NW4",
+            "NW0"
+          ],
+          "difference": -0.09066666666666662,
+          "ci95": [
+            -0.1408888888888889,
+            -0.04355555555555535
+          ],
+          "p_value": 0.0,
+          "paired": false,
+          "p_holm": 0.0
+        }
+      ],
+      "paired": false,
+      "statistics": "10000 graph-stratified bootstrap draws; 95% CI; Holm adjustment; p_value describes the uncentered bootstrap sign tails conditional on fixed graphs"
+    },
+    "public_conformity": {
+      "conditions": [
+        "NW0",
+        "NW1",
+        "NW2",
+        "NW3",
+        "NW4"
+      ],
+      "comparisons": [
+        {
+          "conditions": [
+            "NW1",
+            "NW0"
+          ],
+          "difference": -0.0022222222222222296,
+          "ci95": [
+            -0.010666666666666658,
+            0.007111111111111106
+          ],
+          "p_value": 0.6272,
+          "paired": false,
+          "p_holm": 1.0
+        },
+        {
+          "conditions": [
+            "NW2",
+            "NW0"
+          ],
+          "difference": 0.0022222222222222296,
+          "ci95": [
+            -0.009777777777777767,
+            0.015111111111111117
+          ],
+          "p_value": 0.7359,
+          "paired": false,
+          "p_holm": 1.0
+        },
+        {
+          "conditions": [
+            "NW3",
+            "NW0"
+          ],
+          "difference": 0.007999999999999993,
+          "ci95": [
+            -0.0026666666666666713,
+            0.019555555555555548
+          ],
+          "p_value": 0.1499,
+          "paired": false,
+          "p_holm": 0.4497
+        },
+        {
+          "conditions": [
+            "NW4",
+            "NW0"
+          ],
+          "difference": 0.009777777777777774,
+          "ci95": [
+            -0.0004444444444444487,
+            0.020444444444444446
+          ],
+          "p_value": 0.0617,
+          "paired": false,
+          "p_holm": 0.2468
+        }
+      ],
+      "paired": false,
+      "statistics": "10000 graph-stratified bootstrap draws; 95% CI; Holm adjustment; p_value describes the uncentered bootstrap sign tails conditional on fixed graphs"
+    },
+    "opponent_silence": {
+      "conditions": [
+        "NW0",
+        "NW1",
+        "NW2",
+        "NW3",
+        "NW4"
+      ],
+      "comparisons": [
+        {
+          "conditions": [
+            "NW1",
+            "NW0"
+          ],
+          "difference": -0.005333333333333523,
+          "ci95": [
+            -0.03600000000000003,
+            0.020444444444444376
+          ],
+          "p_value": 0.7409,
+          "paired": false,
+          "p_holm": 1.0
+        },
+        {
+          "conditions": [
+            "NW2",
+            "NW0"
+          ],
+          "difference": -0.00666666666666671,
+          "ci95": [
+            -0.04222222222222227,
+            0.026666666666666727
+          ],
+          "p_value": 0.7156,
+          "paired": false,
+          "p_holm": 1.0
+        },
+        {
+          "conditions": [
+            "NW3",
+            "NW0"
+          ],
+          "difference": -0.008444444444444588,
+          "ci95": [
+            -0.047555555555555684,
+            0.028444444444444494
+          ],
+          "p_value": 0.6735,
+          "paired": false,
+          "p_holm": 1.0
+        },
+        {
+          "conditions": [
+            "NW4",
+            "NW0"
+          ],
+          "difference": -0.011111111111111183,
+          "ci95": [
+            -0.05022222222222228,
+            0.02400000000000002
+          ],
+          "p_value": 0.5909,
+          "paired": false,
+          "p_holm": 1.0
+        }
+      ],
+      "paired": false,
+      "statistics": "10000 graph-stratified bootstrap draws; 95% CI; Holm adjustment; p_value describes the uncentered bootstrap sign tails conditional on fixed graphs"
+    }
+  },
+  "persistence": {
+    "conditions": [
+      "NW0",
+      "NW1",
+      "NW2",
+      "NW3",
+      "NW4"
+    ],
+    "comparisons": [
+      {
+        "conditions": [
+          "NW1",
+          "NW0"
+        ],
+        "difference": -0.01866666666666661,
+        "ci95": [
+          -0.059555555555555514,
+          0.022666666666666682
+        ],
+        "p_value": 0.3947,
+        "paired": false,
+        "p_holm": 0.3947
+      },
+      {
+        "conditions": [
+          "NW2",
+          "NW0"
+        ],
+        "difference": 0.05644444444444455,
+        "ci95": [
+          0.008000000000000118,
+          0.10400000000000006
+        ],
+        "p_value": 0.0186,
+        "paired": false,
+        "p_holm": 0.055799999999999995
+      },
+      {
+        "conditions": [
+          "NW3",
+          "NW0"
+        ],
+        "difference": -0.04311111111111107,
+        "ci95": [
+          -0.08844444444444444,
+          -0.0013333333333333114
+        ],
+        "p_value": 0.0431,
+        "paired": false,
+        "p_holm": 0.0862
+      },
+      {
+        "conditions": [
+          "NW4",
+          "NW0"
+        ],
+        "difference": -0.04755555555555553,
+        "ci95": [
+          -0.08577777777777776,
+          -0.011111111111111086
+        ],
+        "p_value": 0.011,
+        "paired": false,
+        "p_holm": 0.044
+      }
+    ],
+    "paired": false,
+    "statistics": "10000 graph-stratified bootstrap draws; 95% CI; Holm adjustment; p_value describes the uncentered bootstrap sign tails conditional on fixed graphs"
+  },
+  "trajectories": {},
+  "per_network": {},
+  "scope": {}
+}

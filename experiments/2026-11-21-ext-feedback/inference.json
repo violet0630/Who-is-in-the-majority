@@ -1,0 +1,350 @@
+{
+  "outcomes": {
+    "perceived_majority": {
+      "conditions": [
+        "FB0",
+        "FB1",
+        "FB2",
+        "FB3",
+        "FB4"
+      ],
+      "comparisons": [
+        {
+          "conditions": [
+            "FB1",
+            "FB0"
+          ],
+          "difference": -0.02577777777777777,
+          "ci95": [
+            -0.058222222222222286,
+            0.004444444444444362
+          ],
+          "p_value": 0.2109375,
+          "paired_groups": 9,
+          "p_holm": 0.71875
+        },
+        {
+          "conditions": [
+            "FB2",
+            "FB0"
+          ],
+          "difference": 0.015555555555555588,
+          "ci95": [
+            -0.031111111111111145,
+            0.06444444444444442
+          ],
+          "p_value": 0.62890625,
+          "paired_groups": 9,
+          "p_holm": 0.71875
+        },
+        {
+          "conditions": [
+            "FB3",
+            "FB0"
+          ],
+          "difference": -0.022666666666666644,
+          "ci95": [
+            -0.048888888888888926,
+            0.000888888888888939
+          ],
+          "p_value": 0.1796875,
+          "paired_groups": 9,
+          "p_holm": 0.71875
+        },
+        {
+          "conditions": [
+            "FB4",
+            "FB0"
+          ],
+          "difference": 0.026666666666666672,
+          "ci95": [
+            -0.008000000000000007,
+            0.06311111111111117
+          ],
+          "p_value": 0.3125,
+          "paired_groups": 9,
+          "p_holm": 0.71875
+        }
+      ],
+      "paired": true,
+      "statistics": "10000 graph-stratified bootstrap draws; 95% CI; Holm adjustment"
+    },
+    "feed_majority": {
+      "conditions": [
+        "FB0",
+        "FB1",
+        "FB2",
+        "FB3",
+        "FB4"
+      ],
+      "comparisons": [
+        {
+          "conditions": [
+            "FB1",
+            "FB0"
+          ],
+          "difference": -0.04311111111111111,
+          "ci95": [
+            -0.09599999999999986,
+            0.004444444444444473
+          ],
+          "p_value": 0.25,
+          "paired_groups": 9,
+          "p_holm": 1.0
+        },
+        {
+          "conditions": [
+            "FB2",
+            "FB0"
+          ],
+          "difference": 0.0035555555555555835,
+          "ci95": [
+            -0.03733333333333344,
+            0.04488888888888887
+          ],
+          "p_value": 0.90234375,
+          "paired_groups": 9,
+          "p_holm": 1.0
+        },
+        {
+          "conditions": [
+            "FB3",
+            "FB0"
+          ],
+          "difference": -0.017777777777777764,
+          "ci95": [
+            -0.0497777777777777,
+            0.014222222222222247
+          ],
+          "p_value": 0.328125,
+          "paired_groups": 9,
+          "p_holm": 1.0
+        },
+        {
+          "conditions": [
+            "FB4",
+            "FB0"
+          ],
+          "difference": 0.008888888888888884,
+          "ci95": [
+            -0.01244444444444448,
+            0.03155555555555567
+          ],
+          "p_value": 0.53125,
+          "paired_groups": 9,
+          "p_holm": 1.0
+        }
+      ],
+      "paired": true,
+      "statistics": "10000 graph-stratified bootstrap draws; 95% CI; Holm adjustment"
+    },
+    "public_conformity": {
+      "conditions": [
+        "FB0",
+        "FB1",
+        "FB2",
+        "FB3",
+        "FB4"
+      ],
+      "comparisons": [
+        {
+          "conditions": [
+            "FB1",
+            "FB0"
+          ],
+          "difference": -0.0022222222222222196,
+          "ci95": [
+            -0.008000000000000007,
+            0.00311111111111112
+          ],
+          "p_value": 0.609375,
+          "paired_groups": 9,
+          "p_holm": 1.0
+        },
+        {
+          "conditions": [
+            "FB2",
+            "FB0"
+          ],
+          "difference": -0.0022222222222222235,
+          "ci95": [
+            -0.012,
+            0.007555555555555565
+          ],
+          "p_value": 0.765625,
+          "paired_groups": 9,
+          "p_holm": 1.0
+        },
+        {
+          "conditions": [
+            "FB3",
+            "FB0"
+          ],
+          "difference": -0.001333333333333333,
+          "ci95": [
+            -0.00711111111111111,
+            0.003999999999999997
+          ],
+          "p_value": 0.81640625,
+          "paired_groups": 9,
+          "p_holm": 1.0
+        },
+        {
+          "conditions": [
+            "FB4",
+            "FB0"
+          ],
+          "difference": -0.0013333333333333352,
+          "ci95": [
+            -0.004888888888888901,
+            0.0026666666666666713
+          ],
+          "p_value": 0.8125,
+          "paired_groups": 9,
+          "p_holm": 1.0
+        }
+      ],
+      "paired": true,
+      "statistics": "10000 graph-stratified bootstrap draws; 95% CI; Holm adjustment"
+    },
+    "opponent_silence": {
+      "conditions": [
+        "FB0",
+        "FB1",
+        "FB2",
+        "FB3",
+        "FB4"
+      ],
+      "comparisons": [
+        {
+          "conditions": [
+            "FB1",
+            "FB0"
+          ],
+          "difference": 0.0013333333333333346,
+          "ci95": [
+            -0.004444444444444473,
+            0.00666666666666671
+          ],
+          "p_value": 0.78515625,
+          "paired_groups": 9,
+          "p_holm": 1.0
+        },
+        {
+          "conditions": [
+            "FB2",
+            "FB0"
+          ],
+          "difference": 2.4671622769447922e-17,
+          "ci95": [
+            -0.01200000000000001,
+            0.0119999999999999
+          ],
+          "p_value": 1.0,
+          "paired_groups": 9,
+          "p_holm": 1.0
+        },
+        {
+          "conditions": [
+            "FB3",
+            "FB0"
+          ],
+          "difference": -0.0035555555555555956,
+          "ci95": [
+            -0.007111111111111179,
+            0.0004444444444444695
+          ],
+          "p_value": 0.1953125,
+          "paired_groups": 9,
+          "p_holm": 0.78125
+        },
+        {
+          "conditions": [
+            "FB4",
+            "FB0"
+          ],
+          "difference": -0.003111111111111114,
+          "ci95": [
+            -0.008444444444444477,
+            0.0031111111111109535
+          ],
+          "p_value": 0.6015625,
+          "paired_groups": 9,
+          "p_holm": 1.0
+        }
+      ],
+      "paired": true,
+      "statistics": "10000 graph-stratified bootstrap draws; 95% CI; Holm adjustment"
+    }
+  },
+  "persistence": {
+    "conditions": [
+      "FB0",
+      "FB1",
+      "FB2",
+      "FB3",
+      "FB4"
+    ],
+    "comparisons": [
+      {
+        "conditions": [
+          "FB1",
+          "FB0"
+        ],
+        "difference": -0.028000000000000008,
+        "ci95": [
+          -0.06088888888888891,
+          0.0026666666666666505
+        ],
+        "p_value": 0.2109375,
+        "paired_groups": 9,
+        "p_holm": 0.640625
+      },
+      {
+        "conditions": [
+          "FB2",
+          "FB0"
+        ],
+        "difference": 0.017333333333333367,
+        "ci95": [
+          -0.02844444444444444,
+          0.06622222222222227
+        ],
+        "p_value": 0.59375,
+        "paired_groups": 9,
+        "p_holm": 0.828125
+      },
+      {
+        "conditions": [
+          "FB3",
+          "FB0"
+        ],
+        "difference": -0.023999999999999983,
+        "ci95": [
+          -0.050222222222222224,
+          0.0022222222222222088
+        ],
+        "p_value": 0.16015625,
+        "paired_groups": 9,
+        "p_holm": 0.640625
+      },
+      {
+        "conditions": [
+          "FB4",
+          "FB0"
+        ],
+        "difference": 0.020444444444444463,
+        "ci95": [
+          -0.013333333333333322,
+          0.05644444444444449
+        ],
+        "p_value": 0.4140625,
+        "paired_groups": 9,
+        "p_holm": 0.828125
+      }
+    ],
+    "paired": true,
+    "statistics": "10000 graph-stratified bootstrap draws; 95% CI; Holm adjustment"
+  },
+  "trajectories": {}
+}

@@ -525,7 +525,10 @@ def run_one(network, profiles, advocates, bank, settings, seed, branch, output=N
                        advocate_stance=Stance.OPPOSE, window=settings.get("window", 2),
                        read_limit=settings.get("read_limit", 11),
                        cross_fan_comments=settings.get("cross_fan_comments", True),
-                       private_update=private_update)
+                       private_update=private_update,
+                       max_comments=settings.get("max_comments", 3),
+                       comment_alpha=settings.get("comment_alpha", 1.0),
+                       comment_beta=settings.get("comment_beta", 9.0))
     coefficients = coefficients_from(settings)
     metrics, diagnostic_rows = [], []
     prefix_reference = None
