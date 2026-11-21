@@ -161,7 +161,13 @@ class ObserverPerception:
 
     def estimate(self, request):
         if request.node not in self.observers:
-            return PerceptionResult(0.5, "{}", model="inactive_nonobserver")
+            authors = {}
+            for message in request.current.messages:
+                authors[message.author] = self.labels[message.text]
+            support = (sum(stance == 1 for stance in authors.values()) / len(authors)
+                       if authors else request.state.perceived_support)
+            return PerceptionResult(support, json.dumps({"support": support, "source": "local_proxy"}),
+                                    model="local_proxy")
         if self.llm:
             return self.llm.estimate(request)
         # Low-fidelity screening uses only directly read messages, with authors deduplicated.
@@ -321,13 +327,7 @@ class StudyPerception:
 
 
 class ObserverSimulation(Simulation):
-    def _decide(self, node, round, state, targets):
-        coefficients = self.coefficients
-        if node not in self.network.observers:
-            coefficients = replace(coefficients, gamma=0.0,
-                                   theta=(coefficients.theta[0], coefficients.theta[1], 0.0, 0.0))
-        return decide(node, round, self.profiles[node], state, node in self.advocates,
-                      tuple(self.messages[value] for value in targets), coefficients, self.config, self.streams)
+    pass
 
 
 def network_config(size, settings):
@@ -523,7 +523,7 @@ def run_one(network, profiles, advocates, bank, settings, seed, branch, output=N
     study = json.loads((PROJECT / "configs/study.json").read_text(encoding="utf-8"))
     config = RunConfig(rounds=settings["rounds"], alpha=settings.get("alpha", 0.05), rho=settings["rho"],
                        advocate_stance=Stance.OPPOSE, window=settings.get("window", 2),
-                       read_limit=settings.get("read_limit", 5),
+                       read_limit=settings.get("read_limit", 11),
                        cross_fan_comments=settings.get("cross_fan_comments", True),
                        private_update=private_update)
     coefficients = coefficients_from(settings)
@@ -553,7 +553,7 @@ def run_one(network, profiles, advocates, bank, settings, seed, branch, output=N
                 "network": network, "profiles": profiles, "advocates": advocates,
                 "config": config, "coefficients": coefficients, "group_seed": seed, "branch": branch,
                 "observer_count": len(network.observers), "llm": llm_config,
-                "perception_scope": "observers_only; nonobservers gamma=theta_d=theta_hd=0",
+                "perception_scope": "observers use LLM; nonobservers use local_proxy",
                 "prompt": "perception_attitude" if attitude else "perception",
                 "private_update": private_update,
                 "settings": settings, "prompt_sha256": prompt_hash("perception_attitude" if attitude else "perception"),

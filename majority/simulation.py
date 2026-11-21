@@ -75,11 +75,33 @@ class Simulation:
         )
 
     def _prepare_messages(self, round: int, decisions: tuple[Decision, ...]) -> tuple[Message, ...]:
-        return tuple(
-            make_message(self.branch, node, round, decision, self.network, self.bank,
-                         self.messages, self.config, self.streams.for_event(node, round, "text"))
-            for node, decision in enumerate(decisions) if decision.action != Action.SILENT
-        )
+        messages = []
+        for node, decision in enumerate(decisions):
+            if decision.action == Action.SILENT:
+                continue
+            comments = decision.comments
+            if not comments and decision.action in (Action.AGREE, Action.DISAGREE):
+                if decision.target_id is None:
+                    raise ValueError("评论决策必须包含 target_id")
+                comments = ((decision.action, decision.target_id, decision.public_stance),)
+            if comments:
+                for slot, comment in enumerate(comments):
+                    if isinstance(comment, tuple):
+                        action, target_id, public_stance = comment
+                    else:
+                        action, target_id, public_stance = comment.action, comment.target_id, comment.public_stance
+                    message_decision = replace(decision, action=action, target_id=target_id,
+                                               public_stance=public_stance, comments=())
+                    messages.append(make_message(
+                        self.branch, node, round, message_decision, self.network, self.bank,
+                        self.messages, self.config,
+                        self.streams.for_event(node, round, f"text:{slot}"), slot))
+            else:
+                messages.append(make_message(
+                    self.branch, node, round, decision, self.network, self.bank,
+                    self.messages, self.config,
+                    self.streams.for_event(node, round, "text")))
+        return tuple(messages)
 
     def _view(self, ids: tuple[str, ...]) -> tuple[ViewedMessage, ...]:
         messages = (self.messages[id] for id in ids)

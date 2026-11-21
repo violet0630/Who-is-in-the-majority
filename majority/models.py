@@ -75,17 +75,22 @@ class Coefficients:
 class RunConfig:
     rounds: int = 20
     window: int = 2
-    read_limit: int = 5
+    read_limit: int = 11
     alpha: float = 0.05
     rho: float = 1.0
     cross_fan_comments: bool = True
     advocate_stance: Stance = Stance.OPPOSE
+    max_comments: int = 3
+    comment_alpha: float = 1.0
+    comment_beta: float = 9.0
     private_update: bool = False
 
     def __post_init__(self) -> None:
         if min(self.rounds, self.window, self.read_limit) < 1:
             raise ValueError("轮数、窗口和阅读上限必须为正")
-        if not 0 <= self.alpha <= 1 or not isfinite(self.rho) or self.rho <= 0:
+        if (not 0 <= self.alpha <= 1 or not isfinite(self.rho) or self.rho <= 0
+                or self.max_comments < 1 or self.comment_alpha <= 0 or self.comment_beta <= 0
+                or not isfinite(self.comment_alpha) or not isfinite(self.comment_beta)):
             raise ValueError("需要 0 <= alpha <= 1 且 rho > 0")
         if not isinstance(self.advocate_stance, Stance):
             raise ValueError("倡议者立场须为 Stance 枚举")
@@ -150,8 +155,16 @@ class ActionProbabilities:
 
 
 @dataclass(frozen=True)
+class CommentDecision:
+    action: Action
+    target_id: str
+    public_stance: int
+
+
+@dataclass(frozen=True)
 class Decision:
     action: Action
     probabilities: ActionProbabilities
     public_stance: int = 0
     target_id: str | None = None
+    comments: tuple[CommentDecision, ...] = ()
