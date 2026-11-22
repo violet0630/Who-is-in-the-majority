@@ -1,0 +1,17 @@
+{
+  "status": "offline_smoke_passed",
+  "API_calls": 0,
+  "simulated_runs": 4,
+  "rounds_per_run": 15,
+  "tail_rounds": [
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "multi_message_author_rounds": 40,
+  "reads_of_11": 448,
+  "local_state_changes": 190,
+  "research_results": false
+}
