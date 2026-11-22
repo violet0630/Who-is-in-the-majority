@@ -10,17 +10,14 @@
 - [完整实验归档与复现](experiments/2026-11-16/README.md)
 - [选定初始化](configs/initialized_20261116.json)
 
-## 2026-11-20 三项拓展实验
+## 三项拓展实验
 
-三项拓展已经在 `gxy` 分支完成并归档。反馈机制、网络环境和个体抵抗力分别使用 `scripts/ext_feedback.py`、`scripts/ext_network.py` 和 `scripts/ext_resistance.py`，每项都提供 `prepare`、`run`、`analyze` 阶段，个体抵抗力另有 `conversions` 阶段。
+三项拓展的方案、规则、公式、图表与结果按版本独立记录。
 
-- 共 108 条真实 API 轨迹，全部 10 轮完成，无缺失或插补。
-- 三项协议记录冻结输入和各自的运行器 SHA-256。准备阶段验证既有协议，运行阶段要求与该协议指定的代码版本一致。
-- `python -m unittest discover -s tests -v` 验证 47 项测试。
-- `python -m scripts.verify_results` 验证主实验一的 203 个归档文件。
-- 三个拓展目录的 `archive_manifest.json` 均可独立校验。
+- [v1 完整报告](docs/拓展实验方案与结果-v1.md) 包含私人立场更新、反馈机制、网络环境，共 108 条十轮轨迹。[飞书阅读](https://zcn275yyetuw.feishu.cn/docx/Ifeidw7zPoYi92xPLBKc9JSwnOj)
+- [v2 完整报告](docs/拓展实验方案与结果.md) 包含立场表达参数、反馈机制、网络环境，共 126 条十五轮轨迹。[飞书阅读](https://zcn275yyetuw.feishu.cn/docx/EHUsdAUZKoDRFSxpXPNcveMsnEV)
 
-完整结果、统计口径与限制见 [拓展实验方案与结果](docs/拓展实验方案与结果.md)，实施步骤见 [三项拓展实验计划](docs/superpowers/plans/2026-11-20-three-extension-experiments.md)。
+各版本报告给出完整运行身份、推断边界和复核入口。协议和实验归档保存在相应结果目录。
 
 安装实验依赖使用`python -m pip install -e ".[experiments]"`；核对保存结果使用`python -m scripts.verify_results`，重建图表与汇总使用`python -m scripts.summarize_study`。API配置见`.env.example`，实际密钥只在本地提供。
 
