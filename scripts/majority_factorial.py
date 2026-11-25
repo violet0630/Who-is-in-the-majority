@@ -61,19 +61,26 @@ def source_hashes():
     paths += list((PROJECT / "majority/prompts").glob("*.md"))
     paths += [PROJECT / "configs/study.json", PROJECT / "scripts/__init__.py",
               PROJECT / "scripts/majority_study.py", Path(__file__),
-              PROJECT / "scripts/summarize_factorial.py"]
+              PROJECT / "scripts/summarize_factorial.py", PROJECT / "scripts/main2_v2.py"]
     return {path.relative_to(PROJECT).as_posix(): file_hash(path) for path in sorted(set(paths))}
 
 
 def validate_protocol(protocol, baseline):
-    if protocol.get("schema_version") != 1 or protocol.get("position_strategy") != "TH":
-        raise ValueError("Only schema 1 / TH is supported")
+    if protocol.get("schema_version") not in (1, 2) or protocol.get("position_strategy") != "TH":
+        raise ValueError("Only schema 1 or 2 / TH is supported")
     for field in ("graphs", "repeats", "k_grid", "rho_grid"):
         values = protocol[field]
         if not values or len(set(values)) != len(values) or values != sorted(values):
             raise ValueError(f"{field} must be nonempty, unique, and sorted")
-    if protocol["graphs"] != [0, 1, 2] or protocol["repeats"] != [0, 1, 2]:
-        raise ValueError("This protocol uses the nine archived graph/profile groups")
+    expected_repeats = [0] if protocol["schema_version"] == 2 else [0, 1, 2]
+    if protocol["graphs"] != [0, 1, 2] or protocol["repeats"] != expected_repeats:
+        raise ValueError("Unexpected archived graph/profile groups")
+    if protocol["schema_version"] == 2:
+        expected = {"read_limit": 11, "window": 2, "max_comments": 3,
+                    "comment_alpha": 1.0, "comment_beta": 9.0, "cross_fan_comments": True}
+        if (protocol.get("settings") != expected or not protocol.get("reuse_prepared")
+                or protocol["analysis"].get("mode") != "three_graph_descriptive"):
+            raise ValueError("V2 requires frozen local-perception rules and reused positions")
     n = baseline["size"]
     if n != 1000 or baseline["observer_count"] != 50:
         raise ValueError("Expected the frozen 1000-node / 50-observer baseline")
@@ -215,6 +222,8 @@ def prepare(protocol_path, output):
     protocol = read_json(protocol_path)
     baseline = read_json(inside(PROJECT, protocol["baseline"]))
     validate_protocol(protocol, baseline)
+    reused_root = inside(PROJECT, protocol["reuse_prepared"]) if protocol.get("reuse_prepared") else None
+    reused = load_prepared(reused_root, check_code=False) if reused_root else None
     output = Path(output).resolve()
     archive = inside(PROJECT, protocol["archive"])
     if output.is_relative_to(archive):
@@ -271,7 +280,17 @@ def prepare(protocol_path, output):
         profiles = tuple(Profile(**row) for row in read_json(inside(output, group["profiles_file"])))
         for k in protocol["k_grid"]:
             seed = search_seed(protocol["search"]["seed_namespace"], group["graph"], group["repeat"], k)
-            if k == protocol["search"]["reference_k"]:
+            if reused is not None:
+                old_group = next(row for row in reused["groups"]
+                                 if (row["graph"], row["repeat"]) == (group["graph"], group["repeat"]))
+                for field in ("network_file", "profiles_file"):
+                    if file_hash(inside(output, group[field])) != file_hash(inside(reused_root, old_group[field])):
+                        raise ValueError(f"Reused {field} differs from archived group")
+                old_file = old_group["positions"][str(k)]
+                freeze(inside(reused_root, old_file), f"provenance/g{group['graph']}-r{group['repeat']}-k{k}.json")
+                positions = read_json(inside(reused_root, old_file))["positions"]
+                origin = "reused_main2_positions"
+            elif k == protocol["search"]["reference_k"]:
                 positions = read_json(inside(output, group["source_file"]))["positions"]
                 origin = "reused_archived_positions"
             else:
@@ -344,7 +363,8 @@ def load_prepared(prepared, *, check_code=True):
 
 
 def task_settings(baseline, protocol, task):
-    return {**baseline["settings"], "fraction": task["k"] / baseline["size"], "rho": task["rho"],
+    return {**baseline["settings"], **protocol.get("settings", {}),
+            "fraction": task["k"] / baseline["size"], "rho": task["rho"],
             "llm_workers": protocol["execution"]["llm_workers"]}
 
 

@@ -88,7 +88,8 @@ class RunConfig:
         if min(self.rounds, self.window, self.read_limit) < 1:
             raise ValueError("轮数、窗口和阅读上限必须为正")
         if (not 0 <= self.alpha <= 1 or not isfinite(self.rho) or self.rho <= 0
-                or self.max_comments < 1 or self.comment_alpha <= 0 or self.comment_beta <= 0
+                or type(self.max_comments) is not int or self.max_comments < 1
+                or self.comment_alpha <= 0 or self.comment_beta <= 0
                 or not isfinite(self.comment_alpha) or not isfinite(self.comment_beta)):
             raise ValueError("需要 0 <= alpha <= 1 且 rho > 0")
         if not isinstance(self.advocate_stance, Stance):
@@ -99,6 +100,13 @@ class RunConfig:
 class Text:
     id: str
     body: str
+
+
+def message_order(message) -> tuple[int, int, str]:
+    """Numeric publication order; slot zero retains the historical message ID."""
+    suffix = message.id.rsplit(":", 1)[-1]
+    slot = int(suffix[1:]) if suffix.startswith("c") and suffix[1:].isdigit() else 0
+    return message.round, slot, message.id
 
 
 @dataclass(frozen=True)

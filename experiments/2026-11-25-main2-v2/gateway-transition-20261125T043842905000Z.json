@@ -1,0 +1,78 @@
+{
+  "created_at": "2026-11-25T04:38:42.905024+00:00",
+  "bundle_id": "f09775941e4d5e8b4da99ca319ce0d8d5407bcb3816090d9a28cfbf5aa134882",
+  "authorization": "User explicitly requested switching to api.1nvictus.me and continuing; user asserts same underlying model",
+  "original_runtime": {
+    "llm": {
+      "base_url": "https://api.deepseek.com",
+      "model": "deepseek-flash",
+      "timeout": 180,
+      "max_tokens": 4096
+    },
+    "temperature": 0,
+    "thinking": "disabled",
+    "packages": {
+      "numpy": "2.5.5",
+      "openai": "2.54.0",
+      "python-dotenv": "1.2.4"
+    }
+  },
+  "continuation_runtime": {
+    "llm": {
+      "base_url": "https://api.1nvictus.me/v1",
+      "model": "deepseek-flash",
+      "timeout": 180,
+      "max_tokens": 4096
+    },
+    "temperature": 0,
+    "thinking": "disabled",
+    "packages": {
+      "numpy": "2.5.5",
+      "openai": "2.54.0",
+      "python-dotenv": "1.2.4"
+    }
+  },
+  "original_runtime_sha256": "5f196c4a7238bf123fe73b15b905db593b0453804b1370573d91850b60e4e69f",
+  "adapter_source_sha256": "5687968446765750a016378ce045972e18f4feea69c2fa4d2aa61d8161aed00e",
+  "preserved_complete_seals": {
+    "g0-r0-k100-rho1": "a6d9c1009dcbf4a9abf190db9dcb3149bfba6e25993607525e71bb2e61c3b480",
+    "g0-r0-k100-rho3": "ca1fde27a5e20dafed8b08965bdd1224816d55307103e02b702b24f9042e599f",
+    "g0-r0-k100-rho6": "440a3fe02200108dca2f64086ae19dddc11deb4a28b24792e0728d1cfac16ebc",
+    "g0-r0-k160-rho1": "391f48c9419d1c5745ef79c3999986f7f4fb5066561fcb3e1abc2455140013a4",
+    "g0-r0-k160-rho3": "07a1e343b2f8f91651c4206525dc4001d1b92c6a05404745e464f296bbece278",
+    "g0-r0-k160-rho6": "06a09ba14998ff6e5a83dbd7d0028e8a7693e7df2e07df7fb9d5e3380bb20e50",
+    "g0-r0-k200-rho1": "4903e81e67000399a5f64ac506e5bfa76787451528834693b2360610e8025e40",
+    "g0-r0-k200-rho3": "2033d1451e3381d3d95bd379395b22abb57b658026b06a3de7c86f3366957877",
+    "g0-r0-k200-rho6": "c6a96fe9e29657219ae64ebf321313924a4729f3a398ccf4d4efd5be7ac6425c",
+    "g0-r0-k240-rho1": "f4285ba0d3962aed4df289c6b39c04c283d8067daaf20b7bede210a463f3124d",
+    "g0-r0-k240-rho3": "9838b5e134219427d9bd38c14677aa3ae4822d470319d0d26d947d5a515e9b87",
+    "g0-r0-k240-rho6": "f2be73a963d63425403fa4ff3ad93b34065ea8ae7674c27a2aa22a57e9182df9",
+    "g1-r0-k100-rho3": "bc392c3a8a89fd3e983696bf88a5e045e3c8d169404a672cc4afcf9bf7a1c74f",
+    "g1-r0-k100-rho6": "1a38b11c9f3060ad6cf0168690e83b34959f5c582ed2178b98fbb80691c2c6cd",
+    "g1-r0-k160-rho1": "00a592817cd3931fafc7a6144aa632114e06536fea72aaf30a0b6a6df7a46f50",
+    "g1-r0-k160-rho3": "3013f8b7de32af80eb7edcbb1ddca6a17e47e86fa5db4d8a96b242da811d3065",
+    "g1-r0-k160-rho6": "b24ecd6cf9698d187c2dc7fcea03947dbb2459651339de9733ed2a40a16229fc",
+    "g1-r0-k200-rho1": "01d27434916afc6bb07d68681be7d0f8de8a193fded70dfc39b8367c7fc1b770",
+    "g1-r0-k200-rho3": "ba351263643ada3c118b4f3d868ca8df2a74d7e004b2dc1b6944df99c39e747a"
+  },
+  "pending_tasks": [
+    "g1-r0-k200-rho6",
+    "g1-r0-k240-rho1",
+    "g1-r0-k240-rho3",
+    "g1-r0-k240-rho6",
+    "g1-r0-k100-rho1",
+    "g2-r0-k100-rho6",
+    "g2-r0-k160-rho1",
+    "g2-r0-k160-rho3",
+    "g2-r0-k160-rho6",
+    "g2-r0-k200-rho1",
+    "g2-r0-k200-rho3",
+    "g2-r0-k200-rho6",
+    "g2-r0-k240-rho1",
+    "g2-r0-k240-rho3",
+    "g2-r0-k240-rho6",
+    "g2-r0-k100-rho1",
+    "g2-r0-k100-rho3"
+  ],
+  "identity_semantics": "Original runtime in identity.json is the initial stage; actual continuation route is recorded here and in task receipts"
+}

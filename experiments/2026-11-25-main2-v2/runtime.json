@@ -1,0 +1,15 @@
+{
+  "llm": {
+    "base_url": "https://api.deepseek.com",
+    "model": "deepseek-flash",
+    "timeout": 180,
+    "max_tokens": 4096
+  },
+  "temperature": 0,
+  "thinking": "disabled",
+  "packages": {
+    "numpy": "2.5.5",
+    "openai": "2.54.0",
+    "python-dotenv": "1.2.4"
+  }
+}

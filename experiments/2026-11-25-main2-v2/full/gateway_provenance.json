@@ -1,0 +1,9 @@
+{
+  "bundle_id": "f09775941e4d5e8b4da99ca319ce0d8d5407bcb3816090d9a28cfbf5aa134882",
+  "transitions": [
+    "gateway-transition-20261125T043842905000Z.json",
+    "gateway-transition-20261125T081140755993Z.json",
+    "gateway-transition-20261125T111505059895Z.json"
+  ],
+  "model_equivalence": "User asserted; gateway response aliases do not independently prove model equivalence"
+}

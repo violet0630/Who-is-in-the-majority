@@ -160,9 +160,10 @@ class ObserverPerception:
                 self.labels[text.body] = -int(original.stance)
 
     def estimate(self, request):
+        from majority.models import message_order
         if request.node not in self.observers:
             authors = {}
-            for message in request.current.messages:
+            for message in sorted(request.current.messages, key=message_order):
                 authors[message.author] = self.labels[message.text]
             support = (sum(stance == 1 for stance in authors.values()) / len(authors)
                        if authors else request.state.perceived_support)
@@ -173,7 +174,7 @@ class ObserverPerception:
         # Low-fidelity screening uses only directly read messages, with authors deduplicated.
         authors = {}
         for exposure in (*request.history, request.current):
-            for message in exposure.messages:
+            for message in sorted(exposure.messages, key=message_order):
                 authors[message.author] = self.labels[message.text]
         support = (1 + sum(stance == 1 for stance in authors.values())) / (2 + len(authors))
         return PerceptionResult(support, json.dumps({"support": support}), model="screening_author_counts")
@@ -509,6 +510,9 @@ def run_one(network, profiles, advocates, bank, settings, seed, branch, output=N
     config = RunConfig(rounds=settings["rounds"], alpha=0.05, rho=settings["rho"],
                        advocate_stance=Stance.OPPOSE, window=settings.get("window", 2),
                        read_limit=settings.get("read_limit", 11),
+                       max_comments=settings.get("max_comments", 3),
+                       comment_alpha=settings.get("comment_alpha", 1.0),
+                       comment_beta=settings.get("comment_beta", 9.0),
                        cross_fan_comments=settings.get("cross_fan_comments", True))
     coefficients = coefficients_from(settings)
     metrics, diagnostic_rows = [], []
@@ -554,7 +558,14 @@ def run_one(network, profiles, advocates, bank, settings, seed, branch, output=N
                 "active_observers": sum(bool(row.reading.read) for row in observed),
                 "mean_perceived_advocate": sum(1 - row.after.perceived_support for row in observed) / len(observed),
                 "mean_feedback_observers": sum(row.after.feedback_value for row in observed) / len(observed),
-                "messages": len(record.published)}
+                "messages": len(record.published),
+                "comments": sum(m.original_id is not None for m in record.published),
+                "unique_comment_authors": len({m.author for m in record.published if m.original_id is not None}),
+                "notification_count": sum(len(row.notifications) for row in record.nodes),
+                "mean_read_count": sum(len(row.reading.read) for row in record.nodes) / len(record.nodes),
+                "mean_unique_authors": sum(len({simulation.messages[mid].author for mid in row.reading.read})
+                                           for row in record.nodes) / len(record.nodes),
+                "empty_readers_all": sum(not row.reading.read for row in record.nodes)}
             diagnostic_rows.append(diagnostic)
             if trajectory:
                 write_record(trajectory, "round", record)

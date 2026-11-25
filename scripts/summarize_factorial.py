@@ -57,7 +57,10 @@ def analyze_rows(rows, protocol):
         indexed[key] = value
     if set(indexed) != expected:
         raise ValueError(f"Incomplete grid: missing={len(expected - set(indexed))}, extra={len(set(indexed) - expected)}")
-    if len(groups) > 20 or len(protocol["repeats"]) < 2:
+    descriptive = protocol["analysis"].get("mode") == "three_graph_descriptive"
+    if descriptive and (protocol["graphs"] != [0, 1, 2] or protocol["repeats"] != [0]):
+        raise ValueError("Descriptive V2 analysis requires three graphs with r0 only")
+    if not descriptive and (len(groups) > 20 or len(protocol["repeats"]) < 2):
         raise ValueError("Exact sign-flip inference requires <=20 groups and >=2 repeats per graph")
     values = np.array([[indexed[graph, repeat, k, rho] for k, rho in conditions]
                        for graph, repeat in groups], dtype=float)
@@ -69,6 +72,22 @@ def analyze_rows(rows, protocol):
 
     estimates = equally_weighted_mean(contrasts)
     cell_means = equally_weighted_mean(values)
+    if descriptive:
+        cells = [{"k": k, "rho": rho, "mean_q": float(cell_means[i]),
+                  "range": [float(values[:, i].min()), float(values[:, i].max())],
+                  "graph_values": {str(g): float(values[j, i]) for j, (g, _) in enumerate(groups)}}
+                 for i, (k, rho) in enumerate(conditions)]
+        comparisons = [{"name": name, "difference": float(estimates[i]),
+                        "graph_differences": {str(g): float(contrasts[j, i]) for j, (g, _) in enumerate(groups)}}
+                       for i, name in enumerate(PRIMARY_COMPARISONS)]
+        threshold = protocol["analysis"]["coverage_target"]
+        return {"paired_groups": 3, "mode": "three_graph_descriptive", "cells": cells,
+                "comparisons": comparisons, "coverage_target": threshold,
+                "smallest_reached_k_in_tested_grid": {
+                    str(rho): next((k for k in ks if cells[conditions.index((k, rho))]["mean_q"] >= threshold), None)
+                    for rho in rhos},
+                "inference_scope": "Three fixed networks, r0 profiles and inherited TH positions; descriptive only",
+                "intervals": "Observed network ranges are not confidence intervals; no significance claims"}
     rng = np.random.default_rng(protocol["analysis"]["seed"])
     draws, cell_draws = [], []
     graph_indexes = [np.flatnonzero(graph_ids == graph) for graph in protocol["graphs"]]
@@ -190,6 +209,36 @@ def plot_results(rows, analysis, output, protocol):
     axes[0, 0].legend()
     fig.savefig(output / "time_trajectories.png", dpi=180)
     plt.close(fig)
+    fig, axes = plt.subplots(1, len(protocol["graphs"]), figsize=(14, 4), squeeze=False,
+                             constrained_layout=True)
+    for ax, graph in zip(axes[0], protocol["graphs"]):
+        matrix = np.array([[mean(row["q_tail"] for row in rows
+                           if row["graph"] == graph and row["k"] == k and row["rho"] == rho)
+                           * 100 for k in ks] for rho in rhos])
+        mesh = ax.imshow(matrix, vmin=0, vmax=100, cmap="Blues", aspect="auto")
+        ax.set_xticks(range(len(ks)), ks)
+        ax.set_yticks(range(len(rhos)), rhos)
+        ax.set(title=f"Network {graph + 1}: rounds 8-10 (%)", xlabel="Advocate count k", ylabel="rho")
+        for i in range(len(rhos)):
+            for j in range(len(ks)):
+                ax.text(j, i, f"{matrix[i,j]:.1f}", ha="center", va="center",
+                        color="white" if matrix[i,j] > 55 else "black")
+    fig.colorbar(mesh, ax=list(axes[0]), label="Qill (%)")
+    fig.savefig(output / "per_network_heatmaps.png", dpi=180)
+    plt.close(fig)
+    fig, ax = plt.subplots(figsize=(8, 5), constrained_layout=True)
+    for graph in protocol["graphs"]:
+        ax.plot(range(3), [100 * c["graph_differences"][str(graph)] for c in analysis["comparisons"]],
+                marker="o", label=f"Network {graph + 1}")
+    ax.plot(range(3), [100*c["difference"] for c in analysis["comparisons"]],
+            color="black", marker="D", linewidth=2, label="Equal-network mean")
+    ax.set_xticks(range(3), ["Count effect", "Activity effect", "Interaction"])
+    ax.set(ylabel="Difference (percentage points)", title="Paired endpoint contrasts (descriptive)")
+    ax.axhline(0, color="grey", linewidth=1)
+    ax.legend()
+    ax.grid(alpha=.2)
+    fig.savefig(output / "paired_effects.png", dpi=180)
+    plt.close(fig)
 
 
 def summarize(prepared, output, *, pilot=False):
@@ -219,22 +268,32 @@ def summarize(prepared, output, *, pilot=False):
                      f"{row['position_diagnostics']['illusion']:.2%} |")
     if analysis is not None:
         write_json(output / "analysis.json", analysis)
-        lines += ["", "## 预定主要比较", "", "| 比较 | 差值（百分点） | 区间（百分点） | 原始p | Holm p |",
-                  "| --- | ---: | --- | ---: | ---: |"]
-        for comparison in analysis["comparisons"]:
-            lo, hi = comparison["ci"]
-            lines.append(f"| {comparison['name']} | {100*comparison['difference']:+.2f} | "
-                         f"[{100*lo:+.2f}, {100*hi:+.2f}] | {comparison['p_value']:.4f} | {comparison['p_holm']:.4f} |")
+        if analysis.get("mode") == "three_graph_descriptive":
+            lines += ["", "## 预定主要比较（描述性）", "", "| 比较 | 平均差值（百分点） | 网络1 | 网络2 | 网络3 |",
+                      "| --- | ---: | ---: | ---: | ---: |"]
+            for c in analysis["comparisons"]:
+                lines.append(f"| {c['name']} | {100*c['difference']:+.2f} | " + " | ".join(
+                    f"{100*c['graph_differences'][str(g)]:+.2f}" for g in manifest["protocol"]["graphs"]) + " |")
+            lines += ["", "仅3张固定网络、各1组个体配置；展示配对差异和网络间一致性，不计算退化的图内bootstrap区间，不作显著性结论。",
+                      "人数效应：k=240减k=100，跨rho平均；积极性效应：rho=6减rho=1，跨k平均；交互：两端人数差在rho=6与rho=1之间的差。"]
+        else:
+            lines += ["", "## 预定主要比较", "", "| 比较 | 差值（百分点） | 区间（百分点） | 原始p | Holm p |",
+                      "| --- | ---: | --- | ---: | ---: |"]
+            for comparison in analysis["comparisons"]:
+                lo, hi = comparison["ci"]
+                lines.append(f"| {comparison['name']} | {100*comparison['difference']:+.2f} | "
+                             f"[{100*lo:+.2f}, {100*hi:+.2f}] | {comparison['p_value']:.4f} | {comparison['p_holm']:.4f} |")
+            lines += ["", "区间为逐项bootstrap区间；三项主要检验使用Holm校正。"]
         plot_results(rows, analysis, output, manifest["protocol"])
         lines += ["", "![人数与活跃度](count_activity_heatmap.png)", "",
                   "![感知与信息流时间变化](time_trajectories.png)", "",
-                  "区间为逐项bootstrap区间；三项主要检验使用Holm校正。显著性不由区间单独判定。",
+                  "![各网络结果](per_network_heatmaps.png)", "", "![配对效应](paired_effects.png)", "",
                   "未达覆盖目标的条件记录为未达标；最小人数仅限本次已测网格，不外推为普适阈值。"]
     else:
         lines += ["", "试运行仅检查技术流程、描述性结果与预算，不进行主假设显著性检验，不据结果高低删选条件。"]
     lines += ["", "## 调用用量", "", "```json", json.dumps(usage, ensure_ascii=False, indent=2), "```", "",
               "已排除缓存复用行；缺失usage没有按实际零消耗解释，已知token不等于供应商最终账单。",
-              "历史反馈和非观测节点规则沿用主实验一；结果仅针对固定网络与当前TH构造策略。", ""]
+              "结果仅针对本次冻结配置、固定网络与继承的TH位置。新版为本地感知、统一11条阅读及Beta-Binomial多评论；历史结果保持原协议。", ""]
     (output / "report.md").write_text("\n".join(lines), encoding="utf-8")
 
 

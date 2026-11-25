@@ -6,7 +6,7 @@ from statistics import mean
 from random import Random
 from collections import defaultdict
 
-from .models import Message, Network, Stance
+from .models import Message, Network, Stance, message_order
 from .simulation import RoundRecord
 
 
@@ -31,7 +31,7 @@ def measure(record: RoundRecord, network: Network, messages: Mapping[str, Messag
     rows = [row for row in record.nodes if row.node in network.observers]
     focal = record.advocate_stance
     opponents = [row for row in rows if row.before.stance != focal]
-    published = {message.author: message for message in record.published}
+    published = {message.author: message for message in sorted(record.published, key=message_order)}
     public_supporters = {node for node, m in published.items() if m.stance == Stance.SUPPORT}
     public_advocates = {node for node, m in published.items() if m.stance == focal}
     true_support = mean(row.before.stance == Stance.SUPPORT for row in record.nodes)

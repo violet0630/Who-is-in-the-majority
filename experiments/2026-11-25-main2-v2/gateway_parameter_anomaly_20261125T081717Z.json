@@ -1,0 +1,158 @@
+{
+  "created_at": "2026-11-25T08:17:17.162794+00:00",
+  "status": "stopped_pending_gateway_parameter_review",
+  "complete_runs_verified": 19,
+  "reason": "Gateway reports reasoning tokens and output above requested limit despite thinking disabled. Do not silently reuse these continuation responses under a corrected non-thinking protocol.",
+  "examples": [
+    {
+      "task": "g1-r0-k240-rho1-f09775941e4d",
+      "round": 6,
+      "node": 336,
+      "requested_max_tokens": 4096,
+      "requested_extra_body": {
+        "thinking": {
+          "type": "disabled"
+        }
+      },
+      "response_model": "dfmodel",
+      "completion_tokens": 24551,
+      "reasoning_tokens": 24462,
+      "elapsed_seconds": 173.00345620000007
+    },
+    {
+      "task": "g1-r0-k200-rho6-f09775941e4d",
+      "round": 6,
+      "node": 259,
+      "requested_max_tokens": 4096,
+      "requested_extra_body": {
+        "thinking": {
+          "type": "disabled"
+        }
+      },
+      "response_model": "dfmodel",
+      "completion_tokens": 23539,
+      "reasoning_tokens": 23446,
+      "elapsed_seconds": 157.0904115999947
+    },
+    {
+      "task": "g1-r0-k200-rho6-f09775941e4d",
+      "round": 6,
+      "node": 2,
+      "requested_max_tokens": 4096,
+      "requested_extra_body": {
+        "thinking": {
+          "type": "disabled"
+        }
+      },
+      "response_model": "dfmodel",
+      "completion_tokens": 20463,
+      "reasoning_tokens": 20380,
+      "elapsed_seconds": 127.47637509999913
+    },
+    {
+      "task": "g1-r0-k240-rho1-f09775941e4d",
+      "round": 6,
+      "node": 813,
+      "requested_max_tokens": 4096,
+      "requested_extra_body": {
+        "thinking": {
+          "type": "disabled"
+        }
+      },
+      "response_model": "dfmodel",
+      "completion_tokens": 19964,
+      "reasoning_tokens": 19875,
+      "elapsed_seconds": 172.00503130000288
+    },
+    {
+      "task": "g1-r0-k200-rho6-f09775941e4d",
+      "round": 6,
+      "node": 274,
+      "requested_max_tokens": 4096,
+      "requested_extra_body": {
+        "thinking": {
+          "type": "disabled"
+        }
+      },
+      "response_model": "dfmodel",
+      "completion_tokens": 19881,
+      "reasoning_tokens": 19800,
+      "elapsed_seconds": 128.09842479999497
+    },
+    {
+      "task": "g1-r0-k200-rho6-f09775941e4d",
+      "round": 6,
+      "node": 336,
+      "requested_max_tokens": 4096,
+      "requested_extra_body": {
+        "thinking": {
+          "type": "disabled"
+        }
+      },
+      "response_model": "dfmodel",
+      "completion_tokens": 18839,
+      "reasoning_tokens": 18744,
+      "elapsed_seconds": 119.747944499999
+    },
+    {
+      "task": "g1-r0-k200-rho6-f09775941e4d",
+      "round": 6,
+      "node": 220,
+      "requested_max_tokens": 4096,
+      "requested_extra_body": {
+        "thinking": {
+          "type": "disabled"
+        }
+      },
+      "response_model": "dfmodel",
+      "completion_tokens": 18367,
+      "reasoning_tokens": 18274,
+      "elapsed_seconds": 147.90489469999739
+    },
+    {
+      "task": "g1-r0-k240-rho1-f09775941e4d",
+      "round": 6,
+      "node": 768,
+      "requested_max_tokens": 4096,
+      "requested_extra_body": {
+        "thinking": {
+          "type": "disabled"
+        }
+      },
+      "response_model": "dfmodel",
+      "completion_tokens": 17845,
+      "reasoning_tokens": 17761,
+      "elapsed_seconds": 111.81565129999944
+    },
+    {
+      "task": "g1-r0-k200-rho6-f09775941e4d",
+      "round": 6,
+      "node": 302,
+      "requested_max_tokens": 4096,
+      "requested_extra_body": {
+        "thinking": {
+          "type": "disabled"
+        }
+      },
+      "response_model": "dfmodel",
+      "completion_tokens": 17107,
+      "reasoning_tokens": 17019,
+      "elapsed_seconds": 119.18859019999945
+    },
+    {
+      "task": "g1-r0-k240-rho1-f09775941e4d",
+      "round": 6,
+      "node": 762,
+      "requested_max_tokens": 4096,
+      "requested_extra_body": {
+        "thinking": {
+          "type": "disabled"
+        }
+      },
+      "response_model": "dfmodel",
+      "completion_tokens": 16903,
+      "reasoning_tokens": 16816,
+      "elapsed_seconds": 146.8260534000001
+    }
+  ]
+}

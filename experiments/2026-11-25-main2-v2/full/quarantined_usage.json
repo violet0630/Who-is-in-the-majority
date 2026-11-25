@@ -1,0 +1,189 @@
+{
+  "g1-r0-k200-rho6": {
+    "actual_calls": 32,
+    "reused_rows": 501,
+    "ok": 26,
+    "api_error": 6,
+    "invalid_response": 0,
+    "other_status": 0,
+    "known_input_tokens": 149718,
+    "known_output_tokens": 300954,
+    "calls_without_complete_usage": 6
+  },
+  "g1-r0-k240-rho1": {
+    "actual_calls": 66,
+    "reused_rows": 536,
+    "ok": 34,
+    "api_error": 32,
+    "invalid_response": 0,
+    "other_status": 0,
+    "known_input_tokens": 165853,
+    "known_output_tokens": 306758,
+    "calls_without_complete_usage": 32
+  },
+  "g1-r0-k240-rho3": {
+    "actual_calls": 0,
+    "reused_rows": 0,
+    "ok": 0,
+    "api_error": 0,
+    "invalid_response": 0,
+    "other_status": 0,
+    "known_input_tokens": 0,
+    "known_output_tokens": 0,
+    "calls_without_complete_usage": 0
+  },
+  "g1-r0-k240-rho6": {
+    "actual_calls": 0,
+    "reused_rows": 0,
+    "ok": 0,
+    "api_error": 0,
+    "invalid_response": 0,
+    "other_status": 0,
+    "known_input_tokens": 0,
+    "known_output_tokens": 0,
+    "calls_without_complete_usage": 0
+  },
+  "g1-r0-k100-rho1": {
+    "actual_calls": 0,
+    "reused_rows": 0,
+    "ok": 0,
+    "api_error": 0,
+    "invalid_response": 0,
+    "other_status": 0,
+    "known_input_tokens": 0,
+    "known_output_tokens": 0,
+    "calls_without_complete_usage": 0
+  },
+  "g2-r0-k100-rho6": {
+    "actual_calls": 0,
+    "reused_rows": 0,
+    "ok": 0,
+    "api_error": 0,
+    "invalid_response": 0,
+    "other_status": 0,
+    "known_input_tokens": 0,
+    "known_output_tokens": 0,
+    "calls_without_complete_usage": 0
+  },
+  "g2-r0-k160-rho1": {
+    "actual_calls": 0,
+    "reused_rows": 0,
+    "ok": 0,
+    "api_error": 0,
+    "invalid_response": 0,
+    "other_status": 0,
+    "known_input_tokens": 0,
+    "known_output_tokens": 0,
+    "calls_without_complete_usage": 0
+  },
+  "g2-r0-k160-rho3": {
+    "actual_calls": 0,
+    "reused_rows": 0,
+    "ok": 0,
+    "api_error": 0,
+    "invalid_response": 0,
+    "other_status": 0,
+    "known_input_tokens": 0,
+    "known_output_tokens": 0,
+    "calls_without_complete_usage": 0
+  },
+  "g2-r0-k160-rho6": {
+    "actual_calls": 0,
+    "reused_rows": 0,
+    "ok": 0,
+    "api_error": 0,
+    "invalid_response": 0,
+    "other_status": 0,
+    "known_input_tokens": 0,
+    "known_output_tokens": 0,
+    "calls_without_complete_usage": 0
+  },
+  "g2-r0-k200-rho1": {
+    "actual_calls": 0,
+    "reused_rows": 0,
+    "ok": 0,
+    "api_error": 0,
+    "invalid_response": 0,
+    "other_status": 0,
+    "known_input_tokens": 0,
+    "known_output_tokens": 0,
+    "calls_without_complete_usage": 0
+  },
+  "g2-r0-k200-rho3": {
+    "actual_calls": 0,
+    "reused_rows": 0,
+    "ok": 0,
+    "api_error": 0,
+    "invalid_response": 0,
+    "other_status": 0,
+    "known_input_tokens": 0,
+    "known_output_tokens": 0,
+    "calls_without_complete_usage": 0
+  },
+  "g2-r0-k200-rho6": {
+    "actual_calls": 0,
+    "reused_rows": 0,
+    "ok": 0,
+    "api_error": 0,
+    "invalid_response": 0,
+    "other_status": 0,
+    "known_input_tokens": 0,
+    "known_output_tokens": 0,
+    "calls_without_complete_usage": 0
+  },
+  "g2-r0-k240-rho1": {
+    "actual_calls": 0,
+    "reused_rows": 0,
+    "ok": 0,
+    "api_error": 0,
+    "invalid_response": 0,
+    "other_status": 0,
+    "known_input_tokens": 0,
+    "known_output_tokens": 0,
+    "calls_without_complete_usage": 0
+  },
+  "g2-r0-k240-rho3": {
+    "actual_calls": 0,
+    "reused_rows": 0,
+    "ok": 0,
+    "api_error": 0,
+    "invalid_response": 0,
+    "other_status": 0,
+    "known_input_tokens": 0,
+    "known_output_tokens": 0,
+    "calls_without_complete_usage": 0
+  },
+  "g2-r0-k240-rho6": {
+    "actual_calls": 0,
+    "reused_rows": 0,
+    "ok": 0,
+    "api_error": 0,
+    "invalid_response": 0,
+    "other_status": 0,
+    "known_input_tokens": 0,
+    "known_output_tokens": 0,
+    "calls_without_complete_usage": 0
+  },
+  "g2-r0-k100-rho1": {
+    "actual_calls": 0,
+    "reused_rows": 0,
+    "ok": 0,
+    "api_error": 0,
+    "invalid_response": 0,
+    "other_status": 0,
+    "known_input_tokens": 0,
+    "known_output_tokens": 0,
+    "calls_without_complete_usage": 0
+  },
+  "g2-r0-k100-rho3": {
+    "actual_calls": 0,
+    "reused_rows": 0,
+    "ok": 0,
+    "api_error": 0,
+    "invalid_response": 0,
+    "other_status": 0,
+    "known_input_tokens": 0,
+    "known_output_tokens": 0,
+    "calls_without_complete_usage": 0
+  }
+}

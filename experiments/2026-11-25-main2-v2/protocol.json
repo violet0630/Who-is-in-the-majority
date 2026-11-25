@@ -1,0 +1,70 @@
+{
+  "schema_version": 2,
+  "name": "main2-local-perception-v2-36",
+  "baseline": "configs/initialized_20261116.json",
+  "archive": "experiments/2026-11-16",
+  "reuse_prepared": "runs/main2_factorial_20261118_prepare01",
+  "graphs": [
+    0,
+    1,
+    2
+  ],
+  "repeats": [
+    0
+  ],
+  "k_grid": [
+    100,
+    160,
+    200,
+    240
+  ],
+  "rho_grid": [
+    1,
+    3,
+    6
+  ],
+  "position_strategy": "TH",
+  "settings": {
+    "read_limit": 11,
+    "window": 2,
+    "max_comments": 3,
+    "comment_alpha": 1.0,
+    "comment_beta": 9.0,
+    "cross_fan_comments": true
+  },
+  "search": {
+    "reference_k": 200,
+    "reference_rho": 6,
+    "steps": 20000,
+    "restarts": 4,
+    "tolerance": 0.05,
+    "seed_namespace": "main2-position-v1"
+  },
+  "pilot": {
+    "graph": 0,
+    "repeat": 0,
+    "k_grid": [
+      100,
+      200,
+      240
+    ]
+  },
+  "execution": {
+    "run_workers": 2,
+    "llm_workers": 8,
+    "gateway_limit": 16
+  },
+  "analysis": {
+    "mode": "three_graph_descriptive",
+    "bootstrap_repeats": 10000,
+    "seed": 2026112501,
+    "confidence_level": 0.95,
+    "test_alpha": 0.05,
+    "coverage_target": 0.8,
+    "primary_comparisons": [
+      "count_endpoints",
+      "activity_endpoints",
+      "interaction_endpoints"
+    ]
+  }
+}

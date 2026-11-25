@@ -4,11 +4,12 @@ from dataclasses import dataclass
 
 from .llm import JsonChat, LLMValidationError, prompt_hash
 from .perception import Exposure, PerceptionRequest, PerceptionResult, ViewedMessage
+from .models import message_order
 
 
 def perception_payload(topic: str, request: PerceptionRequest, scenario: str = "") -> dict:
     exposures = (*request.history, request.current)
-    aliases = {m.id: f"r{m.round}-u{m.author}"
+    aliases = {m.id: f"r{m.round}-u{m.author}" + (f"-c{message_order(m)[1]}" if message_order(m)[1] else "")
                for exposure in exposures for m in (*exposure.messages, *exposure.context)}
 
     def exposure_data(exposure: Exposure) -> dict:

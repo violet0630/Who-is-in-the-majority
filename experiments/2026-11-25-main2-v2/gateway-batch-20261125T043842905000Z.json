@@ -1,0 +1,15 @@
+{
+  "statuses": [
+    {
+      "task": "g1-r0-k200-rho6",
+      "status": "failed",
+      "error_type": "LLMError"
+    },
+    {
+      "task": "g1-r0-k240-rho1",
+      "status": "failed",
+      "error_type": "LLMError"
+    }
+  ],
+  "failed": true
+}
