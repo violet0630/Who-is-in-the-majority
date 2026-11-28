@@ -61,26 +61,33 @@ def source_hashes():
     paths += list((PROJECT / "majority/prompts").glob("*.md"))
     paths += [PROJECT / "configs/study.json", PROJECT / "scripts/__init__.py",
               PROJECT / "scripts/majority_study.py", Path(__file__),
-              PROJECT / "scripts/summarize_factorial.py", PROJECT / "scripts/main2_v2.py"]
+              PROJECT / "scripts/summarize_factorial.py", PROJECT / "scripts/main2_v2.py",
+              PROJECT / "scripts/main2_observer_mean.py"]
     return {path.relative_to(PROJECT).as_posix(): file_hash(path) for path in sorted(set(paths))}
 
 
 def validate_protocol(protocol, baseline):
-    if protocol.get("schema_version") not in (1, 2) or protocol.get("position_strategy") != "TH":
-        raise ValueError("Only schema 1 or 2 / TH is supported")
+    if protocol.get("schema_version") not in (1, 2, 3) or protocol.get("position_strategy") != "TH":
+        raise ValueError("Only schema 1, 2 or 3 / TH is supported")
     for field in ("graphs", "repeats", "k_grid", "rho_grid"):
         values = protocol[field]
         if not values or len(set(values)) != len(values) or values != sorted(values):
             raise ValueError(f"{field} must be nonempty, unique, and sorted")
-    expected_repeats = [0] if protocol["schema_version"] == 2 else [0, 1, 2]
+    expected_repeats = [0] if protocol["schema_version"] in (2, 3) else [0, 1, 2]
     if protocol["graphs"] != [0, 1, 2] or protocol["repeats"] != expected_repeats:
         raise ValueError("Unexpected archived graph/profile groups")
-    if protocol["schema_version"] == 2:
+    if protocol["schema_version"] in (2, 3):
         expected = {"read_limit": 11, "window": 2, "max_comments": 3,
                     "comment_alpha": 1.0, "comment_beta": 9.0, "cross_fan_comments": True}
+        if protocol["schema_version"] == 3:
+            expected["nonobserver_perception"] = "observer_mean"
+            from majority.llm import LLMConfig
+            config = LLMConfig(**protocol["llm"])
+            if config.reasoning_effort is None:
+                raise ValueError("Observer-mean protocol requires explicit reasoning control")
         if (protocol.get("settings") != expected or not protocol.get("reuse_prepared")
                 or protocol["analysis"].get("mode") != "three_graph_descriptive"):
-            raise ValueError("V2 requires frozen local-perception rules and reused positions")
+            raise ValueError("V2/V3 require frozen perception rules and reused positions")
     n = baseline["size"]
     if n != 1000 or baseline["observer_count"] != 50:
         raise ValueError("Expected the frozen 1000-node / 50-observer baseline")
@@ -417,7 +424,7 @@ def completed_result(prepared, manifest, task, runtime):
     return result
 
 
-def execute_task(prepared, manifest, task, runtime):
+def execute_task(prepared, manifest, task, runtime, *, nonthinking_guard=None):
     from scripts.majority_study import run_one
     directory = run_directory(prepared, manifest, task)
     identity = task_identity(manifest, task, runtime)
@@ -452,7 +459,8 @@ def execute_task(prepared, manifest, task, runtime):
             raise ValueError("Position identity mismatch")
         _, bank = load_bank(inside(prepared, manifest["bank_file"]))
         result = run_one(network, profiles, frozenset(positions["positions"]["TH"]), bank,
-                         settings, task["group_seed"], "TH", directory, True)
+                         settings, task["group_seed"], "TH", directory, True,
+                         **({"nonthinking_guard": nonthinking_guard} if nonthinking_guard is not None else {}))
         validate_result(result, task, baseline, settings)
     write_json(directory / "complete.json", {
         "bundle_id": manifest["bundle_id"], "task_id": task["id"],
@@ -467,9 +475,19 @@ def run_batch(prepared, batch, *, allow_api=False):
     manifest = load_prepared(prepared)
     from majority.llm import canonical_model, load_settings
     config, _ = load_settings(PROJECT / ".env")
-    if canonical_model(config.model) != "deepseek-flash":
+    from scripts.majority_study import study_llm_config, study_runtime
+    config = study_llm_config(config)
+    expected_llm = manifest["protocol"].get("llm")
+    if expected_llm is not None and asdict(config) != expected_llm:
+        raise ValueError("API settings differ from the frozen protocol")
+    if expected_llm is None and canonical_model(config.model) != "deepseek-flash":
         raise ValueError("Unexpected model: changing models requires a new protocol")
-    runtime = {"llm": {**asdict(config), "timeout": 180}, "temperature": 0, "thinking": "disabled",
+    from majority.nonthinking import NonThinkingGuard
+    guard = (NonThinkingGuard(prepared / "nonthinking_stop.json")
+             if config.reasoning_effort == "none" else None)
+    if guard is not None:
+        guard.check()
+    runtime = {**study_runtime(config),
                "packages": {name: importlib.metadata.version(name) for name in ("numpy", "openai", "python-dotenv")}}
     runtime_path = prepared / "runtime.json"
     if runtime_path.exists():
@@ -490,7 +508,9 @@ def run_batch(prepared, batch, *, allow_api=False):
 
     def execute(task):
         try:
-            execute_task(prepared, manifest, task, runtime)
+            if guard is not None:
+                guard.check()
+            execute_task(prepared, manifest, task, runtime, nonthinking_guard=guard)
             return {"task": task["id"], "status": "complete"}
         except Exception as error:
             # No raw exception bodies, payloads or credentials in this status summary.

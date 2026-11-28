@@ -262,6 +262,9 @@ def summarize(prepared, output, *, pilot=False):
              f"完整轨迹：{len(rows)}。私人立场固定，仅50名观察者使用LLM。", "",
              "| 条件 | 图/组 | 末3轮Qill | 末3轮J | 初始IG |",
              "| --- | --- | ---: | ---: | ---: |"]
+    if manifest["protocol"].get("settings", {}).get("nonobserver_perception") == "observer_mean":
+        lines[4:4] = ["本批采用观察节点均值广播：固定50名观察者本轮更新后的p_hat等权平均，"
+                      "含空阅读沿用值，供全部非观察节点下一轮决策使用。主指标仍取固定观察集合。", ""]
     for row in rows:
         lines.append(f"| k={row['k']}, rho={row['rho']} | g{row['graph']}-r{row['repeat']} | "
                      f"{row['q_tail']:.2%} | {row['summary']['feed_majority']:.2%} | "

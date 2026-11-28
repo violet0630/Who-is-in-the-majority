@@ -43,8 +43,11 @@ class LLMConfig:
     model: str = "deepseek-v4-flash"
     timeout: float = 60
     max_tokens: int = 4096
+    reasoning_effort: str | None = None
 
     def __post_init__(self) -> None:
+        if self.reasoning_effort not in (None, "none", "minimal", "low", "medium", "high"):
+            raise ValueError("Invalid reasoning_effort")
         url = urlsplit(self.base_url)
         if url.scheme not in ("http", "https") or not url.hostname or url.username or url.password:
             raise ValueError("base_url 需要不包含凭据的 HTTP(S) 地址")
@@ -65,6 +68,7 @@ def load_settings(env_path: Path = Path(".env")) -> tuple[LLMConfig, str]:
         model=os.environ.get("DEEPSEEK_MODEL", "deepseek-v4-flash"),
         timeout=float(os.environ.get("DEEPSEEK_TIMEOUT", "60")),
         max_tokens=int(os.environ.get("DEEPSEEK_MAX_TOKENS", "4096")),
+        reasoning_effort=os.environ.get("DEEPSEEK_REASONING_EFFORT") or None,
     )
     return config, api_key
 
@@ -118,13 +122,18 @@ class JsonChat:
         temperature: float, context: dict | None = None,
     ) -> tuple[T, Completion]:
         system = load_prompt(prompt)
+        control = ({"reasoning_effort": self.config.reasoning_effort,
+                    "base_url": self.config.base_url}
+                   if self.config.reasoning_effort is not None else {})
         record = {
-            "task": prompt, "context": context or {}, "model": self.config.model,
+            "task": prompt, "context": {**(context or {}), **control}, "model": self.config.model,
             "canonical_model": canonical_model(self.config.model),
             "prompt_sha256": hashlib.sha256(system.encode("utf-8")).hexdigest(),
             "temperature": temperature, "max_tokens": self.config.max_tokens,
             "payload": payload,
         }
+        if self.config.reasoning_effort is not None:
+            record["reasoning_effort"] = self.config.reasoning_effort
         start = perf_counter()
         try:
             key = json.dumps([prompt, payload, record["context"], record["prompt_sha256"],
@@ -137,8 +146,11 @@ class JsonChat:
                     model=self.config.model,
                     messages=[{"role": "system", "content": system},
                               {"role": "user", "content": json.dumps(payload, ensure_ascii=False)}],
-                    response_format={"type": "json_object"}, temperature=temperature,
+                    temperature=temperature,
                     max_tokens=self.config.max_tokens,
+                    **({"reasoning_effort": self.config.reasoning_effort}
+                       if self.config.reasoning_effort is not None
+                       else {"response_format": {"type": "json_object"}}),
                 )
         except (APIConnectionError, APIStatusError) as exc:
             record.update(status="api_error", error=type(exc).__name__,

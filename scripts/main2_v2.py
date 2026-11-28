@@ -4,6 +4,7 @@ import argparse
 from collections import Counter
 import gzip
 import json
+from math import fsum
 from pathlib import Path
 from types import SimpleNamespace
 
@@ -19,6 +20,7 @@ def audit_trajectory(path, expected_config, observers, advocates, expected_round
     previous = {}
     expected_metrics = None
     manifest_seen = False
+    broadcast = expected_config.get("nonobserver_perception", "local_proxy") == "observer_mean"
     with gzip.open(path, "rt", encoding="utf-8") as stream:
         for line in stream:
             entry = json.loads(line)
@@ -58,6 +60,9 @@ def audit_trajectory(path, expected_config, observers, advocates, expected_round
                     raise ValueError("Original post violates private stance or action gate")
             if len(data["nodes"]) != 1000 or {r["node"] for r in data["nodes"]} != set(range(1000)):
                 raise ValueError("Node records incomplete")
+            observed_rows = sorted((r for r in data["nodes"] if r["node"] in observers),
+                                   key=lambda r: r["node"])
+            public_mean = fsum(r["after"]["perceived_support"] for r in observed_rows) / len(observers)
             for row in data["nodes"]:
                 node, reading = row["node"], row["reading"]
                 before, after = row["before"], row["after"]
@@ -75,7 +80,18 @@ def audit_trajectory(path, expected_config, observers, advocates, expected_round
                         raise ValueError("Nonlocal/stale visible message")
                 if len(row["notifications"]) != notifications[node]:
                     raise ValueError("Comment notifications lost or duplicated")
-                if not read:
+                if broadcast and node not in observers:
+                    result = row["perception"]
+                    if (result is None or result["model"] != "observer_mean"
+                            or abs(after["perceived_support"] - public_mean) > 1e-12
+                            or abs(result["support"] - public_mean) > 1e-12):
+                        raise ValueError("Observer mean broadcast differs")
+                    source = json.loads(result["raw_json"])
+                    if (source.get("source") != "observer_mean" or source.get("source_round") != round_count
+                            or source.get("observer_count") != len(observers)
+                            or source.get("updated_observers") != sum(bool(r["reading"]["read"]) for r in observed_rows)):
+                        raise ValueError("Observer mean provenance differs")
+                elif not read:
                     if row["perception"] is not None or after["perceived_support"] != before["perceived_support"]:
                         raise ValueError("Empty reading did not carry forward")
                 elif node not in observers:
@@ -85,8 +101,10 @@ def audit_trajectory(path, expected_config, observers, advocates, expected_round
                     expected = sum(s == 1 for s in authors.values()) / len(authors)
                     if abs(after["perceived_support"] - expected) > 1e-12 or row["perception"]["model"] != "local_proxy":
                         raise ValueError("Local author-deduplicated perception differs")
-                elif row["perception"]["model"] == "local_proxy":
-                    raise ValueError("Observer did not use LLM")
+                elif (row["perception"] is None
+                      or row["perception"]["model"] in ("local_proxy", "observer_mean", "screening_author_counts")
+                      or after["perceived_support"] != row["perception"]["support"]):
+                    raise ValueError("Observer did not use its own LLM estimate")
                 previous[node] = after
             observed = [r for r in data["nodes"] if r["node"] in observers]
             expected_metrics = {

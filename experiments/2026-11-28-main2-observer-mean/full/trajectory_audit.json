@@ -1,0 +1,186 @@
+{
+  "bundle_id": "1a69bc7a6543fbd7988ab65cac2785b9d68bfd5392ad3e96516ff434e84bb432",
+  "runs_audited": 36,
+  "runs": {
+    "g0-r0-k100-rho1": {
+      "rounds": 10,
+      "multi_comment_node_rounds": 139,
+      "messages": 2295
+    },
+    "g0-r0-k100-rho3": {
+      "rounds": 10,
+      "multi_comment_node_rounds": 149,
+      "messages": 2395
+    },
+    "g0-r0-k100-rho6": {
+      "rounds": 10,
+      "multi_comment_node_rounds": 168,
+      "messages": 2479
+    },
+    "g0-r0-k160-rho1": {
+      "rounds": 10,
+      "multi_comment_node_rounds": 140,
+      "messages": 2275
+    },
+    "g0-r0-k160-rho3": {
+      "rounds": 10,
+      "multi_comment_node_rounds": 159,
+      "messages": 2488
+    },
+    "g0-r0-k160-rho6": {
+      "rounds": 10,
+      "multi_comment_node_rounds": 174,
+      "messages": 2631
+    },
+    "g0-r0-k200-rho1": {
+      "rounds": 10,
+      "multi_comment_node_rounds": 136,
+      "messages": 2258
+    },
+    "g0-r0-k200-rho3": {
+      "rounds": 10,
+      "multi_comment_node_rounds": 158,
+      "messages": 2516
+    },
+    "g0-r0-k200-rho6": {
+      "rounds": 10,
+      "multi_comment_node_rounds": 184,
+      "messages": 2702
+    },
+    "g0-r0-k240-rho1": {
+      "rounds": 10,
+      "multi_comment_node_rounds": 140,
+      "messages": 2257
+    },
+    "g0-r0-k240-rho3": {
+      "rounds": 10,
+      "multi_comment_node_rounds": 172,
+      "messages": 2544
+    },
+    "g0-r0-k240-rho6": {
+      "rounds": 10,
+      "multi_comment_node_rounds": 189,
+      "messages": 2736
+    },
+    "g1-r0-k100-rho3": {
+      "rounds": 10,
+      "multi_comment_node_rounds": 154,
+      "messages": 2451
+    },
+    "g1-r0-k100-rho6": {
+      "rounds": 10,
+      "multi_comment_node_rounds": 161,
+      "messages": 2527
+    },
+    "g1-r0-k160-rho1": {
+      "rounds": 10,
+      "multi_comment_node_rounds": 154,
+      "messages": 2345
+    },
+    "g1-r0-k160-rho3": {
+      "rounds": 10,
+      "multi_comment_node_rounds": 169,
+      "messages": 2527
+    },
+    "g1-r0-k160-rho6": {
+      "rounds": 10,
+      "multi_comment_node_rounds": 178,
+      "messages": 2658
+    },
+    "g1-r0-k200-rho1": {
+      "rounds": 10,
+      "multi_comment_node_rounds": 149,
+      "messages": 2334
+    },
+    "g1-r0-k200-rho3": {
+      "rounds": 10,
+      "multi_comment_node_rounds": 164,
+      "messages": 2516
+    },
+    "g1-r0-k200-rho6": {
+      "rounds": 10,
+      "multi_comment_node_rounds": 182,
+      "messages": 2674
+    },
+    "g1-r0-k240-rho1": {
+      "rounds": 10,
+      "multi_comment_node_rounds": 151,
+      "messages": 2331
+    },
+    "g1-r0-k240-rho3": {
+      "rounds": 10,
+      "multi_comment_node_rounds": 171,
+      "messages": 2603
+    },
+    "g1-r0-k240-rho6": {
+      "rounds": 10,
+      "multi_comment_node_rounds": 188,
+      "messages": 2822
+    },
+    "g1-r0-k100-rho1": {
+      "rounds": 10,
+      "multi_comment_node_rounds": 160,
+      "messages": 2374
+    },
+    "g2-r0-k100-rho6": {
+      "rounds": 10,
+      "multi_comment_node_rounds": 171,
+      "messages": 2498
+    },
+    "g2-r0-k160-rho1": {
+      "rounds": 10,
+      "multi_comment_node_rounds": 159,
+      "messages": 2308
+    },
+    "g2-r0-k160-rho3": {
+      "rounds": 10,
+      "multi_comment_node_rounds": 164,
+      "messages": 2442
+    },
+    "g2-r0-k160-rho6": {
+      "rounds": 10,
+      "multi_comment_node_rounds": 176,
+      "messages": 2567
+    },
+    "g2-r0-k200-rho1": {
+      "rounds": 10,
+      "multi_comment_node_rounds": 152,
+      "messages": 2262
+    },
+    "g2-r0-k200-rho3": {
+      "rounds": 10,
+      "multi_comment_node_rounds": 170,
+      "messages": 2508
+    },
+    "g2-r0-k200-rho6": {
+      "rounds": 10,
+      "multi_comment_node_rounds": 180,
+      "messages": 2634
+    },
+    "g2-r0-k240-rho1": {
+      "rounds": 10,
+      "multi_comment_node_rounds": 151,
+      "messages": 2280
+    },
+    "g2-r0-k240-rho3": {
+      "rounds": 10,
+      "multi_comment_node_rounds": 176,
+      "messages": 2522
+    },
+    "g2-r0-k240-rho6": {
+      "rounds": 10,
+      "multi_comment_node_rounds": 188,
+      "messages": 2724
+    },
+    "g2-r0-k100-rho1": {
+      "rounds": 10,
+      "multi_comment_node_rounds": 163,
+      "messages": 2326
+    },
+    "g2-r0-k100-rho3": {
+      "rounds": 10,
+      "multi_comment_node_rounds": 176,
+      "messages": 2443
+    }
+  }
+}

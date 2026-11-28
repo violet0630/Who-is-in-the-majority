@@ -35,6 +35,7 @@ from majority.perception import PerceptionResult
 from majority.preparation import draw_profiles, seed_diagnostics
 from majority.randomness import RandomStreams
 from majority.simulation import Simulation
+from majority.nonthinking import NonThinkingError, NonThinkingGuard
 from majority.storage import write_record
 from majority.text_generation import _texts
 
@@ -180,10 +181,32 @@ class ObserverPerception:
         return PerceptionResult(support, json.dumps({"support": support}), model="screening_author_counts")
 
 
+def study_llm_config(config):
+    """Keep legacy timeout semantics; explicit reasoning uses configured transport."""
+    return config if config.reasoning_effort is not None else replace(config, timeout=180)
+
+
+def study_transport(config):
+    if config.reasoning_effort is not None:
+        return {"reasoning_effort": config.reasoning_effort}
+    return {"extra_body": {"thinking": {"type": "disabled"}}}
+
+
+def study_runtime(config):
+    control = ({"reasoning_effort": config.reasoning_effort}
+               if config.reasoning_effort is not None else {"thinking": "disabled"})
+    policy = {"nonthinking_guard_version": 1} if config.reasoning_effort == "none" else {}
+    return {"llm": asdict(config), "temperature": 0, **control, **policy}
+
+
 class StudyChat(JsonChat):
-    """Use documented non-thinking mode and include it in audit/cache identities."""
-    def __init__(self, client, config, audit, reuse_log=None):
+    """Record explicit reasoning controls in requests and cache identities."""
+    def __init__(self, client, config, audit, reuse_log=None, *, nonthinking_guard=None):
         super().__init__(client, config, audit, reuse_log)
+        if nonthinking_guard is not None and config.reasoning_effort != "none":
+            raise ValueError("A nonthinking guard requires reasoning_effort=none")
+        self.nonthinking_guard = (nonthinking_guard if nonthinking_guard is not None
+                                 else NonThinkingGuard() if config.reasoning_effort == "none" else None)
         self.invalid_reuse = {}
         self.cache_source_models = {}
         if reuse_log:
@@ -224,13 +247,19 @@ class StudyChat(JsonChat):
                 sleep(1 + 2 * attempt)
 
     def _request_once(self, prompt, payload, parse, *, temperature, context=None):
+        if self.nonthinking_guard is not None:
+            self.nonthinking_guard.check()
         system = load_prompt(prompt)
-        context = {**(context or {}), "thinking": "disabled"}
+        transport = study_transport(self.config)
+        control = ({"reasoning_effort": self.config.reasoning_effort,
+                    "base_url": self.config.base_url}
+                   if self.config.reasoning_effort is not None else {"thinking": "disabled"})
+        context = {**(context or {}), **control}
         record = {"task": prompt, "context": context, "model": self.config.model,
                   "canonical_model": canonical_model(self.config.model),
                   "prompt_sha256": hashlib.sha256(system.encode()).hexdigest(),
                   "temperature": temperature, "max_tokens": self.config.max_tokens,
-                  "extra_body": {"thinking": {"type": "disabled"}}, "payload": payload}
+                  **transport, "payload": payload}
         cache_key = json.dumps([prompt, payload, context, record["prompt_sha256"],
                                 canonical_model(self.config.model), temperature, self.config.max_tokens], sort_keys=True)
         start = perf_counter()
@@ -243,17 +272,28 @@ class StudyChat(JsonChat):
                 response = ChatCompletion.model_validate(saved)
             else:
                 with GATEWAY_SLOTS:
+                    if self.nonthinking_guard is not None:
+                        self.nonthinking_guard.check()
                     response = self.client.chat.completions.create(model=self.config.model,
                         messages=[{"role": "system", "content": system},
                                   {"role": "user", "content": json.dumps(payload, ensure_ascii=False)}],
-                        response_format={"type": "json_object"}, temperature=temperature,
-                        max_tokens=self.config.max_tokens, extra_body=record["extra_body"])
+                        temperature=temperature, max_tokens=self.config.max_tokens,
+                        **transport,
+                        **({"response_format": {"type": "json_object"}}
+                           if self.config.reasoning_effort is None else {}))
         except (APIConnectionError, APIStatusError) as exc:
             record.update(status="api_error", error=type(exc).__name__, elapsed_seconds=perf_counter() - start)
             self._record(record)
             raise LLMError(f"{prompt}: {type(exc).__name__}; see audit log") from None
         elapsed = perf_counter() - start
         record.update(response=response.model_dump(mode="json"), elapsed_seconds=elapsed)
+        if self.nonthinking_guard is not None:
+            try:
+                record["nonthinking_check"] = self.nonthinking_guard.inspect(response, self.config.max_tokens)
+            except NonThinkingError as exc:
+                record.update(status="rejected_nonthinking", error=str(exc))
+                self._record(record)
+                raise
         try:
             if not response.choices or response.choices[0].finish_reason != "stop":
                 raise ValueError("Incomplete response")
@@ -505,7 +545,8 @@ def screening():
     save_json(destination / "finalists.json", sorted(finalists, key=lambda row: row["score"], reverse=True))
 
 
-def run_one(network, profiles, advocates, bank, settings, seed, branch, output=None, llm=False):
+def run_one(network, profiles, advocates, bank, settings, seed, branch, output=None, llm=False,
+            *, nonthinking_guard=None):
     study = json.loads((PROJECT / "configs/study.json").read_text(encoding="utf-8"))
     config = RunConfig(rounds=settings["rounds"], alpha=0.05, rho=settings["rho"],
                        advocate_stance=Stance.OPPOSE, window=settings.get("window", 2),
@@ -513,6 +554,7 @@ def run_one(network, profiles, advocates, bank, settings, seed, branch, output=N
                        max_comments=settings.get("max_comments", 3),
                        comment_alpha=settings.get("comment_alpha", 1.0),
                        comment_beta=settings.get("comment_beta", 9.0),
+                       nonobserver_perception=settings.get("nonobserver_perception", "local_proxy"),
                        cross_fan_comments=settings.get("cross_fan_comments", True))
     coefficients = coefficients_from(settings)
     metrics, diagnostic_rows = [], []
@@ -530,19 +572,20 @@ def run_one(network, profiles, advocates, bank, settings, seed, branch, output=N
                 return json.loads((output / "result.json").read_text(encoding="utf-8"))
             output.mkdir(parents=True, exist_ok=True)
             llm_config, key = load_settings(PROJECT / ".env")
-            llm_config = replace(llm_config, timeout=180)
+            llm_config = study_llm_config(llm_config)
             client = open_client(llm_config, key)
             audit_path = output / "calls.jsonl"
             audit = audit_path.open("a", encoding="utf-8")
-            chat = StudyChat(client, llm_config, audit, audit_path)
+            chat = StudyChat(client, llm_config, audit, audit_path, nonthinking_guard=nonthinking_guard)
             perception_llm = StudyPerception(chat, study["topic"], study["scenario"], output.name)
             trajectory = gzip.open(output / "trajectory.partial.jsonl.gz", "wt", encoding="utf-8")
             write_record(trajectory, "manifest", {
                 "network": network, "profiles": profiles, "advocates": advocates,
                 "config": config, "coefficients": coefficients, "group_seed": seed, "branch": branch,
-                "observer_count": len(network.observers), "llm": llm_config,
-                "perception_scope": "observers use LLM; nonobservers use local_proxy",
-                "settings": settings, "prompt_sha256": prompt_hash("perception"), "thinking": "disabled",
+                "observer_count": len(network.observers),
+                "perception_scope": f"observers use LLM; nonobservers use {config.nonobserver_perception}",
+                "settings": settings, "prompt_sha256": prompt_hash("perception"),
+                **study_runtime(llm_config),
             })
         perception = ObserverPerception(network.observers, bank, perception_llm)
         simulation = ObserverSimulation(network, profiles, advocates, bank, coefficients, config,
@@ -566,6 +609,9 @@ def run_one(network, profiles, advocates, bank, settings, seed, branch, output=N
                 "mean_unique_authors": sum(len({simulation.messages[mid].author for mid in row.reading.read})
                                            for row in record.nodes) / len(record.nodes),
                 "empty_readers_all": sum(not row.reading.read for row in record.nodes)}
+            if config.nonobserver_perception == "observer_mean":
+                diagnostic["observer_mean_support"] = sum(row.after.perceived_support for row in observed) / len(observed)
+                diagnostic["nonobserver_perception"] = "observer_mean"
             diagnostic_rows.append(diagnostic)
             if trajectory:
                 write_record(trajectory, "round", record)

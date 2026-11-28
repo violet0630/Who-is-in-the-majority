@@ -3,6 +3,8 @@
 from collections.abc import Iterator
 from concurrent.futures import ThreadPoolExecutor
 from dataclasses import dataclass, replace
+import json
+from math import fsum
 
 from .behavior import decide, update_feedback
 from .feed import make_message, read_feed
@@ -124,7 +126,9 @@ class Simulation:
                                    self.streams.for_event(node, round, "read"))
                          for node in range(len(self.profiles)))
         exposures = tuple(Exposure(round, self._view(r.read), self._view(r.context)) for r in readings)
-        active = [node for node, reading in enumerate(readings) if reading.read]
+        broadcast = self.config.nonobserver_perception == "observer_mean"
+        active = [node for node, reading in enumerate(readings) if reading.read
+                  and (not broadcast or node in self.network.observers)]
         requests = [PerceptionRequest(node, self.profiles[node], self.states[node],
                                       tuple(self.history[node]), exposures[node]) for node in active]
         if self.workers == 1:
@@ -132,6 +136,20 @@ class Simulation:
         else:
             with ThreadPoolExecutor(max_workers=self.workers) as pool:
                 results = dict(zip(active, pool.map(self.perception.estimate, requests)))
+        if broadcast:
+            # Fixed observer denominator, including carried-forward empty readers.
+            # Gather all estimates before any t+1 decisions: never a partial mean.
+            observers = sorted(self.network.observers)
+            support = fsum(results[node].support if node in results
+                           else self.states[node].perceived_support
+                           for node in observers) / len(observers)
+            shared = PerceptionResult(support, json.dumps({
+                "support": support, "source": "observer_mean", "source_round": round,
+                "observer_count": len(observers), "updated_observers": len(results),
+            }), model="observer_mean")
+            for node in range(len(self.states)):
+                if node not in self.network.observers:
+                    results[node] = shared
         records = []
         for node, before in enumerate(self.states):
             reading = readings[node]

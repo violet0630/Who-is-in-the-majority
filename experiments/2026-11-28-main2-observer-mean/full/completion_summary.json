@@ -1,0 +1,28 @@
+{
+  "completed_at": "2026-11-27T16:30:23.119228+00:00",
+  "runs_completed": 36,
+  "runs_audited": 36,
+  "rounds_each": 10,
+  "response_checks_including_replay": {
+    "no_visible_anomaly": 18202
+  },
+  "response_models_including_replay": {
+    "qoder-cn/dfmodel": 18202
+  },
+  "requested_temperatures_including_replay": {
+    "0": 18708
+  },
+  "reported_reasoning_tokens_including_replay": {
+    "0": 18202
+  },
+  "maximum_reported_output_tokens": 127,
+  "call_statuses_including_replay": {
+    "ok": 18100,
+    "invalid_response": 102,
+    "api_error": 506
+  },
+  "changes_to_generated_report": [
+    "Corrected legacy local-perception footer to observer-mean protocol",
+    "Appended recovery provenance, response checks and public-signal plot"
+  ]
+}

@@ -83,8 +83,11 @@ class RunConfig:
     max_comments: int = 3
     comment_alpha: float = 1.0
     comment_beta: float = 9.0
+    nonobserver_perception: str = "local_proxy"
 
     def __post_init__(self) -> None:
+        if self.nonobserver_perception not in ("local_proxy", "observer_mean"):
+            raise ValueError("Unknown nonobserver perception mode")
         if min(self.rounds, self.window, self.read_limit) < 1:
             raise ValueError("轮数、窗口和阅读上限必须为正")
         if (not 0 <= self.alpha <= 1 or not isfinite(self.rho) or self.rho <= 0

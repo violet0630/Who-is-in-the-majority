@@ -1,0 +1,18 @@
+{
+    "created_at":  "2026-11-27T14:25:47.0064419+08:00",
+    "gateway_version":  "0.1.4890",
+    "plugin_version":  "0.2.75",
+    "checks":  "Check live file hashes before and after every API request; stop all subsequent dispatch on mismatch",
+    "files":  [
+                  {
+                      "live_path":  "E:\\大三\\反代\\runtime\\magpie\\plugins\\node_modules\\@magpie-community\\opencode-qoder-auth\\index.mjs",
+                      "snapshot":  "transport/index.mjs",
+                      "sha256":  "4036a97f6bb72897d0b920a605d3e764470a61592037792af7f8d7ccce67b8cf"
+                  },
+                  {
+                      "live_path":  "E:\\大三\\反代\\runtime\\magpie\\plugins\\node_modules\\@magpie-community\\opencode-qoder-auth\\package.json",
+                      "snapshot":  "transport/package.json",
+                      "sha256":  "09760afb8f8475bc9007a29e378dd33dd8ef0f728abf4263b91ef2f5b63b3c1e"
+                  }
+              ]
+}
